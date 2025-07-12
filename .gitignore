@@ -60,3 +60,5 @@ htmlcov/
 .DS_Store
 *.bak
 *.tmp
+script_arbo.ps1
+arborescence_*.txt
