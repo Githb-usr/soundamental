@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmation de votre message</title>
+    <style>
+        body { font-family: Arial, sans-serif; color: #333; background-color: #f4f4f4; padding: 20px; }
+        .container { max-width: 850px; margin: auto; background: white; padding: 20px; border-radius: 8px; }
+        .header { background-color: #0088a8; color: white; padding: 10px; text-align: center; font-size: 20px; }
+        .content { padding: 20px; font-size: 16px; }
+        .footer { text-align: center; font-size: 14px; color: gray; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">Merci de nous avoir contactés !</div>
+        <div class="content">
+            <p>Bonjour <strong>{{ nom }}</strong>,</p>
+            <p>Nous avons bien reçu votre message et nous vous répondrons dans les plus brefs délais.</p>
+            <p><strong>Vos informations :</strong></p>
+            <blockquote style="border-left: 4px solid #0088a8; padding: 15px; font-style: italic; background: #f4f4f4; border-radius: 5px;">
+                <p><strong>Votre nom :</strong> {{ nom }}</p>
+                <p><strong>Votre email :</strong> {{ email }}</p>
+                <p><strong>Votre structure :</strong> {{ structure }}</p>
+                <p><strong>Catégorie choisie :</strong> {{ categorie }}</p>
+                <p><strong>Sujet :</strong> {{ sujet }}</p>
+                <p><strong>Votre message :</strong></p>
+                {{ message|safe }}
+            </blockquote>
+            <p>Merci pour votre patience et à bientôt sur Soundamental !</p>
+        </div>
+        <div class="footer">
+            Cet email est automatique, merci de ne pas y répondre.
+        </div>
+    </div>
+</body>
+</html>

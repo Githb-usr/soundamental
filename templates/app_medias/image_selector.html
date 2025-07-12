@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="mb-4">Sélection d’une image</h1>
+
+{# Sélecteur de dossier #}
+<form method="get" class="mb-3">
+  <label for="dossier" class="form-label">Choisir un dossier :</label>
+  <select name="dossier" id="dossier" class="form-select w-auto d-inline-block" onchange="this.form.submit()">
+    {% for key, biblio in bibliotheques.items %}
+      <option value="{{ key }}" {% if key == dossier_actif %}selected{% endif %}>
+        {{ biblio.label }}
+      </option>
+    {% endfor %}
+  </select>
+</form>
+
+{% if images %}
+  <div class="row row-cols-2 row-cols-md-4 g-4">
+    {% for img in images %}
+      <div class="col">
+        <div class="card h-100 shadow-sm">
+          <img src="{{ img.url }}" class="card-img-top" alt="{{ img.filename }}">
+          <div class="card-body p-2">
+            <p class="card-text small mb-2 text-break"><strong>{{ img.filename }}</strong></p>
+            <button class="btn btn-sm btn-primary w-100" onclick="insertImage('{{ img.url }}')">
+              ➕ Utiliser cette image
+            </button>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+{% else %}
+  <p>Aucune image trouvée dans ce dossier.</p>
+{% endif %}
+
+<script>
+  /**
+   * Insère l’image sélectionnée dans l’éditeur TinyMCE de la fenêtre parente.
+   */
+  function insertImage(url) {
+    if (window.opener && window.opener.tinymce) {
+      const editor = window.opener.tinymce.activeEditor;
+      if (editor) {
+        editor.insertContent(`<img src="${url}" alt="">`);
+        window.close();
+      } else {
+        alert("Impossible de récupérer l’éditeur TinyMCE actif.");
+      }
+    } else {
+      alert("TinyMCE n’est pas accessible depuis cette fenêtre.");
+    }
+  }
+</script>
+{% endblock %}

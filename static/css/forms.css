@@ -1,0 +1,31 @@
+/* ######################################## */
+/* ## forms.css - Styles des formulaires ## */
+/* ######################################## */
+
+/* Formulaire de création d'article en ligne
+/* #########################################
+
+/* Réglage de la hauteur par défaut du champ "Résumé" */
+#id_resume {
+    height: 100px;
+    min-height: 100px;
+    resize: vertical;
+}
+
+/* Réglage de la largeur à 50% de la page pour les champs concernés */
+#id_image,
+#id_categorie_principale,
+#id_categories_secondaires {
+    max-width: 50%;
+    width: 100%;
+}
+
+#id_tags + .select2-container {
+    max-width: 100% !important;
+}
+
+/* Correction du bug du label "Tags" si le champ fait 50% de large */
+label[for="id_tags"] {
+    display: block;
+    margin-bottom: 0.4rem; /* même marge que les autres champs */
+}

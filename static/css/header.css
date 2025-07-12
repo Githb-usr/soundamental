@@ -1,0 +1,86 @@
+/* ################################################## */
+/* ## header.css - Styles du header (menu compris) ## */
+/* ################################################## */
+
+/* HEADER */
+/* ###### */
+
+/* En-tête global */
+.site-header .page-header-wrapper {
+    background-color: #F4EDE8;
+    width: calc(100% + 130px); /* Étend l'entête sur les marges du bloc central */
+    margin-left: -65px; /* Annule la marge gauche */
+    margin-right: -65px; /* Annule la marge droite */
+    margin-bottom: 0 !important;
+    padding: 30px 0 10px 0;
+}
+
+/* Contenu du header */
+.site-header .page-header {
+    max-width: 100%;
+    padding: 0 65px;
+    margin-bottom: 0 !important;
+}
+
+/* MENU UTILISATEUR */
+/* ################ */
+.user-menu-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 0.5rem;
+    margin-right: 1rem;
+    z-index: 1000;
+    background-color: black;
+}
+
+/* MENU PRINCIPAL */
+/* ############## */
+
+/* Taille de police spécifique au menu principal */
+.site-menu .fs-5-5 {
+    font-size: 1.1rem !important; /* Forcer l'application de la taille */
+}
+
+/* Ajustement de l’espace sous les boutons */
+.site-menu .page-header .buttons-container {
+    margin-bottom: 10px;
+}
+
+/* Sous-menus déroulants */
+
+.site-menu #indexDropdown + .dropdown-menu {
+    background-color: black !important;
+    border-radius: 0 !important;
+    padding-bottom: 0;
+}
+
+.site-menu #indexDropdown + .dropdown-menu .dropdown-item {
+    color: white !important;
+    font-weight: bold;
+    position: relative;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center; /* Centre verticalement le texte */
+}
+
+.site-menu #indexDropdown + .dropdown-menu .dropdown-item:not(.last-item)::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 15px;  /* Aligné avec le padding */
+    right: 15px; /* Aligné avec le padding */
+    transform: translateY(50%); /* Corrige l'alignement pour un vrai centrage */
+    height: 1px;
+    background-color: rgb(146, 144, 144);
+    opacity: 0.5; /* Rend la ligne plus discrète si besoin */
+}
+
+.site-menu #indexDropdown + .dropdown-menu .dropdown-item.last-item {
+    border-bottom: none;
+}
+
+.site-menu #indexDropdown + .dropdown-menu .dropdown-item:hover {
+    background-color: #333 !important;
+}

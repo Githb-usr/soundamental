@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="mb-4">Confirmer la suppression</h1>
+
+<p>Voulez-vous vraiment supprimer cette image&nbsp;?</p>
+
+<div class="mb-3">
+    <img src="{{ file_url }}" alt="{{ filename }}" class="img-fluid" style="max-width: 400px; border-radius: 8px;">
+    <p class="mt-2"><strong>{{ filename }}</strong></p>
+</div>
+
+{% if articles_utilisant_image %}
+  <div class="alert alert-warning">
+    <p><strong>Attention :</strong> cette image est utilisée dans {{ articles_utilisant_image|length }} article{{ articles_utilisant_image|length|pluralize }} :</p>
+    <ul class="mb-0">
+      {% for article in articles_utilisant_image %}
+        <li>
+          <a href="{% url 'admin:app_blog_article_change' article.id %}" target="_blank">
+            {{ article.titre }}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+    <p class="mt-2">
+      Supprimer l’image ne supprimera pas son affichage dans les articles : elle apparaîtra alors comme "image manquante".
+    </p>
+  </div>
+{% endif %}
+
+<form method="post">
+    {% csrf_token %}
+    <a href="{% url 'app_blog:blog_media_images' %}" class="btn btn-secondary">Annuler</a>
+    <button type="submit" class="btn btn-danger">Supprimer définitivement</button>
+</form>
+{% endblock %}

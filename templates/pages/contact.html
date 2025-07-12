@@ -1,0 +1,150 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_js %}
+    <script src="{% static 'js/tinymce/tinymce.min.js' %}"></script>
+    <script src="{% static 'js/tinymce_contact_init.js' %}"></script>
+    <script src="{% static 'js/contact.js' %}" defer></script>
+{% endblock %}
+
+{% block head %}
+    <meta name="description" content="Contactez-nous pour toute question ou demande d'information.">
+    <meta property="og:title" content="Contact">
+    <meta property="og:description" content="Contactez-nous pour toute question ou demande d'information.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ request.build_absolute_uri }}">
+{% endblock %}
+
+{% block content %}
+    {% include "includes/page_title.html" %}
+    <p>
+        Vous pouvez nous contacter en remplissant le formulaire ci-dessous.<br>
+        Faites bien attention à indiquer un email valide.
+    </p>
+    <p>
+        Nous vous répondrons dès que possible.
+    </p>
+    {% if messages %}
+        <div id="error-container" class="alert alert-warning">
+            {% for message in messages %}
+                <p id="error-message">{{ message|safe }}</p>
+            {% endfor %}
+        </div>
+    {% endif %}
+
+    {% if message_data %}
+        <div class="alert alert-success">
+            <h3>Récapitulatif de votre message :</h3>
+            <ul>
+                <li><strong>Nom :</strong> {{ message_data.nom }}</li>
+                <li><strong>Email :</strong> {{ message_data.email }}</li>
+                <li><strong>Catégorie :</strong> {{ message_data.categorie }}</li>
+                <li><strong>Sujet :</strong> {{ message_data.sujet }}</li>
+                <li><strong>Message :</strong> <br> {{ message_data.message|linebreaks }}</li>
+            </ul>
+        </div>
+
+        <div class="alert alert-success text-center p-4">
+            <h2 class="mb-3">✅ Message envoyé avec succès !</h2>
+            <p>Merci, votre message a bien été envoyé. Nous vous répondrons dès que possible.</p>
+            <div class="mt-4">
+                <a href="/contact/" class="btn btn-primary">Retour au formulaire</a>
+                <a href="/" class="btn btn-secondary ms-2">Retour à l'accueil</a>
+            </div>
+        </div>
+    {% else %}
+        <form id="contact-form" method="post" class="contact-form">
+            {% csrf_token %}
+            
+            <div class="contact-item mb-3">
+                <label for="{{ form.nom.id_for_label }}" class="form-label">
+                    Nom <span class="text-danger">*</span>
+                </label>
+                <div class="w-50">
+                    {{ form.nom }}
+                </div>
+                {% if form.nom.errors %}
+                    <div class="text-danger">{{ form.nom.errors }}</div>
+                {% endif %}
+            </div>
+
+            <div class="contact-item mb-3">
+                <label for="{{ form.email.id_for_label }}" class="form-label">
+                    Email <span class="text-danger">*</span>
+                </label>
+                <div class="w-50">
+                    {{ form.email }}
+                </div>
+                {% if form.email.errors %}
+                    <div class="text-danger">{{ form.email.errors }}</div>
+                {% endif %}
+            </div>
+
+            <div class="contact-item mb-3">
+                <label for="{{ form.structure.id_for_label }}" class="form-label">
+                    Structure (organisme, société, site Internet)
+                </label>
+                <div class="w-50">
+                    {{ form.structure }}
+                </div>
+                {% if form.structure.errors %}
+                    <div class="text-danger">{{ form.structure.errors }}</div>
+                {% endif %}
+            </div>
+
+            <div class="mb-5"></div>
+
+            <div class="contact-item mb-3">
+                <label for="{{ form.categorie.id_for_label }}" class="form-label">
+                    Votre message concerne : <span class="text-danger">*</span>
+                </label>
+                <div class="w-50">
+                    {{ form.categorie }}
+                </div>
+                {% if form.categorie.errors %}
+                    <div class="text-danger">{{ form.categorie.errors }}</div>
+                {% endif %}
+            </div>
+
+            <div class="contact-item mb-3">
+                <label for="{{ form.sujet.id_for_label }}" class="form-label">
+                    Sujet <span class="text-danger">*</span>
+                </label>
+                {{ form.sujet }}
+                {% if form.sujet.errors %}
+                    <div class="text-danger">{{ form.sujet.errors }}</div>
+                {% endif %}
+            </div>
+
+            <div class="contact-item mb-3">
+                <label for="{{ form.message.id_for_label }}" class="form-label">
+                    Message <span class="text-danger">*</span>
+                </label>
+                {{ form.message }}
+                {% if form.message.errors %}
+                    <div class="text-danger">{{ form.message.errors }}</div>
+                {% endif %}
+            </div>
+
+            <!-- reCAPTCHA -->
+            <div class="contact-item mb-3">
+                {{ form.recaptcha }}
+                {% if form.recaptcha.errors %}
+                    <div class="text-danger">{{ form.recaptcha.errors }}</div>
+                {% endif %}
+            </div>
+
+            <div class="d-flex justify-content-between mt-3 contact-btn">
+                <button type="button" id="reset-btn" class="btn btn-secondary px-3">Effacer le formulaire</button>
+                <button type="submit" class="btn btn-primary px-4">Envoyer</button>
+            </div>
+
+            <p class="text-muted"><span class="text-danger">*</span> Champs obligatoires</p>
+            
+        </form>
+    {% endif %}
+
+    {% if time_remaining %}
+        <p id="countdown" class="text-danger">Réessayez dans <span id="timer">{{ time_remaining }}</span> secondes...</p>
+    {% endif %}
+{% endblock %}

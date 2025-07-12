@@ -1,0 +1,64 @@
+{% load static %}
+
+<!-- Menu utilisateur (haut à droite, propre et séparé) -->
+<nav class="user-menu">
+  <ul class="nav justify-content-end align-items-center">
+
+    {% if user.is_authenticated %}
+      {% if user.is_staff %}
+        <!-- Mon espace pour staff -->
+        <li class="nav-item dropdown me-2">
+          <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown">
+            Mon espace
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="{% url 'app_blog:article_creer' %}">Créer une news</a></li>
+            <li class="dropdown-item disabled">Créer une fiche pressage</li>
+            <li class="dropdown-item disabled">Créer un artiste</li>
+          </ul>
+        </li>
+      {% else %}
+        {% with "" as affichage_deja_fait %}
+          {% for group in user.groups.all %}
+            {% if group.name == "Contributeurs" and not affichage_deja_fait %}
+              <li class="nav-item dropdown me-2">
+                <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown">
+                  Mon espace
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li><a class="dropdown-item" href="{% url 'app_blog:article_creer' %}">Créer une news</a></li>
+                  <li class="dropdown-item disabled">Créer une fiche pressage</li>
+                  <li class="dropdown-item disabled">Créer un artiste</li>
+                </ul>
+              </li>
+            {% endif %}
+          {% endfor %}
+        {% endwith %}
+      {% endif %}
+
+      <!-- Mon compte -->
+      <li class="nav-item dropdown me-2">
+        <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown">
+          Mon compte
+        </a>
+        <ul class="dropdown-menu dropdown-menu-end">
+          <li class="dropdown-item disabled">Voir mon profil</li>
+          <li class="dropdown-item disabled">Modifier mes infos</li>
+          <li class="dropdown-item disabled">Préférences</li>
+        </ul>
+      </li>
+
+      <!-- Déconnexion -->
+      <li class="nav-item">
+        <a class="nav-link text-white" href="{% url 'logout' %}">Se déconnecter</a>
+      </li>
+
+    {% else %}
+      <!-- Connexion -->
+      <li class="nav-item">
+        <a class="nav-link text-white" href="{% url 'login' %}?next={{ request.path }}">Se connecter</a>
+      </li>
+    {% endif %}
+
+  </ul>
+</nav>

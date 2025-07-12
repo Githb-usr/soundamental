@@ -1,0 +1,46 @@
+{% load static %}
+
+<nav class="site-menu w-100 bg-black text-white justify-content-end">
+    <div class="container-lg justify-content-end">
+        <ul class="nav w-100 fs-6 fw-bold justify-content-end">
+            <li class="nav-item">
+                <a href="{% url 'app_blog:liste_articles' %}" class="nav-link text-white">NEWS</a>
+            </li>
+            <!-- Menu déroulant pour "Index" -->
+            <li class="nav-item dropdown">
+                <a href="#" class="nav-link text-white fw-bold dropdown-toggle" id="indexDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    INDEX
+                </a>
+                <ul class="dropdown-menu bg-black text-white" aria-labelledby="indexDropdown">
+                    <li><a class="dropdown-item" href="{% url 'app_index:index' %}">Index général</a></li>
+                    <li><a class="dropdown-item" href="{% url 'app_index:category_index' category='artistes' %}">Index artistes</a></li>
+                    <li><a class="dropdown-item" href="{% url 'app_index:category_index' category='compilations' %}">Index compilations</a></li>
+                    <li><a class="dropdown-item last-item" href="{% url 'app_index:category_index' category='labels' %}">Index labels</a></li>
+                </ul>
+            </li>
+            <!-- Menu déroulant pour "Forum" -->
+            <li class="nav-item dropdown">
+                <a href="#" class="nav-link text-white fw-bold dropdown-toggle" id="indexDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    FORUM
+                </a>
+                <ul class="dropdown-menu bg-black text-white" aria-labelledby="indexDropdown">
+                    <li><a class="dropdown-item" href="https://www.soundamental.org/forum/">Accueil forum</a></li>
+                    <li><a class="dropdown-item" href="https://www.soundamental.org/forum/forum/107-le-hit-des-clubs-classements/">Hit Des Clubs</a></li>
+                    <li><a class="dropdown-item" href="https://www.soundamental.org/forum/forum/149-espace-clubbers/">Espace Clubbers</a></li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a href="{% url 'app_main:aide_root' slug='aide' %}" class="nav-link text-white">Aide / FAQ</a>
+            </li>
+            <li class="nav-item">
+                <a href="{% url 'app_main:dynamic_page' page_name='telechargements' %}" class="nav-link text-white">TÉLÉCHARGEMENTS</a>
+            </li>
+            <li class="nav-item">
+                <a href="{% url 'app_main:static_page_liens' %}" class="nav-link text-white">LIENS</a>
+            </li>
+            <li class="nav-item nav-item-last">
+                <a href="{% url 'app_main:contact' %}" class="nav-link text-white">CONTACT</a>
+            </li>
+        </ul>
+    </div>
+</nav>

@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}Modifier la page - {{ page.title }}{% endblock %}
+
+{% block content %}
+    <h1>Modifier la page : {{ page.title }}</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.media }}  {# Charge les ressources nécessaires (TinyMCE) #}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-success">💾 Enregistrer</button>
+    </form>
+    <a href="{% url 'app_main:static_page_'|add:page.slug %}" class="btn btn-secondary">⬅️ Retour</a>
+{% endblock %}

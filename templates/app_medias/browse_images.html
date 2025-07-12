@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container py-4">
+    <h1 class="mb-3">📁 Parcourir les images</h1>
+
+    {% if current_path %}
+        <p>
+            <a href="?path={{ current_path|cut:'/'|rpartition:'/'|first }}">⬅️ Revenir au dossier parent</a>
+        </p>
+    {% endif %}
+
+    <h2 class="h5 mt-4">📂 Dossiers</h2>
+    <div class="row">
+        {% for d in subdirs %}
+            <div class="col-md-4 mb-3">
+                <a href="?path={{ current_path }}/{{ d }}" class="text-decoration-none">
+                    <i class="bi bi-folder-fill text-warning me-2"></i>{{ d }}
+                </a>
+            </div>
+        {% empty %}
+            <div class="col-12 text-muted">Aucun sous-dossier</div>
+        {% endfor %}
+    </div>
+
+    <h2 class="h5 mt-4">🖼️ Images</h2>
+    <div class="row">
+        {% for f in files %}
+            <div class="col-md-3 col-sm-4 col-6 mb-4">
+                <div class="border p-2 h-100 text-center">
+                    <img src="{{ current_url }}/{{ f }}" alt="{{ f }}" class="img-fluid mb-2" style="max-height: 160px;" title="{{ f }}">
+                    <div class="text-truncate small">{{ f|truncatechars:60 }}</div>
+                </div>
+            </div>
+        {% empty %}
+            <div class="col-12 text-muted">Aucune image dans ce dossier</div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

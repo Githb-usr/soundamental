@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}Déconnexion{% endblock %}
+
+{% block content %}
+<div class="container my-5" style="max-width: 600px;">
+  <h1>Déconnexion réussie</h1>
+  <p class="mt-3">
+    Vous êtes maintenant déconnecté.
+  </p>
+  <p>
+    <a href="{% url 'login' %}" class="btn btn-outline-primary">Se reconnecter</a>
+    <a href="{% url 'app_main:home' %}" class="btn btn-link">Retour à l’accueil</a>
+  </p>
+</div>
+{% endblock %}

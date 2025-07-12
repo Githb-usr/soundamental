@@ -1,0 +1,161 @@
+{% load static %}
+{% load custom_filters %}
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Insérer une image</title>
+  <link rel="stylesheet" href="{% static 'css/images.css' %}">
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      font-size: 0.95rem;
+      color: #222;
+      margin: 0;
+    }
+
+    .layout {
+      display: flex;
+      height: 100vh;
+    }
+
+    .sidebar {
+      width: 250px;
+      background: #f6f6f6;
+      border-right: 1px solid #ccc;
+      padding: 20px;
+      overflow-y: auto;
+    }
+
+    .sidebar h2 {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .sidebar li {
+      margin-bottom: 0.5rem;
+    }
+
+    .sidebar a {
+      text-decoration: none;
+      color: #0066cc;
+    }
+
+    .sidebar a.active {
+      font-weight: bold;
+      color: #000;
+    }
+
+    .content {
+      flex-grow: 1;
+      padding: 20px;
+      overflow-y: auto;
+    }
+
+    .image-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .image-gallery img {
+      height: 100px;
+      border: 2px solid transparent;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: border 0.2s ease;
+    }
+
+    .image-gallery img:hover {
+      border-color: #3399ff;
+    }
+
+    .intro-box {
+      background: #eef5ff;
+      padding: 10px 12px;
+      border-left: 4px solid #3399ff;
+      margin-bottom: 20px;
+    }
+
+    .text-muted {
+      color: #666;
+      font-style: italic;
+    }
+  </style>
+
+  <script>
+    function insertImage(url) {
+      if (window.opener && window.opener.tinymce) {
+        const editor = window.opener.tinymce.activeEditor;
+        if (editor) {
+          editor.insertContent(`<img src="${url}" alt="">`);
+          window.close();
+        } else {
+          alert("Impossible de récupérer l’éditeur TinyMCE actif.");
+        }
+      } else {
+        alert("TinyMCE n’est pas accessible depuis cette fenêtre.");
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <div class="layout">
+    <!-- 📂 Barre latérale avec liste des dossiers -->
+    <div class="sidebar">
+      <h2>Dossiers disponibles</h2>
+      <p class="text-muted" style="font-size: 0.85rem;">
+        Les sous-dossiers sont affichés uniquement s’ils contiennent au moins une image.
+      </p>
+      <ul>
+        {% for key, config in images_par_dossier.items %}
+          <li style="margin-left: {% if config.sous_dossier_de %}20{% else %}0{% endif %}px;">
+            {% if not config.sous_dossier_de %}
+              📁
+            {% else %}
+              ↳
+            {% endif %}
+            <a href="?dossier={{ key }}"{% if key == dossier_selectionne %} class="active"{% endif %}>
+              {{ config.label }}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>      
+    </div>
+
+    <!-- 🖼️ Contenu principal -->
+    <div class="content">
+      <h1 style="font-size: 1.4rem;">Insérer une image</h1>
+
+      <div class="intro-box">
+        📌 <strong>Important :</strong> Placez le curseur de la souris à l’endroit souhaité dans le texte de l'article avant d’ouvrir cette fenêtre.<br>
+        Double-cliquez sur une image pour l’insérer.
+      </div>
+
+    {% with images_par_dossier|get_item:dossier_selectionne as selection %}
+        {% if selection %}
+            <h2>{{ selection.label }}</h2>
+            <div class="image-gallery">
+            {% for image in selection.fichiers %}
+                <img src="{{ image.url }}" alt="{{ image.nom }}" title="{{ image.nom }}" ondblclick="insertImage('{{ image.url|urlencode }}')">
+            {% empty %}
+                <p class="text-muted fst-italic">Aucun fichier disponible pour le moment.</p>
+            {% endfor %}
+            </div>
+        {% else %}
+            <p class="text-muted">Aucun dossier sélectionné.</p>
+        {% endif %}
+    {% endwith %}
+    
+    </div>
+  </div>
+</body>
+</html>

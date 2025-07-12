@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'css/errors.css' %}">
+{% endblock %}
+
+{% block title %}Erreur 500 - Soundamental{% endblock %}
+
+{% block content %}
+<div class="error-500">
+    <div class="container text-center mt-5">
+        <div class="retro-screen">
+            <pre>
+*** SYSTEM ERROR ***
+500 - INTERNAL FAILURE
+
+[CORE DUMP INITIATED]
+_ _ _
+
+Please contact the system administrator.
+            </pre>
+        </div> 
+        <p class="error-text mt-4">Une erreur interne est survenue !</p>
+        <p class="error-text mt-4">Pas de panique, notre équipe est alertée.</p>
+        <a href="/" class="btn btn-danger mt-3">Retour à l'accueil</a>
+    </div>
+</div>
+{% endblock %}

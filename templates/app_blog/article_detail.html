@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+{% block content %}
+<article class="mb-5">
+    <h1>{{ article.titre }}</h1>
+    <p class="text-muted">
+        Publié le {{ article.date_publication|date:"d F Y" }} par {{ article.auteur }}
+    </p>
+
+    <div class="article-categories">
+        <span class="badge badge-primary">
+          <a href="{% url 'app_blog:articles_par_categorie' article.categorie_principale.id %}">
+            {{ article.categorie_principale.nom }}
+          </a>
+        </span>
+        {% for cat in article.categories_secondaires.all %}
+          <span class="badge badge-secondary">
+            <a href="{% url 'app_blog:articles_par_categorie' cat.id %}">
+              {{ cat.nom }}
+            </a>
+          </span>
+        {% endfor %}
+    </div>      
+
+    {% if article.image %}
+        <img src="{{ article.image.url }}" alt="{{ article.titre }}" class="img-fluid my-4" />
+    {% endif %}
+
+    <div class="blog-content">
+        {{ article.contenu|safe }}
+    </div>
+</article>
+
+<div class="d-flex justify-content-between">
+    {% if article_precedent %}
+        <a href="{% url 'app_blog:detail_article' slug=article_precedent.slug %}" class="btn btn-outline-primary">
+            ← Article précédent
+        </a>
+    {% else %}
+        <span></span>
+    {% endif %}
+
+    {% if article_suivant %}
+        <a href="{% url 'app_blog:detail_article' slug=article_suivant.slug %}" class="btn btn-outline-primary">
+            Article suivant →
+        </a>
+    {% endif %}
+</div>
+
+<a href="{% url 'app_blog:liste_articles' %}" class="btn btn-outline-secondary mt-4">← Retour au blog</a>
+
+{% if article.tags.all %}
+<div class="tag-bloc">
+    <div class="mt-2">
+        {% for tag in article.tags.all %}
+            <a href="{% url 'app_main:tag_page' tag_slug=tag.slug %}" class="tag-button me-2">
+                {{ tag.name }}
+            </a>
+        {% endfor %}
+    </div>
+</div>
+{% endif %}
+
+{% endblock %}

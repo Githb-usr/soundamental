@@ -1,0 +1,37 @@
+{% load blog_tags %}
+
+<div class="archives-sidebar narrow-sidebar">
+    <h2 class="h5 mb-3">Archives</h2>
+    <div class="accordion" id="accordionArchives">
+        {% for annee, mois_list in archives.items %}
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="heading{{ annee }}">
+                    <button class="accordion-button collapsed flex-grow-1" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#collapse{{ annee }}"
+                            aria-expanded="false" aria-controls="collapse{{ annee }}">
+                        {{ annee }}
+                    </button>
+                </h2>
+                <div id="collapse{{ annee }}" class="accordion-collapse collapse" aria-labelledby="heading{{ annee }}"
+                     data-bs-parent="#accordionArchives">
+                    <div class="accordion-body p-2">
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="{% url 'app_blog:archives_annee' annee=annee %}">
+                                    Tous les articles
+                                </a>
+                            </li>
+                            {% for mois in mois_list %}
+                                <li>
+                                    <a href="{% url 'app_blog:archives_mois' annee=annee mois=mois %}">
+                                        {{ mois|mois_nom|capfirst }}
+                                    </a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>

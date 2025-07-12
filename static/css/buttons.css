@@ -1,0 +1,35 @@
+/* ##################################### */
+/* ## button.css - Styles des boutons ## */
+/* ##################################### */
+
+/* BOUTONS GLOBAUX */
+/* ############### */
+
+
+
+/* BOUTONS TAGS */
+/* ############ */
+
+.tag-bloc {
+    margin-top: 50px;
+}
+
+/* Boutons de tags */
+.tag-button {
+    display: inline-block;
+    background: #0088a8; /* Bleu Soundamental */
+    color: white;
+    padding: 5px 10px;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Effet au survol des tags */
+.tag-button:hover {
+    background: white;
+    color: #0088a8;
+    border: 1px solid #0088a8;
+}

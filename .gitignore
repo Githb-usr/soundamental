@@ -1,0 +1,62 @@
+# Ignore les fichiers Python compilés
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore les environnements virtuels (venv)
+venv/
+env/
+ENV/
+*.venv
+*.env
+
+# Ignore les fichiers de logs et de bases de données temporaires
+logs/
+*.log
+*.sqlite3
+db.sqlite3
+
+# Ignore les fichiers générés par l'IDE (VS Code, PyCharm...)
+.vscode/
+.idea/
+*.iml
+*.swp
+
+# Ignore les fichiers de dépendances et de build
+node_modules/
+dist/
+build/
+.DS_Store
+
+# Ignore les fichiers secrets (variables d’environnement)
+.env
+.env.local
+.env.production
+.env.development
+.env.test
+
+# Ignore les fichiers de migration Django (optionnel)
+**/migrations/*.pyc
+**/migrations/*.pyo
+**/migrations/__pycache__/
+!**/migrations/__init__.py
+
+# Ignore les fichiers de cache de Django
+staticfiles/
+static_collected/
+
+# Ignore tout le dossier media sauf media/site
+media/*
+!media/site/
+!media/site/**
+
+# Ignore les fichiers de tests et coverage (si tu fais des tests)
+.coverage
+htmlcov/
+*.cover
+
+# Autres
+.DS_Store
+*.bak
+*.tmp

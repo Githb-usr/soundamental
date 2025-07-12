@@ -1,0 +1,259 @@
+/* ############################################ */
+/* ## index.css - Styles des pages des index ## */
+/* ############################################ */
+
+/* Fixe un cadre général pour tout ce qui est sous l’entête */
+.main-index .index-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-height: 200px; /* Empêche le contenu de rétrécir sur les pages vides */
+    padding-top: 0;
+}
+
+/* Les boutons secondaires ne doivent pas trop étirer l'entête */
+.main-index .page-header .buttons-container {
+    margin-bottom: 10px; /* Ajoute un petit espace sous les boutons pour éviter l'effet trop étendu */
+}
+
+/* Ajoute un espace avant le tableau pour éviter qu'il soit collé */
+.main-index .index-table, .index-empty-message {
+    margin: 35px 0; /* Ajoute un espace au-dessus du tableau */
+    width: 100%; /* Garde l'alignement correct */
+}
+
+/* Effet au survol */
+.main-index .grid-4x10 > a:hover, .grid-sub-letters > a:hover {
+    background: white;
+    color: #0088a8;
+    border: 1px solid #0088a8;
+}
+
+/* Supprimer le `gutter-x` de Bootstrap */
+.main-index .container, .row {
+    --bs-gutter-x: 0 !important; /* Supprime l'espace horizontal Bootstrap */
+}
+
+/* Boutons carrés avec bon alignement */
+.main-index .btn-outline-primary, .btn-outline-secondary {
+    width: 50px;
+    height: 50px;
+    font-size: 1rem;
+    padding: 0;
+    text-align: center;
+    border-radius: 0 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Grosse lettre (ajustée à la hauteur des boutons) */
+.main-index .big-letter {
+    width: 174px;
+    height: 174px;
+    font-size: 8rem;
+    font-weight: bold;
+    background: linear-gradient(to bottom right, #00a0c6, #0088a8);
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    overflow: hidden;
+}
+
+.main-index .big-letter span {
+    display: inline-block;
+    line-height: 1;
+    /* transform: translateY(-5%); */
+}
+
+/* Boutons carrés menu index */
+.main-index .btn-outline-primary, .btn-outline-secondary {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+    padding: 0;
+    text-align: center;
+    border-radius: 0 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Grille des 27 boutons principaux */
+.main-index .grid-4x10 {
+    display: grid;
+    grid-template-columns: repeat(10, 40px); /* 10 colonnes de 50px */
+    grid-template-rows: repeat(4, 40px); /* 4 lignes de 50px */
+    gap: 5px 3px; /* 7px entre les lignes, 3px entre colonnes */
+}
+
+/* Style des boutons principaux */
+.main-index .grid-4x10 > a {
+    background: linear-gradient(to bottom right, #00a0c6, #0088a8);
+    color: white;
+    border: 1px solid white;
+    transition: background 0.3s ease-in-out;
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 !important; /* Supprime les arrondis */
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Empêche les boutons principaux d'être affectés par l'état actif */
+.main-index .grid-4x10 > a.active {
+    background: linear-gradient(to bottom right, #00a0c6, #0088a8) !important;
+    color: white !important;
+    border: 1px solid white !important;
+    box-shadow: none !important; /* Supprime tout effet d'ombre */
+}
+
+/* Grille des sous-boutons (27 colonnes, ajustés pour une seule ligne) */
+.main-index .grid-sub-letters {
+    position: relative; /* Assure que l'élément reste bien en place */
+    margin: 20px 0 !important; /* Supprime tout écart indésirable */
+    padding-top: 0 !important;
+    min-height: 40px; /* Empêche la ligne de disparaître */
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(27, 1fr); /* 27 colonnes de 26px */
+    grid-template-rows: 1fr; /* Une seule ligne */
+    gap: 4px; /* Espacement uniforme */
+    justify-content: center; /* Centre la ligne dans le conteneur */
+}
+
+/* Style des sous-boutons */
+.main-index .btn-sub {
+    width: 30px;
+    height: 30px;
+    font-size: 0.8rem; /* Plus petit pour tenir */
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 !important;
+    background: linear-gradient(to bottom right, #00a0c6, #0088a8) !important;
+    color: white !important;
+    border: 1px solid white !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Effet au survol */
+.main-index .btn-sub:hover {
+    background: white !important;
+    color: #0088a8 !important;
+    border: 1px solid #0088a8 !important;
+}
+
+/* Style des liens des sous-boutons */
+.main-index .grid-sub-letters > a {
+    width: 35px;
+    height: 35px;
+    font-size: 1rem; /* Plus petit pour tenir */
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 !important;
+    background: linear-gradient(to bottom right, #00a0c6, #0088a8);
+    color: white;
+    border: 1px solid white;
+}
+
+/* Style du bouton actif dans les sous-lettres */
+.main-index .grid-sub-letters > a.active {
+    background: white !important;
+    color: #0088a8 !important;
+    border: 2px solid #0088a8 !important;
+    font-weight: bold;
+    box-shadow: 0 0 5px rgba(0, 136, 168, 0.8);
+}
+
+/* zone des entrées de l'index */
+
+/* Assure que la zone des résultats reste constante */
+.main-index .index-results {
+    min-height: 150px; /* Empêche un décalage entre pages avec et sans entrées */
+    width: 100%;
+}
+
+/* Table des entrées de l'index */
+.main-index .index-table {
+    width: 100%;
+    border-collapse: collapse; /* Supprime l’espace entre les cellules */
+    margin: 50px 0;
+}
+
+/* Espacement entre les mini-boutons et la bordure */
+.main-index .index-table td {
+    padding: 5px 5px; /* Haut/Bas: 8px | Gauche/Droite: 5px */
+}
+
+/* Style des catégories (noir et non souligné par défaut) */
+.main-index .index-table td.category-link a {
+    color: black !important; /* Texte noir */
+    text-decoration: none !important; /* Pas de soulignement */
+    font-weight: normal !important; /* Texte non gras */
+    transition: color 0.3s ease-in-out;
+}
+
+/* Effet au survol : révéler que c’est cliquable */
+.main-index .index-table td.category-link a:hover {
+    color: #0088a8 !important; /* Bleu Soundamental */
+    text-decoration: underline !important; /* Souligne au survol */
+}
+
+/* Colonnes : Largeurs fixes pour une bonne lisibilité */
+.main-index .index-table th:nth-child(1), .index-table td:nth-child(1) { width: 50%; } /* Nom */
+.main-index .index-table th:nth-child(2), .index-table td:nth-child(2) { width: 15%; } /* Catégorie */
+.main-index .index-table th:nth-child(n+3), .index-table td:nth-child(n+3) { width: 6%; text-align: center; } /* Liens et Forum */
+
+/* Bordure entre les lignes */
+.main-index .index-table tbody tr {
+    border-bottom: 1px solid #ddd; /* Trait de séparation */
+}
+
+/* Ajoute une bordure en haut uniquement à la première ligne */
+.main-index .index-table tbody tr:first-child {
+    border-top: 1px solid #ddd; /* Épaisseur et couleur ajustable */
+}
+
+/* Alternance de couleurs pour une meilleure lisibilité */
+.main-index .index-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Boutons des liens (mini format avec code 3 lettres) */
+.main-index .index-link-btn {
+    display: inline-block;
+    width: 40px; /* Mini bouton */
+    height: 25px;
+    line-height: 25px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-align: center;
+    background: #0088a8;
+    color: white;
+    text-decoration: none;
+    border-radius: 3px;
+    border: 1px solid white;
+    transition: background 0.3s ease-in-out;
+}
+
+/* Effet au survol */
+.main-index .index-link-btn:hover {
+    background: white;
+    color: #0088a8;
+    border: 1px solid #0088a8;
+}

@@ -1,0 +1,122 @@
+{% extends "base.html" %}
+{% load static %}
+{% block main_class %}main-index no-top-padding{% endblock %}
+{% with has_page_header=True %}  <!-- On informe base.html que cette page a une entête -->
+
+    {% block page_header %}
+        <!-- En-tête couvrant toute la largeur du bloc central -->
+        <div class="page-header-wrapper">
+            <div class="page-header">
+                <h1 class="header-page-title dynamic-page-title">
+                    {% if category %}
+                        INDEX - {{ category|title }}
+                    {% else %}
+                        INDEX GÉNÉRAL
+                    {% endif %}
+                </h1>
+
+                <div class="d-flex align-items-center mb-4">
+                    <!-- Grosse lettre -->
+                    <div class="big-letter">
+                        <span>{{ letter|default:"A" }}</span>
+                    </div>
+
+                    <!-- Grille des lettres principales -->
+                    <div class="flex-grow-1 ms-4">
+                        <div class="d-grid grid-4x10">
+                            {% for char in "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ@" %}
+                                <a href="{% if category %}
+                                            {% url 'app_index:category_index_letter' category=category|default:'artistes' letter=char %}
+                                        {% else %}
+                                            {% url 'app_index:index_letter' letter=char %}
+                                        {% endif %}"
+                                class="btn btn-outline-primary {% if letter == char %}active{% endif %}">
+                                    {{ char }}
+                                </a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    {% endblock %}
+
+{% endwith %}
+
+{% block content %}
+    <div class="index-content">
+        <!-- Grille des sous-lettres -->
+        {% if show_sub_buttons %}
+            <div class="grid-sub-letters">
+                <a href="{% if category %}
+                            {% url 'app_index:category_index_sub_letter' category=category|default:'artistes' letter=letter sub_letter=letter %}
+                        {% else %}
+                            {% url 'app_index:index_sub_letter' letter=letter sub_letter=letter %}
+                        {% endif %}"
+                class="btn btn-sub {% if sub_letter == letter %}active{% endif %}">
+                    {{ letter }}
+                </a>
+
+                {% for char in "ABCDEFGHIJKLMNOPQRSTUVWXYZ" %}
+                    <a href="{% if category %}
+                                {% url 'app_index:category_index_sub_letter' category=category|default:'artistes' letter=letter sub_letter=letter|add:char %}
+                            {% else %}
+                                {% url 'app_index:index_sub_letter' letter=letter sub_letter=letter|add:char %}
+                            {% endif %}"
+                    class="btn btn-sub {% if sub_letter == letter|add:char %}active{% endif %}">
+                        {{ letter }}{{ char|lower }}
+                    </a>
+                {% endfor %}
+            </div>
+        {% endif %}
+
+        <!-- Tableau des entrées -->
+        <div class="index-results">
+            {% include "includes/pagination.html" %}
+            {% if index_data %}
+                <table class="index-table">
+                    <tbody>
+                        {% for entry in index_data %}
+                        <tr>
+                            <td>{{ entry.entry.name }}</td>
+                            
+                            {% if not category %}
+                                <td class="category-link">
+                                    {% if entry.category_url %}
+                                        <td class="category-link">
+                                            <a href="{% url 'app_index:category_index' entry.category_url %}">
+                                                {{ entry.entry.category|title }}
+                                            </a>
+                                        </td>
+                                    {% endif %}
+                                </td>
+                            {% endif %}
+                            
+                            <!-- 🔹 Liens dynamiques -->
+                            {% for link_data in entry.links %}
+                            <td>
+                                {% if link_data.link %}
+                                    <span class="index-link-btn-letters">
+                                        <a href="{{ link_data.link }}" class="index-link-btn">{{ link_data.label }}</a>
+                                    </span>
+                                {% else %}
+                                    <span style="visibility: hidden;">-</span>
+                                {% endif %}
+                            </td>
+                            {% endfor %}
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            {% else %}
+                <p class="index-empty-message text-muted">Aucune entrée trouvée.</p>
+            {% endif %}
+
+            {% include "includes/pagination.html" %}
+
+        </div>
+    </div>
+
+{% endblock %}

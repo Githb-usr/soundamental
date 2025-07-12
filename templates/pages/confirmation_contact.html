@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="confirmation-page">
+        <h1>Message envoyé avec succès !</h1>
+        
+        {% if message_data %}
+            <div class="alert alert-success">
+                <h3>Récapitulatif de votre message :</h3>
+                <ul>
+                    <li><strong>Nom :</strong> {{ message_data.nom }}</li>
+                    <li><strong>Email :</strong> {{ message_data.email }}</li>
+                    <li><strong>Structure :</strong> {{ message_data.structure|default:"Non renseigné" }}</li>
+                    <li><strong>Sujet :</strong> {{ message_data.sujet }}</li>
+                    <li><strong>Message :</strong> <br> {{ message_data.message|safe }}</li>
+                </ul>
+            </div>
+        {% else %}
+            <p>Votre message a bien été envoyé. Nous vous répondrons dès que possible.</p>
+        {% endif %}
+
+        <div class="mt-4">
+            <a href="{% url 'app_main:contact' %}" class="btn btn-primary">Retour au formulaire</a>
+            <a href="/" class="btn btn-secondary ms-2">Retour à l'accueil</a>
+        </div>
+    </div>
+{% endblock %}

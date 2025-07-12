@@ -1,0 +1,13 @@
+{% load static %}
+
+{% if tags %}
+    <div class="tag-bloc">
+        <div class="d-flex flex-wrap gap-2">
+            {% for tag in tags %}
+                <a href="{% url 'app_main:tag_page' tag_slug=tag.slug %}"  class="tag-button">
+                    {{ tag.name }}
+                </a>
+            {% endfor %}
+        </div>
+    </div>
+{% endif %}

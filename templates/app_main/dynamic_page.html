@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% if "tag-" in page_name %}
+        <!-- PAGE DE TAG : AFFICHAGE DES LIENS DES PAGES AVEC CE TAG -->
+        {% include "app_main/tag_page.html" %}
+    
+    {% elif page_name == "telechargements" %}
+        <!-- PAGE DE TELECHARGEMENTS : AFFICHAGE DES FICHIERS TÉLÉCHARGEABLES AVEC TRI -->
+        {% include "app_main/telechargements.html" %}
+    {% endif %}
+
+    <!-- AFFICHAGE DES TAGS EN BAS DE PAGE -->
+    {% if tags %}
+        {% include "includes/tags.html" %}
+    {% endif %}
+{% endblock %}

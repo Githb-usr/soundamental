@@ -1,0 +1,98 @@
+/* ############################################################### */
+/* ## base.css - Styles globaux (couleurs, typographie, layout) ## */
+/* ############################################################### */
+
+/* Fond dégradé global */
+.bg-primary-gradient {
+    position: relative;
+    background: linear-gradient(to bottom right, #00a0c6, #0088a8);
+    min-height: 100vh;
+    width: 100%;
+    z-index: 0;  /* important */
+}
+
+/* Image du fond global */
+.layout-background.bg-primary-gradient::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: url('/static/images/background_img.png') no-repeat center center;
+    background-size: cover;
+    opacity: 1;
+    pointer-events: none;
+}
+
+/* Suppression des marges internes imposées par Bootstrap */
+.site-header .container-lg,
+.site-menu .container-lg,
+.site-footer .container-lg {
+    --bs-gutter-x: 0 !important;
+}
+
+/* TITRES */
+h1, h2, h3, h4, h5, h6 {
+    color: #222222;  /* Légèrement plus foncé que le texte principal */
+    font-weight: 700;  /* Renforce la présence des titres */
+}
+
+/* PARAGRAPHES */
+/* p {
+    margin-bottom: 16px;
+} */
+
+/* LIENS */
+/* ##### */
+
+a {
+    color: #0073e6;
+    text-decoration: none;  /* Supprime le soulignement par défaut */
+}
+
+a:hover {
+    text-decoration: underline;  /* Ajoute un soulignement du lien au survol */
+}
+
+
+/* BLOC CENTRAL (CONTENU) */
+/* ###################### */
+
+/* Bloc central avec gestion de la largeur et des marges du contenu */
+.content-container {
+    /* Pour que le fond soit visible uniquement autour */
+    position: relative;
+    z-index: 1;
+    background-color: #f7f7f7;  /* Fond légèrement gris */
+    color: #333333;  /* Texte gris foncé */
+    font-family: 'Roboto', 'Inter', 'Open Sans', 'Arial', sans-serif;
+    font-size: 1rem;  /* Taille de texte par défaut */
+    line-height: 1.6;  /* Espacement pour améliorer la lisibilité */
+    padding-left: 65px !important;
+    padding-right: 65px !important;
+    min-height: auto !important;
+}
+
+/* Ajustement du `main` pour qu'il occupe tout l'espace possible */
+.content-container main {
+    min-height: 100% !important;
+    flex-grow: 1 !important;
+    display: flex !important;
+    flex-direction: column;
+    justify-content: space-between !important;
+}
+
+/* 2 blocs .list-group-item à identifier (quelle action pour cette class bootstrap ?? --> menu ??) */
+/* Supprime l'espace entre les blocs et les marges */
+.list-group-item {
+    margin: 0;
+    padding: 15px 10px;
+    border-bottom: 1px solid #ddd; /* Séparation entre les blocs */
+}
+
+Supprime la bordure du dernier élément */
+.list-group-item:last-child {
+    border-bottom: none;
+}

@@ -1,0 +1,204 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1 class="mt-4">Pages de la catégorie « {{ tag.name }} »</h1>
+    <div class="tag-header-block">
+        <p class="text-muted">
+            {{ total_items }} page{{ total_items|pluralize }} utilisent le tag « {{ tag.name }} ».
+        </p>
+    </div> 
+
+        <div class="tag-filter-row mb-4">
+            <div class="d-flex align-items-center flex-wrap gap-2">
+                <span class="me-2">Filtrer par type de page :</span>
+        
+                {% for badge_type, badge_class in badge_classes.items %}
+                    {% if badge_type in types_present %}
+                        {% if badge_type == selected_type %}
+                            <a href="?" class="badge badge-active px-3 py-2 opacity-100 d-inline-flex align-items-center gap-2 text-white" title="Annuler le filtre">
+                                {{ badge_type }}
+                                <svg xmlns="http://www.w3.org/2000/svg" class="badge-dismiss-icon" viewBox="0 0 16 16" width="14" height="14" fill="white">
+                                    <path d="M2.5 2.5a1 1 0 0 1 1.4 0L8 6.6l4.1-4.1a1 1 0 0 1 1.4 1.4L9.4 8l4.1 4.1a1 1 0 0 1-1.4 1.4L8 9.4l-4.1 4.1a1 1 0 0 1-1.4-1.4L6.6 8 2.5 3.9a1 1 0 0 1 0-1.4z"/>
+                                </svg>
+                            </a>
+                        {% else %}
+                            <a href="?type={{ badge_type }}"
+                            class="badge {{ badge_class }} px-3 py-2 opacity-50"
+                            title="Filtrer par {{ badge_type }}">
+                                {{ badge_type }}
+                            </a>
+                        {% endif %}
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+  
+    
+    {% if column1 or column2 or column3 %}
+        <div class="tag-page-container">
+            <div class="tag-page-columns">
+                <!-- 🔹 Colonne 1 -->
+                <div class="tag-page-column">
+                    <ul class="list-unstyled">
+                        {% for item in column1 %}
+                            {% with obj=item.object type=item.type badge=item.badge_class %}
+                                <li>
+                                    <a href="{% if type == 'site' %}
+                                                {% url 'app_main:static_page_'|add:obj.slug %}
+                                            {% elif type == 'page' %}
+                                                {% url 'app_main:dynamic_page' page_name=obj.page_info.page_name %}
+                                            {% elif type == 'blog' %}
+                                                {% url 'app_blog:detail_article' slug=obj.slug %}
+                                            {% elif type == 'tag' %}
+                                                {% url 'app_main:tag_page' tag_slug=obj.slug %}
+                                            {% endif %}"
+                                        class="tag-page-item">
+
+                                        <span class="tag-page-title me-2">
+                                            {% if type == 'site' %}
+                                                {{ obj.title }}
+                                            {% elif type == 'page' %}
+                                                {{ obj.page_info.display_name }}
+                                            {% elif type == 'blog' %}
+                                                {{ obj.titre }}
+                                            {% elif type == 'tag' %}
+                                                {{ obj.name }}
+                                            {% endif %}
+                                        </span>                                    
+
+                                        <span class="badge {{ badge }} ms-auto">
+                                            {{ type }}
+                                        </span>
+                                    </a>
+                                </li>
+                            {% endwith %}
+                        {% endfor %}
+                    </ul>
+                </div>
+
+                <!-- 🔹 Colonne 2 -->
+                <div class="tag-page-column">
+                    <ul class="list-unstyled">
+                        {% for item in column2 %}
+                            {% with obj=item.object type=item.type badge=item.badge_class %}
+                                <li>
+                                    <a href="{% if type == 'site' %}
+                                                {% url 'app_main:static_page_'|add:obj.slug %}
+                                            {% elif type == 'page' %}
+                                                {% url 'app_main:dynamic_page' page_name=obj.page_info.page_name %}
+                                            {% elif type == 'blog' %}
+                                                {% url 'app_blog:detail_article' slug=obj.slug %}
+                                            {% elif type == 'tag' %}
+                                                {% url 'app_main:tag_page' tag_slug=obj.slug %}
+                                            {% endif %}"
+                                        class="tag-page-item">
+
+                                        <span class="tag-page-title me-2">
+                                            {% if type == 'site' %}
+                                                {{ obj.title }}
+                                            {% elif type == 'page' %}
+                                                {{ obj.page_info.display_name }}
+                                            {% elif type == 'blog' %}
+                                                {{ obj.titre }}
+                                            {% elif type == 'tag' %}
+                                                {{ obj.name }}
+                                            {% endif %}
+                                        </span>
+
+                                        <span class="badge {{ badge }} ms-auto">
+                                            {{ type }}
+                                        </span>
+                                    </a>
+                                </li>
+                            {% endwith %}
+                        {% endfor %}
+
+                    </ul>
+                </div>
+
+                <!-- 🔹 Colonne 3 -->
+                <div class="tag-page-column">
+                    <ul class="list-unstyled">
+                        {% for item in column3 %}
+                            {% with obj=item.object type=item.type badge=item.badge_class %}
+                                <li>
+                                    <a href="{% if type == 'site' %}
+                                                {% url 'app_main:static_page_'|add:obj.slug %}
+                                            {% elif type == 'page' %}
+                                                {% url 'app_main:dynamic_page' page_name=obj.page_info.page_name %}
+                                            {% elif type == 'blog' %}
+                                                {% url 'app_blog:detail_article' slug=obj.slug %}
+                                            {% elif type == 'tag' %}
+                                                {% url 'app_main:tag_page' tag_slug=obj.slug %}
+                                            {% endif %}"
+                                        class="tag-page-item">
+
+                                        <span class="tag-page-title me-2">
+                                            {% if type == 'site' %}
+                                                {{ obj.title }}
+                                            {% elif type == 'page' %}
+                                                {{ obj.page_info.display_name }}
+                                            {% elif type == 'blog' %}
+                                                {{ obj.titre }}
+                                            {% elif type == 'tag' %}
+                                                {{ obj.name }}
+                                            {% endif %}
+                                        </span>
+                        
+                                        <span class="badge {{ badge }} ms-auto">
+                                            {{ type }}
+                                        </span>
+                                    </a>
+                                </li>
+                            {% endwith %}
+                        {% endfor %}
+                    
+                    </ul>
+                </div>
+            </div>
+        </div>
+    {% else %}
+        <p class="text-center text-muted">🚫 Aucune page n'est associée à ce tag.</p>
+    {% endif %}
+
+    <!-- PAGINATION -->
+    {% if page_obj.has_other_pages %}
+        <nav class="mt-4">
+            <ul class="pagination justify-content-center">
+                {% if page_obj.has_previous %}
+                    <li class="page-item">
+                        <a class="page-link" href="?page=1">⏪ Début</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="?page={{ page_obj.previous_page_number }}">⬅ Précédent</a>
+                    </li>
+                {% endif %}
+
+                <li class="page-item active">
+                    <span class="page-link">Page {{ page_obj.number }} / {{ page_obj.paginator.num_pages }}</span>
+                </li>
+
+                {% if page_obj.has_next %}
+                    <li class="page-item">
+                        <a class="page-link" href="?page={{ page_obj.next_page_number }}">Suivant ➡</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="?page={{ page_obj.paginator.num_pages }}">Fin ⏩</a>
+                    </li>
+                {% endif %}
+            </ul>
+        </nav>
+    {% endif %}
+
+    {% if related_tags %}
+        <div class="tag-bloc">
+            {% for related in related_tags %}
+                <a href="{% url 'app_main:tag_page' tag_slug=related.slug %}"
+                class="tag-button me-2">
+                    {{ related.name }}
+                </a>
+            {% endfor %}
+        </div>
+    {% endif %}
+
+{% endblock %}

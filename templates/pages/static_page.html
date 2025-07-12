@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block head %}
+    <title>{{ page.title }}</title>
+    <meta name="description" content="{{ page.content|striptags|truncatechars:150 }}">
+    <meta property="og:title" content="{{ page.title }}">
+    <meta property="og:description" content="{{ page.content|striptags|truncatechars:150 }}">
+
+    <!-- Web sémantique avec JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "{{ page.title }}",
+        "description": "{{ page.content|striptags|truncatechars:150 }}",
+        "author": {
+            "@type": "Person",
+            "name": "{{ page.created_by }}"
+        },
+        "datePublished": "{{ page.created_at|date:'Y-m-d' }}",
+        "dateModified": "{{ page.updated_at|date:'Y-m-d' }}",
+        {% if page.image %}
+        "image": "{{ page.image.url }}",
+        {% endif %}
+        "url": "{{ request.build_absolute_uri }}"
+    }
+    </script>
+{% endblock %}
+
+{% block content %}
+    {% if status_code %}
+        {% with "includes/errors/error_"|add:status_code|stringformat:"s"|add:".html" as error_template %}
+            {% include error_template %}
+        {% endwith %}
+    {% else %}
+        {% if messages %}
+            <div id="error-container" class="alert alert-warning">
+                {% for message in messages %}
+                    <p id="error-message">{{ message|safe }}</p>
+                {% endfor %}
+            </div>
+        {% endif %}
+
+        {% if page.image %}
+            <img src="{{ page.image.url }}" alt="{{ page.title }}" class="page-image">
+        {% endif %}
+
+        {% include "includes/page_title.html" %}
+        <div>{{ page.content|safe }}</div>
+
+        {% if page.slug == "aide" %}
+            <section id="aide-contents" class="mb-4">
+                {% include "includes/aide_contents.html" %}
+            </section>
+        {% endif %}
+
+        {% if user.is_authenticated and page.slug != "aide" %}
+            <div class="text-end mt-4">
+                <a href="{% url 'app_main:edit_page' slug=page.slug %}" class="text-muted text-decoration-none">✏️ Modifier cette page</a>
+            </div>
+        {% endif %}
+
+        {% if tags %}
+            {% include "includes/tags.html" %}
+        {% endif %}
+    {% endif %}
+{% endblock %}

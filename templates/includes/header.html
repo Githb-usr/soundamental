@@ -1,0 +1,13 @@
+{% load static %}
+
+<div class="container-lg d-flex justify-content-between align-items-center" style="max-width: 1200px; margin: 0 auto;">
+    <!-- Logo -->
+    <div class="fs-4 fw-bold">
+        <a href="{% url 'app_main:home' %}" class="d-flex align-items-center text-white text-decoration-none">
+            <img src="{% static 'images/logo.png' %}" alt="Soundamental" style="height: 40px;">
+        </a>
+    </div>
+
+    <!-- Inclusion du menu principal -->
+    {% include "includes/menu.html" %}
+</div>

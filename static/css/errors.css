@@ -1,0 +1,179 @@
+/* ============================================
+   STYLES ERREUR 404 — isolés avec .error-404
+   ============================================ */
+
+/* Conteneur principal spécifique à l'erreur 404 */
+.error-404 .container {
+    margin-bottom: 65px;
+}
+
+/* Boîtier du lecteur MP3 */
+.error-404 .mp3-player {
+    width: 250px;
+    height: 450px;
+    background: #f0f0f0;
+    color: #000;
+    border-radius: 20px;
+    margin: 40px auto;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Écran du lecteur */
+.error-404 .screen {
+    width: 99%;
+    height: 200px;
+    background: #ddd;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: monospace;
+    border-radius: 10px;
+    text-transform: uppercase;
+}
+
+/* Effet de clignotement du texte */
+.error-404 .error-message {
+    animation: blink 1s infinite alternate;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    100% { opacity: 0.3; }
+}
+
+/* Section des boutons */
+.error-404 .buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.error-404 .btn-row {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+/* Numéro de l'erreur affiché en grand */
+.error-404 p.number-404 {
+    font-size: 75px;
+    font-weight: bold;
+}
+
+/* Texte secondaire dans l'écran */
+.error-404 .screen .txt-404 {
+    font-size: 20px;
+}
+
+/* Style des boutons */
+.error-404 .btn-play,
+.error-404 .btn-circle,
+.error-404 .btn-record,
+.error-404 .btn-pause .bar {
+    background: #888;
+}
+
+/* Cercle supérieur */
+.error-404 .btn-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.2);
+    margin-bottom: 35px;
+}
+
+/* Base commune pour tous les boutons carrés */
+.error-404 .btn-play,
+.error-404 .btn-pause,
+.error-404 .btn-record {
+    width: 20px;
+    height: 20px;
+}
+
+/* Bouton "play" en forme de triangle */
+.error-404 .btn-play {
+    clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
+}
+
+/* Bouton "pause" avec deux barres */
+.error-404 .btn-pause {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f0f0f0;
+    padding: 0 2px;
+    border: none;
+}
+
+.error-404 .btn-pause .bar {
+    width: 6px;
+    height: 100%;
+}
+
+/* Bouton "record" rouge et rond */
+.error-404 .btn-record {
+    border-radius: 50%;
+}
+
+/* Texte explicatif sous le lecteur */
+.error-404 .error-text {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+/* ============================================
+   STYLES ERREUR 500 — écran rétro terminal
+   ============================================ */
+
+.bg-primary-gradient::after {
+    display: none !important;
+}
+
+.error-500 .retro-screen {
+    background: #000;
+    color: #33ff33;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 30px;
+    border: 3px solid #0f0;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
+    width: 90%;
+    max-width: 500px;
+    margin: 0 auto 40px auto;
+    text-align: left;
+    font-size: 16px;
+    line-height: 1.5;
+    position: relative;
+    overflow: hidden;
+}
+
+.error-500 .retro-screen pre {
+    margin: 0;
+    white-space: pre-wrap;
+}
+
+/* effet de balayage rétro */
+.error-500 .retro-screen::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0,255,0,0.1), transparent);
+    animation: scanline 4s linear infinite;
+}
+
+@keyframes scanline {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}

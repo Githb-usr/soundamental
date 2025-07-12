@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<h1 class="mb-4">Images insérées via TinyMCE</h1>
+
+{% if images %}
+  <div class="row row-cols-2 row-cols-md-4 g-4">
+    {% for img in images %}
+      <div class="col">
+        <div class="card h-100 shadow-sm">
+          <img src="{{ img.url }}" class="card-img-top" alt="{{ img.filename }}">
+          <div class="card-body p-2">
+            <p class="card-text small mb-1"><strong>{{ img.filename }}</strong></p>
+            <p class="card-text text-muted mb-2">
+              {{ img.size_kb }} Ko<br>
+              {{ img.modified|date:"d/m/Y H:i" }}
+            </p>
+          
+            {% if request.user.is_staff %}
+              <div class="d-flex gap-2">
+                <a href="{% url 'app_blog:delete_blog_image' filename=img.filename %}" class="btn btn-sm btn-outline-danger">
+                  🗑 Supprimer
+                </a>
+                {# Placeholders pour futurs boutons #}
+                {# <a href="#" class="btn btn-sm btn-outline-secondary">✏️ Renommer</a> #}
+              </div>
+            {% endif %}
+          </div>          
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+{% else %}
+  <p>Aucune image trouvée dans <code>media/blog/contenu/</code>.</p>
+{% endif %}
+
+{% endblock %}

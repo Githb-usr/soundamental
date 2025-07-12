@@ -1,0 +1,62 @@
+{% load static %}
+
+<div class="container text-center footer">
+    <div class="row">
+        <!-- Colonne 1 -->
+        <div class="col-md-3">
+            <h5 class="text-uppercase fw-bold">Navigation</h5>
+            <ul class="list-unstyled">
+                <li><a href="{% url 'app_main:static_page_accueil' %}" class="text-white text-decoration-none">Accueil</a></li>
+                <li><a href="{% url 'app_blog:liste_articles' %}" class="text-white text-decoration-none">News</a></li>
+                <li><a class="dropdown-item" href="{% url 'app_main:dynamic_page' page_name='index' %}">Index général</a></li>
+                <li><a class="dropdown-item" href="{% url 'app_index:category_index' category='artistes' %}">Index artistes</a></li>
+                <li><a class="dropdown-item" href="{% url 'app_index:category_index' category='compilations' %}">Index compilations</a></li>
+                <li><a class="dropdown-item last-item" href="{% url 'app_index:category_index' category='labels' %}">Index labels</a></li>
+                <li><a class="dropdown-item" href="https://www.soundamental.org/forum/">Forum - Accueil</a></li>
+                <li><a class="dropdown-item" href="https://www.soundamental.org/forum/forum/107-le-hit-des-clubs-classements/">Forum - Hit Des Clubs</a></li>
+                <li><a class="dropdown-item" href="https://www.soundamental.org/forum/forum/149-espace-clubbers/">Forum - Espace Clubbers</a></li>
+            </ul>
+        </div>
+
+        <!-- Colonne 2 -->
+        <div class="col-md-3">
+            <h5 class="text-uppercase fw-bold">Soundamental</h5>
+            <ul class="list-unstyled">
+                <li><a href="{% url 'app_main:static_page_a-propos-de-soundamental' %}" class="text-white text-decoration-none">À propos de Soundamental</a></li>
+                <li><a href="{% url 'app_main:static_page_charte-du-forum' %}" class="text-white text-decoration-none">Charte du forum</a></li>
+                <li><a href="{% url 'app_main:static_page_avertissements' %}" class="text-white text-decoration-none">Avertissements</a></li>
+                <li><a href="{% url 'app_main:static_page_politique-de-confidentialite' %}" class="text-white text-decoration-none">Politique de confidentialité</a></li>
+            </ul>
+        </div>
+
+        <!-- Colonne 3 -->
+        <div class="col-md-3">
+            <h5 class="text-uppercase fw-bold">Ressources</h5>
+            <ul class="list-unstyled">
+                <a href="{% url 'app_main:dynamic_page' page_name='telechargements' %}" class="nav-link text-white">Téléchargements</a>
+                <a href="{% url 'app_main:static_page_liens' %}" class="nav-link text-white">Liens</a>
+                <a href="{% url 'app_blog:flux_rss' %}" class="text-muted text-decoration-none me-2" title="Flux RSS du blog">
+                    <i class="bi bi-rss-fill"></i> RSS
+                </a>                
+            </ul>
+        </div>
+
+        <!-- Colonne 4 -->
+        <div class="col-md-3">
+            <h5 class="text-uppercase fw-bold">Support</h5>
+            <ul class="list-unstyled">
+                <li><a href="{% url 'app_main:aide_root' slug='aide' %}">Aide / FAQ</a></li>
+                <li><a href="{% url 'app_main:contact' %}" class="text-white text-decoration-none">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Placeholder pour les icônes de réseaux sociaux -->
+    {% comment %} <div class="d-flex justify-content-center gap-3 mt-3">
+        <span class="border p-2 rounded-circle d-inline-block" style="width: 40px; height: 40px;"></span>
+        <span class="border p-2 rounded-circle d-inline-block" style="width: 40px; height: 40px;"></span>
+        <span class="border p-2 rounded-circle d-inline-block" style="width: 40px; height: 40px;"></span>
+    </div> {% endcomment %}
+
+    <p class="mt-3 text-muted">© 2025 Soundamental - Tous droits réservés.</p>
+</div>

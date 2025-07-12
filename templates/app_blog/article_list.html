@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% load blog_tags %}
+
+{% block content %}
+<h1 class="mb-4">News et sorties</h1>
+{% if categorie_active %}
+  <div class="blog-subheading">
+    <p>Catégorie sélectionnée : <strong>{{ categorie_active.nom }}</strong></p>
+  </div>
+{% endif %}
+
+<div class="row">
+    {% include "includes/pagination.html" %}
+    <!-- Colonne principale (articles) -->
+    <div class="col-md-10">
+        {% for article in articles %}
+            <article class="blog-article-preview d-flex gap-3 mb-4">
+
+              {% if article.get_image_url %}
+                <div class="blog-thumbnail-wrapper">
+                  <a href="{% url 'app_blog:detail_article' slug=article.slug %}">
+                    <img src="{{ article.get_image_url }}" alt="{{ article.titre }}" class="blog-article-thumbnail" />
+                  </a>
+                </div>
+              {% endif %}
+            
+              <div class="blog-article-body">
+                <h2 class="blog-article-title">
+                  <a href="{% url 'app_blog:detail_article' slug=article.slug %}" title="{{ article.titre }}">
+                    {{ article.titre }}
+                  </a>
+                </h2>
+            
+                <p class="text-muted">
+                  Publié le {{ article.date_publication|date:"d F Y" }} par {{ article.auteur }}
+                </p>
+            
+                <div class="article-categories">
+                  {% if not categorie_active or article.categorie_principale != categorie_active %}
+                    <span class="badge badge-primary">
+                      <a href="{% url 'app_blog:archives_annee' annee_actuelle %}?categorie={{ article.categorie_principale.slug }}">
+                        {{ article.categorie_principale.nom }}
+                      </a>
+                    </span>
+                  {% else %}
+                    <span class="badge bg-light text-dark">
+                      {{ article.categorie_principale.nom }}
+                    </span>
+                  {% endif %}
+            
+                  {% for cat in article.categories_secondaires.all %}
+                    {% if not categorie_active or cat != categorie_active %}
+                      <span class="badge badge-secondary">
+                        <a href="{% url 'app_blog:archives_annee' annee_actuelle %}?categorie={{ cat.slug }}">
+                          {{ cat.nom }}
+                        </a>
+                      </span>
+                    {% else %}
+                      <span class="badge bg-light text-dark">
+                        {{ cat.nom }}
+                      </span>
+                    {% endif %}
+                  {% endfor %}
+                </div>
+            
+                <p class="blog-article-excerpt mt-2">
+                  {{ article.resume|default:article.get_resume|safe }}
+                </p>
+              </div>
+            </article>
+      
+        {% empty %}
+            <p>Aucun article publié pour le moment.</p>
+        {% endfor %}
+    </div>
+
+    <!-- Colonne latérale (archives) -->
+    <div class="col-md-2 ms-auto">
+        {% include "includes/blog_categories_sidebar.html" %}
+        {% include "includes/blog_archives_sidebar.html" %}
+    </div>
+    {% include "includes/pagination.html" %}
+</div>
+{% endblock %}

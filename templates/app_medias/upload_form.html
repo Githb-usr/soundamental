@@ -1,0 +1,156 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Upload d’image – {{ section|capfirst }}</title>
+  <link rel="stylesheet" href="{% static 'css/images.css' %}">
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      font-size: 0.95rem;
+      color: #222;
+      padding: 2rem;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+      max-width: 400px;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    select, input[type="file"], button {
+      padding: 0.4rem;
+      font-size: 1rem;
+    }
+
+    .note {
+      font-size: 0.9rem;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Uploader une image dans « {{ section }} »</h1>
+
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    <div>
+      <label for="id_subfolder">Sous-dossier cible</label><br>
+      <select name="subfolder" id="id_subfolder" required>
+        {% for name in sous_dossiers %}
+          <option value="{{ name }}">{{ name }}</option>
+        {% empty %}
+          <option disabled>(Aucun sous-dossier trouvé)</option>
+        {% endfor %}
+      </select>
+      <div class="note">Les fichiers seront enregistrés dans media/{{ section }}/[sous-dossier]</div>
+    </div>
+
+    <div>
+      <label for="id_image">Image à uploader</label><br>
+      <input type="file" name="image" id="id_image" accept="image/*" required>
+    </div>
+
+    <button type="submit">Envoyer</button>
+  </form>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const form = document.querySelector("form");
+  
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();  // ⛔ Empêche l'envoi classique
+  
+        const csrfToken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+        const subfolder = document.querySelector('#id_subfolder').value;
+        const imageInput = document.querySelector('#id_image');
+        const file = imageInput.files[0];
+  
+        if (!file) {
+          alert("Veuillez sélectionner une image.");
+          return;
+        }
+  
+        const formData = new FormData();
+        formData.append("subfolder", subfolder);
+        formData.append("image", file);
+  
+        fetch(window.location.href, {
+          method: "POST",
+          headers: {
+            "X-CSRFToken": csrfToken
+          },
+          body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+          if (window.opener && window.opener.tinymce) {
+            const editor = window.opener.tinymce.activeEditor;
+            if (editor) {
+                editor.windowManager.open({
+                    title: 'Insérer une image',
+                    body: {
+                      type: 'panel',
+                      items: [
+                        {
+                          type: 'input',
+                          name: 'alt',
+                          label: 'Texte alternatif'
+                        },
+                        {
+                          type: 'input',
+                          name: 'width',
+                          label: 'Largeur'
+                        },
+                        {
+                          type: 'input',
+                          name: 'height',
+                          label: 'Hauteur'
+                        }
+                      ]
+                    },
+                    buttons: [
+                      {
+                        type: 'submit',
+                        text: 'Insérer'
+                      },
+                      {
+                        type: 'cancel',
+                        text: 'Annuler'
+                      }
+                    ],
+                    onSubmit: function (api) {
+                      const dataForm = api.getData();
+                      const html = `<img src="${data.location}" alt="${dataForm.alt}" width="${dataForm.width}" height="${dataForm.height}">`;
+                      editor.insertContent(html);
+                      api.close();
+                      window.close();
+                    }
+                  });
+                  
+              window.close();
+            } else {
+              alert("Impossible d’accéder à l’éditeur TinyMCE.");
+            }
+          } else {
+            alert("TinyMCE n’est pas accessible depuis cette fenêtre.");
+          }
+        })
+        .catch(error => {
+          alert("Échec de l’upload.");
+          console.error(error);
+        });
+      });
+    });
+  </script>
+  
+</body>
+</html>

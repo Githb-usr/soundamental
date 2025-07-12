@@ -1,0 +1,532 @@
+/* ########################################################## */
+/* ## pages.css - Styles des pages statiques et dynamiques ## */
+/* ########################################################## */
+
+
+/* PAGES STATIQUES */
+/* ############### */
+
+/* Titre des pages statiques */
+.page-title {
+    color: #0088a8;
+    font-weight: 700;
+    font-size: 3rem;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+    text-align: left;
+}
+
+/* PAGES DYNAMIQUES */
+/* ################ */
+
+/* Titre des pages dynamiques */
+.dynamic-page-title {
+    color: #0088a8; /* Même bleu que la grosse lettre */
+    font-weight: 700; /* Épaisseur modérée (ajuste à 700 si tu veux plus épais) */
+    font-size: 3rem; /* Ajustable selon tes préférences */
+    text-transform: uppercase; /* Met tout en majuscules */
+    margin-bottom: 25px; /* Augmente l’espace avec la grosse lettre */
+    text-align: left; /* Centré */
+}
+
+/* En-tête interne */
+/* ############### */
+
+/* Supprime le padding-top pour toutes les pages ayant une en-tête interne */
+.no-top-padding {
+    padding-top: 0 !important;
+}
+
+/* L'en-tête interne doit couvrir toute la largeur du bloc central, y compris ses marges */
+.page-header-wrapper {
+    background-color: #F4EDE8;
+    width: calc(100% + 130px); /* Étend l'entête sur les marges du bloc central */
+    margin-left: -65px; /* Annule la marge gauche */
+    margin-right: -65px; /* Annule la marge droite */
+    margin-bottom: 0 !important; /* 🔥 Supprime toute marge inutile */
+    padding: 30px 0 10px 0; /* Espace interne pour le contenu */
+}
+
+/* Le contenu de l'en-tête interne reste aligné avec le bloc central */
+.page-header {
+    max-width: 100%; /* Prend toute la largeur disponible */
+    padding: 0 65px; /* Applique le même padding que le reste du site */
+    margin-bottom: 0 !important;
+}
+
+/* Pages de tags */
+/* ############# */
+
+.tag-page-container {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    flex-grow: 0 !important;
+    width: 100%;
+    height: auto !important;
+}
+
+.tag-header-block {
+    min-height: 3rem; /* Ajustable selon besoin visuel */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+@media (min-width: 768px) {
+    .tag-header-block {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .tag-header-block p {
+        margin-bottom: 0;
+    }
+}
+
+.tag-page-columns {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+    margin-top: 1rem;
+    min-height: 500px;  /* fixe un espace pour stabiliser le haut de la page */
+}
+
+.tag-page-column {
+    flex: 1 1 0;
+    min-width: 0;
+}
+
+.tag-page-column ul li {
+    padding: 0.4rem 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.tag-page-column ul li:last-child {
+    border-bottom: none;
+}
+
+.tag-page-item {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #212529;
+    padding: 0 0.5rem;
+    transition: background-color 0.2s ease;
+}
+
+.tag-page-item:hover {
+    background-color: #f8f9fa;
+    border-radius: 4px;
+}
+
+.tag-page-title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 80%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* Badges */
+.badge-type-site {
+    background-color: #6c757d;
+    color: white;
+}
+
+.badge-type-page {
+    background-color: #343a40;
+    color: white;
+}
+
+.badge-type-blog {
+    background-color: #0d6efd;
+    color: white;
+}
+
+.badge-type-pressage {
+    background-color: #198754;
+    color: white;
+}
+
+.tag-page-item .badge {
+    text-decoration: none !important;
+    min-width: 50px;
+    text-align: center;
+    display: inline-block;
+}
+
+.tag-page-item:hover {
+    text-decoration: none !important;
+}
+
+/* Badges de filtre dans la ligne du haut */
+.tag-filter-row a.badge {
+    transition: all 0.2s ease;
+    cursor: pointer;
+    text-decoration: none !important;
+}
+
+.tag-filter-row a.badge:hover {
+    opacity: 1 !important;
+    filter: brightness(1.1);
+}
+
+/* Badge actif (filtre sélectionné) */
+.badge-active {
+    opacity: 1 !important;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: red !important;
+    color: #000 !important;                /* Texte bien lisible */
+    font-weight: 800;
+}
+
+.badge-active:hover {
+    opacity: 0.9;
+    filter: brightness(1);
+}
+
+.tag-filter-row {
+    margin-top: 2.5rem;
+}
+
+.tag-filter-row .badge {
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 0.4rem 0.9rem;
+    border-radius: 999px;
+    text-transform: capitalize;
+    transition: all 0.2s ease;
+    opacity: 0.5;
+    border: none;
+}
+
+.tag-filter-row .badge:hover {
+    opacity: 1;
+    filter: brightness(1.1);
+    text-decoration: none !important;
+}
+
+/* Badge actif = sélectionné */
+.tag-filter-row .badge-active {
+    opacity: 1 !important;
+    background-color: #ffc107 !important;
+    color: #212529 !important;
+    font-weight: 700;
+}
+
+/* Icône croix dans le badge actif */
+.tag-filter-row .badge-active .badge-dismiss-icon {
+    width: 18px;
+    height: 18px;
+    margin-left: 6px;
+    vertical-align: middle;
+    fill: currentColor;
+}
+
+/* Icône de croix dans les filtres */
+.badge-dismiss-icon {
+    width: 18px;
+    height: 18px;
+    margin-left: 6px;
+    vertical-align: middle;
+    fill: currentColor; /* S'adapte à la couleur du texte du badge */
+}
+
+/* BLOG - Liste des articles (accueil et archives) */
+/* ############################################### */
+
+.blog-article-preview {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+}
+  
+/* Titre */
+.blog-article-preview h2 {
+font-size: 1.5rem;
+font-weight: 600;
+margin-bottom: 0.3rem;
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+}
+
+.blog-article-preview h2 a {
+text-decoration: none;
+color: #005f73;
+transition: color 0.3s ease;
+}
+
+.blog-article-preview h2 a:hover {
+color: #0088a8;
+text-decoration: underline;
+}
+
+/* Métadonnées */
+.blog-article-preview p.text-muted {
+font-size: 0.9rem;
+margin-bottom: 0.8rem;
+}
+
+/* Contenu prévisualisé */
+.blog-article-preview .blog-content-preview {
+font-size: 0.95rem;
+color: #333;
+line-height: 1.5;
+}
+
+/* Image miniature */
+.blog-thumbnail-wrapper {
+flex-shrink: 0;
+}
+
+.blog-thumbnail {
+width: 200px;
+max-width: 100%;
+height: auto;
+border-radius: 8px;
+display: block;
+}
+
+.blog-article-body {
+flex-grow: 1;
+}
+
+.blog-article-excerpt {
+margin-bottom: 0.5rem;
+color: #333;
+}
+
+/* Vignettes illustrant les articles dans les listes d'articles du blog */
+.blog-article-thumbnail {
+    max-width: 100%;
+    width: 200px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    display: block;
+}
+  
+
+/* ARCHIVES - Barre de mois (type onglet) */
+.mois-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-bottom: 1.5rem;
+    align-items: center;
+}
+
+.mois-tab {
+    display: inline-block;
+    padding: 4px 10px;
+    min-width: 80px;
+    text-align: center;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    transition: all 0.2s ease-in-out;
+    background-color: #c6e6ee;
+    color: #0088a8;
+    line-height: 1.2rem;
+}
+
+.mois-tab:hover {
+    background-color: #d4edf3;
+    color: #005f73;
+}
+
+.mois-tab.mois-actif {
+    background-color: #007596;
+    color: #fff;
+    border-color: #007596;
+    pointer-events: none;
+}
+
+.mois-tab.mois-inactif {
+    background-color: #f8f9fa;
+    color: #b5b5b5;
+    border-color: #eeeeee;
+    pointer-events: none;
+    opacity: 1;
+}
+
+.mois-tab.mois-tous {
+    min-width: 100px; /* plus large pour "Tous les articles" */
+}
+
+/* SIDEBAR DES ARCHIVES DU BLOG */
+/* ############################ */
+
+.archives-sidebar.narrow-sidebar .accordion-item {
+    border: none;
+    background-color: transparent;
+}
+
+/* En-tête (année) — bouton accordéon avec teinte claire */
+.archives-sidebar.narrow-sidebar .accordion-button {
+    background-color: #e7e7e7; /* Teinte claire, légèrement plus marquée */
+    color: #212529;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 0.6rem 0.75rem;
+    border: none;
+    border-bottom: 1px solid #ccc; /* Trait de séparation visible */
+    border-radius: 0;
+    box-shadow: none;
+}
+
+/* Icône de l'accordéon (flèche) */
+.archives-sidebar.narrow-sidebar .accordion-button::after {
+    transform: scale(0.6);
+    filter: brightness(0.6);
+}
+
+/* Supprime le padding Bootstrap sur le body de l'accordéon */
+.archives-sidebar.narrow-sidebar .accordion-body {
+    padding: 0 !important;
+}
+
+/* Supprime le margin-bottom sur le ul l'accordéon */
+.archives-sidebar.narrow-sidebar .accordion-body ul {
+    margin-bottom: 0 !important;
+}
+
+/* Liste des mois (et "Tous les articles") */
+.archives-sidebar.narrow-sidebar .accordion-body ul li a {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    margin-bottom: 2px;
+    background-color: #f8f9fa;
+    color: #0088a8;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: background-color 0.2s ease;
+}
+
+/* Effet au survol */
+.archives-sidebar.narrow-sidebar .accordion-body ul li a:hover {
+    background-color: #e1eff2;
+    color: #005f6b;
+}
+
+/* PAGE DES TELECHARGEMENTS */
+/* ######################## */
+.description-html {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.object-fit-contain {
+    object-fit: contain;
+}
+
+/* PAGINATION */
+/* ########## */
+
+/* Conteneur de la pagination */
+.pagination-container .pagination {
+    --bs-pagination-active-bg: transparent;
+    --bs-pagination-active-color: #0088a8;
+    margin: 50px 0;
+    padding: 5px 10px;
+}
+
+/* Liens */
+
+/* Boutons inactifs */
+.pagination-container .pagination .page-link {
+    color: #0088a8;
+    border: 1px solid #0088a8;
+    background-color: transparent;
+    border-radius: 0;
+    padding: 8px 12px;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Bouton actif */
+.pagination-container .pagination .page-item.active .page-link {
+    color: #f7f7f7;
+    background-color: #0088a8;
+    border: 1px solid #0088a8;
+    font-weight: bold;
+}
+
+/* Effet au survol */
+.pagination-container .pagination .page-link:hover {
+    background: #2aa8c1;
+    color: #f7f7f7;
+}
+
+/* Page de liens */
+
+.liens-section {
+    margin: 40px 0 60px 0;
+    width: 100%;
+    border-radius: 12px;
+    padding: 30px 0;
+}
+.liens-section__banner {
+    display: block;
+    margin-bottom : 20px;
+    max-width: 95%;
+}
+.liens-section__intro {
+    margin-bottom: 30px;
+}
+.liens-partenaire, .liens-bdd__site {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    /* margin-bottom: 10px; */
+}
+.liens-partenaire__logo, .liens-bdd__logo {
+    flex-shrink: 0;
+}
+.liens-partenaire__infos, .liens-bdd__infos {
+    flex: 1;
+}
+.liens-partenaire__titre, .liens-bdd__titre {
+    font-size: 1.18rem;
+    text-decoration: none;
+    color: #145a85;
+}
+.liens-partenaire__description, .liens-bdd__description {
+    margin: 8px 0 8px 0;
+}
+.liens-partenaire__lang, .liens-bdd__lang {
+    margin-top: 6px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 0.95em;
+    color: #888;
+}
+.liens-bdd__separator hr {
+    margin: 30px 0 30px 0;
+    border: none;
+    border-top: 1px solid #ddd;
+    width: 90%;
+}
+@media (max-width: 700px) {
+    .liens-partenaire, .liens-bdd__site {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+    .liens-section__banner {
+        width: 100%;
+        height: auto;
+    }
+}

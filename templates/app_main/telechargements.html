@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+    <div class="container g-0">
+        {% include "includes/page_title.html" with page_title="Fichiers téléchargeables" %}
+
+        <!-- Barre de tri -->
+        <form method="get" class="mb-4 d-flex align-items-center">
+            <label for="sort" class="me-2 fw-bold">Trier par :</label>
+            <select name="sort" id="sort" class="form-select w-auto" onchange="this.form.submit()">
+                <option value="uploaded_at" {% if current_sort == "uploaded_at" %}selected{% endif %}>Date d'ajout (plus récent)</option>
+                <option value="-uploaded_at" {% if current_sort == "-uploaded_at" %}selected{% endif %}>Date d'ajout (plus ancien)</option>
+                <option value="title" {% if current_sort == "title" %}selected{% endif %}>Nom (A-Z)</option>
+                <option value="-title" {% if current_sort == "-title" %}selected{% endif %}>Nom (Z-A)</option>
+                <option value="download_count" {% if current_sort == "download_count" %}selected{% endif %}>Téléchargements (croissant)</option>
+                <option value="-download_count" {% if current_sort == "-download_count" %}selected{% endif %}>Téléchargements (décroissant)</option>
+                <option value="file_size" {% if current_sort == "file_size" %}selected{% endif %}>Taille (petit → grand)</option>
+                <option value="-file_size" {% if current_sort == "-file_size" %}selected{% endif %}>Taille (grand → petit)</option>
+            </select>
+        </form>
+
+        {% if files %}
+            <div class="list-group list-unstyled">
+                {% for file in files %}
+                    <div class="list-group-item border-bottom p-3">
+                        <div class="d-flex gap-3 align-items-stretch">
+                            
+                            <!-- 📷 Image à gauche -->
+                            {% if file.image %}
+                                <div class="flex-shrink-0">
+                                    <img src="{{ file.image.url }}" alt="{{ file.title }}"
+                                        class="rounded" style="max-width: 130px; max-height: 250px; object-fit: contain;">
+                                </div>
+                            {% endif %}
+                    
+                            <!-- 📝 Texte + bouton à droite -->
+                            <div class="flex-grow-1 d-flex flex-column justify-content-between">
+                                <!-- Titre + description -->
+                                <div>
+                                    <h5 class="mb-1">{{ file.title }}</h5>
+                                    <div class="small text-muted description-html">{{ file.description|safe }}</div>
+                                </div>
+                    
+                                <!-- Bouton aligné en bas à droite -->
+                                <div class="text-end mt-3">
+                                    <a href="{% url 'app_main:download_file' file.id %}" class="btn btn-primary btn-sm" title="{{ file.file.name }}">Télécharger</a>
+                                    <p class="small text-muted mt-1 mb-0">📥 {{ file.download_count }} téléchargement(s)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                
+                {% endfor %}
+            </div>
+        {% else %}
+            <p class="text-center text-muted">Aucun fichier disponible pour le moment.</p>
+        {% endif %}
+    </div>
+
+    {% include "includes/tags.html" %}
+
+{% endblock %}

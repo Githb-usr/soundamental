@@ -1,0 +1,44 @@
+
+    <h2 class="h4">📘 Petit mode d’emploi du site :</h2>
+    <ul class="list-unstyled mt-3">
+        <li>
+            <strong>{% if "guide-navigation" in pages_by_slug %}<a href="{% url 'app_main:aide_detail' slug='guide-navigation' %}">Naviguer sur Soundamental</a>{% else %}Naviguer sur Soundamental{% endif %}</strong>
+            <ul>
+                <li>{% if "guide-menu" in pages_by_slug %}<a href="{% url 'app_main:aide_detail' slug='guide-menu' %}">Le menu</a>{% else %}Le menu{% endif %}</li>
+                <li>{% if "guide-index-general" in pages_by_slug %}<a href="{% url 'app_main:aide_detail' slug='guide-index-general' %}">L’index général</a>{% else %}L’index général{% endif %}</li>
+                <li>{% if "guide-index-thematiques" in pages_by_slug %}<a href="{% url 'app_main:aide_detail' slug='guide-index-thematiques' %}">Les index thématiques</a>{% else %}Les index thématiques{% endif %}</li>
+                <li>{% if "guide-recherche" in pages_by_slug %}<a href="{% url 'app_main:aide_detail' slug='guide-recherche' %}">Le moteur de recherche</a>{% else %}Le moteur de recherche{% endif %}</li>
+                <li>{% if "guide-tags" in pages_by_slug %}<a href="{% url 'app_main:aide_detail' slug='guide-tags' %}">Les catégories (mots clés)</a>{% else %}Les catégories (mots clés){% endif %}</li>
+                <li>{% if "guide-footer" in pages_by_slug %}<a href="{% url 'app_main:aide_detail' slug='guide-footer' %}">Le footer</a>{% else %}Le footer{% endif %}</li>
+            </ul>
+        </li>
+
+        <li class="mt-3">
+            <strong>{% if "guide-minisites" in pages_by_slug %}<a href="{% url 'app_main:aide_detail' slug='minisites' %}">Se familiariser avec les pages artistes, labels, compilations...</a>{% else %}Se familiariser avec les pages artistes, labels, compilations...{% endif %}</strong>
+            <ul>
+                <li>{% if "guide-portail" in pages_by_slug %}<a href="{% url 'app_main:aide_detail' slug='guide-portail' %}">Le portail (page d’accueil)</a>{% else %}Le portail (page d’accueil){% endif %}</li>
+                <li>{% if "guide-disco-simplifiee" in pages_by_slug %}<a href="{% url 'app_main:aide_detail' slug='guide-disco-simplifiee' %}">La discographie simplifiée des artistes</a>{% else %}La discographie simplifiée des artistes{% endif %}</li>
+                <li>{% if "guide-disco-detaillee" in pages_by_slug %}<a href="{% url 'app_main:aide_detail' slug='guide-disco-detaillee' %}">La discographie détaillée des artistes</a>{% else %}La discographie détaillée des artistes{% endif %}</li>
+                <li>{% if "guide-fiches-pressages" in pages_by_slug %}<a href="{% url 'app_main:aide_detail' slug='guide-fiches-pressages' %}">Les fiches pressages</a>{% else %}Les fiches pressages{% endif %}</li>
+                <li>{% if "guide-volumes-compilations" in pages_by_slug %}<a href="{% url 'app_main:aide_detail' slug='guide-volumes-compilations' %}">Les volumes des compilations</a>{% else %}Les volumes des compilations{% endif %}</li>
+                <li>{% if "guide-catalogue-labels" in pages_by_slug %}<a href="{% url 'app_main:aide_detail' slug='guide-catalogue-labels' %}">Le catalogue des labels</a>{% else %}Le catalogue des labels{% endif %}</li>
+            </ul>
+        </li>
+
+        <li class="mt-3">
+            <strong>{% if "guide-documentation" in pages_by_slug %}<a href="{% url 'app_main:aide_detail' slug='guide-documentation' %}">La documentation</a>{% else %}La documentation{% endif %}</strong>
+            <ul>
+                <li>{% if "guide-doc-technique" in pages_by_slug %}<a href="{% url 'app_main:aide_detail' slug='guide-doc-technique' %}">Documentation technique</a>{% else %}Documentation technique{% endif %}</li>
+                <li>{% if "guide-photos-images" in pages_by_slug %}<a href="{% url 'app_main:aide_detail' slug='guide-photos-images' %}">Photos & images</a>{% else %}Photos & images{% endif %}</li>
+                <li>{% if "guide-regles-editoriales" in pages_by_slug %}<a href="{% url 'app_main:aide_detail' slug='guide-regles-editoriales' %}">Règles éditoriales</a>{% else %}Règles éditoriales{% endif %}</li>
+            </ul>
+        </li>
+
+        <li class="mt-3">
+            <strong>{% if "guide-faq" in pages_by_slug %}<a href="{% url 'app_main:aide_detail' slug='guide-faq' %}">FAQ</a>{% else %}FAQ{% endif %}</strong>
+        </li>
+
+        <li class="mt-1">
+            <strong>{% if "guide-annexes" in pages_by_slug %}<a href="{% url 'app_main:aide_detail' slug='guide-annexes' %}">Annexes</a>{% else %}Annexes{% endif %}</strong>
+        </li>
+    </ul>

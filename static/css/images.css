@@ -1,0 +1,13 @@
+/* #################################### */
+/* ## images.css - Styles des images ## */
+/* #################################### */
+
+/* Images dans le contenu */
+.page-image {
+    max-width: 100%; /* S'assure que l'image ne dépasse pas son conteneur */
+    height: auto;
+    display: block;
+    margin: 20px auto; /* Centre l'image horizontalement */
+    border-radius: 5px; /* Arrondit légèrement les bords */
+}
+ 
