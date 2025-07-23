@@ -120,6 +120,14 @@ DEFAULT_REQUEST_DELAY = 120  # 120 secondes (2 minutes)
 LOGIN_REDIRECT_URL = "app_main:home"
 LOGOUT_REDIRECT_URL = "app_main:home"
 
+# Droits d'accès globaux
+ACCESS_LEVELS = {
+    "public": 1,
+    "registered": 2,
+    "moderator": 3,
+    "admin": 4,
+}
+
 # MIGRATION_MODULES = {
 #     "app_main": None,  # 🔹 Désactive les migrations pour `app_main`
 # }

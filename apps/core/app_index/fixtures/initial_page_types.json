@@ -1,0 +1,101 @@
+[
+  {
+    "model": "app_index.pagetype",
+    "pk": 1,
+    "fields": {
+      "code": "artiste_biography",
+      "label": "Biographie (Artistes)",
+      "description": "Type de page vers laquelle mène le lien de l'index, ici la page 'biographie' d'un artiste"
+    }
+  },
+  {
+    "model": "app_index.pagetype",
+    "pk": 2,
+    "fields": {
+      "code": "artiste_discography",
+      "label": "Discographie (Artistes)",
+      "description": "Type de page vers laquelle mène le lien de l'index, ici l'accueil des pages 'discographie' d'un artiste"
+    }
+  },
+  {
+    "model": "app_index.pagetype",
+    "pk": 3,
+    "fields": {
+      "code": "artiste_videography",
+      "label": "Vidéographie (Artistes)",
+      "description": "Type de page vers laquelle mène le lien de l'index, ici l'accueil des pages 'vidéographie' d'un artiste"
+    }
+  },
+  {
+    "model": "app_index.pagetype",
+    "pk": 4,
+    "fields": {
+      "code": "artiste_bootography",
+      "label": "Bootographie (Artistes)",
+      "description": "Type de page vers laquelle mène le lien de l'index, ici l'accueil des pages 'bootographie' d'un artiste"
+    }
+  },
+  {
+    "model": "app_index.pagetype",
+    "pk": 5,
+    "fields": {
+      "code": "compilation_history",
+      "label": "Historique (Compilations)",
+      "description": "Type de page vers laquelle mène le lien de l'index, ici la pages 'historique' d'une compilation"
+    }
+  },
+  {
+    "model": "app_index.pagetype",
+    "pk": 6,
+    "fields": {
+      "code": "compilation_volumes",
+      "label": "Volumes (Compilations)",
+      "description": "Type de page vers laquelle mène le lien de l'index, ici l'accueil des pages 'volumes' d'une compilation"
+    }
+  },
+  {
+    "model": "app_index.pagetype",
+    "pk": 7,
+    "fields": {
+      "code": "compilation_videography",
+      "label": "Vidéographie (Compilations)",
+      "description": "Type de page vers laquelle mène le lien de l'index, ici l'accueil des pages 'vidéographie' d'une compilation"
+    }
+  },
+  {
+    "model": "app_index.pagetype",
+    "pk": 8,
+    "fields": {
+      "code": "compilation_bootography",
+      "label": "Bootographie (Compilations)",
+      "description": "Type de page vers laquelle mène le lien de l'index, ici l'accueil des pages 'bootographie' d'une compilation"
+    }
+  },
+  {
+    "model": "app_index.pagetype",
+    "pk": 9,
+    "fields": {
+      "code": "label_history",
+      "label": "Historique (Labels)",
+      "description": "Type de page vers laquelle mène le lien de l'index, ici la pages 'historique' d'un label"
+    }
+  },
+  {
+    "model": "app_index.pagetype",
+    "pk": 10,
+    "fields": {
+      "code": "label_catalog",
+      "label": "Catalogue (Labels)",
+      "description": "Type de page vers laquelle mène le lien de l'index, ici l'accueil des pages 'catalogue' d'un label"
+    }
+  },
+  {
+    "model": "app_index.pagetype",
+    "pk": 11,
+    "fields": {
+      "code": "label_bootography",
+      "label": "Bootographie (Labels)",
+      "description": "Type de page vers laquelle mène le lien de l'index, ici l'accueil des pages 'bootographie' d'un label"
+    }
+  }
+]

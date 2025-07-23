@@ -8,8 +8,8 @@
         <div class="page-header-wrapper">
             <div class="page-header">
                 <h1 class="header-page-title dynamic-page-title">
-                    {% if category %}
-                        INDEX - {{ category|title }}
+                    {% if category and category.code != "index" %}
+                        INDEX - {{ category.label|default:category.name|default:category.code|title }}
                     {% else %}
                         INDEX GÉNÉRAL
                     {% endif %}
@@ -26,7 +26,7 @@
                         <div class="d-grid grid-4x10">
                             {% for char in "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ@" %}
                                 <a href="{% if category %}
-                                            {% url 'app_index:category_index_letter' category=category|default:'artistes' letter=char %}
+                                            {% url 'app_index:category_index_letter' category=category.code letter=char|default:"A" %}
                                         {% else %}
                                             {% url 'app_index:index_letter' letter=char %}
                                         {% endif %}"
@@ -51,9 +51,9 @@
         {% if show_sub_buttons %}
             <div class="grid-sub-letters">
                 <a href="{% if category %}
-                            {% url 'app_index:category_index_sub_letter' category=category|default:'artistes' letter=letter sub_letter=letter %}
+                            {% url 'app_index:category_index_letter' category=category.code letter=char|default:"A" %}
                         {% else %}
-                            {% url 'app_index:index_sub_letter' letter=letter sub_letter=letter %}
+                            {% url 'app_index:index_sub_letter' letter=letter|default:"A" sub_letter=letter|default:"A" %}
                         {% endif %}"
                 class="btn btn-sub {% if sub_letter == letter %}active{% endif %}">
                     {{ letter }}
@@ -61,9 +61,9 @@
 
                 {% for char in "ABCDEFGHIJKLMNOPQRSTUVWXYZ" %}
                     <a href="{% if category %}
-                                {% url 'app_index:category_index_sub_letter' category=category|default:'artistes' letter=letter sub_letter=letter|add:char %}
+                                {% url 'app_index:category_index_sub_letter' category=category.code letter=letter|default:"A" sub_letter=letter|default:"A"|add:char %}
                             {% else %}
-                                {% url 'app_index:index_sub_letter' letter=letter sub_letter=letter|add:char %}
+                                {% url 'app_index:index_sub_letter' letter=letter|default:"A" sub_letter=letter|default:"A"|add:char %}
                             {% endif %}"
                     class="btn btn-sub {% if sub_letter == letter|add:char %}active{% endif %}">
                         {{ letter }}{{ char|lower }}
@@ -87,14 +87,14 @@
                                     {% if entry.category_url %}
                                         <td class="category-link">
                                             <a href="{% url 'app_index:category_index' entry.category_url %}">
-                                                {{ entry.entry.category|title }}
+                                                {{ entry.entry.category.label|default:entry.entry.category.name|title }}
                                             </a>
                                         </td>
                                     {% endif %}
                                 </td>
                             {% endif %}
                             
-                            <!-- 🔹 Liens dynamiques -->
+                            <!-- Liens dynamiques -->
                             {% for link_data in entry.links %}
                             <td>
                                 {% if link_data.link %}

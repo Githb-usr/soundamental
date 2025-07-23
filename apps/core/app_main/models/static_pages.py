@@ -11,7 +11,6 @@ from apps.core.app_main.models.settings import AppMainSettings
 CATEGORY_CHOICES = [
         ("site-info", "Pages de base"),
         ("aide", "Pages Aide/FAQ"),
-        ("mail", "Pages contact"),
 ]
 
 class StaticPageMeta(models.Model):
@@ -144,9 +143,9 @@ class StaticPageHistory(models.Model):
         excess_entry_ids = [entry.id for entry in excess_entries]
         
         # DEBUG TEMPORAIRE
-        print("max_history =", max_history)
-        print("Nombre d'entrées d'historique actuelles :", StaticPageHistory.objects.filter(page=page_instance).count())
-        print("IDs des entrées à supprimer :", excess_entry_ids)
+        # print("max_history =", max_history)
+        # print("Nombre d'entrées d'historique actuelles :", StaticPageHistory.objects.filter(page=page_instance).count())
+        # print("IDs des entrées à supprimer :", excess_entry_ids)
 
         # Supprime effectivement les entrées excédentaires
         if excess_entry_ids:

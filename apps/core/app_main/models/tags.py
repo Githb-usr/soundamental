@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils.text import slugify
+from django.conf import settings
 
 # ===========================
 # 📂 MODÈLES POUR LES TAGS
@@ -9,13 +10,7 @@ class Tag(models.Model):
     """
     Modèle pour gérer les tags associés aux pages statiques et dynamiques.
     """
-    ACCESS_LEVELS = {
-        "public": 1,
-        "registered": 2,
-        "moderator": 3,
-        "admin": 4,
-    }
-
+    ACCESS_LEVELS = settings.ACCESS_LEVELS
     ACCESS_LEVEL_CHOICES = [(v, k) for k, v in ACCESS_LEVELS.items()]
 
     name = models.CharField(max_length=255, unique=True, verbose_name="Nom du tag")
@@ -26,11 +21,18 @@ class Tag(models.Model):
         default=ACCESS_LEVELS["public"],
         verbose_name="Niveau d'accès"
     )
+    category = models.ForeignKey(
+        "app_index.Category",           # référence lazy, pour éviter les problèmes d’import
+        on_delete=models.SET_NULL,      # Conserver le tag même si la catégorie est supprimée
+        null=True,
+        blank=True,
+        verbose_name="Catégorie liée"
+    )
 
     class Meta:
         indexes = [
-            models.Index(fields=["name"]),  # 🔹 Accélère les recherches par nom
-            models.Index(fields=["slug"]),  # 🔹 Accélère les recherches par slug
+            models.Index(fields=["name"]),  # Accélère les recherches par nom
+            models.Index(fields=["slug"]),  # Accélère les recherches par slug
         ]
         ordering = ["name"]
         verbose_name = "Tag"

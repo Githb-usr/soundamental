@@ -20,11 +20,6 @@ def dynamic_page_view(request, page_name):
     if page_name in ["400", "403", "404", "500", "test-error-500", "error-500"]:
         raise Http404("Route réservée au système")
     
-    # 🚨 Vérifier si la page existe en tant que page statique
-    STATIC_PAGES = settings.STATIC_PAGES  # On récupère la liste des pages statiques
-    if page_name in STATIC_PAGES:
-        return static_page_view(request, slug=page_name)
-
     # 🚨 Vérifier si la page existe dans la base de données des pages dynamiques
     if not DynamicPageInfo.objects.filter(page_name=page_name).exists():
         return render(request, "pages/errors/error_404.html", status=404)

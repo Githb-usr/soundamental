@@ -1,0 +1,122 @@
+[
+  {
+    "model": "app_main.downloadablefile",
+    "pk": 1,
+    "fields": {
+      "title": "Danceur #1\nIndra - Reine de la Dance et du Top 50",
+      "description": "Le premier numéro de Danceur, le magazine de Soundamental, avec Indra, David Guetta, Melodie MC, Lolo Ferrari et beaucoup d’autres choses à découvrir !",
+      "file": "downloads/data/danceur-01.pdf",
+      "image": "downloads/images/danceur-01_couv.jpg",
+      "uploaded_at": "2016-09-14T22:07:00",
+      "download_count": 704
+    }
+  },
+  {
+    "model": "app_main.downloadablefile",
+    "pk": 2,
+    "fields": {
+      "title": "Danceur #1\nPortfolio Michael Jackson",
+      "description": "Le portfolio du premier numéro de Danceur, le magazine de Soundamental, avec le coffret « Visionary – The video singles » de Michael Jackson.",
+      "file": "downloads/data/danceur-01_bonus_mj.pdf",
+      "image": "downloads/images/danceur-01_bonus_mj.jpg",
+      "uploaded_at": "2016-09-14T22:07:00",
+      "download_count": 431
+    }
+  },
+  {
+    "model": "app_main.downloadablefile",
+    "pk": 3,
+    "fields": {
+      "title": "Danceur #2\nAbyale - Il était une voix...",
+      "description": "Le deuxième numéro de Danceur, le magazine de Soundamental, avec Abyale, Madonna, Top DJ, Gina G., Pin-Occhio, Winx et beaucoup d’autres choses à découvrir !",
+      "file": "downloads/data/danceur-02.pdf",
+      "image": "downloads/images/danceur-02_couv.jpg",
+      "uploaded_at": "2016-11-30T11:14:00",
+      "download_count": 709
+    }
+  },
+  {
+    "model": "app_main.downloadablefile",
+    "pk": 4,
+    "fields": {
+      "title": "Danceur #2\nPortfolio Enigma",
+      "description": "Le portfolio du deuxième numéro de Danceur, le magazine de Soundamental, avec le coffret « 15 years after » de Enigma.",
+      "file": "downloads/data/danceur-02_bonus_enigma.pdf",
+      "image": "downloads/images/danceur-02_bonus_enigma.jpg",
+      "uploaded_at": "2016-11-30T11:14:00",
+      "download_count": 486
+    }
+  },
+  {
+    "model": "app_main.downloadablefile",
+    "pk": 5,
+    "fields": {
+      "title": "Danceur #3\n2 Unlimited - Culture tubes",
+      "description": "Le troisième numéro de Danceur, le magazine de Soundamental, avec 2 Unlimited, Kylie Minogue, Doop, Magic Affair, Yelle et beaucoup d’autres choses à découvrir !",
+      "file": "downloads/data/danceur-03.pdf",
+      "image": "downloads/images/danceur-03_couv.jpg",
+      "uploaded_at": "2017-05-23T05:30:00",
+      "download_count": 838
+    }
+  },
+  {
+    "model": "app_main.downloadablefile",
+    "pk": 6,
+    "fields": {
+      "title": "Danceur #3\nPortfolio The Prodigy",
+      "description": "Le supplément portfolio du troisième numéro de Danceur, le magazine de Soundamental, avec le coffret « Invaders must die » du groupe The Prodigy.",
+      "file": "downloads/data/danceur-03_bonus_prodigy.pdf",
+      "image": "downloads/images/danceur-03_bonus_prodigy.jpg",
+      "uploaded_at": "2017-05-23T05:30:00",
+      "download_count": 390
+    }
+  },
+  {
+    "model": "app_main.downloadablefile",
+    "pk": 7,
+    "fields": {
+      "title": "Danceur hors-série #1\nFaithless - Music, live & kryptonite",
+      "description": "Le premier numéro hors-série de Danceur, le magazine de Soundamental, dans lequel vous découvrirez tout sur le groupe anglais Faithless !",
+      "file": "downloads/data/danceur-hs-01.pdf",
+      "image": "downloads/images/danceur-hs-01_couv.jpg",
+      "uploaded_at": "2018-01-27T17:19:00",
+      "download_count": 638
+    }
+  },
+  {
+    "model": "app_main.downloadablefile",
+    "pk": 8,
+    "fields": {
+      "title": "Danceur hors-série #1\nPortfolio Faithless",
+      "description": "Le supplément portfolio du premier numéro hors-série de Danceur, le magazine de Soundamental, avec le coffret « The dance » du groupe Faithless.",
+      "file": "downloads/data/danceur-hs-01_bonus_faithless.pdf",
+      "image": "downloads/images/danceur-hs-01_bonus_faithless.jpg",
+      "uploaded_at": "2018-01-27T17:19:00",
+      "download_count": 409
+    }
+  },
+  {
+    "model": "app_main.downloadablefile",
+    "pk": 9,
+    "fields": {
+      "title": "Danceur hors-série #2\nNyls - Melting pop",
+      "description": "Le deuxième numéro hors-série de Danceur, le magazine de Soundamental, dans lequel vous découvrirez tout sur l'artiste Nyls !\nCe PDF propose la version classique avec les pages en face à face.\nCenuméro existe en version papier (épuisé)",
+      "file": "downloads/data/danceur-hs-02_classique.pdf",
+      "image": "downloads/images/danceur-hs-02_couv.jpg",
+      "uploaded_at": "2018-07-27T08:00:00",
+      "download_count": 351
+    }
+  },
+  {
+    "model": "app_main.downloadablefile",
+    "pk": 10,
+    "fields": {
+      "title": "Danceur hors-série #2\nNyls - Melting pop",
+      "description": "Le deuxième numéro hors-série de Danceur, le magazine de Soundamental, dans lequel vous découvrirez tout sur l'artiste Nyls !\nCe PDF propose une version alternativeclassique avec une seule page à la fois.\nCenuméro existe en version papier (épuisé)",
+      "file": "downloads/data/danceur-hs-02_page_a_page.pdf",
+      "image": "downloads/images/danceur-hs-02_couv.jpg",
+      "uploaded_at": "2018-07-27T08:00:00",
+      "download_count": 251
+    }
+  }
+]

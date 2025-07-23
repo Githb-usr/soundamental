@@ -6,7 +6,7 @@
         <div class="col-md-3">
             <h5 class="text-uppercase fw-bold">Navigation</h5>
             <ul class="list-unstyled">
-                <li><a href="{% url 'app_main:static_page_accueil' %}" class="text-white text-decoration-none">Accueil</a></li>
+                <li><a href="{% url 'app_main:static_page' slug='accueil' %}" class="text-white text-decoration-none">Accueil</a></li>
                 <li><a href="{% url 'app_blog:liste_articles' %}" class="text-white text-decoration-none">News</a></li>
                 <li><a class="dropdown-item" href="{% url 'app_main:dynamic_page' page_name='index' %}">Index général</a></li>
                 <li><a class="dropdown-item" href="{% url 'app_index:category_index' category='artistes' %}">Index artistes</a></li>
@@ -22,10 +22,10 @@
         <div class="col-md-3">
             <h5 class="text-uppercase fw-bold">Soundamental</h5>
             <ul class="list-unstyled">
-                <li><a href="{% url 'app_main:static_page_a-propos-de-soundamental' %}" class="text-white text-decoration-none">À propos de Soundamental</a></li>
-                <li><a href="{% url 'app_main:static_page_charte-du-forum' %}" class="text-white text-decoration-none">Charte du forum</a></li>
-                <li><a href="{% url 'app_main:static_page_avertissements' %}" class="text-white text-decoration-none">Avertissements</a></li>
-                <li><a href="{% url 'app_main:static_page_politique-de-confidentialite' %}" class="text-white text-decoration-none">Politique de confidentialité</a></li>
+                <li><a href="{% url 'app_main:static_page' slug='a-propos-de-soundamental' %}" class="text-white text-decoration-none">À propos de Soundamental</a></li>
+                <li><a href="{% url 'app_main:static_page' slug='charte-du-forum' %}" class="text-white text-decoration-none">Charte du forum</a></li>
+                <li><a href="{% url 'app_main:static_page' slug='avertissements' %}" class="text-white text-decoration-none">Avertissements</a></li>
+                <li><a href="{% url 'app_main:static_page' slug='politique-de-confidentialite' %}" class="text-white text-decoration-none">Politique de confidentialité</a></li>
             </ul>
         </div>
 
@@ -34,7 +34,7 @@
             <h5 class="text-uppercase fw-bold">Ressources</h5>
             <ul class="list-unstyled">
                 <a href="{% url 'app_main:dynamic_page' page_name='telechargements' %}" class="nav-link text-white">Téléchargements</a>
-                <a href="{% url 'app_main:static_page_liens' %}" class="nav-link text-white">Liens</a>
+                <a href="{% url 'app_main:static_page' slug='liens' %}" class="nav-link text-white">Liens</a>
                 <a href="{% url 'app_blog:flux_rss' %}" class="text-muted text-decoration-none me-2" title="Flux RSS du blog">
                     <i class="bi bi-rss-fill"></i> RSS
                 </a>                

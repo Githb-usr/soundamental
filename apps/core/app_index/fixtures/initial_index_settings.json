@@ -1,0 +1,146 @@
+[
+  {
+    "model": "app_index.indexsettings",
+    "pk": 1,
+    "fields": {
+      "category": 1,
+      "apply_to_all": false,
+      "letters_with_sub_buttons": "A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z"
+    }
+  },
+  {
+    "model": "app_index.indexsettings",
+    "pk": 2,
+    "fields": {
+      "category": 2,
+      "apply_to_all": false,
+      "letters_with_sub_buttons": "A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z"
+    }
+  },
+  {
+    "model": "app_index.indexsettings",
+    "pk": 3,
+    "fields": {
+      "category": 3,
+      "apply_to_all": false,
+      "letters_with_sub_buttons": ""
+    }
+  },
+  {
+    "model": "app_index.indexsettings",
+    "pk": 4,
+    "fields": {
+      "category": 4,
+      "apply_to_all": false,
+      "letters_with_sub_buttons": ""
+    }
+  },
+  {
+    "model": "app_index.indexsettings",
+    "pk": 5,
+    "fields": {
+      "category": 5,
+      "apply_to_all": false,
+      "letters_with_sub_buttons": ""
+    }
+  },
+  {
+    "model": "app_index.indexsettings",
+    "pk": 6,
+    "fields": {
+      "category": 6,
+      "apply_to_all": false,
+      "letters_with_sub_buttons": ""
+    }
+  },
+  {
+    "model": "app_index.indexsettings",
+    "pk": 7,
+    "fields": {
+      "category": 7,
+      "apply_to_all": false,
+      "letters_with_sub_buttons": ""
+    }
+  },
+  {
+    "model": "app_index.indexsettings",
+    "pk": 8,
+    "fields": {
+      "category": 8,
+      "apply_to_all": false,
+      "letters_with_sub_buttons": ""
+    }
+  },
+  {
+    "model": "app_index.indexsettings",
+    "pk": 9,
+    "fields": {
+      "category": 9,
+      "apply_to_all": false,
+      "letters_with_sub_buttons": ""
+    }
+  },
+  {
+    "model": "app_index.indexsettings",
+    "pk": 10,
+    "fields": {
+      "category": 10,
+      "apply_to_all": false,
+      "letters_with_sub_buttons": ""
+    }
+  },
+  {
+    "model": "app_index.indexsettings",
+    "pk": 11,
+    "fields": {
+      "category": 11,
+      "apply_to_all": false,
+      "letters_with_sub_buttons": ""
+    }
+  },
+  {
+    "model": "app_index.indexsettings",
+    "pk": 12,
+    "fields": {
+      "category": 12,
+      "apply_to_all": false,
+      "letters_with_sub_buttons": ""
+    }
+  },
+  {
+    "model": "app_index.indexsettings",
+    "pk": 13,
+    "fields": {
+      "category": 13,
+      "apply_to_all": false,
+      "letters_with_sub_buttons": ""
+    }
+  },
+  {
+    "model": "app_index.indexsettings",
+    "pk": 14,
+    "fields": {
+      "category": 14,
+      "apply_to_all": false,
+      "letters_with_sub_buttons": ""
+    }
+  },
+  {
+    "model": "app_index.indexsettings",
+    "pk": 15,
+    "fields": {
+      "category": 15,
+      "apply_to_all": false,
+      "letters_with_sub_buttons": ""
+    }
+  },
+  {
+    "model": "app_index.indexsettings",
+    "pk": 16,
+    "fields": {
+      "category": 16,
+      "apply_to_all": false,
+      "letters_with_sub_buttons": ""
+    }
+  }
+]

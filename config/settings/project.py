@@ -1,21 +1,5 @@
 from decouple import Config, RepositoryEnv
 
-# Liste des pages statiques bien définie pour éviter les conflits
-STATIC_PAGES = [
-    "accueil", 
-    "confirmation-envoi-message", 
-    "a-propos-de-soundamental", 
-    "politique-de-confidentialite", 
-    "avertissements", 
-    "liens",
-    "charte-du-forum",
-]
-
-DYNAMIC_RESERVED_NAMES = [
-    "index",
-    "telechargements",
-]
-
 # Structures des principaux liens de Soundamental
 LINK_BASES = {
     "forum": "https://www.soundamental.org/forum/topic/{}",
@@ -51,6 +35,7 @@ LINK_BASES = {
 
 CATEGORY_MAPPING = {
     "artistes": "artiste",
+    "collection": "collection",
     "compilations": "compilation",
     "labels": "label",
     "lexique": "lexique"

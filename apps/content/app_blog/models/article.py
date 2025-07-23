@@ -106,7 +106,7 @@ class Article(models.Model):
         ordering = ['-date_publication']
         get_latest_by = 'date_publication'
         verbose_name = "Article de blog"
-        verbose_name_plural = "Articles de blog"
+        verbose_name_plural = "Blog - Articles"
         
     def get_resume(self):
         """

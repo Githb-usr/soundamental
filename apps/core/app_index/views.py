@@ -4,7 +4,7 @@ from django.db.models import Q
 from django.http import HttpResponseRedirect
 from django.shortcuts import render, redirect
 from apps.core.utils import paginate
-from apps.core.app_index.models import IndexEntry, IndexSettings, PageExistence
+from apps.core.app_index.models import Category, PageType, IndexEntry, IndexSettings, PageExistence
 
 # =======================
 # # 📂 VUES POUR L'INDEX
@@ -14,21 +14,24 @@ def get_index_settings(category):
     """
     Récupère les paramètres d'affichage pour une catégorie donnée (ou l'index général).
     """
+    if not category:
+        # Cas de l’index général, on cherche category=None (clé étrangère nulle)
+        return IndexSettings.objects.filter(category__code="index_general").first()
     try:
-        return IndexSettings.objects.get(category=category if category else "index")
-    except IndexSettings.DoesNotExist:
+        cat_obj = Category.objects.get(code=category)  # ou name=category si tu utilises le champ name
+        return IndexSettings.objects.get(category=cat_obj)
+    except (Category.DoesNotExist, IndexSettings.DoesNotExist):
         return None  # Aucune configuration trouvée
 
-def filter_index_entries(category, letter, sub_letter):
+def filter_index_entries(category_obj, letter, sub_letter):
     """
     Filtre les entrées de l'index en fonction de la catégorie, lettre et sous-lettre.
     """
     index_entries = IndexEntry.objects.only("id", "name", "category", "id_forum").order_by("name")
 
     # Filtrage par catégorie
-    if category:
-        category_singular = settings.CATEGORY_MAPPING.get(category.lower(), category.lower())
-        index_entries = index_entries.filter(category=category_singular)
+    if category_obj:
+        index_entries = index_entries.filter(category=category_obj)
 
     # Filtrage par lettre
     if letter == "@":
@@ -58,12 +61,12 @@ def generate_index_data(index_entries):
     index_data = []
 
     for entry in index_entries:
-        template = settings.INDEX_LINK_TEMPLATES.get(entry.category.lower(), [None] * 5)
-        links = entry.get_links  # 🔹 Utilise la méthode centralisée
+        template = settings.INDEX_LINK_TEMPLATES.get(entry.category.name.lower(), [None] * 5)
+        links = entry.get_links  # Utilise la méthode centralisée
 
         index_data.append({
             "entry": entry,
-            "category_url": settings.CATEGORY_MAPPING.get(entry.category.lower(), entry.category.lower()),
+            "category_url": settings.CATEGORY_MAPPING.get(entry.category.name.lower(), entry.category.name.lower()),
             "links": [
                 {"link": l, "label": settings.INDEX_LINK_CODES.get(k, "-")} if k else {"link": None, "label": "-"}
                 for l, k in zip(links, template)
@@ -74,7 +77,7 @@ def generate_index_data(index_entries):
 
 from django.shortcuts import redirect
 
-def normalize_letters(category, letter, sub_letter, active_letters, show_sub_buttons):
+def normalize_letters(category_slug, letter, sub_letter, active_letters, show_sub_buttons):
     """
     Normalise la lettre et la sous-lettre et gère les redirections si nécessaire.
     """
@@ -86,13 +89,13 @@ def normalize_letters(category, letter, sub_letter, active_letters, show_sub_but
 
     # Redirection si aucune lettre spécifiée
     if not letter:
-        return redirect('app_index:category_index_letter', category=category, letter='A') if category else \
+        return redirect('app_index:category_index_letter', category=category_slug, letter='A') if category_slug else \
                redirect('app_index:index_letter', letter='A')
 
     # Redirection si les sous-lettres sont activées
     if not sub_letter:
         if show_sub_buttons:
-            return redirect('app_index:category_index_sub_letter', category=category, letter=letter, sub_letter=letter) if category else \
+            return redirect('app_index:category_index_sub_letter', category=category_slug, letter=letter, sub_letter=letter) if category_slug else \
                    redirect('app_index:index_sub_letter', letter=letter, sub_letter=letter)
         else:
             sub_letter = ""  # Afficher tout le contenu sans redirection
@@ -104,19 +107,25 @@ def index_or_category_view(request, category=None, letter=None, sub_letter=None)
     Affiche l'index général ou filtré par catégorie (artistes, labels, compilations, lexique)
     avec gestion des lettres et sous-lettres.
     """
-    # Vérifie si `category` est absente et la récupère depuis l'URL
-    category = (category or request.resolver_match.kwargs.get("category") or "").strip()
- 
+    # Récupère le code de la catégorie depuis l'URL ou les arguments
+    category_code = (category or request.resolver_match.kwargs.get("category") or "").strip().lower()
+    category_obj = None
+
+    if category_code:
+        try:
+            category_obj = Category.objects.get(code=category_code)
+        except Category.DoesNotExist:
+            category_obj = None
+
     # Récupérer la configuration de l'index (ou par catégorie)
-    index_settings = get_index_settings(category)
+    index_settings = get_index_settings(category_code)
 
     # Déterminer si les sous-boutons doivent être affichés
     show_sub_buttons = index_settings.apply_to_all or bool(index_settings.get_active_letters()) if index_settings else False
-    #active_letters = index_settings.get_active_letters() or []
     active_letters = index_settings.get_active_letters() or [] if index_settings else []
 
     # Normalise les lettres et gère les éventuelles redirections si nécessaires
-    result = normalize_letters(category, letter, sub_letter, active_letters, show_sub_buttons)
+    result = normalize_letters(category_code, letter, sub_letter, active_letters, show_sub_buttons)
 
     # Si la fonction retourne une redirection (ex: vers 'A' par défaut), on la suit immédiatement
     if isinstance(result, HttpResponseRedirect):
@@ -126,7 +135,7 @@ def index_or_category_view(request, category=None, letter=None, sub_letter=None)
     letter, sub_letter, show_sub_buttons = result
 
     # Récupère les entrées de l'index filtrées par catégorie, lettre et sous-lettre
-    index_entries = filter_index_entries(category, letter, sub_letter)
+    index_entries = filter_index_entries(category_obj, letter, sub_letter)
 
     # Construction des données pour le template
     index_data = generate_index_data(index_entries)
@@ -141,18 +150,18 @@ def index_or_category_view(request, category=None, letter=None, sub_letter=None)
         "index_data": page_obj,
         "letter": letter,
         "sub_letter": sub_letter,
-        "category": category,
+        "category": category_obj,  # Passe l'objet complet (utilise category_obj.name dans les templates si besoin)
         "paginator": paginator,
         "page_obj": page_obj,
         "show_sub_buttons": show_sub_buttons  # Maintenant, l'affichage est géré depuis l'admin
     })
 
-def page_exists(category, name, page_type):
+def page_exists(category_obj, name, page_type):
     """
     Vérifie si une page existe en tenant compte de la catégorie et du type de page.
     """
     exists = PageExistence.objects.filter(
-        category=category, name=name, page_type=f"{category}_{page_type}"
+        category=category_obj, name=name, page_type=page_type
     ).exists()
 
     return exists

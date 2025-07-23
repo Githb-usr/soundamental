@@ -1,0 +1,2502 @@
+[
+  {
+    "model": "app_main.tag",
+    "pk": 1,
+    "fields": {
+      "name": "Mylène Farmer",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Mylène Farmer.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 2,
+    "fields": {
+      "name": "2 Unlimited",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe 2 Unlimited.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 3,
+    "fields": {
+      "name": "Cappella",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Cappella.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 4,
+    "fields": {
+      "name": "Corona",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Corona.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 5,
+    "fields": {
+      "name": "Sash!",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Sash!.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 6,
+    "fields": {
+      "name": "U96",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe U96.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 7,
+    "fields": {
+      "name": "Pet Shop Boys",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Pet Shop Boys.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 8,
+    "fields": {
+      "name": "Culture Beat",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Culture Beat.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 9,
+    "fields": {
+      "name": "T.H. Express",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe T.H. Express.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 10,
+    "fields": {
+      "name": "Dorothée",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Dorothée.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 11,
+    "fields": {
+      "name": "Masterboy",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Masterboy.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 12,
+    "fields": {
+      "name": "Space Master",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Space Master.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 13,
+    "fields": {
+      "name": "E-Type",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe E-Type.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 14,
+    "fields": {
+      "name": "Black Box",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Black Box.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 15,
+    "fields": {
+      "name": "Scooter",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Scooter.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 16,
+    "fields": {
+      "name": "E-Rotic",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe E-Rotic.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 17,
+    "fields": {
+      "name": "Faithless",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Faithless.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 18,
+    "fields": {
+      "name": "2 Brothers On The 4th Floor",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe 2 Brothers On The 4th Floor.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 19,
+    "fields": {
+      "name": "ICE MC",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe ICE MC.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 20,
+    "fields": {
+      "name": "Depeche Mode",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Depeche Mode.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 21,
+    "fields": {
+      "name": "Einstein Doctor Deejay",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Einstein Doctor Deejay.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 22,
+    "fields": {
+      "name": "Haddaway",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Haddaway.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 23,
+    "fields": {
+      "name": "Indra",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Indra.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 24,
+    "fields": {
+      "name": "DJ Bertrand",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe DJ Bertrand.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 25,
+    "fields": {
+      "name": "Whigfield",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Whigfield.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 26,
+    "fields": {
+      "name": "Latino Party",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Latino Party.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 27,
+    "fields": {
+      "name": "Pleasure Game",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Pleasure Game.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 28,
+    "fields": {
+      "name": "Egma",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Egma.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 29,
+    "fields": {
+      "name": "EXP",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe EXP.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 30,
+    "fields": {
+      "name": "Pharao",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Pharao.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 31,
+    "fields": {
+      "name": "Magic Affair",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Magic Affair.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 32,
+    "fields": {
+      "name": "Rozlyne Clarke",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Rozlyne Clarke.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 33,
+    "fields": {
+      "name": "20 Fingers",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe 20 Fingers.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 34,
+    "fields": {
+      "name": "Snap!",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Snap!.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 35,
+    "fields": {
+      "name": "The Space Brothers",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe The Space Brothers.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 36,
+    "fields": {
+      "name": "Technotronic",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Technotronic.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 37,
+    "fields": {
+      "name": "Antares",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Antares.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 38,
+    "fields": {
+      "name": "Fun Factory",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Fun Factory.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 39,
+    "fields": {
+      "name": "J.K.",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe J.K..",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 40,
+    "fields": {
+      "name": "Maxx",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Maxx.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 41,
+    "fields": {
+      "name": "Jam & Spoon",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Jam & Spoon.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 42,
+    "fields": {
+      "name": "La Bouche",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe La Bouche.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 43,
+    "fields": {
+      "name": "Mephisto",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Mephisto.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 44,
+    "fields": {
+      "name": "Gala",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Gala.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 45,
+    "fields": {
+      "name": "David Guetta",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe David Guetta.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 46,
+    "fields": {
+      "name": "Anita Doth",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Anita Doth.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 47,
+    "fields": {
+      "name": "Bell Bar",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Bell Bar.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 48,
+    "fields": {
+      "name": "Björk",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Björk.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 49,
+    "fields": {
+      "name": "A-ha",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe A-ha.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 50,
+    "fields": {
+      "name": "Maxxima",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Maxxima.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 51,
+    "fields": {
+      "name": "Ysa Ferrer",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Ysa Ferrer.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 52,
+    "fields": {
+      "name": "Stromae",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Stromae.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 53,
+    "fields": {
+      "name": "Ame Strong SA",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Ame Strong SA.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 54,
+    "fields": {
+      "name": "Melissa",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Melissa.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 55,
+    "fields": {
+      "name": "Madonna",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Madonna.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 56,
+    "fields": {
+      "name": "Lady Gaga",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Lady Gaga.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 57,
+    "fields": {
+      "name": "Cascada",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Cascada.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 58,
+    "fields": {
+      "name": "Najoua Belyzel",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Najoua Belyzel.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 59,
+    "fields": {
+      "name": "Alizée",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Alizée.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 60,
+    "fields": {
+      "name": "Playahitty",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Playahitty.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 61,
+    "fields": {
+      "name": "Kylie Minogue",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Kylie Minogue.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 62,
+    "fields": {
+      "name": "Soundstream",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Soundstream.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 63,
+    "fields": {
+      "name": "Yelle",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Yelle.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 64,
+    "fields": {
+      "name": "Twenty 4 Seven",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Twenty 4 Seven.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 65,
+    "fields": {
+      "name": "Captain Hollywood",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Captain Hollywood.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 66,
+    "fields": {
+      "name": "Basic Element",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Basic Element.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 67,
+    "fields": {
+      "name": "Rozalla",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Rozalla.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 68,
+    "fields": {
+      "name": "Enigma",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Enigma.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 69,
+    "fields": {
+      "name": "Ace Of Base",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Ace Of Base.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 70,
+    "fields": {
+      "name": "Elsa Esnoult",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Elsa Esnoult.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 71,
+    "fields": {
+      "name": "Sandra",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Sandra.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 72,
+    "fields": {
+      "name": "Real McCoy",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Real McCoy.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 73,
+    "fields": {
+      "name": "Le Park",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Le Park.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 74,
+    "fields": {
+      "name": "Bass Bumpers",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Bass Bumpers.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 75,
+    "fields": {
+      "name": "Da Blitz",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Da Blitz.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 76,
+    "fields": {
+      "name": "B.G. The Prince Of Rap",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe B.G. The Prince Of Rap.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 77,
+    "fields": {
+      "name": "Cartouche",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Cartouche.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 78,
+    "fields": {
+      "name": "Dr. Alban",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Dr. Alban.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 79,
+    "fields": {
+      "name": "Sarah",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Sarah.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 80,
+    "fields": {
+      "name": "Hurts",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Hurts.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 81,
+    "fields": {
+      "name": "Lana Del Rey",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Lana Del Rey.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 82,
+    "fields": {
+      "name": "The KLF",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe The KLF.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 83,
+    "fields": {
+      "name": "Robert Miles",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Robert Miles.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 84,
+    "fields": {
+      "name": "Legend B",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Legend B.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 85,
+    "fields": {
+      "name": "God's Groove",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe God's Groove.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 86,
+    "fields": {
+      "name": "Armin Van Buuren",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Armin Van Buuren.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 87,
+    "fields": {
+      "name": "Ramirez",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Ramirez.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 88,
+    "fields": {
+      "name": "Mo-Do",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Mo-Do.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 89,
+    "fields": {
+      "name": "Phantom",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Phantom.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 90,
+    "fields": {
+      "name": "Michael Jackson",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Michael Jackson.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 91,
+    "fields": {
+      "name": "Abyale",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Abyale.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 92,
+    "fields": {
+      "name": "Lena",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Lena.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 93,
+    "fields": {
+      "name": "DJ BoBo",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe DJ BoBo.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 94,
+    "fields": {
+      "name": "Double You",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Double You.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 95,
+    "fields": {
+      "name": "Milk Inc.",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Milk Inc..",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 96,
+    "fields": {
+      "name": "Echo Bass",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Echo Bass.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 97,
+    "fields": {
+      "name": "Daft Punk",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Daft Punk.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 98,
+    "fields": {
+      "name": "Bob Sinclar",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Bob Sinclar.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 99,
+    "fields": {
+      "name": "Etienne Daho",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Etienne Daho.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 100,
+    "fields": {
+      "name": "Crystal Waters",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Crystal Waters.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 101,
+    "fields": {
+      "name": "Moby",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Moby.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 102,
+    "fields": {
+      "name": "4 Strings",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe 4 Strings.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 103,
+    "fields": {
+      "name": "Calvin Harris",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Calvin Harris.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 104,
+    "fields": {
+      "name": "Franco Diaferia",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Franco Diaferia.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 105,
+    "fields": {
+      "name": "Felix",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Felix.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 106,
+    "fields": {
+      "name": "Livin' Joy",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Livin' Joy.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 107,
+    "fields": {
+      "name": "Astral Projection",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Astral Projection.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 108,
+    "fields": {
+      "name": "Antoine Clamaran",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Antoine Clamaran.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 109,
+    "fields": {
+      "name": "2 Fabiola",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe 2 Fabiola.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 110,
+    "fields": {
+      "name": "Fred Rister",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Fred Rister.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 111,
+    "fields": {
+      "name": "Gouryella",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Gouryella.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 112,
+    "fields": {
+      "name": "Brooklyn Bounce",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Brooklyn Bounce.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 113,
+    "fields": {
+      "name": "Anticappella",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Anticappella.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 114,
+    "fields": {
+      "name": "Ann Lee",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Ann Lee.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 115,
+    "fields": {
+      "name": "Hélène",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Hélène.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 116,
+    "fields": {
+      "name": "Les Rita Mitsouko",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Les Rita Mitsouko.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 117,
+    "fields": {
+      "name": "Mr. President",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Mr. President.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 118,
+    "fields": {
+      "name": "Benny B.",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Benny B..",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 119,
+    "fields": {
+      "name": "Scatman John",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Scatman John.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 120,
+    "fields": {
+      "name": "Avicii",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Avicii.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 121,
+    "fields": {
+      "name": "Gigi D'Agostino",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Gigi D'Agostino.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 122,
+    "fields": {
+      "name": "Elsa",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Elsa.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 123,
+    "fields": {
+      "name": "Krasi",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Krasi.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 124,
+    "fields": {
+      "name": "Foretaste",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Foretaste.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 125,
+    "fields": {
+      "name": "Ray & Anita",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Ray & Anita.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 126,
+    "fields": {
+      "name": "Jeanne Mas",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Jeanne Mas.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 127,
+    "fields": {
+      "name": "Sylver",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Sylver.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 128,
+    "fields": {
+      "name": "Niagara",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Niagara.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 129,
+    "fields": {
+      "name": "The Prodigy",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe The Prodigy.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 130,
+    "fields": {
+      "name": "Christophe Willem",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Christophe Willem.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 131,
+    "fields": {
+      "name": "Ian Van Dahl",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Ian Van Dahl.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 132,
+    "fields": {
+      "name": "Vitalic",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Vitalic.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 133,
+    "fields": {
+      "name": "Crazy Frog",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Crazy Frog.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 134,
+    "fields": {
+      "name": "Kate Ryan",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Kate Ryan.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 135,
+    "fields": {
+      "name": "Lorie",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Lorie.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 136,
+    "fields": {
+      "name": "Helmut Fritz",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Helmut Fritz.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 137,
+    "fields": {
+      "name": "Eric Prydz",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Eric Prydz.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 138,
+    "fields": {
+      "name": "General Base",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe General Base.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 139,
+    "fields": {
+      "name": "Reel 2 Real",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Reel 2 Real.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 140,
+    "fields": {
+      "name": "Jean-Michel Jarre",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Jean-Michel Jarre.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 141,
+    "fields": {
+      "name": "Onda Del Futuro",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Onda Del Futuro.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 142,
+    "fields": {
+      "name": "Datura",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Datura.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 143,
+    "fields": {
+      "name": "Kim Sanders",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Kim Sanders.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 144,
+    "fields": {
+      "name": "Tony Di Bart",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Tony Di Bart.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 145,
+    "fields": {
+      "name": "Zhi-Vago",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Zhi-Vago.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 146,
+    "fields": {
+      "name": "Darude",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Darude.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 147,
+    "fields": {
+      "name": "S'Express",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe S'Express.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 148,
+    "fields": {
+      "name": "Key Motion",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Key Motion.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 149,
+    "fields": {
+      "name": "49ers",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe 49ers.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 150,
+    "fields": {
+      "name": "Alexia",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Alexia.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 151,
+    "fields": {
+      "name": "Airplay Records",
+      "description": "Tag apposé sur toutes les pages en lien direct avec le label Airplay Records.",
+      "category": 10,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 152,
+    "fields": {
+      "name": "Scorpio Music",
+      "description": "Tag apposé sur toutes les pages en lien direct avec le label Scorpio Music.",
+      "category": 10,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 153,
+    "fields": {
+      "name": "Media Records",
+      "description": "Tag apposé sur toutes les pages en lien direct avec le label Media Records.",
+      "category": 10,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 154,
+    "fields": {
+      "name": "Flarenasch",
+      "description": "Tag apposé sur toutes les pages en lien direct avec le label Flarenasch.",
+      "category": 10,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 155,
+    "fields": {
+      "name": "ZYX Music",
+      "description": "Tag apposé sur toutes les pages en lien direct avec le label ZYX Music.",
+      "category": 10,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 156,
+    "fields": {
+      "name": "Happy Music",
+      "description": "Tag apposé sur toutes les pages en lien direct avec le label Happy Music.",
+      "category": 10,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 157,
+    "fields": {
+      "name": "On The Beat",
+      "description": "Tag apposé sur toutes les pages en lien direct avec le label On The Beat.",
+      "category": 10,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 158,
+    "fields": {
+      "name": "Panic Records",
+      "description": "Tag apposé sur toutes les pages en lien direct avec le label Panic Records.",
+      "category": 10,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 159,
+    "fields": {
+      "name": "Full Ace Music",
+      "description": "Tag apposé sur toutes les pages en lien direct avec le label Full Ace Music.",
+      "category": 10,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 160,
+    "fields": {
+      "name": "Dance Pool",
+      "description": "Tag apposé sur toutes les pages en lien direct avec le label Dance Pool.",
+      "category": 10,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 161,
+    "fields": {
+      "name": "Feel The Rhythm",
+      "description": "Tag apposé sur toutes les pages en lien direct avec le label Feel The Rhythm.",
+      "category": 10,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 162,
+    "fields": {
+      "name": "Overdance!",
+      "description": "Tag apposé sur toutes les pages en lien direct avec le label Overdance!.",
+      "category": 10,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 163,
+    "fields": {
+      "name": "More Vinyl",
+      "description": "Tag apposé sur toutes les pages en lien direct avec le label More Vinyl.",
+      "category": 10,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 164,
+    "fields": {
+      "name": "Ramdam Factory",
+      "description": "Tag apposé sur toutes les pages en lien direct avec le label Ramdam Factory.",
+      "category": 10,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 165,
+    "fields": {
+      "name": "Touch Of Gold",
+      "description": "Tag apposé sur toutes les pages en lien direct avec le label Touch Of Gold.",
+      "category": 10,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 166,
+    "fields": {
+      "name": "Versailles",
+      "description": "Tag apposé sur toutes les pages en lien direct avec le label Versailles.",
+      "category": 10,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 167,
+    "fields": {
+      "name": "Mascotte Music",
+      "description": "Tag apposé sur toutes les pages en lien direct avec le label Mascotte Music.",
+      "category": 10,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 168,
+    "fields": {
+      "name": "Step 2 House Records",
+      "description": "Tag apposé sur toutes les pages en lien direct avec le label Step 2 House Records.",
+      "category": 10,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 169,
+    "fields": {
+      "name": "Atoll Music",
+      "description": "Tag apposé sur toutes les pages en lien direct avec le label Atoll Music.",
+      "category": 10,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 170,
+    "fields": {
+      "name": "Hot Tracks",
+      "description": "Tag apposé sur toutes les pages en lien direct avec le label Hot Tracks.",
+      "category": 10,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 171,
+    "fields": {
+      "name": "FuturePlay",
+      "description": "Tag apposé sur toutes les pages en lien direct avec le label FuturePlay.",
+      "category": 10,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 172,
+    "fields": {
+      "name": "Ouragan",
+      "description": "Tag apposé sur toutes les pages en lien direct avec le label Ouragan.",
+      "category": 10,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 173,
+    "fields": {
+      "name": "F Communications",
+      "description": "Tag apposé sur toutes les pages en lien direct avec le label F Communications.",
+      "category": 10,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 174,
+    "fields": {
+      "name": "Strictly Rhythm",
+      "description": "Tag apposé sur toutes les pages en lien direct avec le label Strictly Rhythm.",
+      "category": 10,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 175,
+    "fields": {
+      "name": "A-Traxx",
+      "description": "Tag apposé sur toutes les pages en lien direct avec le label A-Traxx.",
+      "category": 10,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 176,
+    "fields": {
+      "name": "Dance Machine",
+      "description": "Tag apposé sur toutes les pages en lien direct avec la compilation Dance Machine.",
+      "category": 5,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 177,
+    "fields": {
+      "name": "Serious Beats",
+      "description": "Tag apposé sur toutes les pages en lien direct avec la compilation Serious Beats.",
+      "category": 5,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 178,
+    "fields": {
+      "name": "Trancemaster",
+      "description": "Tag apposé sur toutes les pages en lien direct avec la compilation Trancemaster.",
+      "category": 5,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 179,
+    "fields": {
+      "name": "Thunderdome",
+      "description": "Tag apposé sur toutes les pages en lien direct avec la compilation Thunderdome.",
+      "category": 5,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 180,
+    "fields": {
+      "name": "Top DJ",
+      "description": "Tag apposé sur toutes les pages en lien direct avec la compilation Top DJ.",
+      "category": 5,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 181,
+    "fields": {
+      "name": "Maxximum 20 Ans Déjà",
+      "description": "Tag apposé sur toutes les pages en lien direct avec la compilation Maxximum 20 Ans Déjà.",
+      "category": 5,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 182,
+    "fields": {
+      "name": "Top Dance",
+      "description": "Tag apposé sur toutes les pages en lien direct avec la compilation Top Dance.",
+      "category": 5,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 183,
+    "fields": {
+      "name": "Airplay Records - Une Dance D'Avance",
+      "description": "Tag apposé sur toutes les pages en lien direct avec la compilation Airplay Records - Une Dance D'Avance.",
+      "category": 5,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 184,
+    "fields": {
+      "name": "Panic Records - Encore Plus De Dance Music",
+      "description": "Tag apposé sur toutes les pages en lien direct avec la compilation Panic Records - Encore Plus De Dance Music.",
+      "category": 5,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 185,
+    "fields": {
+      "name": "Techno Dance Party",
+      "description": "Tag apposé sur toutes les pages en lien direct avec la compilation Techno Dance Party.",
+      "category": 5,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 186,
+    "fields": {
+      "name": "Génération Dance",
+      "description": "Tag apposé sur toutes les pages en lien direct avec la compilation Génération Dance.",
+      "category": 5,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 187,
+    "fields": {
+      "name": "La Collection Officielle TOP 50",
+      "description": "Tag apposé sur toutes les pages en lien direct avec la compilation La Collection Officielle TOP 50.",
+      "category": 5,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 188,
+    "fields": {
+      "name": "TSOB - The Sound Of Belgium",
+      "description": "Tag apposé sur toutes les pages en lien direct avec la compilation TSOB - The Sound Of Belgium.",
+      "category": 5,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 189,
+    "fields": {
+      "name": "La Discothèque Du 20e Siècle",
+      "description": "Tag apposé sur toutes les pages en lien direct avec la compilation La Discothèque Du 20e Siècle.",
+      "category": 5,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 190,
+    "fields": {
+      "name": "La Plus Grande Discothèque Du Monde",
+      "description": "Tag apposé sur toutes les pages en lien direct avec la compilation La Plus Grande Discothèque Du Monde.",
+      "category": 5,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 191,
+    "fields": {
+      "name": "Top Hits",
+      "description": "Tag apposé sur toutes les pages en lien direct avec la compilation Top Hits.",
+      "category": 5,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 192,
+    "fields": {
+      "name": "Singles 80",
+      "description": "Tag apposé sur toutes les pages en lien direct avec la compilation Singles 80.",
+      "category": 5,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 193,
+    "fields": {
+      "name": "At The Villa (Compilation)",
+      "description": "Tag apposé sur toutes les pages en lien direct avec la compilation At The Villa (Compilation).",
+      "category": 5,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 194,
+    "fields": {
+      "name": "Cherry Moon (Compilation)",
+      "description": "Tag apposé sur toutes les pages en lien direct avec la compilation Cherry Moon (Compilation).",
+      "category": 5,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 195,
+    "fields": {
+      "name": "Hit Mania Dance",
+      "description": "Tag apposé sur toutes les pages en lien direct avec la compilation Hit Mania Dance.",
+      "category": 5,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 196,
+    "fields": {
+      "name": "Dance Computer",
+      "description": "Tag apposé sur toutes les pages en lien direct avec la compilation Dance Computer.",
+      "category": 5,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 197,
+    "fields": {
+      "name": "Maxi Dance",
+      "description": "Tag apposé sur toutes les pages en lien direct avec la compilation Maxi Dance.",
+      "category": 5,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 198,
+    "fields": {
+      "name": "Rave Mission",
+      "description": "Tag apposé sur toutes les pages en lien direct avec la compilation Rave Mission.",
+      "category": 5,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 199,
+    "fields": {
+      "name": "Les Nuits Trance",
+      "description": "Tag apposé sur toutes les pages en lien direct avec la compilation Les Nuits Trance.",
+      "category": 5,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 200,
+    "fields": {
+      "name": "Tunnel Trance Force",
+      "description": "Tag apposé sur toutes les pages en lien direct avec la compilation Tunnel Trance Force.",
+      "category": 5,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 201,
+    "fields": {
+      "name": "Télé 80 - Les Séries Cultes De Votre Enfance",
+      "description": "Tag apposé sur toutes les pages en lien direct avec la collection Télé 80 - Les Séries Cultes De Votre Enfance.",
+      "category": 4,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 202,
+    "fields": {
+      "name": "Référence 80 - Le Meilleur Des Années 80",
+      "description": "Tag apposé sur toutes les pages en lien direct avec la collection Référence 80 - Le Meilleur Des Années 80.",
+      "category": 4,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 203,
+    "fields": {
+      "name": "Animé Classique",
+      "description": "Tag apposé sur toutes les pages en lien direct avec la collection Animé Classique.",
+      "category": 4,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 204,
+    "fields": {
+      "name": "Cherry Moon",
+      "description": "Tag apposé sur toutes les pages en lien direct avec la discothèque Cherry Moon.",
+      "category": 3,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 205,
+    "fields": {
+      "name": "Boccaccio Life",
+      "description": "Tag apposé sur toutes les pages en lien direct avec la discothèque Boccaccio Life.",
+      "category": 3,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 206,
+    "fields": {
+      "name": "Boccaccio East",
+      "description": "Tag apposé sur toutes les pages en lien direct avec la discothèque Boccaccio East.",
+      "category": 3,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 207,
+    "fields": {
+      "name": "La Bush",
+      "description": "Tag apposé sur toutes les pages en lien direct avec la discothèque La Bush.",
+      "category": 3,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 208,
+    "fields": {
+      "name": "Le Carré",
+      "description": "Tag apposé sur toutes les pages en lien direct avec la discothèque Le Carré.",
+      "category": 3,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 209,
+    "fields": {
+      "name": "L'Haçienda",
+      "description": "Tag apposé sur toutes les pages en lien direct avec la discothèque L'Haçienda.",
+      "category": 3,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 210,
+    "fields": {
+      "name": "Parkzicht",
+      "description": "Tag apposé sur toutes les pages en lien direct avec la discothèque Parkzicht.",
+      "category": 3,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 211,
+    "fields": {
+      "name": "Le Fuse",
+      "description": "Tag apposé sur toutes les pages en lien direct avec la discothèque Le Fuse.",
+      "category": 3,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 212,
+    "fields": {
+      "name": "Cap'tain",
+      "description": "Tag apposé sur toutes les pages en lien direct avec la discothèque Cap'tain.",
+      "category": 3,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 213,
+    "fields": {
+      "name": "At The Villa",
+      "description": "Tag apposé sur toutes les pages en lien direct avec la discothèque At The Villa.",
+      "category": 3,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 214,
+    "fields": {
+      "name": "Palladium",
+      "description": "Tag apposé sur toutes les pages en lien direct avec la discothèque Palladium.",
+      "category": 3,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 215,
+    "fields": {
+      "name": "Balmoral",
+      "description": "Tag apposé sur toutes les pages en lien direct avec la discothèque Balmoral.",
+      "category": 3,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 216,
+    "fields": {
+      "name": "Zillion",
+      "description": "Tag apposé sur toutes les pages en lien direct avec la discothèque Zillion.",
+      "category": 3,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 217,
+    "fields": {
+      "name": "Plan B",
+      "description": "Tag apposé sur toutes les pages en lien direct avec la discothèque Plan B.",
+      "category": 3,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 218,
+    "fields": {
+      "name": "Le Lokal",
+      "description": "Tag apposé sur toutes les pages en lien direct avec la discothèque Le Lokal.",
+      "category": 3,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 219,
+    "fields": {
+      "name": "Extreme",
+      "description": "Tag apposé sur toutes les pages en lien direct avec la discothèque Extreme.",
+      "category": 3,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 220,
+    "fields": {
+      "name": "Lagoa",
+      "description": "Tag apposé sur toutes les pages en lien direct avec la discothèque Lagoa.",
+      "category": 3,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 221,
+    "fields": {
+      "name": "La Rocca",
+      "description": "Tag apposé sur toutes les pages en lien direct avec la discothèque La Rocca.",
+      "category": 3,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 222,
+    "fields": {
+      "name": "Montini",
+      "description": "Tag apposé sur toutes les pages en lien direct avec la discothèque Montini.",
+      "category": 3,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 223,
+    "fields": {
+      "name": "Cheops",
+      "description": "Tag apposé sur toutes les pages en lien direct avec la discothèque Cheops.",
+      "category": 3,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 224,
+    "fields": {
+      "name": "Eurodance",
+      "description": "Tag apposé sur toutes les pages en lien direct avec le genre musical Eurodance.",
+      "category": 9,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 225,
+    "fields": {
+      "name": "Happy Hardcore",
+      "description": "Tag apposé sur toutes les pages en lien direct avec le genre musical Happy Hardcore.",
+      "category": 9,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 226,
+    "fields": {
+      "name": "Techno",
+      "description": "Tag apposé sur toutes les pages en lien direct avec le genre musical Techno.",
+      "category": 9,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 227,
+    "fields": {
+      "name": "Hardtrance",
+      "description": "Tag apposé sur toutes les pages en lien direct avec le genre musical Hardtrance.",
+      "category": 9,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 228,
+    "fields": {
+      "name": "House Music",
+      "description": "Tag apposé sur toutes les pages en lien direct avec le genre musical House Music.",
+      "category": 9,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 229,
+    "fields": {
+      "name": "Trance",
+      "description": "Tag apposé sur toutes les pages en lien direct avec le genre musical Trance.",
+      "category": 9,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 230,
+    "fields": {
+      "name": "Eurobeat",
+      "description": "Tag apposé sur toutes les pages en lien direct avec le genre musical Eurobeat.",
+      "category": 9,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 231,
+    "fields": {
+      "name": "Breakbeat",
+      "description": "Tag apposé sur toutes les pages en lien direct avec le genre musical Breakbeat.",
+      "category": 9,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 232,
+    "fields": {
+      "name": "Disco House",
+      "description": "Tag apposé sur toutes les pages en lien direct avec le genre musical Disco House.",
+      "category": 9,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 233,
+    "fields": {
+      "name": "Italodisco",
+      "description": "Tag apposé sur toutes les pages en lien direct avec le genre musical Italodisco.",
+      "category": 9,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 234,
+    "fields": {
+      "name": "Dance Attitude",
+      "description": "Tag apposé sur toutes les pages en lien direct avec le magazine Dance Attitude.",
+      "category": 13,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 235,
+    "fields": {
+      "name": "Trax",
+      "description": "Tag apposé sur toutes les pages en lien direct avec le magazine Trax.",
+      "category": 13,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 236,
+    "fields": {
+      "name": "Platine",
+      "description": "Tag apposé sur toutes les pages en lien direct avec le magazine Platine.",
+      "category": 13,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 237,
+    "fields": {
+      "name": "Zipper",
+      "description": "Tag apposé sur toutes les pages en lien direct avec le magazine Zipper.",
+      "category": 13,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 238,
+    "fields": {
+      "name": "Zipper",
+      "description": "Tag apposé sur toutes les pages en lien direct avec le magazine Zipper.",
+      "category": 13,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 239,
+    "fields": {
+      "name": "De La Dance",
+      "description": "Tag apposé sur toutes les pages en lien direct avec le magazine De La Dance.",
+      "category": 13,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 240,
+    "fields": {
+      "name": "Only For DJ's",
+      "description": "Tag apposé sur toutes les pages en lien direct avec le magazine Only For DJ's.",
+      "category": 13,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 241,
+    "fields": {
+      "name": "Ressources",
+      "description": "Tag apposé sur toutes les pages de ressources pour les visiteurs du site.",
+      "category": null,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 242,
+    "fields": {
+      "name": "Page du site",
+      "description": "Tag apposé sur toutes les pages du site hors contenu (A propos de Soundamental, Contact, etc.).",
+      "category": null,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 243,
+    "fields": {
+      "name": "Aide/FAQ",
+      "description": "Tag apposé sur toutes les pages composant l'aide/FAQ.",
+      "category": null,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 244,
+    "fields": {
+      "name": "Membre",
+      "description": "Tag apposé sur toutes les pages de profils de membres inscrits.",
+      "category": null,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 245,
+    "fields": {
+      "name": "Youtube",
+      "description": "Tag apposé sur toutes les pages en lien direct avec le site / l'application Youtube.",
+      "category": 15,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 246,
+    "fields": {
+      "name": "Soundcloud",
+      "description": "Tag apposé sur toutes les pages en lien direct avec le site / l'application Soundcloud.",
+      "category": 15,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 247,
+    "fields": {
+      "name": "EuroKDJ",
+      "description": "Tag apposé sur toutes les pages en lien direct avec le site / l'application EuroKDJ.",
+      "category": 15,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 248,
+    "fields": {
+      "name": "ReMYxes",
+      "description": "Tag apposé sur toutes les pages en lien direct avec le site / l'application ReMYxes.",
+      "category": 15,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 249,
+    "fields": {
+      "name": "Le Hit Des Clubs",
+      "description": "Tag apposé sur toutes les pages en lien direct avec le site / l'application Le Hit Des Clubs.",
+      "category": 15,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 250,
+    "fields": {
+      "name": "Discogs",
+      "description": "Tag apposé sur toutes les pages en lien direct avec le site / l'application Discogs.",
+      "category": 15,
+      "access_level": 1
+    }
+  }
+]

@@ -5,6 +5,7 @@ from .email import *
 from .external import *
 from .project import *
 from decouple import Config, RepositoryEnv
+import os
 
 # Mode production
 DEBUG = False
@@ -24,3 +25,22 @@ SECURE_SSL_REDIRECT = False #temporaire pour tests / debug
 SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
 X_FRAME_OPTIONS = "DENY"
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'file': {
+            'level': 'ERROR',
+            'class': 'logging.FileHandler',
+            'filename': os.path.join(BASE_DIR, 'logs', 'django-errors.log'),
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['file'],
+            'level': 'ERROR',
+            'propagate': True,
+        },
+    },
+}

@@ -8,9 +8,10 @@ from apps.core.app_main.models.tag_meta import TagPageMeta
 
 @admin.register(Tag)
 class TagAdmin(admin.ModelAdmin):
-    list_display = ("name", "access_level")  # Affichage des colonnes principales
+    list_display = ("name", "slug", "category", "description", "access_level")  # Affichage des colonnes principales
     prepopulated_fields = {"slug": ("name",)}
-    search_fields = ("name",)  # Recherche par nom
+    fields = ("name", "slug", "category", "description", "access_level")
+    search_fields = ("name", "category__name")  # Recherche par nom + sur le nom de la catégorie
     
     def has_delete_permission(self, request, obj=None):
         """Empêche la suppression des tags système."""

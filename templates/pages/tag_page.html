@@ -44,7 +44,7 @@
                             {% with obj=item.object type=item.type badge=item.badge_class %}
                                 <li>
                                     <a href="{% if type == 'site' %}
-                                                {% url 'app_main:static_page_'|add:obj.slug %}
+                                                {% url 'app_main:static_page' slug=obj.slug %}
                                             {% elif type == 'page' %}
                                                 {% url 'app_main:dynamic_page' page_name=obj.page_info.page_name %}
                                             {% elif type == 'blog' %}
@@ -83,7 +83,7 @@
                             {% with obj=item.object type=item.type badge=item.badge_class %}
                                 <li>
                                     <a href="{% if type == 'site' %}
-                                                {% url 'app_main:static_page_'|add:obj.slug %}
+                                                {% url 'app_main:static_page' slug=obj.slug %}
                                             {% elif type == 'page' %}
                                                 {% url 'app_main:dynamic_page' page_name=obj.page_info.page_name %}
                                             {% elif type == 'blog' %}
@@ -123,7 +123,7 @@
                             {% with obj=item.object type=item.type badge=item.badge_class %}
                                 <li>
                                     <a href="{% if type == 'site' %}
-                                                {% url 'app_main:static_page_'|add:obj.slug %}
+                                                {% url 'app_main:static_page' slug=obj.slug %}
                                             {% elif type == 'page' %}
                                                 {% url 'app_main:dynamic_page' page_name=obj.page_info.page_name %}
                                             {% elif type == 'blog' %}

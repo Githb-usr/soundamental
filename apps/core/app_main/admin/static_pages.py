@@ -61,7 +61,7 @@ class StaticPageMetaAdmin(admin.ModelAdmin):
     readonly_fields = ("created_at", "updated_at", "created_by", "updated_by")
     prepopulated_fields = {"slug": ("title",)}
     form = StaticPageForm
-
+    
     def save_model(self, request, obj, form, change):
         if not obj.pk:  # Si c'est une création
             obj.created_by = request.user

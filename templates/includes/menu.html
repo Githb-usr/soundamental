@@ -13,9 +13,9 @@
                 </a>
                 <ul class="dropdown-menu bg-black text-white" aria-labelledby="indexDropdown">
                     <li><a class="dropdown-item" href="{% url 'app_index:index' %}">Index général</a></li>
-                    <li><a class="dropdown-item" href="{% url 'app_index:category_index' category='artistes' %}">Index artistes</a></li>
-                    <li><a class="dropdown-item" href="{% url 'app_index:category_index' category='compilations' %}">Index compilations</a></li>
-                    <li><a class="dropdown-item last-item" href="{% url 'app_index:category_index' category='labels' %}">Index labels</a></li>
+                    <li><a class="dropdown-item" href="{% url 'app_index:category_index' category='artiste' %}">Index artistes</a></li>
+                    <li><a class="dropdown-item" href="{% url 'app_index:category_index' category='compilation' %}">Index compilations</a></li>
+                    <li><a class="dropdown-item last-item" href="{% url 'app_index:category_index' category='label' %}">Index labels</a></li>
                 </ul>
             </li>
             <!-- Menu déroulant pour "Forum" -->
@@ -36,7 +36,7 @@
                 <a href="{% url 'app_main:dynamic_page' page_name='telechargements' %}" class="nav-link text-white">TÉLÉCHARGEMENTS</a>
             </li>
             <li class="nav-item">
-                <a href="{% url 'app_main:static_page_liens' %}" class="nav-link text-white">LIENS</a>
+                <a href="{% url 'app_main:static_page' slug='liens' %}" class="nav-link text-white">LIENS</a>
             </li>
             <li class="nav-item nav-item-last">
                 <a href="{% url 'app_main:contact' %}" class="nav-link text-white">CONTACT</a>

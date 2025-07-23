@@ -10,5 +10,5 @@
         {{ form.as_p }}
         <button type="submit" class="btn btn-success">💾 Enregistrer</button>
     </form>
-    <a href="{% url 'app_main:static_page_'|add:page.slug %}" class="btn btn-secondary">⬅️ Retour</a>
+    <a href="{% url 'app_main:static_page' slug=page.slug %}" class="btn btn-secondary">⬅️ Retour</a>
 {% endblock %}

@@ -1,0 +1,162 @@
+[
+  {
+    "model": "app_index.category",
+    "pk": 1,
+    "fields": {
+      "code": "index_general",
+      "name": "Index général",
+      "label": "Index général",
+      "description": "Index général du site (toutes les entrées, toutes catégories confonfues)"
+    }
+  },
+  {
+    "model": "app_index.category",
+    "pk": 2,
+    "fields": {
+      "code": "artiste",
+      "name": "Artiste",
+      "label": "Artistes",
+      "description": "Artiste référencé sur le site"
+    }
+  },
+  {
+    "model": "app_index.category",
+    "pk": 3,
+    "fields": {
+      "code": "club",
+      "name": "Club",
+      "label": "Clubs",
+      "description": "Club référencé sur le site"
+    }
+  },
+  {
+    "model": "app_index.category",
+    "pk": 4,
+    "fields": {
+      "code": "collection",
+      "name": "Collection",
+      "label": "Collections",
+      "description": "Collection référencée sur le site"
+    }
+  },
+  {
+    "model": "app_index.category",
+    "pk": 5,
+    "fields": {
+      "code": "compilation",
+      "name": "Compilation",
+      "label": "Compilations",
+      "description": "Compilation référencée sur le site"
+    }
+  },
+  {
+    "model": "app_index.category",
+    "pk": 6,
+    "fields": {
+      "code": "emission_radio",
+      "name": "Émission radio",
+      "label": "Émissions radio",
+      "description": "Émission radio référencée sur le site"
+    }
+  },
+  {
+    "model": "app_index.category",
+    "pk": 7,
+    "fields": {
+      "code": "emission_tv",
+      "name": "Émission TV",
+      "label": "Émissions TV",
+      "description": "Émission TV référencée sur le site"
+    }
+  },
+  {
+    "model": "app_index.category",
+    "pk": 8,
+    "fields": {
+      "code": "emission_web",
+      "name": "Émission web",
+      "label": "Émissions web",
+      "description": "Émission web référencée sur le site"
+    }
+  },
+  {
+    "model": "app_index.category",
+    "pk": 9,
+    "fields": {
+      "code": "genre_musical",
+      "name": "Genre musical",
+      "label": "Genres musicaux",
+      "description": "Genre musical référencé sur le site"
+    }
+  },
+  {
+    "model": "app_index.category",
+    "pk": 10,
+    "fields": {
+      "code": "label",
+      "name": "Label",
+      "label": "Labels",
+      "description": "Label référencé sur le site"
+    }
+  },
+  {
+    "model": "app_index.category",
+    "pk": 11,
+    "fields": {
+      "code": "lexique",
+      "name": "Lexique",
+      "label": "Lexique",
+      "description": "Terme du lexique référencé sur le site"
+    }
+  },
+  {
+    "model": "app_index.category",
+    "pk": 12,
+    "fields": {
+      "code": "livre",
+      "name": "Livre",
+      "label": "Livres",
+      "description": "Livre référencé sur le site"
+    }
+  },
+  {
+    "model": "app_index.category",
+    "pk": 13,
+    "fields": {
+      "code": "magazine",
+      "name": "Magazine",
+      "label": "Magazines",
+      "description": "Magazine référencé sur le site"
+    }
+  },
+  {
+    "model": "app_index.category",
+    "pk": 14,
+    "fields": {
+      "code": "radio",
+      "name": "Radio",
+      "label": "Radios",
+      "description": "Chaine de radio référencée sur le site"
+    }
+  },
+  {
+    "model": "app_index.category",
+    "pk": 15,
+    "fields": {
+      "code": "site_internet_application",
+      "name": "Site internet / Application",
+      "label": "Sites internet / Applications",
+      "description": "Site internet et/ou application référencé(e) sur le site"
+    }
+  },
+  {
+    "model": "app_index.category",
+    "pk": 16,
+    "fields": {
+      "code": "tv",
+      "name": "TV",
+      "label": "TV",
+      "description": "Chaine de TV référencée sur le site"
+    }
+  }
+]

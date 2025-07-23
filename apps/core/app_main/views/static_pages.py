@@ -5,6 +5,8 @@ from apps.core.app_main.models.static_pages import StaticPageMeta
 from apps.core.app_main.models.tags import Tag
 from apps.core.app_main.forms.static_pages import PublicPageEditForm
 from apps.core.app_main.views.tags import get_visible_tags
+import logging
+logger = logging.getLogger("django")
 
 # =================================
 # 📂 VUES POUR LES PAGES STATIQUES
@@ -51,7 +53,7 @@ def edit_page(request, slug):
         form = PublicPageEditForm(request.POST, instance=page)
         if form.is_valid():
             form.save()
-            return redirect(reverse(f"app_main:static_page_{page.slug}")) # Retourne à la page après édition
+            return redirect("app_main:static_page", slug=page.slug)  # Retourne à la page après édition
     else:
         form = PublicPageEditForm(instance=page)
 

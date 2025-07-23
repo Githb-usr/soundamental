@@ -22,7 +22,7 @@ class CategorieArticle(models.Model):
  
     class Meta:
         verbose_name = "Catégorie d'article"
-        verbose_name_plural = "Catégories d'article"
+        verbose_name_plural = "Blog - Catégories d'articles"
         ordering = ['nom']
 
     def __str__(self):
