@@ -84,12 +84,12 @@
                             
                             {% if not category %}
                                 <td class="category-link">
-                                    {% if entry.category_url %}
-                                        <td class="category-link">
-                                            <a href="{% url 'app_index:category_index' entry.category_url %}">
-                                                {{ entry.entry.category.label|default:entry.entry.category.name|title }}
-                                            </a>
-                                        </td>
+                                    {% if entry.has_index %}
+                                        <a href="{% url 'app_index:category_index' entry.category_url %}">
+                                            {{ entry.entry.category.label|default:entry.entry.category.name|title }}
+                                        </a>
+                                    {% else %}
+                                        {{ entry.entry.category.label|default:entry.entry.category.name|title }}
                                     {% endif %}
                                 </td>
                             {% endif %}

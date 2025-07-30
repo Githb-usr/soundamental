@@ -86,4 +86,12 @@ class ArticleArchiveView(ListView):
             if s in mois_valides_set:
                 context["mois_suiv"] = s
 
+        context["categories"] = (
+            CategorieArticle.objects.annotate(
+                nb_principale=Count("articles_avec_cette_categorie_principale", distinct=True),
+                nb_secondaire=Count("articles_avec_cette_categorie_secondaire", distinct=True),
+            )
+        )
+        context["archives"] = build_archive_dict()
+
         return context

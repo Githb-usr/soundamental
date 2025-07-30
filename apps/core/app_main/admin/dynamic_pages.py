@@ -19,7 +19,7 @@ class DynamicPageInfoAdmin(admin.ModelAdmin):
         return perms
     
     def generated_display_name(self, obj):
-        return obj.generate_display_name()  # 🔹 Utilise la fonction de correction
+        return obj.generate_display_name()  # Utilise la fonction de correction
 
     generated_display_name.short_description = "Nom affiché"
 
@@ -63,5 +63,5 @@ class DynamicPageTagAdmin(admin.ModelAdmin):
     def page_info_display(self, obj):
         return obj.page_info.display_name if obj.page_info else "—"
 
-    page_info_display.short_description = "Page dynamique"  # 🔹 Renomme la colonne
+    page_info_display.short_description = "Page dynamique"  # Renomme la colonne
 

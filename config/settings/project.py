@@ -33,14 +33,6 @@ LINK_BASES = {
     },
 }
 
-CATEGORY_MAPPING = {
-    "artistes": "artiste",
-    "collection": "collection",
-    "compilations": "compilation",
-    "labels": "label",
-    "lexique": "lexique"
-}
-
 # Codes des liens de l'index
 INDEX_LINK_CODES = {
     "biography": "BIO",  # Biographie (Artistes)
@@ -53,9 +45,55 @@ INDEX_LINK_CODES = {
     "forum": "FOR",  # Forum (toutes catégories)
 }
 
+# Ce mapping définit, pour chaque catégorie d'entrée de l'index,
+# la liste des types de pages qui peuvent être liées dans l'interface.
+# - La clé est le code interne de la catégorie (ex: "artiste", "genre_musical", ...).
+# - La valeur est une liste de 5 éléments : chaque position correspond à un type de page
+#   (ou None si non utilisé), la dernière position doit être "forum" si un lien forum existe.
+# Exemple :
+#   "artiste": ["biography", "discography", "videography", "bootography", "forum"]
+# ➔ Si tu ajoutes une nouvelle catégorie, AJOUTE-LA ICI obligatoirement,
+#   sinon les liens ne s’afficheront pas dans l’index.
 INDEX_LINK_TEMPLATES = {
     "artiste": ["biography", "discography", "videography", "bootography", "forum"],
     "compilation": ["history", "volumes", "videography", "bootography", "forum"],
     "label": ["history", "catalog", None, "bootography", "forum"],
     "lexique": ["definition", None, None, None, "forum"],
+    "animateur_radio": [None, None, None, None, "forum"],
+    "chaine_tv": [None, None, None, None, "forum"],
+    "club": [None, None, None, None, "forum"],
+    "collection": [None, None, None, None, "forum"],
+    "documentaire": [None, None, None, None, "forum"],
+    "emission_radio": [None, None, None, None, "forum"],
+    "emission_tv": [None, None, None, None, "forum"],
+    "emission_web": [None, None, None, None, "forum"],
+    "film": [None, None, None, None, "forum"],
+    "genre_musical": [None, None, None, None, "forum"],
+    "jeu_video": [None, None, None, None, "forum"],
+    "livre": [None, None, None, None, "forum"],
+    "magazine": [None, None, None, None, "forum"],
+    "pub_tv": [None, None, None, None, "forum"],
+    "reportage": [None, None, None, None, "forum"],
+    "serie": [None, None, None, None, "forum"],
+    "site_web": [None, None, None, None, "forum"],
+    "station_radio": [None, None, None, None, "forum"],
+    "webradio": [None, None, None, None, "forum"],
+}
+
+# Ce mapping sert uniquement à générer les URL de navigation pour les index thématiques.
+# - La clé est le nom affiché au pluriel de la catégorie (ex: "artistes", "compilations").
+# - La valeur est le code utilisé dans l’URL pour cette catégorie (ex: "artiste", "compilation").
+# ➔ À compléter UNIQUEMENT si la nouvelle catégorie doit avoir sa propre page d’index thématique
+#   (ex : index des artistes, index des labels, etc.).
+# ➔ Inutile pour les catégories "secondaires" ou techniques non visibles dans l’index global.
+
+# Pour les noms composés de plusieurs mots, la clé doit être identique
+# à la forme plurielle affichée sur le site (ex: "sites internet / applications"),
+# et la valeur doit correspondre au code technique de la catégorie (ex: "site_internet_application").
+CATEGORY_MAPPING = {
+    "artistes": "artiste",
+    "collection": "collection",
+    "compilations": "compilation",
+    "labels": "label",
+    "lexique": "lexique"
 }

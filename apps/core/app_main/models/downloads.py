@@ -57,7 +57,12 @@ class DownloadableFile(models.Model):
     """
     Modèle pour gérer les fichiers téléchargeables.
     """
-    title = models.CharField(max_length=255, unique=True, verbose_name="Nom du fichier")
+    title = models.CharField(max_length=255, verbose_name="Nom du fichier")
+    subtitle = models.CharField(
+        max_length=255,
+        blank=True,
+        help_text="Sous-titre optionnel affiché sous le titre principal."
+    )
     description = models.TextField(blank=True, verbose_name="Description")
     
     file = models.FileField(
@@ -84,6 +89,7 @@ class DownloadableFile(models.Model):
         return 0
 
     class Meta:
+        unique_together = ("title", "subtitle")  # Contraintes d’unicité sur le couple
         ordering = ["-uploaded_at"]
         verbose_name = "Fichier téléchargeable"
         verbose_name_plural = "Téléchargements - Fichiers"

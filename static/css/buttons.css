@@ -5,7 +5,16 @@
 /* BOUTONS GLOBAUX */
 /* ############### */
 
+/* Bouton de téléchargement */
+.btn-telechargement {
+    background-color: #00a0c6 !important;  /* même couleur que le fond */
+    color: #fff !important;                /* texte blanc pour contraste suffisant */
+    border: none !important;
+}
 
+.btn-telechargement:hover {
+    background-color: #008cae !important; /* version légèrement plus foncée au survol */
+}
 
 /* BOUTONS TAGS */
 /* ############ */

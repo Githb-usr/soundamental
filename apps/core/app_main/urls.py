@@ -6,13 +6,15 @@ from apps.core.app_main.views import static_pages
 from apps.core.app_main.views.static_pages import static_page_view, edit_page
 from apps.core.app_main.views.dynamic_pages import dynamic_page_view
 from apps.core.app_main.views.downloads import telechargements_view, download_file
+from apps.core.app_main.views.home import home_view
 from apps.core.app_main.views.tags import tag_page_view
 from apps.core.app_main.views.contact import contact_view, confirmation_contact
 
 app_name = "app_main"
 
 urlpatterns = [
-    path("", lambda request: redirect("app_main:static_page", slug="accueil"), name="home"),
+    # Page d'accueil
+    path("", home_view, name="home"),
     
     # Téléchargements
     path("download/<int:file_id>/", download_file, name="download_file"),

@@ -1,0 +1,274 @@
+/* ################################################# */
+/* ## pages.css - Styles des pages du blog (news) ## */
+/* ################################################# */
+
+.blog-2col-grid {
+    display: grid;
+    grid-template-columns: 1fr minmax(160px, 220px);
+    grid-template-rows: auto 1fr;      /* navigation (auto), puis contenu (1fr) */
+    gap: 2.5rem 2.5rem;
+    align-items: start;
+}
+.blog-nav-col {
+    grid-column: 1 / -1;   /* navigation sur toute la largeur */
+}
+
+/* Responsive : une colonne, sidebar passe sous les articles */
+@media (max-width: 991px) {
+    .blog-2col-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr;
+        gap: 0;
+    }
+    .blog-2col-grid > aside {
+        margin-top: 2.5rem;
+    }
+}
+
+/* BLOG - Liste des articles (accueil et archives) */
+/* ############################################### */
+
+.blog-article-preview {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+}
+  
+/* Titre */
+.blog-article-preview h2 {
+font-size: 1.5rem;
+font-weight: 500;
+margin-bottom: 0.3rem;
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+}
+
+.blog-article-preview h2 a {
+text-decoration: none;
+color: #005f73;
+transition: color 0.3s ease;
+}
+
+.blog-article-preview h2 a:hover {
+color: #0088a8;
+text-decoration: underline;
+}
+
+/* Métadonnées */
+.blog-article-preview p.text-muted {
+font-size: 0.9rem;
+margin-bottom: 0.8rem;
+}
+
+/* Contenu prévisualisé */
+.blog-article-preview .blog-content-preview {
+font-size: 0.95rem;
+color: #333;
+line-height: 1.5;
+}
+
+/* Image miniature */
+.blog-thumbnail-wrapper {
+flex-shrink: 0;
+}
+
+.blog-thumbnail {
+width: 200px;
+max-width: 100%;
+height: auto;
+border-radius: 8px;
+display: block;
+}
+
+.blog-article-body {
+flex-grow: 1;
+}
+
+.blog-article-excerpt {
+margin-bottom: 0.5rem;
+color: #333;
+}
+
+/* Vignettes illustrant les articles dans les listes d'articles du blog */
+.blog-article-thumbnail {
+    max-width: 100%;
+    width: 200px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    display: block;
+}
+  
+
+/* ARCHIVES - Barre de mois (type onglet) */
+.mois-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-bottom: 1.5rem;
+    align-items: center;
+}
+
+.mois-tab {
+    display: inline-block;
+    padding: 4px 10px;
+    min-width: 80px;
+    text-align: center;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    transition: all 0.2s ease-in-out;
+    background-color: #c6e6ee;
+    color: #0088a8;
+    line-height: 1.2rem;
+}
+
+.mois-tab:hover {
+    background-color: #d4edf3;
+    color: #005f73;
+}
+
+.mois-tab.mois-actif {
+    background-color: #007596;
+    color: #fff;
+    border-color: #007596;
+    pointer-events: none;
+}
+
+.mois-tab.mois-inactif {
+    background-color: #f8f9fa;
+    color: #b5b5b5;
+    border-color: #eeeeee;
+    pointer-events: none;
+    opacity: 1;
+}
+
+.mois-tab.mois-tous {
+    min-width: 100px; /* plus large pour "Tous les articles" */
+}
+
+/* SIDEBAR CATEGORIES + ARCHIVES DU BLOG */
+/* ##################################### */
+
+/* Conteneur accordéon (année) : pas de bordure, fond transparent */
+.archives-sidebar.narrow-sidebar .accordion-item {
+    border: none;
+    background-color: transparent;
+}
+
+/* Bouton d'entête de l'accordéon (année) : teinte claire, sans bordure visible, séparation basse */
+.archives-sidebar.narrow-sidebar .accordion-button {
+    background-color: #e7e7e7; /* Teinte claire, légèrement plus marquée */
+    color: #212529;
+    font-size: 1.1rem;
+    padding: 0.6rem 0.75rem;
+    border: none;
+    border-bottom: 1px solid #ccc; /* Trait de séparation visible */
+    border-radius: 0;
+    box-shadow: none;
+}
+
+/* Icône de l'accordéon (flèche) : réduite et assombrie */
+.archives-sidebar.narrow-sidebar .accordion-button::after {
+    transform: scale(0.6);
+    filter: brightness(0.6);
+}
+
+/* Supprime le padding du body de l'accordéon (mois) */
+.archives-sidebar.narrow-sidebar .accordion-body {
+    padding: 0 !important;
+}
+
+/* Supprime le margin-bottom sur le ul de la liste des mois */
+.archives-sidebar.narrow-sidebar .accordion-body ul {
+    margin-bottom: 0 !important;
+}
+
+/* Liens des mois et "Tous les articles" : style bouton discret */
+.archives-sidebar.narrow-sidebar .accordion-body ul li a {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    margin-bottom: 2px;
+    background-color: #f8f9fa;
+    color: #0088a8;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: background-color 0.2s ease;
+}
+
+/* Effet au survol sur les liens de la liste archives */
+.archives-sidebar.narrow-sidebar .accordion-body ul li a:hover {
+    background-color: #e1eff2;
+    color: #005f6b;
+}
+
+/* UNIFORMISATION ENTRE ARCHIVES ET CATÉGORIES */
+/* Même taille de police pour les listes d'archives et de catégories */
+.archives-sidebar.narrow-sidebar ul,
+.blog-categories.narrow-sidebar ul {
+    font-size: 0.9rem !important;
+}
+
+/* TITRES DES BLOCS SIDEBAR */
+/* Taille du titre homogène pour "Archives" et "Catégories" */
+.sidebar-title,
+.archives-sidebar.narrow-sidebar h2,
+.archives-sidebar.narrow-sidebar .h5,
+.blog-categories.narrow-sidebar h3 {
+    font-size: 1.1rem !important;
+}
+
+/* Espace sous le titre "Catégories" uniquement */
+.blog-categories .sidebar-title {
+    margin-bottom: 0.2rem !important;
+}
+
+/* Espace sous le titre "Archives" (garde la valeur précédente) */
+.archives-sidebar .sidebar-title {
+    margin-bottom: 0.6rem !important;
+}
+
+/* Supprime la marge basse des titres dans la sidebar */
+.archives-sidebar.narrow-sidebar h2,
+.archives-sidebar.narrow-sidebar .h5,
+.blog-categories.narrow-sidebar h3 {
+    margin-bottom: 0 !important;
+}
+
+/* Ajoute un espace entre les deux blocs sidebars */
+#blog-sidebar .blog-categories {
+    margin-bottom: 2rem;
+}
+
+/* Grilles de vignettes (interviews) */
+/* ################################# */
+
+#blog-grille-img {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+  margin-bottom: 24px;
+}
+#blog-grille-img img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  object-fit: cover;
+  aspect-ratio: 1 / 1; /* pour carré même sans hauteur */
+}
+@media (max-width: 800px) {
+  #blog-grille-img {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 500px) {
+  #blog-grille-img {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

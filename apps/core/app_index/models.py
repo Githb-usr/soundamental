@@ -96,8 +96,8 @@ class IndexEntry(models.Model):
 
     class Meta:
         indexes = [
-            models.Index(fields=["category"]),  # 🔹 Accélère les recherches par catégorie
-            models.Index(fields=["name"]),  # 🔹 Accélère les recherches par nom
+            models.Index(fields=["category"]),  # Accélère les recherches par catégorie
+            models.Index(fields=["name"]),  # Accélère les recherches par nom
         ]
         ordering = ["name"]  # Trie l’index par nom (A-Z)
         verbose_name = "Entrée de l'index"
@@ -115,8 +115,8 @@ class IndexEntry(models.Model):
 
     @cached_property
     def get_links(self):
-        base_urls = settings.LINK_BASES.get(self.category.name.lower(), {})
-        template = settings.INDEX_LINK_TEMPLATES.get(self.category.name.lower(), [None] * 5)
+        base_urls = settings.LINK_BASES.get(self.category.code, {})
+        template = settings.INDEX_LINK_TEMPLATES.get(self.category.code, [None] * 5)
         slugified_name = f"{self.id}-{unidecode(self.name).lower().replace(' ', '-')}"
         links = []
         for key in template[:-1]:  # on gère forum à part
@@ -125,15 +125,20 @@ class IndexEntry(models.Model):
                 continue
             exists = PageExistence.objects.filter(
                 category=self.category,
-                name__iexact=self.name,  # 🔹 insensible à la casse
-                page_type__name=f"{self.category}_{key}"
+                name__iexact=self.name,  # insensible à la casse
+                page_type__code=f"{self.category}_{key}"
             ).exists()
+            
             if exists and key in base_urls:
                 links.append(base_urls[key].format(slugified_name))
             else:
                 links.append(None)
-        # 🔹 Ajout du lien forum (en dernière position)
-        links.append(self.get_forum_url if self.id_forum else None)
+        # Ajout du lien forum (en dernière position)
+        _ = self.get_forum_url  # force le calcul
+        if template and template[-1] == "forum":
+            links.append(self.get_forum_url if self.id_forum else None)
+        else:
+            links.append(None)
         return links
 
     def __str__(self):

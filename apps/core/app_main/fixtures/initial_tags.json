@@ -4,6 +4,7 @@
     "pk": 1,
     "fields": {
       "name": "Mylène Farmer",
+      "slug": "mylene-farmer",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Mylène Farmer.",
       "category": 2,
       "access_level": 1
@@ -14,6 +15,7 @@
     "pk": 2,
     "fields": {
       "name": "2 Unlimited",
+      "slug": "2-unlimited",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe 2 Unlimited.",
       "category": 2,
       "access_level": 1
@@ -24,6 +26,7 @@
     "pk": 3,
     "fields": {
       "name": "Cappella",
+      "slug": "cappella",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Cappella.",
       "category": 2,
       "access_level": 1
@@ -34,6 +37,7 @@
     "pk": 4,
     "fields": {
       "name": "Corona",
+      "slug": "corona",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Corona.",
       "category": 2,
       "access_level": 1
@@ -44,6 +48,7 @@
     "pk": 5,
     "fields": {
       "name": "Sash!",
+      "slug": "sash",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Sash!.",
       "category": 2,
       "access_level": 1
@@ -54,6 +59,7 @@
     "pk": 6,
     "fields": {
       "name": "U96",
+      "slug": "u96",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe U96.",
       "category": 2,
       "access_level": 1
@@ -64,6 +70,7 @@
     "pk": 7,
     "fields": {
       "name": "Pet Shop Boys",
+      "slug": "pet-shop-boys",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Pet Shop Boys.",
       "category": 2,
       "access_level": 1
@@ -74,6 +81,7 @@
     "pk": 8,
     "fields": {
       "name": "Culture Beat",
+      "slug": "culture-beat",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Culture Beat.",
       "category": 2,
       "access_level": 1
@@ -84,6 +92,7 @@
     "pk": 9,
     "fields": {
       "name": "T.H. Express",
+      "slug": "th-express",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe T.H. Express.",
       "category": 2,
       "access_level": 1
@@ -94,6 +103,7 @@
     "pk": 10,
     "fields": {
       "name": "Dorothée",
+      "slug": "dorothee",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Dorothée.",
       "category": 2,
       "access_level": 1
@@ -104,6 +114,7 @@
     "pk": 11,
     "fields": {
       "name": "Masterboy",
+      "slug": "masterboy",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Masterboy.",
       "category": 2,
       "access_level": 1
@@ -114,6 +125,7 @@
     "pk": 12,
     "fields": {
       "name": "Space Master",
+      "slug": "space-master",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Space Master.",
       "category": 2,
       "access_level": 1
@@ -124,6 +136,7 @@
     "pk": 13,
     "fields": {
       "name": "E-Type",
+      "slug": "e-type",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe E-Type.",
       "category": 2,
       "access_level": 1
@@ -134,6 +147,7 @@
     "pk": 14,
     "fields": {
       "name": "Black Box",
+      "slug": "black-box",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Black Box.",
       "category": 2,
       "access_level": 1
@@ -144,6 +158,7 @@
     "pk": 15,
     "fields": {
       "name": "Scooter",
+      "slug": "scooter",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Scooter.",
       "category": 2,
       "access_level": 1
@@ -154,6 +169,7 @@
     "pk": 16,
     "fields": {
       "name": "E-Rotic",
+      "slug": "e-rotic",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe E-Rotic.",
       "category": 2,
       "access_level": 1
@@ -164,6 +180,7 @@
     "pk": 17,
     "fields": {
       "name": "Faithless",
+      "slug": "faithless",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Faithless.",
       "category": 2,
       "access_level": 1
@@ -174,6 +191,7 @@
     "pk": 18,
     "fields": {
       "name": "2 Brothers On The 4th Floor",
+      "slug": "2-brothers-on-the-4th-floor",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe 2 Brothers On The 4th Floor.",
       "category": 2,
       "access_level": 1
@@ -184,6 +202,7 @@
     "pk": 19,
     "fields": {
       "name": "ICE MC",
+      "slug": "ice-mc",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe ICE MC.",
       "category": 2,
       "access_level": 1
@@ -194,6 +213,7 @@
     "pk": 20,
     "fields": {
       "name": "Depeche Mode",
+      "slug": "depeche-mode",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Depeche Mode.",
       "category": 2,
       "access_level": 1
@@ -204,6 +224,7 @@
     "pk": 21,
     "fields": {
       "name": "Einstein Doctor Deejay",
+      "slug": "einstein-doctor-deejay",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Einstein Doctor Deejay.",
       "category": 2,
       "access_level": 1
@@ -214,6 +235,7 @@
     "pk": 22,
     "fields": {
       "name": "Haddaway",
+      "slug": "haddaway",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Haddaway.",
       "category": 2,
       "access_level": 1
@@ -224,6 +246,7 @@
     "pk": 23,
     "fields": {
       "name": "Indra",
+      "slug": "indra",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Indra.",
       "category": 2,
       "access_level": 1
@@ -234,6 +257,7 @@
     "pk": 24,
     "fields": {
       "name": "DJ Bertrand",
+      "slug": "dj-bertrand",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe DJ Bertrand.",
       "category": 2,
       "access_level": 1
@@ -244,6 +268,7 @@
     "pk": 25,
     "fields": {
       "name": "Whigfield",
+      "slug": "whigfield",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Whigfield.",
       "category": 2,
       "access_level": 1
@@ -254,6 +279,7 @@
     "pk": 26,
     "fields": {
       "name": "Latino Party",
+      "slug": "latino-party",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Latino Party.",
       "category": 2,
       "access_level": 1
@@ -264,6 +290,7 @@
     "pk": 27,
     "fields": {
       "name": "Pleasure Game",
+      "slug": "pleasure-game",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Pleasure Game.",
       "category": 2,
       "access_level": 1
@@ -274,6 +301,7 @@
     "pk": 28,
     "fields": {
       "name": "Egma",
+      "slug": "egma",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Egma.",
       "category": 2,
       "access_level": 1
@@ -284,6 +312,7 @@
     "pk": 29,
     "fields": {
       "name": "EXP",
+      "slug": "exp",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe EXP.",
       "category": 2,
       "access_level": 1
@@ -294,6 +323,7 @@
     "pk": 30,
     "fields": {
       "name": "Pharao",
+      "slug": "pharao",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Pharao.",
       "category": 2,
       "access_level": 1
@@ -304,6 +334,7 @@
     "pk": 31,
     "fields": {
       "name": "Magic Affair",
+      "slug": "magic-affair",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Magic Affair.",
       "category": 2,
       "access_level": 1
@@ -314,6 +345,7 @@
     "pk": 32,
     "fields": {
       "name": "Rozlyne Clarke",
+      "slug": "rozlyne-clarke",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Rozlyne Clarke.",
       "category": 2,
       "access_level": 1
@@ -324,6 +356,7 @@
     "pk": 33,
     "fields": {
       "name": "20 Fingers",
+      "slug": "20-fingers",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe 20 Fingers.",
       "category": 2,
       "access_level": 1
@@ -334,6 +367,7 @@
     "pk": 34,
     "fields": {
       "name": "Snap!",
+      "slug": "snap",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Snap!.",
       "category": 2,
       "access_level": 1
@@ -344,6 +378,7 @@
     "pk": 35,
     "fields": {
       "name": "The Space Brothers",
+      "slug": "the-space-brothers",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe The Space Brothers.",
       "category": 2,
       "access_level": 1
@@ -354,6 +389,7 @@
     "pk": 36,
     "fields": {
       "name": "Technotronic",
+      "slug": "technotronic",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Technotronic.",
       "category": 2,
       "access_level": 1
@@ -364,6 +400,7 @@
     "pk": 37,
     "fields": {
       "name": "Antares",
+      "slug": "antares",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Antares.",
       "category": 2,
       "access_level": 1
@@ -374,6 +411,7 @@
     "pk": 38,
     "fields": {
       "name": "Fun Factory",
+      "slug": "fun-factory",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Fun Factory.",
       "category": 2,
       "access_level": 1
@@ -384,6 +422,7 @@
     "pk": 39,
     "fields": {
       "name": "J.K.",
+      "slug": "jk",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe J.K..",
       "category": 2,
       "access_level": 1
@@ -394,6 +433,7 @@
     "pk": 40,
     "fields": {
       "name": "Maxx",
+      "slug": "maxx",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Maxx.",
       "category": 2,
       "access_level": 1
@@ -404,6 +444,7 @@
     "pk": 41,
     "fields": {
       "name": "Jam & Spoon",
+      "slug": "jam-spoon",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Jam & Spoon.",
       "category": 2,
       "access_level": 1
@@ -414,6 +455,7 @@
     "pk": 42,
     "fields": {
       "name": "La Bouche",
+      "slug": "la-bouche",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe La Bouche.",
       "category": 2,
       "access_level": 1
@@ -424,6 +466,7 @@
     "pk": 43,
     "fields": {
       "name": "Mephisto",
+      "slug": "mephisto",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Mephisto.",
       "category": 2,
       "access_level": 1
@@ -434,6 +477,7 @@
     "pk": 44,
     "fields": {
       "name": "Gala",
+      "slug": "gala",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Gala.",
       "category": 2,
       "access_level": 1
@@ -444,6 +488,7 @@
     "pk": 45,
     "fields": {
       "name": "David Guetta",
+      "slug": "david-guetta",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe David Guetta.",
       "category": 2,
       "access_level": 1
@@ -454,6 +499,7 @@
     "pk": 46,
     "fields": {
       "name": "Anita Doth",
+      "slug": "anita-doth",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Anita Doth.",
       "category": 2,
       "access_level": 1
@@ -464,6 +510,7 @@
     "pk": 47,
     "fields": {
       "name": "Bell Bar",
+      "slug": "bell-bar",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Bell Bar.",
       "category": 2,
       "access_level": 1
@@ -474,6 +521,7 @@
     "pk": 48,
     "fields": {
       "name": "Björk",
+      "slug": "bjork",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Björk.",
       "category": 2,
       "access_level": 1
@@ -484,6 +532,7 @@
     "pk": 49,
     "fields": {
       "name": "A-ha",
+      "slug": "a-ha",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe A-ha.",
       "category": 2,
       "access_level": 1
@@ -494,6 +543,7 @@
     "pk": 50,
     "fields": {
       "name": "Maxxima",
+      "slug": "maxxima",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Maxxima.",
       "category": 2,
       "access_level": 1
@@ -504,6 +554,7 @@
     "pk": 51,
     "fields": {
       "name": "Ysa Ferrer",
+      "slug": "ysa-ferrer",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Ysa Ferrer.",
       "category": 2,
       "access_level": 1
@@ -514,6 +565,7 @@
     "pk": 52,
     "fields": {
       "name": "Stromae",
+      "slug": "stromae",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Stromae.",
       "category": 2,
       "access_level": 1
@@ -524,6 +576,7 @@
     "pk": 53,
     "fields": {
       "name": "Ame Strong SA",
+      "slug": "ame-strong-sa",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Ame Strong SA.",
       "category": 2,
       "access_level": 1
@@ -534,6 +587,7 @@
     "pk": 54,
     "fields": {
       "name": "Melissa",
+      "slug": "melissa",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Melissa.",
       "category": 2,
       "access_level": 1
@@ -544,6 +598,7 @@
     "pk": 55,
     "fields": {
       "name": "Madonna",
+      "slug": "madonna",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Madonna.",
       "category": 2,
       "access_level": 1
@@ -554,6 +609,7 @@
     "pk": 56,
     "fields": {
       "name": "Lady Gaga",
+      "slug": "lady-gaga",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Lady Gaga.",
       "category": 2,
       "access_level": 1
@@ -564,6 +620,7 @@
     "pk": 57,
     "fields": {
       "name": "Cascada",
+      "slug": "cascada",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Cascada.",
       "category": 2,
       "access_level": 1
@@ -574,6 +631,7 @@
     "pk": 58,
     "fields": {
       "name": "Najoua Belyzel",
+      "slug": "najoua-belyzel",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Najoua Belyzel.",
       "category": 2,
       "access_level": 1
@@ -584,6 +642,7 @@
     "pk": 59,
     "fields": {
       "name": "Alizée",
+      "slug": "alizee",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Alizée.",
       "category": 2,
       "access_level": 1
@@ -594,6 +653,7 @@
     "pk": 60,
     "fields": {
       "name": "Playahitty",
+      "slug": "playahitty",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Playahitty.",
       "category": 2,
       "access_level": 1
@@ -604,6 +664,7 @@
     "pk": 61,
     "fields": {
       "name": "Kylie Minogue",
+      "slug": "kylie-minogue",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Kylie Minogue.",
       "category": 2,
       "access_level": 1
@@ -614,6 +675,7 @@
     "pk": 62,
     "fields": {
       "name": "Soundstream",
+      "slug": "soundstream",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Soundstream.",
       "category": 2,
       "access_level": 1
@@ -624,6 +686,7 @@
     "pk": 63,
     "fields": {
       "name": "Yelle",
+      "slug": "yelle",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Yelle.",
       "category": 2,
       "access_level": 1
@@ -634,6 +697,7 @@
     "pk": 64,
     "fields": {
       "name": "Twenty 4 Seven",
+      "slug": "twenty-4-seven",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Twenty 4 Seven.",
       "category": 2,
       "access_level": 1
@@ -644,6 +708,7 @@
     "pk": 65,
     "fields": {
       "name": "Captain Hollywood",
+      "slug": "captain-hollywood",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Captain Hollywood.",
       "category": 2,
       "access_level": 1
@@ -654,6 +719,7 @@
     "pk": 66,
     "fields": {
       "name": "Basic Element",
+      "slug": "basic-element",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Basic Element.",
       "category": 2,
       "access_level": 1
@@ -664,6 +730,7 @@
     "pk": 67,
     "fields": {
       "name": "Rozalla",
+      "slug": "rozalla",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Rozalla.",
       "category": 2,
       "access_level": 1
@@ -674,6 +741,7 @@
     "pk": 68,
     "fields": {
       "name": "Enigma",
+      "slug": "enigma",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Enigma.",
       "category": 2,
       "access_level": 1
@@ -684,6 +752,7 @@
     "pk": 69,
     "fields": {
       "name": "Ace Of Base",
+      "slug": "ace-of-base",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Ace Of Base.",
       "category": 2,
       "access_level": 1
@@ -694,6 +763,7 @@
     "pk": 70,
     "fields": {
       "name": "Elsa Esnoult",
+      "slug": "elsa-esnoult",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Elsa Esnoult.",
       "category": 2,
       "access_level": 1
@@ -704,6 +774,7 @@
     "pk": 71,
     "fields": {
       "name": "Sandra",
+      "slug": "sandra",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Sandra.",
       "category": 2,
       "access_level": 1
@@ -714,6 +785,7 @@
     "pk": 72,
     "fields": {
       "name": "Real McCoy",
+      "slug": "real-mccoy",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Real McCoy.",
       "category": 2,
       "access_level": 1
@@ -724,6 +796,7 @@
     "pk": 73,
     "fields": {
       "name": "Le Park",
+      "slug": "le-park",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Le Park.",
       "category": 2,
       "access_level": 1
@@ -734,6 +807,7 @@
     "pk": 74,
     "fields": {
       "name": "Bass Bumpers",
+      "slug": "bass-bumpers",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Bass Bumpers.",
       "category": 2,
       "access_level": 1
@@ -744,6 +818,7 @@
     "pk": 75,
     "fields": {
       "name": "Da Blitz",
+      "slug": "da-blitz",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Da Blitz.",
       "category": 2,
       "access_level": 1
@@ -754,6 +829,7 @@
     "pk": 76,
     "fields": {
       "name": "B.G. The Prince Of Rap",
+      "slug": "bg-the-prince-of-rap",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe B.G. The Prince Of Rap.",
       "category": 2,
       "access_level": 1
@@ -764,6 +840,7 @@
     "pk": 77,
     "fields": {
       "name": "Cartouche",
+      "slug": "cartouche",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Cartouche.",
       "category": 2,
       "access_level": 1
@@ -774,6 +851,7 @@
     "pk": 78,
     "fields": {
       "name": "Dr. Alban",
+      "slug": "dr-alban",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Dr. Alban.",
       "category": 2,
       "access_level": 1
@@ -784,6 +862,7 @@
     "pk": 79,
     "fields": {
       "name": "Sarah",
+      "slug": "sarah",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Sarah.",
       "category": 2,
       "access_level": 1
@@ -794,6 +873,7 @@
     "pk": 80,
     "fields": {
       "name": "Hurts",
+      "slug": "hurts",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Hurts.",
       "category": 2,
       "access_level": 1
@@ -804,6 +884,7 @@
     "pk": 81,
     "fields": {
       "name": "Lana Del Rey",
+      "slug": "lana-del-rey",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Lana Del Rey.",
       "category": 2,
       "access_level": 1
@@ -814,6 +895,7 @@
     "pk": 82,
     "fields": {
       "name": "The KLF",
+      "slug": "the-klf",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe The KLF.",
       "category": 2,
       "access_level": 1
@@ -824,6 +906,7 @@
     "pk": 83,
     "fields": {
       "name": "Robert Miles",
+      "slug": "robert-miles",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Robert Miles.",
       "category": 2,
       "access_level": 1
@@ -834,6 +917,7 @@
     "pk": 84,
     "fields": {
       "name": "Legend B",
+      "slug": "legend-b",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Legend B.",
       "category": 2,
       "access_level": 1
@@ -844,6 +928,7 @@
     "pk": 85,
     "fields": {
       "name": "God's Groove",
+      "slug": "gods-groove",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe God's Groove.",
       "category": 2,
       "access_level": 1
@@ -854,6 +939,7 @@
     "pk": 86,
     "fields": {
       "name": "Armin Van Buuren",
+      "slug": "armin-van-buuren",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Armin Van Buuren.",
       "category": 2,
       "access_level": 1
@@ -864,6 +950,7 @@
     "pk": 87,
     "fields": {
       "name": "Ramirez",
+      "slug": "ramirez",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Ramirez.",
       "category": 2,
       "access_level": 1
@@ -874,6 +961,7 @@
     "pk": 88,
     "fields": {
       "name": "Mo-Do",
+      "slug": "mo-do",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Mo-Do.",
       "category": 2,
       "access_level": 1
@@ -884,6 +972,7 @@
     "pk": 89,
     "fields": {
       "name": "Phantom",
+      "slug": "phantom",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Phantom.",
       "category": 2,
       "access_level": 1
@@ -894,6 +983,7 @@
     "pk": 90,
     "fields": {
       "name": "Michael Jackson",
+      "slug": "michael-jackson",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Michael Jackson.",
       "category": 2,
       "access_level": 1
@@ -904,6 +994,7 @@
     "pk": 91,
     "fields": {
       "name": "Abyale",
+      "slug": "abyale",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Abyale.",
       "category": 2,
       "access_level": 1
@@ -914,6 +1005,7 @@
     "pk": 92,
     "fields": {
       "name": "Lena",
+      "slug": "lena",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Lena.",
       "category": 2,
       "access_level": 1
@@ -924,6 +1016,7 @@
     "pk": 93,
     "fields": {
       "name": "DJ BoBo",
+      "slug": "dj-bobo",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe DJ BoBo.",
       "category": 2,
       "access_level": 1
@@ -934,6 +1027,7 @@
     "pk": 94,
     "fields": {
       "name": "Double You",
+      "slug": "double-you",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Double You.",
       "category": 2,
       "access_level": 1
@@ -944,6 +1038,7 @@
     "pk": 95,
     "fields": {
       "name": "Milk Inc.",
+      "slug": "milk-inc",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Milk Inc..",
       "category": 2,
       "access_level": 1
@@ -954,6 +1049,7 @@
     "pk": 96,
     "fields": {
       "name": "Echo Bass",
+      "slug": "echo-bass",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Echo Bass.",
       "category": 2,
       "access_level": 1
@@ -964,6 +1060,7 @@
     "pk": 97,
     "fields": {
       "name": "Daft Punk",
+      "slug": "daft-punk",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Daft Punk.",
       "category": 2,
       "access_level": 1
@@ -974,6 +1071,7 @@
     "pk": 98,
     "fields": {
       "name": "Bob Sinclar",
+      "slug": "bob-sinclar",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Bob Sinclar.",
       "category": 2,
       "access_level": 1
@@ -984,6 +1082,7 @@
     "pk": 99,
     "fields": {
       "name": "Etienne Daho",
+      "slug": "etienne-daho",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Etienne Daho.",
       "category": 2,
       "access_level": 1
@@ -994,6 +1093,7 @@
     "pk": 100,
     "fields": {
       "name": "Crystal Waters",
+      "slug": "crystal-waters",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Crystal Waters.",
       "category": 2,
       "access_level": 1
@@ -1004,6 +1104,7 @@
     "pk": 101,
     "fields": {
       "name": "Moby",
+      "slug": "moby",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Moby.",
       "category": 2,
       "access_level": 1
@@ -1014,6 +1115,7 @@
     "pk": 102,
     "fields": {
       "name": "4 Strings",
+      "slug": "4-strings",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe 4 Strings.",
       "category": 2,
       "access_level": 1
@@ -1024,6 +1126,7 @@
     "pk": 103,
     "fields": {
       "name": "Calvin Harris",
+      "slug": "calvin-harris",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Calvin Harris.",
       "category": 2,
       "access_level": 1
@@ -1034,6 +1137,7 @@
     "pk": 104,
     "fields": {
       "name": "Franco Diaferia",
+      "slug": "franco-diaferia",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Franco Diaferia.",
       "category": 2,
       "access_level": 1
@@ -1044,6 +1148,7 @@
     "pk": 105,
     "fields": {
       "name": "Felix",
+      "slug": "felix",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Felix.",
       "category": 2,
       "access_level": 1
@@ -1054,6 +1159,7 @@
     "pk": 106,
     "fields": {
       "name": "Livin' Joy",
+      "slug": "livin-joy",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Livin' Joy.",
       "category": 2,
       "access_level": 1
@@ -1064,6 +1170,7 @@
     "pk": 107,
     "fields": {
       "name": "Astral Projection",
+      "slug": "astral-projection",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Astral Projection.",
       "category": 2,
       "access_level": 1
@@ -1074,6 +1181,7 @@
     "pk": 108,
     "fields": {
       "name": "Antoine Clamaran",
+      "slug": "antoine-clamaran",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Antoine Clamaran.",
       "category": 2,
       "access_level": 1
@@ -1084,6 +1192,7 @@
     "pk": 109,
     "fields": {
       "name": "2 Fabiola",
+      "slug": "2-fabiola",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe 2 Fabiola.",
       "category": 2,
       "access_level": 1
@@ -1094,6 +1203,7 @@
     "pk": 110,
     "fields": {
       "name": "Fred Rister",
+      "slug": "fred-ristor",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Fred Rister.",
       "category": 2,
       "access_level": 1
@@ -1104,6 +1214,7 @@
     "pk": 111,
     "fields": {
       "name": "Gouryella",
+      "slug": "gouryella",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Gouryella.",
       "category": 2,
       "access_level": 1
@@ -1114,6 +1225,7 @@
     "pk": 112,
     "fields": {
       "name": "Brooklyn Bounce",
+      "slug": "brooklyn-bounce",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Brooklyn Bounce.",
       "category": 2,
       "access_level": 1
@@ -1124,6 +1236,7 @@
     "pk": 113,
     "fields": {
       "name": "Anticappella",
+      "slug": "anticappella",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Anticappella.",
       "category": 2,
       "access_level": 1
@@ -1134,6 +1247,7 @@
     "pk": 114,
     "fields": {
       "name": "Ann Lee",
+      "slug": "ann-lee",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Ann Lee.",
       "category": 2,
       "access_level": 1
@@ -1144,6 +1258,7 @@
     "pk": 115,
     "fields": {
       "name": "Hélène",
+      "slug": "helene",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Hélène.",
       "category": 2,
       "access_level": 1
@@ -1154,6 +1269,7 @@
     "pk": 116,
     "fields": {
       "name": "Les Rita Mitsouko",
+      "slug": "les-rita-mitsouko",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Les Rita Mitsouko.",
       "category": 2,
       "access_level": 1
@@ -1164,6 +1280,7 @@
     "pk": 117,
     "fields": {
       "name": "Mr. President",
+      "slug": "mr-president",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Mr. President.",
       "category": 2,
       "access_level": 1
@@ -1174,6 +1291,7 @@
     "pk": 118,
     "fields": {
       "name": "Benny B.",
+      "slug": "benny-b",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Benny B..",
       "category": 2,
       "access_level": 1
@@ -1184,6 +1302,7 @@
     "pk": 119,
     "fields": {
       "name": "Scatman John",
+      "slug": "scatman-john",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Scatman John.",
       "category": 2,
       "access_level": 1
@@ -1194,6 +1313,7 @@
     "pk": 120,
     "fields": {
       "name": "Avicii",
+      "slug": "avicii",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Avicii.",
       "category": 2,
       "access_level": 1
@@ -1204,6 +1324,7 @@
     "pk": 121,
     "fields": {
       "name": "Gigi D'Agostino",
+      "slug": "gigi-dagostino",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Gigi D'Agostino.",
       "category": 2,
       "access_level": 1
@@ -1214,6 +1335,7 @@
     "pk": 122,
     "fields": {
       "name": "Elsa",
+      "slug": "elsa",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Elsa.",
       "category": 2,
       "access_level": 1
@@ -1224,6 +1346,7 @@
     "pk": 123,
     "fields": {
       "name": "Krasi",
+      "slug": "krasi",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Krasi.",
       "category": 2,
       "access_level": 1
@@ -1234,6 +1357,7 @@
     "pk": 124,
     "fields": {
       "name": "Foretaste",
+      "slug": "foretaste",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Foretaste.",
       "category": 2,
       "access_level": 1
@@ -1244,6 +1368,7 @@
     "pk": 125,
     "fields": {
       "name": "Ray & Anita",
+      "slug": "ray-anita",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Ray & Anita.",
       "category": 2,
       "access_level": 1
@@ -1254,6 +1379,7 @@
     "pk": 126,
     "fields": {
       "name": "Jeanne Mas",
+      "slug": "jeanne-mas",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Jeanne Mas.",
       "category": 2,
       "access_level": 1
@@ -1264,6 +1390,7 @@
     "pk": 127,
     "fields": {
       "name": "Sylver",
+      "slug": "sylver",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Sylver.",
       "category": 2,
       "access_level": 1
@@ -1274,6 +1401,7 @@
     "pk": 128,
     "fields": {
       "name": "Niagara",
+      "slug": "niagara",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Niagara.",
       "category": 2,
       "access_level": 1
@@ -1284,6 +1412,7 @@
     "pk": 129,
     "fields": {
       "name": "The Prodigy",
+      "slug": "the-prodigy",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe The Prodigy.",
       "category": 2,
       "access_level": 1
@@ -1294,6 +1423,7 @@
     "pk": 130,
     "fields": {
       "name": "Christophe Willem",
+      "slug": "christophe-willem",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Christophe Willem.",
       "category": 2,
       "access_level": 1
@@ -1304,6 +1434,7 @@
     "pk": 131,
     "fields": {
       "name": "Ian Van Dahl",
+      "slug": "ian-van-dahl",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Ian Van Dahl.",
       "category": 2,
       "access_level": 1
@@ -1314,6 +1445,7 @@
     "pk": 132,
     "fields": {
       "name": "Vitalic",
+      "slug": "vitalic",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Vitalic.",
       "category": 2,
       "access_level": 1
@@ -1324,6 +1456,7 @@
     "pk": 133,
     "fields": {
       "name": "Crazy Frog",
+      "slug": "crazy-frog",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Crazy Frog.",
       "category": 2,
       "access_level": 1
@@ -1334,6 +1467,7 @@
     "pk": 134,
     "fields": {
       "name": "Kate Ryan",
+      "slug": "kate-ryan",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Kate Ryan.",
       "category": 2,
       "access_level": 1
@@ -1344,6 +1478,7 @@
     "pk": 135,
     "fields": {
       "name": "Lorie",
+      "slug": "lorie",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Lorie.",
       "category": 2,
       "access_level": 1
@@ -1354,6 +1489,7 @@
     "pk": 136,
     "fields": {
       "name": "Helmut Fritz",
+      "slug": "helmut-fritz",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Helmut Fritz.",
       "category": 2,
       "access_level": 1
@@ -1364,6 +1500,7 @@
     "pk": 137,
     "fields": {
       "name": "Eric Prydz",
+      "slug": "eric-prydz",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Eric Prydz.",
       "category": 2,
       "access_level": 1
@@ -1374,6 +1511,7 @@
     "pk": 138,
     "fields": {
       "name": "General Base",
+      "slug": "general-base",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe General Base.",
       "category": 2,
       "access_level": 1
@@ -1384,6 +1522,7 @@
     "pk": 139,
     "fields": {
       "name": "Reel 2 Real",
+      "slug": "reel-2-real",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Reel 2 Real.",
       "category": 2,
       "access_level": 1
@@ -1394,6 +1533,7 @@
     "pk": 140,
     "fields": {
       "name": "Jean-Michel Jarre",
+      "slug": "jean-michel-jarre",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Jean-Michel Jarre.",
       "category": 2,
       "access_level": 1
@@ -1404,6 +1544,7 @@
     "pk": 141,
     "fields": {
       "name": "Onda Del Futuro",
+      "slug": "onda-del-futuro",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Onda Del Futuro.",
       "category": 2,
       "access_level": 1
@@ -1414,6 +1555,7 @@
     "pk": 142,
     "fields": {
       "name": "Datura",
+      "slug": "datura",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Datura.",
       "category": 2,
       "access_level": 1
@@ -1424,6 +1566,7 @@
     "pk": 143,
     "fields": {
       "name": "Kim Sanders",
+      "slug": "kim-sanders",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Kim Sanders.",
       "category": 2,
       "access_level": 1
@@ -1434,6 +1577,7 @@
     "pk": 144,
     "fields": {
       "name": "Tony Di Bart",
+      "slug": "tony-di-bart",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Tony Di Bart.",
       "category": 2,
       "access_level": 1
@@ -1444,6 +1588,7 @@
     "pk": 145,
     "fields": {
       "name": "Zhi-Vago",
+      "slug": "zhi-vago",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Zhi-Vago.",
       "category": 2,
       "access_level": 1
@@ -1454,6 +1599,7 @@
     "pk": 146,
     "fields": {
       "name": "Darude",
+      "slug": "darude",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Darude.",
       "category": 2,
       "access_level": 1
@@ -1464,6 +1610,7 @@
     "pk": 147,
     "fields": {
       "name": "S'Express",
+      "slug": "sexpress",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe S'Express.",
       "category": 2,
       "access_level": 1
@@ -1474,6 +1621,7 @@
     "pk": 148,
     "fields": {
       "name": "Key Motion",
+      "slug": "key-motion",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Key Motion.",
       "category": 2,
       "access_level": 1
@@ -1484,6 +1632,7 @@
     "pk": 149,
     "fields": {
       "name": "49ers",
+      "slug": "49ers",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe 49ers.",
       "category": 2,
       "access_level": 1
@@ -1494,6 +1643,7 @@
     "pk": 150,
     "fields": {
       "name": "Alexia",
+      "slug": "alexia",
       "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Alexia.",
       "category": 2,
       "access_level": 1
@@ -1504,6 +1654,7 @@
     "pk": 151,
     "fields": {
       "name": "Airplay Records",
+      "slug": "airplay-records",
       "description": "Tag apposé sur toutes les pages en lien direct avec le label Airplay Records.",
       "category": 10,
       "access_level": 1
@@ -1514,6 +1665,7 @@
     "pk": 152,
     "fields": {
       "name": "Scorpio Music",
+      "slug": "scorpio-music",
       "description": "Tag apposé sur toutes les pages en lien direct avec le label Scorpio Music.",
       "category": 10,
       "access_level": 1
@@ -1524,6 +1676,7 @@
     "pk": 153,
     "fields": {
       "name": "Media Records",
+      "slug": "media-records",
       "description": "Tag apposé sur toutes les pages en lien direct avec le label Media Records.",
       "category": 10,
       "access_level": 1
@@ -1534,6 +1687,7 @@
     "pk": 154,
     "fields": {
       "name": "Flarenasch",
+      "slug": "flarenasch",
       "description": "Tag apposé sur toutes les pages en lien direct avec le label Flarenasch.",
       "category": 10,
       "access_level": 1
@@ -1544,6 +1698,7 @@
     "pk": 155,
     "fields": {
       "name": "ZYX Music",
+      "slug": "zyx-music",
       "description": "Tag apposé sur toutes les pages en lien direct avec le label ZYX Music.",
       "category": 10,
       "access_level": 1
@@ -1554,6 +1709,7 @@
     "pk": 156,
     "fields": {
       "name": "Happy Music",
+      "slug": "happy-music",
       "description": "Tag apposé sur toutes les pages en lien direct avec le label Happy Music.",
       "category": 10,
       "access_level": 1
@@ -1564,6 +1720,7 @@
     "pk": 157,
     "fields": {
       "name": "On The Beat",
+      "slug": "on-the-beat",
       "description": "Tag apposé sur toutes les pages en lien direct avec le label On The Beat.",
       "category": 10,
       "access_level": 1
@@ -1574,6 +1731,7 @@
     "pk": 158,
     "fields": {
       "name": "Panic Records",
+      "slug": "panic-records",
       "description": "Tag apposé sur toutes les pages en lien direct avec le label Panic Records.",
       "category": 10,
       "access_level": 1
@@ -1584,6 +1742,7 @@
     "pk": 159,
     "fields": {
       "name": "Full Ace Music",
+      "slug": "full-ace-music",
       "description": "Tag apposé sur toutes les pages en lien direct avec le label Full Ace Music.",
       "category": 10,
       "access_level": 1
@@ -1594,6 +1753,7 @@
     "pk": 160,
     "fields": {
       "name": "Dance Pool",
+      "slug": "dance-pool",
       "description": "Tag apposé sur toutes les pages en lien direct avec le label Dance Pool.",
       "category": 10,
       "access_level": 1
@@ -1604,6 +1764,7 @@
     "pk": 161,
     "fields": {
       "name": "Feel The Rhythm",
+      "slug": "feel-the-rhythm",
       "description": "Tag apposé sur toutes les pages en lien direct avec le label Feel The Rhythm.",
       "category": 10,
       "access_level": 1
@@ -1614,6 +1775,7 @@
     "pk": 162,
     "fields": {
       "name": "Overdance!",
+      "slug": "overdance",
       "description": "Tag apposé sur toutes les pages en lien direct avec le label Overdance!.",
       "category": 10,
       "access_level": 1
@@ -1624,6 +1786,7 @@
     "pk": 163,
     "fields": {
       "name": "More Vinyl",
+      "slug": "more-vinyl",
       "description": "Tag apposé sur toutes les pages en lien direct avec le label More Vinyl.",
       "category": 10,
       "access_level": 1
@@ -1634,6 +1797,7 @@
     "pk": 164,
     "fields": {
       "name": "Ramdam Factory",
+      "slug": "ramdam-factory",
       "description": "Tag apposé sur toutes les pages en lien direct avec le label Ramdam Factory.",
       "category": 10,
       "access_level": 1
@@ -1644,6 +1808,7 @@
     "pk": 165,
     "fields": {
       "name": "Touch Of Gold",
+      "slug": "touch-of-gold",
       "description": "Tag apposé sur toutes les pages en lien direct avec le label Touch Of Gold.",
       "category": 10,
       "access_level": 1
@@ -1654,6 +1819,7 @@
     "pk": 166,
     "fields": {
       "name": "Versailles",
+      "slug": "versailles",
       "description": "Tag apposé sur toutes les pages en lien direct avec le label Versailles.",
       "category": 10,
       "access_level": 1
@@ -1664,6 +1830,7 @@
     "pk": 167,
     "fields": {
       "name": "Mascotte Music",
+      "slug": "mascotte-music",
       "description": "Tag apposé sur toutes les pages en lien direct avec le label Mascotte Music.",
       "category": 10,
       "access_level": 1
@@ -1674,6 +1841,7 @@
     "pk": 168,
     "fields": {
       "name": "Step 2 House Records",
+      "slug": "step-2-house-records",
       "description": "Tag apposé sur toutes les pages en lien direct avec le label Step 2 House Records.",
       "category": 10,
       "access_level": 1
@@ -1684,6 +1852,7 @@
     "pk": 169,
     "fields": {
       "name": "Atoll Music",
+      "slug": "atoll-music",
       "description": "Tag apposé sur toutes les pages en lien direct avec le label Atoll Music.",
       "category": 10,
       "access_level": 1
@@ -1694,6 +1863,7 @@
     "pk": 170,
     "fields": {
       "name": "Hot Tracks",
+      "slug": "hot-tracks",
       "description": "Tag apposé sur toutes les pages en lien direct avec le label Hot Tracks.",
       "category": 10,
       "access_level": 1
@@ -1704,6 +1874,7 @@
     "pk": 171,
     "fields": {
       "name": "FuturePlay",
+      "slug": "futureplay",
       "description": "Tag apposé sur toutes les pages en lien direct avec le label FuturePlay.",
       "category": 10,
       "access_level": 1
@@ -1714,6 +1885,7 @@
     "pk": 172,
     "fields": {
       "name": "Ouragan",
+      "slug": "ouragan",
       "description": "Tag apposé sur toutes les pages en lien direct avec le label Ouragan.",
       "category": 10,
       "access_level": 1
@@ -1724,6 +1896,7 @@
     "pk": 173,
     "fields": {
       "name": "F Communications",
+      "slug": "f-communications",
       "description": "Tag apposé sur toutes les pages en lien direct avec le label F Communications.",
       "category": 10,
       "access_level": 1
@@ -1734,6 +1907,7 @@
     "pk": 174,
     "fields": {
       "name": "Strictly Rhythm",
+      "slug": "strictly-rhythm",
       "description": "Tag apposé sur toutes les pages en lien direct avec le label Strictly Rhythm.",
       "category": 10,
       "access_level": 1
@@ -1744,6 +1918,7 @@
     "pk": 175,
     "fields": {
       "name": "A-Traxx",
+      "slug": "a-traxx",
       "description": "Tag apposé sur toutes les pages en lien direct avec le label A-Traxx.",
       "category": 10,
       "access_level": 1
@@ -1754,6 +1929,7 @@
     "pk": 176,
     "fields": {
       "name": "Dance Machine",
+      "slug": "dance-machine",
       "description": "Tag apposé sur toutes les pages en lien direct avec la compilation Dance Machine.",
       "category": 5,
       "access_level": 1
@@ -1764,6 +1940,7 @@
     "pk": 177,
     "fields": {
       "name": "Serious Beats",
+      "slug": "serious-beats",
       "description": "Tag apposé sur toutes les pages en lien direct avec la compilation Serious Beats.",
       "category": 5,
       "access_level": 1
@@ -1774,6 +1951,7 @@
     "pk": 178,
     "fields": {
       "name": "Trancemaster",
+      "slug": "trancemaster",
       "description": "Tag apposé sur toutes les pages en lien direct avec la compilation Trancemaster.",
       "category": 5,
       "access_level": 1
@@ -1784,6 +1962,7 @@
     "pk": 179,
     "fields": {
       "name": "Thunderdome",
+      "slug": "thunderdome",
       "description": "Tag apposé sur toutes les pages en lien direct avec la compilation Thunderdome.",
       "category": 5,
       "access_level": 1
@@ -1794,6 +1973,7 @@
     "pk": 180,
     "fields": {
       "name": "Top DJ",
+      "slug": "top-dj",
       "description": "Tag apposé sur toutes les pages en lien direct avec la compilation Top DJ.",
       "category": 5,
       "access_level": 1
@@ -1804,6 +1984,7 @@
     "pk": 181,
     "fields": {
       "name": "Maxximum 20 Ans Déjà",
+      "slug": "maxximum-20-ans-deja",
       "description": "Tag apposé sur toutes les pages en lien direct avec la compilation Maxximum 20 Ans Déjà.",
       "category": 5,
       "access_level": 1
@@ -1814,6 +1995,7 @@
     "pk": 182,
     "fields": {
       "name": "Top Dance",
+      "slug": "top-dance",
       "description": "Tag apposé sur toutes les pages en lien direct avec la compilation Top Dance.",
       "category": 5,
       "access_level": 1
@@ -1824,6 +2006,7 @@
     "pk": 183,
     "fields": {
       "name": "Airplay Records - Une Dance D'Avance",
+      "slug": "airplay-records-une-dance-davance",
       "description": "Tag apposé sur toutes les pages en lien direct avec la compilation Airplay Records - Une Dance D'Avance.",
       "category": 5,
       "access_level": 1
@@ -1834,6 +2017,7 @@
     "pk": 184,
     "fields": {
       "name": "Panic Records - Encore Plus De Dance Music",
+      "slug": "panic-records-encore-plus-de-dance-music",
       "description": "Tag apposé sur toutes les pages en lien direct avec la compilation Panic Records - Encore Plus De Dance Music.",
       "category": 5,
       "access_level": 1
@@ -1844,6 +2028,7 @@
     "pk": 185,
     "fields": {
       "name": "Techno Dance Party",
+      "slug": "techno-dance-party",
       "description": "Tag apposé sur toutes les pages en lien direct avec la compilation Techno Dance Party.",
       "category": 5,
       "access_level": 1
@@ -1854,6 +2039,7 @@
     "pk": 186,
     "fields": {
       "name": "Génération Dance",
+      "slug": "generation-dance",
       "description": "Tag apposé sur toutes les pages en lien direct avec la compilation Génération Dance.",
       "category": 5,
       "access_level": 1
@@ -1864,6 +2050,7 @@
     "pk": 187,
     "fields": {
       "name": "La Collection Officielle TOP 50",
+      "slug": "la-collection-officielle-top-50",
       "description": "Tag apposé sur toutes les pages en lien direct avec la compilation La Collection Officielle TOP 50.",
       "category": 5,
       "access_level": 1
@@ -1874,6 +2061,7 @@
     "pk": 188,
     "fields": {
       "name": "TSOB - The Sound Of Belgium",
+      "slug": "tsob-the-sound-of-belgium",
       "description": "Tag apposé sur toutes les pages en lien direct avec la compilation TSOB - The Sound Of Belgium.",
       "category": 5,
       "access_level": 1
@@ -1884,6 +2072,7 @@
     "pk": 189,
     "fields": {
       "name": "La Discothèque Du 20e Siècle",
+      "slug": "la-discotheque-du-20e-siecle",
       "description": "Tag apposé sur toutes les pages en lien direct avec la compilation La Discothèque Du 20e Siècle.",
       "category": 5,
       "access_level": 1
@@ -1894,6 +2083,7 @@
     "pk": 190,
     "fields": {
       "name": "La Plus Grande Discothèque Du Monde",
+      "slug": "la-plus-grande-discotheque-du-monde",
       "description": "Tag apposé sur toutes les pages en lien direct avec la compilation La Plus Grande Discothèque Du Monde.",
       "category": 5,
       "access_level": 1
@@ -1904,6 +2094,7 @@
     "pk": 191,
     "fields": {
       "name": "Top Hits",
+      "slug": "top-hits",
       "description": "Tag apposé sur toutes les pages en lien direct avec la compilation Top Hits.",
       "category": 5,
       "access_level": 1
@@ -1914,6 +2105,7 @@
     "pk": 192,
     "fields": {
       "name": "Singles 80",
+      "slug": "singles-80",
       "description": "Tag apposé sur toutes les pages en lien direct avec la compilation Singles 80.",
       "category": 5,
       "access_level": 1
@@ -1924,6 +2116,7 @@
     "pk": 193,
     "fields": {
       "name": "At The Villa (Compilation)",
+      "slug": "at-the-villa-compilation",
       "description": "Tag apposé sur toutes les pages en lien direct avec la compilation At The Villa (Compilation).",
       "category": 5,
       "access_level": 1
@@ -1934,6 +2127,7 @@
     "pk": 194,
     "fields": {
       "name": "Cherry Moon (Compilation)",
+      "slug": "cherry-moon-compilation",
       "description": "Tag apposé sur toutes les pages en lien direct avec la compilation Cherry Moon (Compilation).",
       "category": 5,
       "access_level": 1
@@ -1944,6 +2138,7 @@
     "pk": 195,
     "fields": {
       "name": "Hit Mania Dance",
+      "slug": "hit-mania-dance",
       "description": "Tag apposé sur toutes les pages en lien direct avec la compilation Hit Mania Dance.",
       "category": 5,
       "access_level": 1
@@ -1954,6 +2149,7 @@
     "pk": 196,
     "fields": {
       "name": "Dance Computer",
+      "slug": "dance-computer",
       "description": "Tag apposé sur toutes les pages en lien direct avec la compilation Dance Computer.",
       "category": 5,
       "access_level": 1
@@ -1964,6 +2160,7 @@
     "pk": 197,
     "fields": {
       "name": "Maxi Dance",
+      "slug": "maxi-dance",
       "description": "Tag apposé sur toutes les pages en lien direct avec la compilation Maxi Dance.",
       "category": 5,
       "access_level": 1
@@ -1974,6 +2171,7 @@
     "pk": 198,
     "fields": {
       "name": "Rave Mission",
+      "slug": "rave-mission",
       "description": "Tag apposé sur toutes les pages en lien direct avec la compilation Rave Mission.",
       "category": 5,
       "access_level": 1
@@ -1984,6 +2182,7 @@
     "pk": 199,
     "fields": {
       "name": "Les Nuits Trance",
+      "slug": "les-nuits-trance",
       "description": "Tag apposé sur toutes les pages en lien direct avec la compilation Les Nuits Trance.",
       "category": 5,
       "access_level": 1
@@ -1994,6 +2193,7 @@
     "pk": 200,
     "fields": {
       "name": "Tunnel Trance Force",
+      "slug": "tunnel-trance-force",
       "description": "Tag apposé sur toutes les pages en lien direct avec la compilation Tunnel Trance Force.",
       "category": 5,
       "access_level": 1
@@ -2004,6 +2204,7 @@
     "pk": 201,
     "fields": {
       "name": "Télé 80 - Les Séries Cultes De Votre Enfance",
+      "slug": "tele-80-les-series-cultes-de-votre-enfance",
       "description": "Tag apposé sur toutes les pages en lien direct avec la collection Télé 80 - Les Séries Cultes De Votre Enfance.",
       "category": 4,
       "access_level": 1
@@ -2014,6 +2215,7 @@
     "pk": 202,
     "fields": {
       "name": "Référence 80 - Le Meilleur Des Années 80",
+      "slug": "reference-80-le-meilleur-des-annees-80",
       "description": "Tag apposé sur toutes les pages en lien direct avec la collection Référence 80 - Le Meilleur Des Années 80.",
       "category": 4,
       "access_level": 1
@@ -2024,6 +2226,7 @@
     "pk": 203,
     "fields": {
       "name": "Animé Classique",
+      "slug": "anime-classique",
       "description": "Tag apposé sur toutes les pages en lien direct avec la collection Animé Classique.",
       "category": 4,
       "access_level": 1
@@ -2034,6 +2237,7 @@
     "pk": 204,
     "fields": {
       "name": "Cherry Moon",
+      "slug": "cherry-moon",
       "description": "Tag apposé sur toutes les pages en lien direct avec la discothèque Cherry Moon.",
       "category": 3,
       "access_level": 1
@@ -2044,6 +2248,7 @@
     "pk": 205,
     "fields": {
       "name": "Boccaccio Life",
+      "slug": "boccaccio-life",
       "description": "Tag apposé sur toutes les pages en lien direct avec la discothèque Boccaccio Life.",
       "category": 3,
       "access_level": 1
@@ -2054,6 +2259,7 @@
     "pk": 206,
     "fields": {
       "name": "Boccaccio East",
+      "slug": "boccaccio-east",
       "description": "Tag apposé sur toutes les pages en lien direct avec la discothèque Boccaccio East.",
       "category": 3,
       "access_level": 1
@@ -2064,6 +2270,7 @@
     "pk": 207,
     "fields": {
       "name": "La Bush",
+      "slug": "la-bush",
       "description": "Tag apposé sur toutes les pages en lien direct avec la discothèque La Bush.",
       "category": 3,
       "access_level": 1
@@ -2074,6 +2281,7 @@
     "pk": 208,
     "fields": {
       "name": "Le Carré",
+      "slug": "le-carre",
       "description": "Tag apposé sur toutes les pages en lien direct avec la discothèque Le Carré.",
       "category": 3,
       "access_level": 1
@@ -2084,6 +2292,7 @@
     "pk": 209,
     "fields": {
       "name": "L'Haçienda",
+      "slug": "lhacienda",
       "description": "Tag apposé sur toutes les pages en lien direct avec la discothèque L'Haçienda.",
       "category": 3,
       "access_level": 1
@@ -2094,6 +2303,7 @@
     "pk": 210,
     "fields": {
       "name": "Parkzicht",
+      "slug": "parkzicht",
       "description": "Tag apposé sur toutes les pages en lien direct avec la discothèque Parkzicht.",
       "category": 3,
       "access_level": 1
@@ -2104,6 +2314,7 @@
     "pk": 211,
     "fields": {
       "name": "Le Fuse",
+      "slug": "le-fuse",
       "description": "Tag apposé sur toutes les pages en lien direct avec la discothèque Le Fuse.",
       "category": 3,
       "access_level": 1
@@ -2114,6 +2325,7 @@
     "pk": 212,
     "fields": {
       "name": "Cap'tain",
+      "slug": "captain",
       "description": "Tag apposé sur toutes les pages en lien direct avec la discothèque Cap'tain.",
       "category": 3,
       "access_level": 1
@@ -2124,6 +2336,7 @@
     "pk": 213,
     "fields": {
       "name": "At The Villa",
+      "slug": "at-the-villa",
       "description": "Tag apposé sur toutes les pages en lien direct avec la discothèque At The Villa.",
       "category": 3,
       "access_level": 1
@@ -2134,6 +2347,7 @@
     "pk": 214,
     "fields": {
       "name": "Palladium",
+      "slug": "palladium",
       "description": "Tag apposé sur toutes les pages en lien direct avec la discothèque Palladium.",
       "category": 3,
       "access_level": 1
@@ -2144,6 +2358,7 @@
     "pk": 215,
     "fields": {
       "name": "Balmoral",
+      "slug": "balmoral",
       "description": "Tag apposé sur toutes les pages en lien direct avec la discothèque Balmoral.",
       "category": 3,
       "access_level": 1
@@ -2154,6 +2369,7 @@
     "pk": 216,
     "fields": {
       "name": "Zillion",
+      "slug": "zillion",
       "description": "Tag apposé sur toutes les pages en lien direct avec la discothèque Zillion.",
       "category": 3,
       "access_level": 1
@@ -2164,6 +2380,7 @@
     "pk": 217,
     "fields": {
       "name": "Plan B",
+      "slug": "plan-b",
       "description": "Tag apposé sur toutes les pages en lien direct avec la discothèque Plan B.",
       "category": 3,
       "access_level": 1
@@ -2174,6 +2391,7 @@
     "pk": 218,
     "fields": {
       "name": "Le Lokal",
+      "slug": "le-lokal",
       "description": "Tag apposé sur toutes les pages en lien direct avec la discothèque Le Lokal.",
       "category": 3,
       "access_level": 1
@@ -2184,6 +2402,7 @@
     "pk": 219,
     "fields": {
       "name": "Extreme",
+      "slug": "extreme",
       "description": "Tag apposé sur toutes les pages en lien direct avec la discothèque Extreme.",
       "category": 3,
       "access_level": 1
@@ -2194,6 +2413,7 @@
     "pk": 220,
     "fields": {
       "name": "Lagoa",
+      "slug": "lagoa",
       "description": "Tag apposé sur toutes les pages en lien direct avec la discothèque Lagoa.",
       "category": 3,
       "access_level": 1
@@ -2204,6 +2424,7 @@
     "pk": 221,
     "fields": {
       "name": "La Rocca",
+      "slug": "la-rocca",
       "description": "Tag apposé sur toutes les pages en lien direct avec la discothèque La Rocca.",
       "category": 3,
       "access_level": 1
@@ -2214,6 +2435,7 @@
     "pk": 222,
     "fields": {
       "name": "Montini",
+      "slug": "montini",
       "description": "Tag apposé sur toutes les pages en lien direct avec la discothèque Montini.",
       "category": 3,
       "access_level": 1
@@ -2224,6 +2446,7 @@
     "pk": 223,
     "fields": {
       "name": "Cheops",
+      "slug": "cheops",
       "description": "Tag apposé sur toutes les pages en lien direct avec la discothèque Cheops.",
       "category": 3,
       "access_level": 1
@@ -2234,6 +2457,7 @@
     "pk": 224,
     "fields": {
       "name": "Eurodance",
+      "slug": "eurodance",
       "description": "Tag apposé sur toutes les pages en lien direct avec le genre musical Eurodance.",
       "category": 9,
       "access_level": 1
@@ -2244,6 +2468,7 @@
     "pk": 225,
     "fields": {
       "name": "Happy Hardcore",
+      "slug": "happy-hardcore",
       "description": "Tag apposé sur toutes les pages en lien direct avec le genre musical Happy Hardcore.",
       "category": 9,
       "access_level": 1
@@ -2254,6 +2479,7 @@
     "pk": 226,
     "fields": {
       "name": "Techno",
+      "slug": "techno",
       "description": "Tag apposé sur toutes les pages en lien direct avec le genre musical Techno.",
       "category": 9,
       "access_level": 1
@@ -2264,6 +2490,7 @@
     "pk": 227,
     "fields": {
       "name": "Hardtrance",
+      "slug": "hardtrance",
       "description": "Tag apposé sur toutes les pages en lien direct avec le genre musical Hardtrance.",
       "category": 9,
       "access_level": 1
@@ -2274,6 +2501,7 @@
     "pk": 228,
     "fields": {
       "name": "House Music",
+      "slug": "house-music",
       "description": "Tag apposé sur toutes les pages en lien direct avec le genre musical House Music.",
       "category": 9,
       "access_level": 1
@@ -2284,6 +2512,7 @@
     "pk": 229,
     "fields": {
       "name": "Trance",
+      "slug": "trance",
       "description": "Tag apposé sur toutes les pages en lien direct avec le genre musical Trance.",
       "category": 9,
       "access_level": 1
@@ -2294,6 +2523,7 @@
     "pk": 230,
     "fields": {
       "name": "Eurobeat",
+      "slug": "eurobeat",
       "description": "Tag apposé sur toutes les pages en lien direct avec le genre musical Eurobeat.",
       "category": 9,
       "access_level": 1
@@ -2304,6 +2534,7 @@
     "pk": 231,
     "fields": {
       "name": "Breakbeat",
+      "slug": "breakbeat",
       "description": "Tag apposé sur toutes les pages en lien direct avec le genre musical Breakbeat.",
       "category": 9,
       "access_level": 1
@@ -2314,6 +2545,7 @@
     "pk": 232,
     "fields": {
       "name": "Disco House",
+      "slug": "disco-house",
       "description": "Tag apposé sur toutes les pages en lien direct avec le genre musical Disco House.",
       "category": 9,
       "access_level": 1
@@ -2324,6 +2556,7 @@
     "pk": 233,
     "fields": {
       "name": "Italodisco",
+      "slug": "italodisco",
       "description": "Tag apposé sur toutes les pages en lien direct avec le genre musical Italodisco.",
       "category": 9,
       "access_level": 1
@@ -2334,6 +2567,7 @@
     "pk": 234,
     "fields": {
       "name": "Dance Attitude",
+      "slug": "dance-attitude",
       "description": "Tag apposé sur toutes les pages en lien direct avec le magazine Dance Attitude.",
       "category": 13,
       "access_level": 1
@@ -2344,6 +2578,7 @@
     "pk": 235,
     "fields": {
       "name": "Trax",
+      "slug": "trax",
       "description": "Tag apposé sur toutes les pages en lien direct avec le magazine Trax.",
       "category": 13,
       "access_level": 1
@@ -2354,6 +2589,7 @@
     "pk": 236,
     "fields": {
       "name": "Platine",
+      "slug": "platine",
       "description": "Tag apposé sur toutes les pages en lien direct avec le magazine Platine.",
       "category": 13,
       "access_level": 1
@@ -2364,6 +2600,7 @@
     "pk": 237,
     "fields": {
       "name": "Zipper",
+      "slug": "zipper",
       "description": "Tag apposé sur toutes les pages en lien direct avec le magazine Zipper.",
       "category": 13,
       "access_level": 1
@@ -2373,8 +2610,9 @@
     "model": "app_main.tag",
     "pk": 238,
     "fields": {
-      "name": "Zipper",
-      "description": "Tag apposé sur toutes les pages en lien direct avec le magazine Zipper.",
+      "name": "Star Club",
+      "slug": "star-club",
+      "description": "Tag apposé sur toutes les pages en lien direct avec le magazine Star Club.",
       "category": 13,
       "access_level": 1
     }
@@ -2384,6 +2622,7 @@
     "pk": 239,
     "fields": {
       "name": "De La Dance",
+      "slug": "de-la-dance",
       "description": "Tag apposé sur toutes les pages en lien direct avec le magazine De La Dance.",
       "category": 13,
       "access_level": 1
@@ -2394,6 +2633,7 @@
     "pk": 240,
     "fields": {
       "name": "Only For DJ's",
+      "slug": "only-for-djs",
       "description": "Tag apposé sur toutes les pages en lien direct avec le magazine Only For DJ's.",
       "category": 13,
       "access_level": 1
@@ -2404,6 +2644,7 @@
     "pk": 241,
     "fields": {
       "name": "Ressources",
+      "slug": "ressources",
       "description": "Tag apposé sur toutes les pages de ressources pour les visiteurs du site.",
       "category": null,
       "access_level": 1
@@ -2414,6 +2655,7 @@
     "pk": 242,
     "fields": {
       "name": "Page du site",
+      "slug": "page-du-site",
       "description": "Tag apposé sur toutes les pages du site hors contenu (A propos de Soundamental, Contact, etc.).",
       "category": null,
       "access_level": 1
@@ -2424,6 +2666,7 @@
     "pk": 243,
     "fields": {
       "name": "Aide/FAQ",
+      "slug": "aide-faq",
       "description": "Tag apposé sur toutes les pages composant l'aide/FAQ.",
       "category": null,
       "access_level": 1
@@ -2434,6 +2677,7 @@
     "pk": 244,
     "fields": {
       "name": "Membre",
+      "slug": "membre",
       "description": "Tag apposé sur toutes les pages de profils de membres inscrits.",
       "category": null,
       "access_level": 1
@@ -2444,6 +2688,7 @@
     "pk": 245,
     "fields": {
       "name": "Youtube",
+      "slug": "youtube",
       "description": "Tag apposé sur toutes les pages en lien direct avec le site / l'application Youtube.",
       "category": 15,
       "access_level": 1
@@ -2453,8 +2698,9 @@
     "model": "app_main.tag",
     "pk": 246,
     "fields": {
-      "name": "Soundcloud",
-      "description": "Tag apposé sur toutes les pages en lien direct avec le site / l'application Soundcloud.",
+      "name": "Club80",
+      "slug": "club80",
+      "description": "Tag apposé sur toutes les pages en lien direct avec le site / l'application Club80.",
       "category": 15,
       "access_level": 1
     }
@@ -2463,8 +2709,9 @@
     "model": "app_main.tag",
     "pk": 247,
     "fields": {
-      "name": "EuroKDJ",
-      "description": "Tag apposé sur toutes les pages en lien direct avec le site / l'application EuroKDJ.",
+      "name": "Soundcloud",
+      "slug": "soundcloud",
+      "description": "Tag apposé sur toutes les pages en lien direct avec le site / l'application Soundcloud.",
       "category": 15,
       "access_level": 1
     }
@@ -2473,8 +2720,9 @@
     "model": "app_main.tag",
     "pk": 248,
     "fields": {
-      "name": "ReMYxes",
-      "description": "Tag apposé sur toutes les pages en lien direct avec le site / l'application ReMYxes.",
+      "name": "EuroKDJ",
+      "slug": "eurokdj",
+      "description": "Tag apposé sur toutes les pages en lien direct avec le site / l'application EuroKDJ.",
       "category": 15,
       "access_level": 1
     }
@@ -2484,6 +2732,7 @@
     "pk": 249,
     "fields": {
       "name": "Le Hit Des Clubs",
+      "slug": "le-hit-des-clubs",
       "description": "Tag apposé sur toutes les pages en lien direct avec le site / l'application Le Hit Des Clubs.",
       "category": 15,
       "access_level": 1
@@ -2494,6 +2743,7 @@
     "pk": 250,
     "fields": {
       "name": "Discogs",
+      "slug": "discogs",
       "description": "Tag apposé sur toutes les pages en lien direct avec le site / l'application Discogs.",
       "category": 15,
       "access_level": 1

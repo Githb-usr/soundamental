@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Accueil – Soundamental{% endblock %}
+
+{% block main_class %}no-top-padding{% endblock %}
+
+{% block content %}
+    <!-- Carousel principal -->
+    <section class="carousel-fullwidth" style="width: calc(100% + 130px); margin-left: -65px; margin-right: -65px;">
+        <div id="homeCarousel" class="carousel slide" data-bs-ride="carousel">
+            <!-- Points ronds pour naviguer -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="0" class="active" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                {% for slide in carousel_slides %}
+                <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                    <div class="carousel-slide-row">
+                        {% for img in slide %}
+                            <img src="{{ img }}" class="carousel-img" alt="Image {{ forloop.parentloop.counter }}-{{ forloop.counter }}">
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <!-- Texte de présentation -->
+    <section class="intro-section mt-3 py-4">
+        <div class="container">
+            <div class="container">
+                <h1 class="home-page-title">Bienvenue sur Soundamental</h1>
+                <p class="text-center mb-0">
+                    Soundamental est le site en français n°1 sur les musiques club des années&nbsp;'90&nbsp;:
+                </p>
+                <p class="text-center mb-0">
+                    <strong>Dance, Eurodance, House, Techno, Trance, etc.</strong>
+                </p>
+                <p class="text-center mb-0">
+                    Il est aussi ouvert aux autres musiques et autres périodes.
+                </p>
+                <p class="text-center">
+                    Rejoignez notre communauté de passionnés en vous inscrivant sur notre forum&nbsp;!
+                </p>
+            </div>
+            <div class="text-center mt-5 mb-3">
+                <a href="https://www.soundamental.org/forum/" class="btn btn-telechargement btn-sm">
+                    Découvrez Soundamental
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bloc promo : magazines Danceur -->
+    <div class="promo-section-bg magazine-wrapper my-4">
+        <div class="container">
+            <h4 class="bebas text-center mb-3">"DANCEUR" : LE MAGAZINE DE SOUNDAMENTAL</h4>
+            <p class="text-center mb-0">Disponible en téléchargement gratuit, DANCEUR est créé&nbsp;</p>
+            <p class="text-center mb-0">par des fans de Dance et autres courants électroniques des années&nbsp;'90&nbsp;</p>
+            <p class="text-center mb-0">Un vrai magazine, qui se lit et qui s'écoute&nbsp;: playlists, portfolios...</p>
+            <div class="mag-covers-table mt-4">
+                <div class="mag-row">
+                    <!-- Ligne 1 : 2 couvertures (HS) -->
+                    <img src="/media/site/danceur/danceur-hs-01_couv.jpg" class="mag-cover" alt="Danceur HS n°1">
+                    <img src="/media/site/danceur/danceur-hs-02_couv.jpg" class="mag-cover" alt="Danceur HS n°2">
+                </div>
+                <div class="mag-row">
+                    <!-- Ligne 2 : 3 couvertures (n°1, n°2, n°3) -->
+                    <img src="/media/site/danceur/danceur-01_couv.jpg" class="mag-cover" alt="Danceur n°1">
+                    <img src="/media/site/danceur/danceur-02_couv.jpg" class="mag-cover" alt="Danceur n°2">
+                    <img src="/media/site/danceur/danceur-03_couv.jpg" class="mag-cover" alt="Danceur n°3">
+                </div>
+            </div>
+            <div class="text-center mt-5 mb-4">
+                <a href="{% url 'app_main:dynamic_page' page_name='telechargements' %}" class="btn btn-telechargement btn-sm">
+                    Découvrez Danceur
+                </a>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

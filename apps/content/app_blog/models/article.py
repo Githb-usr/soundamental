@@ -54,6 +54,14 @@ class Article(models.Model):
             "Une image plus petite ne sera pas redimensionnée."
         )
     )
+    
+    # apps/content/app_blog/models/article.py
+
+    masquer_image = models.BooleanField(
+        default=False,
+        verbose_name="Ne pas afficher l'image d'illustration dans l'article",
+        help_text="Cochez pour masquer l'image d'illustration en haut de l'article (elle reste utilisée pour la liste d'articles)."
+    )
 
     auteur = models.ForeignKey(
         User,

@@ -61,11 +61,18 @@ def generate_index_data(index_entries):
     index_data = []
 
     for entry in index_entries:
+        # Détermine le slug d'index ou None
+        slug = settings.CATEGORY_MAPPING.get(entry.category.name.lower())
+        # Un slug d'index ne doit contenir ni espace ni /
+        has_index = bool(slug) and (' ' not in slug) and ('/' not in slug)        
+
         template = settings.INDEX_LINK_TEMPLATES.get(entry.category.name.lower(), [None] * 5)
         links = entry.get_links  # Utilise la méthode centralisée
 
         index_data.append({
             "entry": entry,
+            "category_url": slug,
+            "has_index": has_index,
             "category_url": settings.CATEGORY_MAPPING.get(entry.category.name.lower(), entry.category.name.lower()),
             "links": [
                 {"link": l, "label": settings.INDEX_LINK_CODES.get(k, "-")} if k else {"link": None, "label": "-"}

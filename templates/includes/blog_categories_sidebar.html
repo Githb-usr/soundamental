@@ -6,11 +6,17 @@
           {% if categorie_active and cat == categorie_active %}
             <span>{{ cat.nom }} ({{ cat.nb_principale|add:cat.nb_secondaire }})</span>
           {% else %}
-            <a href="{% url 'app_blog:archives_annee' annee_actuelle %}?categorie={{ cat.slug }}">
-              {{ cat.nom }} ({{ cat.nb_principale|add:cat.nb_secondaire }})
-            </a>
+            {% if annee %}
+              <a href="{% url 'app_blog:articles_par_annee_categorie' annee=annee slug=cat.slug %}">
+                {{ cat.nom }} ({{ cat.nb_principale|add:cat.nb_secondaire }})
+              </a>
+            {% else %}
+              <a href="{% url 'app_blog:articles_par_categorie' cat.slug %}">
+                {{ cat.nom }} ({{ cat.nb_principale|add:cat.nb_secondaire }})
+              </a>
+            {% endif %}
           {% endif %}
-        </li> 
+        </li>
       {% endfor %}
     </ul>
 </div>

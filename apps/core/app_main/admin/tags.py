@@ -11,7 +11,7 @@ class TagAdmin(admin.ModelAdmin):
     list_display = ("name", "slug", "category", "description", "access_level")  # Affichage des colonnes principales
     prepopulated_fields = {"slug": ("name",)}
     fields = ("name", "slug", "category", "description", "access_level")
-    search_fields = ("name", "category__name")  # Recherche par nom + sur le nom de la catégorie
+    search_fields = ("name", "category__code")  # Recherche par nom + sur le nom de la catégorie
     
     def has_delete_permission(self, request, obj=None):
         """Empêche la suppression des tags système."""

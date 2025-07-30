@@ -39,6 +39,13 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 700;  /* Renforce la présence des titres */
 }
 
+h1, h2, h3, .bebas {
+    font-family: 'Bebas Neue', Arial, sans-serif;
+    letter-spacing: 0.03em;
+    font-weight: normal; /* cette font n'a qu'une graisse */
+    text-transform: uppercase;
+}
+
 /* PARAGRAPHES */
 /* p {
     margin-bottom: 16px;

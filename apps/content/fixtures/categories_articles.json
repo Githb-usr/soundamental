@@ -1,0 +1,83 @@
+[
+  {
+    "model": "app_blog.categoriearticle",
+    "pk": 1,
+    "fields": {
+      "nom": "Soundamental - Le site",
+      "description": "Toutes les actus liées au site Soundamental (fonctionnalités, évolutions, mises à jour, bugs, etc.)",
+      "slug": "soundamental-le-site"
+    }
+  },
+  {
+    "model": "app_blog.categoriearticle",
+    "pk": 2,
+    "fields": {
+      "nom": "Soundamental - Le forum",
+      "description": "Informations, nouveautés et annonces liées au forum associé au site Soundamental.",
+      "slug": "soundamental-le-forum"
+    }
+  },
+  {
+    "model": "app_blog.categoriearticle",
+    "pk": 3,
+    "fields": {
+      "nom": "Soundamental sur le web",
+      "description": "Présence de Soundamental sur les réseaux sociaux, Wikipedia ou autres sites et plateformes.",
+      "slug": "soundamental-sur-le-web"
+    }
+  },
+  {
+    "model": "app_blog.categoriearticle",
+    "pk": 4,
+    "fields": {
+      "nom": "News artistes",
+      "description": "Actualités, sorties, interviews ou focus sur des artistes.",
+      "slug": "news-artistes"
+    }
+  },
+  {
+    "model": "app_blog.categoriearticle",
+    "pk": 5,
+    "fields": {
+      "nom": "News labels",
+      "description": "Actualités, sorties, interviews ou focus sur des labels.",
+      "slug": "news-labels"
+    }
+  },
+  {
+    "model": "app_blog.categoriearticle",
+    "pk": 6,
+    "fields": {
+      "nom": "News sorties",
+      "description": "Sorties et revue d’albums, singles, compilations.",
+      "slug": "news-sorties"
+    }
+  },
+  {
+    "model": "app_blog.categoriearticle",
+    "pk": 7,
+    "fields": {
+      "nom": "News concerts",
+      "description": "Infos sur les concerts, tournées, festivals et autres évènements live.",
+      "slug": "news-concerts"
+    }
+  },
+  {
+    "model": "app_blog.categoriearticle",
+    "pk": 8,
+    "fields": {
+      "nom": "Interviews",
+      "description": "Interviews de personnalités du monde de la musique.",
+      "slug": "interviews"
+    }
+  },
+  {
+    "model": "app_blog.categoriearticle",
+    "pk": 9,
+    "fields": {
+      "nom": "Evènements",
+      "description": "Evènements autres que concerts et festivals : remises de prix, etc.",
+      "slug": "evenements"
+    }
+  }
+]

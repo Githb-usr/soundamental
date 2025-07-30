@@ -16,147 +16,227 @@
       "code": "artiste",
       "name": "Artiste",
       "label": "Artistes",
-      "description": "Artiste référencé sur le site"
+      "description": "Artiste référencé(e) sur le site"
     }
   },
   {
     "model": "app_index.category",
     "pk": 3,
     "fields": {
-      "code": "club",
-      "name": "Club",
-      "label": "Clubs",
-      "description": "Club référencé sur le site"
+      "code": "compilation",
+      "name": "Compilation",
+      "label": "Compilations",
+      "description": "Compilation référencé(e) sur le site"
     }
   },
   {
     "model": "app_index.category",
     "pk": 4,
     "fields": {
-      "code": "collection",
-      "name": "Collection",
-      "label": "Collections",
-      "description": "Collection référencée sur le site"
+      "code": "label",
+      "name": "Label",
+      "label": "Labels",
+      "description": "Label référencé(e) sur le site"
     }
   },
   {
     "model": "app_index.category",
     "pk": 5,
     "fields": {
-      "code": "compilation",
-      "name": "Compilation",
-      "label": "Compilations",
-      "description": "Compilation référencée sur le site"
+      "code": "lexique",
+      "name": "Lexique",
+      "label": "Lexique",
+      "description": "Terme du lexique référencé(e) sur le site"
     }
   },
   {
     "model": "app_index.category",
     "pk": 6,
     "fields": {
-      "code": "emission_radio",
-      "name": "Émission radio",
-      "label": "Émissions radio",
-      "description": "Émission radio référencée sur le site"
+      "code": "animateur_radio",
+      "name": "Animateur radio",
+      "label": "Animateurs radio",
+      "description": "Animateur radio référencé(e) sur le site"
     }
   },
   {
     "model": "app_index.category",
     "pk": 7,
     "fields": {
-      "code": "emission_tv",
-      "name": "Émission TV",
-      "label": "Émissions TV",
-      "description": "Émission TV référencée sur le site"
+      "code": "chaine_tv",
+      "name": "Chaine TV",
+      "label": "Chaine TV",
+      "description": "Chaine de TV référencé(e) sur le site"
     }
   },
   {
     "model": "app_index.category",
     "pk": 8,
     "fields": {
-      "code": "emission_web",
-      "name": "Émission web",
-      "label": "Émissions web",
-      "description": "Émission web référencée sur le site"
+      "code": "club",
+      "name": "Club",
+      "label": "Clubs",
+      "description": "Club référencé(e) sur le site"
     }
   },
   {
     "model": "app_index.category",
     "pk": 9,
     "fields": {
-      "code": "genre_musical",
-      "name": "Genre musical",
-      "label": "Genres musicaux",
-      "description": "Genre musical référencé sur le site"
+      "code": "collection",
+      "name": "Collection",
+      "label": "Collections",
+      "description": "Collection référencé(e) sur le site"
     }
   },
   {
     "model": "app_index.category",
     "pk": 10,
     "fields": {
-      "code": "label",
-      "name": "Label",
-      "label": "Labels",
-      "description": "Label référencé sur le site"
+      "code": "documentaire",
+      "name": "Documentaire",
+      "label": "Documentaires",
+      "description": "Documentaire référencé(e) sur le site"
     }
   },
   {
     "model": "app_index.category",
     "pk": 11,
     "fields": {
-      "code": "lexique",
-      "name": "Lexique",
-      "label": "Lexique",
-      "description": "Terme du lexique référencé sur le site"
+      "code": "emission_radio",
+      "name": "Émission radio",
+      "label": "Émissions radio",
+      "description": "Émission radio référencé(e) sur le site"
     }
   },
   {
     "model": "app_index.category",
     "pk": 12,
     "fields": {
-      "code": "livre",
-      "name": "Livre",
-      "label": "Livres",
-      "description": "Livre référencé sur le site"
+      "code": "emission_tv",
+      "name": "Émission TV",
+      "label": "Émissions TV",
+      "description": "Émission TV référencé(e) sur le site"
     }
   },
   {
     "model": "app_index.category",
     "pk": 13,
     "fields": {
-      "code": "magazine",
-      "name": "Magazine",
-      "label": "Magazines",
-      "description": "Magazine référencé sur le site"
+      "code": "emission_web",
+      "name": "Émission web",
+      "label": "Émissions web",
+      "description": "Émission web référencé(e) sur le site"
     }
   },
   {
     "model": "app_index.category",
     "pk": 14,
     "fields": {
-      "code": "radio",
-      "name": "Radio",
-      "label": "Radios",
-      "description": "Chaine de radio référencée sur le site"
+      "code": "film",
+      "name": "Film",
+      "label": "Films",
+      "description": "Film référencé(e) sur le site"
     }
   },
   {
     "model": "app_index.category",
     "pk": 15,
     "fields": {
-      "code": "site_internet_application",
-      "name": "Site internet / Application",
-      "label": "Sites internet / Applications",
-      "description": "Site internet et/ou application référencé(e) sur le site"
+      "code": "genre_musical",
+      "name": "Genre musical",
+      "label": "Genres musicaux",
+      "description": "Genre musical référencé(e) sur le site"
     }
   },
   {
     "model": "app_index.category",
     "pk": 16,
     "fields": {
-      "code": "tv",
-      "name": "TV",
-      "label": "TV",
-      "description": "Chaine de TV référencée sur le site"
+      "code": "jeu_video",
+      "name": "Jeu vidéo",
+      "label": "Jeux vidéo",
+      "description": "Jeu vidéo référencé(e) sur le site"
+    }
+  },
+  {
+    "model": "app_index.category",
+    "pk": 17,
+    "fields": {
+      "code": "livre",
+      "name": "Livre",
+      "label": "Livres",
+      "description": "Livre référencé(e) sur le site"
+    }
+  },
+  {
+    "model": "app_index.category",
+    "pk": 18,
+    "fields": {
+      "code": "magazine",
+      "name": "Magazine",
+      "label": "Magazines",
+      "description": "Magazine référencé(e) sur le site"
+    }
+  },
+  {
+    "model": "app_index.category",
+    "pk": 19,
+    "fields": {
+      "code": "pub_tv",
+      "name": "Pub TV",
+      "label": "Pubs TV",
+      "description": "Pub TV référencé(e) sur le site"
+    }
+  },
+  {
+    "model": "app_index.category",
+    "pk": 20,
+    "fields": {
+      "code": "reportage",
+      "name": "Reportage",
+      "label": "Reportages",
+      "description": "Reportage référencé(e) sur le site"
+    }
+  },
+  {
+    "model": "app_index.category",
+    "pk": 21,
+    "fields": {
+      "code": "serie",
+      "name": "Série",
+      "label": "Séries",
+      "description": "Série référencé(e) sur le site"
+    }
+  },
+  {
+    "model": "app_index.category",
+    "pk": 22,
+    "fields": {
+      "code": "site_web",
+      "name": "Site web",
+      "label": "Sites web",
+      "description": "Site web et/ou application référencé(e) sur le site"
+    }
+  },
+  {
+    "model": "app_index.category",
+    "pk": 23,
+    "fields": {
+      "code": "station_radio",
+      "name": "Station radio",
+      "label": "Station radio",
+      "description": "Station de radio référencé(e) sur le site"
+    }
+  },
+  {
+    "model": "app_index.category",
+    "pk": 24,
+    "fields": {
+      "code": "webradio",
+      "name": "Webradio",
+      "label": "Webradios",
+      "description": "Webradio référencé(e) sur le site"
     }
   }
 ]

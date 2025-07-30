@@ -12,8 +12,11 @@ urlpatterns = [
     # RSS
     path('rss/', BlogRSSFeed(), name='flux_rss'),
     
-    # Articles par catégorie
-    path('categorie/<int:pk>/', ArticleCategorieView.as_view(), name='articles_par_categorie'),
+    # Archive annuelle filtrée par catégorie (navigation croisée année + catégorie)
+    path('<int:annee>/categorie/<slug:slug>/', ArticleCategorieView.as_view(), name='articles_par_annee_categorie'),
+    
+    # Articles par catégorie toutes années confondues
+    path('categorie/<slug:slug>/', ArticleCategorieView.as_view(), name='articles_par_categorie'),
     
     # Accueil des archives
     path('', ArticleListView.as_view(), name='liste_articles'),

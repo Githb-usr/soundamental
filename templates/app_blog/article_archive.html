@@ -3,85 +3,123 @@
 
 {% block content %}
   <h1>
-    Articles publiés en 
+    Articles publiés en
     {% if mois %}
       {{ mois|mois_nom }} {{ annee }}
     {% else %}
       {{ annee }}
     {% endif %}
+    {% if categorie_active %}
+      – {{ categorie_active.nom }}
+    {% endif %}
   </h1>
+  
+  <div class="blog-2col-grid">
+      <div>
+        {# Navigation années #}
+        {% if annee_prec or annee_suiv %}
+          <div class="archive-nav d-flex align-items-center justify-content-between mb-3">
+            {# précédent #}
+            {% if annee_prec %}
+              {% if categorie_active %}
+                <a href="{% url 'app_blog:articles_par_annee_categorie' annee=annee_prec slug=categorie_active.slug %}"
+                  class="btn btn-outline-primary btn-sm">← {{ annee_prec }}</a>
+              {% else %}
+                <a href="{% url 'app_blog:archives_annee' annee=annee_prec %}"
+                  class="btn btn-outline-primary btn-sm">← {{ annee_prec }}</a>
+              {% endif %}
+            {% else %}
+              <span class="btn btn-outline-primary btn-sm disabled">←</span>
+            {% endif %}
 
-  {# ---- navigation années (uniquement sur /blog/2025/) ---- #}
-  {% if not mois %}
-    <div class="mb-4 d-flex justify-content-between">
-      {% if annee_prec %}
-        <a href="{% url 'app_blog:archives_annee' annee=annee_prec %}"
-           class="btn btn-outline-primary btn-sm">
-          ← {{ annee_prec }}
-        </a>
-      {% else %}
-        <span></span>
-      {% endif %}
-      {% if annee_suiv %}
-        <a href="{% url 'app_blog:archives_annee' annee=annee_suiv %}"
-           class="btn btn-outline-primary btn-sm">
-          {{ annee_suiv }} →
-        </a>
-      {% endif %}
-    </div>
-  {% endif %}
+            {# année courante #}
+            <span class="flex-grow-1 text-center fw-bold">{{ annee }}</span>
 
-  {# ---- sélection des mois (uniquement sur /blog/2025/) ---- #}
-  {% if not mois and mois_disponibles %}
-    <div class="mb-4">
-      <p>Sélectionnez un mois :</p>
-      <div class="d-flex flex-wrap gap-2">
-        {% for m in mois_disponibles %}
-          <a href="{% url 'app_blog:archives_mois' annee=annee mois=m %}"
-             class="btn btn-outline-secondary btn-sm">
-            {{ m|mois_nom|capfirst }}
-          </a>
+            {# suivant #}
+            {% if annee_suiv %}
+              {% if categorie_active %}
+                <a href="{% url 'app_blog:articles_par_annee_categorie' annee=annee_suiv slug=categorie_active.slug %}"
+                  class="btn btn-outline-primary btn-sm">{{ annee_suiv }} →</a>
+              {% else %}
+                <a href="{% url 'app_blog:archives_annee' annee=annee_suiv %}"
+                  class="btn btn-outline-primary btn-sm">{{ annee_suiv }} →</a>
+              {% endif %}
+            {% else %}
+              <span class="btn btn-outline-primary btn-sm disabled">→</span>
+            {% endif %}
+          </div>
+        {% endif %}
+
+        {# Navigation mois #}
+        {% if mois %}
+          <div class="archive-nav d-flex align-items-center justify-content-between mb-3">
+            {# précédent #}
+            {% if mois_prec %}
+              <a href="{% url 'app_blog:archives_mois' annee=mois_prec.0 mois=mois_prec.1 %}"
+                class="btn btn-outline-primary btn-sm">
+                ← {{ mois_prec.1|mois_nom }} {{ mois_prec.0 }}
+              </a>
+            {% else %}
+              <span class="btn btn-outline-primary btn-sm disabled">←</span>
+            {% endif %}
+
+            {# mois courant #}
+            <span class="flex-grow-1 text-center fw-bold">
+              {{ mois|mois_nom }} {{ annee }}
+            </span>
+
+            {# suivant #}
+            {% if mois_suiv %}
+              <a href="{% url 'app_blog:archives_mois' annee=mois_suiv.0 mois=mois_suiv.1 %}"
+                class="btn btn-outline-primary btn-sm">
+                {{ mois_suiv.1|mois_nom }} {{ mois_suiv.0 }} →
+              </a>
+            {% else %}
+              <span class="btn btn-outline-primary btn-sm disabled">→</span>
+            {% endif %}
+          </div>
+        {% endif %}
+    
+        {# Sélection des mois (si pas de mois sélectionné) #}
+        {% if not mois and mois_disponibles %}
+          <div class="mb-4">
+            <p>Sélectionnez un mois :</p>
+            <div class="d-flex flex-wrap gap-2">
+              {% for m in mois_disponibles %}
+                <a href="{% url 'app_blog:archives_mois' annee=annee mois=m %}"
+                  class="btn btn-outline-secondary btn-sm">
+                  {{ m|mois_nom|capfirst }}
+                </a>
+              {% endfor %}
+            </div>
+          </div>
+        {% endif %}
+
+        {# ---- liste des articles ou message vide ---- #}
+        <span id="align-sidebar-anchor" style="display:block;"></span>
+        {% for article in articles %}
+          <article class="mb-5">
+            <h2><a href="{% url 'app_blog:detail_article' slug=article.slug %}">{{ article.titre }}</a></h2>
+            <p class="text-muted">
+              Publié le {{ article.date_publication|date:"d F Y" }} par {{ article.auteur }}
+            </p>
+            {% if article.image %}
+              <img src="{{ article.image.url }}" alt="{{ article.titre }}" class="img-fluid my-3" />
+            {% endif %}
+            <p>{{ article.resume|default:article.get_resume|safe }}</p>
+          </article>
+        {% empty %}
+          <p>Aucun article pour cette période.</p>
         {% endfor %}
+
+        {# ---- pagination ---- #}
+        {% include "includes/pagination.html" %}
       </div>
-    </div>
-  {% endif %}
 
-  {# ---- navigation mois (uniquement sur /blog/2025/03/) ---- #}
-  {% if mois %}
-    <div class="mb-4 d-flex justify-content-between">
-      {% if mois_prec %}
-        <a href="{% url 'app_blog:archives_mois' annee=mois_prec.0 mois=mois_prec.1 %}"
-           class="btn btn-outline-primary btn-sm">
-          ← {{ mois_prec.1|mois_nom }} {{ mois_prec.0 }}
-        </a>
-      {% else %}
-        <span></span>
-      {% endif %}
-      {% if mois_suiv %}
-        <a href="{% url 'app_blog:archives_mois' annee=mois_suiv.0 mois=mois_suiv.1 %}"
-           class="btn btn-outline-primary btn-sm">
-          {{ mois_suiv.1|mois_nom }} {{ mois_suiv.0 }} →
-        </a>
-      {% endif %}
-    </div>
-  {% endif %}
-
-  {# ---- liste des articles ou message vide ---- #}
-  {% for article in articles %}
-    <article class="mb-5">
-      <h2><a href="{% url 'app_blog:detail_article' slug=article.slug %}">{{ article.titre }}</a></h2>
-      <p class="text-muted">
-        Publié le {{ article.date_publication|date:"d F Y" }} par {{ article.auteur }}
-      </p>
-      {% if article.image %}
-        <img src="{{ article.image.url }}" alt="{{ article.titre }}" class="img-fluid my-3" />
-      {% endif %}
-      <p>{{ article.resume|default:article.get_resume|safe }}</p>
-    </article>
-  {% empty %}
-    <p>Aucun article pour cette période.</p>
-  {% endfor %}
-
-  {# ---- pagination ---- #}
-  {% include "includes/pagination.html" %}
+      <!-- Colonne latérale (archives) -->
+      <aside id="blog-sidebar">
+        {% include "includes/blog_categories_sidebar.html" %}
+        {% include "includes/blog_archives_sidebar.html" %}
+      </aside>
+  </div>
 {% endblock %}

@@ -22,8 +22,8 @@
         {% endfor %}
     </div>      
 
-    {% if article.image %}
-        <img src="{{ article.image.url }}" alt="{{ article.titre }}" class="img-fluid my-4" />
+    {% if article.image and not article.masquer_image %}
+    <img src="{{ article.image.url }}" alt="{{ article.titre }}" class="img-fluid my-3" />
     {% endif %}
 
     <div class="blog-content">

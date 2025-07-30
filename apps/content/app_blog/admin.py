@@ -22,7 +22,7 @@ class ArticleAdmin(admin.ModelAdmin):
         (None, {
             'fields': (
                 'titre', 'slug', 'auteur', 'categorie_principale', 'categories_secondaires',
-                'resume', 'contenu', 'image', 'image_preview', 'est_publie', 'tags'
+                'resume', 'contenu', 'image', 'masquer_image', 'image_preview', 'est_publie', 'tags'
             )
         }),
         ('Dates (automatiques)', {

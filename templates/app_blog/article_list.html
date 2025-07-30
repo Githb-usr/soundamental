@@ -3,16 +3,52 @@
 
 {% block content %}
 <h1 class="mb-4">News et sorties</h1>
-{% if categorie_active %}
-  <div class="blog-subheading">
-    <p>Catégorie sélectionnée : <strong>{{ categorie_active.nom }}</strong></p>
-  </div>
-{% endif %}
 
-<div class="row">
-    {% include "includes/pagination.html" %}
-    <!-- Colonne principale (articles) -->
-    <div class="col-md-10">
+<div class="blog-2col-grid">
+    <div>
+        {% include "includes/pagination.html" %}
+
+        {# Navigation années #}
+        {% if annee_prec or annee_suiv %}
+          <div class="archive-nav d-flex align-items-center justify-content-between mb-3">
+            {# précédent #}
+            {% if annee_prec %}
+              {% if categorie_active %}
+                <a href="{% url 'app_blog:articles_par_annee_categorie' annee=annee_prec slug=categorie_active.slug %}"
+                  class="btn btn-outline-primary btn-sm">← {{ annee_prec }}</a>
+              {% else %}
+                <a href="{% url 'app_blog:archives_annee' annee=annee_prec %}"
+                  class="btn btn-outline-primary btn-sm">← {{ annee_prec }}</a>
+              {% endif %}
+            {% else %}
+              <span class="btn btn-outline-primary btn-sm disabled">←</span>
+            {% endif %}
+
+            {# année courante #}
+            <span class="flex-grow-1 text-center fw-bold">{{ annee }}</span>
+
+            {# suivant #}
+            {% if annee_suiv %}
+              {% if categorie_active %}
+                <a href="{% url 'app_blog:articles_par_annee_categorie' annee=annee_suiv slug=categorie_active.slug %}"
+                  class="btn btn-outline-primary btn-sm">{{ annee_suiv }} →</a>
+              {% else %}
+                <a href="{% url 'app_blog:archives_annee' annee=annee_suiv %}"
+                  class="btn btn-outline-primary btn-sm">{{ annee_suiv }} →</a>
+              {% endif %}
+            {% else %}
+              <span class="btn btn-outline-primary btn-sm disabled">→</span>
+            {% endif %}
+          </div>
+        {% endif %}
+
+        {% if categorie_active %}
+          <div class="blog-subheading">
+            <p>Catégorie sélectionnée : <strong>{{ categorie_active.nom }}</strong></p>
+          </div>
+        {% endif %}
+          
+        <span id="align-sidebar-anchor" style="display:block;"></span>
         {% for article in articles %}
             <article class="blog-article-preview d-flex gap-3 mb-4">
 
@@ -38,7 +74,7 @@
                 <div class="article-categories">
                   {% if not categorie_active or article.categorie_principale != categorie_active %}
                     <span class="badge badge-primary">
-                      <a href="{% url 'app_blog:archives_annee' annee_actuelle %}?categorie={{ article.categorie_principale.slug }}">
+                      <a href="{% url 'app_blog:articles_par_categorie' article.categorie_principale.slug %}">
                         {{ article.categorie_principale.nom }}
                       </a>
                     </span>
@@ -51,7 +87,7 @@
                   {% for cat in article.categories_secondaires.all %}
                     {% if not categorie_active or cat != categorie_active %}
                       <span class="badge badge-secondary">
-                        <a href="{% url 'app_blog:archives_annee' annee_actuelle %}?categorie={{ cat.slug }}">
+                        <a href="{% url 'app_blog:articles_par_categorie' cat.slug %}">
                           {{ cat.nom }}
                         </a>
                       </span>
@@ -75,10 +111,10 @@
     </div>
 
     <!-- Colonne latérale (archives) -->
-    <div class="col-md-2 ms-auto">
+    <aside id="blog-sidebar">
         {% include "includes/blog_categories_sidebar.html" %}
         {% include "includes/blog_archives_sidebar.html" %}
-    </div>
+    </aside>
     {% include "includes/pagination.html" %}
-</div>
+  </div>
 {% endblock %}

@@ -2,11 +2,27 @@ from django import forms
 from django.contrib import admin
 from import_export import resources
 from import_export.admin import ImportExportModelAdmin
+from import_export.fields import Field
+from import_export.widgets import ForeignKeyWidget
 from apps.core.app_index.models import IndexEntry, IndexSettings, PageExistence, Category, PageType
 from django.conf import settings
+import logging
+
+# Initialisation du logger (placé tout en haut du fichier si pas déjà fait)
+logger = logging.getLogger("import_index")
+handler = logging.FileHandler("logs/import_index.log", encoding="utf-8")
+handler.setFormatter(logging.Formatter("%(asctime)s - %(levelname)s - %(message)s"))
+logger.addHandler(handler)
+logger.setLevel(logging.INFO)
 
 # Définition de la ressource pour gérer l'import/export des entrées de l'index
 class IndexEntryResource(resources.ModelResource):
+    category = Field(
+        column_name="category",
+        attribute="category",
+        widget=ForeignKeyWidget(Category, field="code")
+    )
+
     class Meta:
         model = IndexEntry  # On lie cette ressource au modèle IndexEntry
         fields = ("name", "category", "id_forum")  # Champs à importer/exporter
@@ -15,27 +31,46 @@ class IndexEntryResource(resources.ModelResource):
     def before_import_row(self, row, **kwargs):
         """
         Avant l'import de chaque ligne :
-        - Nettoie les champs.
-        - Vérifie si l'entrée existe.
-        - Met à jour `id_forum` uniquement si nécessaire.
+        - Nettoie les données.
+        - Vérifie si une entrée existe.
+        - Met à jour `id_forum` si nécessaire.
+        - Affiche et enregistre un message clair pour chaque cas.
         """
-        try:
-            name = row.get("name", "").strip()
-            category = row.get("category", "").strip()
-            id_forum = row.get("id_forum", "").strip() or None  # Remplace "" par None
-            if not name or not category:
-                print(f"⚠️ Ligne ignorée : Nom ou catégorie manquant ({row})")
-                return  # Ignore les lignes invalides
-            # Vérifie si l'entrée existe déjà
-            entry = IndexEntry.objects.filter(name=name).first()
-            if entry:
-                if id_forum and entry.id_forum != id_forum:  # 🔹 Met à jour uniquement si nécessaire
-                    entry.id_forum = id_forum
-                    entry.save()
+        name = row.get("name", "").strip()
+        category_code = row.get("category", "").strip()
+        id_forum = row.get("id_forum", "").strip() or None
+
+        if not name or not category_code:
+            msg = f"⚠️ Ignoré (champ manquant) → name: '{name}' / category: '{category_code}'"
+            print(msg)
+            logger.warning(msg)
+            return
+
+        category = Category.objects.filter(code=category_code).first()
+        if not category:
+            msg = f"❌ Catégorie inconnue : {category_code}"
+            print(msg)
+            logger.error(msg)
+            return
+
+        row["category"] = category.code  # Injection directe
+
+        entry = IndexEntry.objects.filter(name=name).first()
+
+        if entry:
+            if id_forum and entry.id_forum != id_forum:
+                msg = f"✏️ Mise à jour : {name} → id_forum modifié"
+                entry.id_forum = id_forum
+                entry.save()
             else:
-                IndexEntry.objects.create(name=name, category=category, id_forum=id_forum)
-        except Exception as e:
-            print(f"❌ Erreur lors de l'import d'une ligne : {e}")
+                msg = f"🔁 Doublon (inchangé) : {name}"
+            print(msg)
+            logger.info(msg)
+        else:
+            msg = f"➕ Nouvelle entrée : {name}"
+            print(msg)
+            logger.info(msg)
+            # La création est laissée à import_export (pas de .create ici)
 
 # Configuration de l'admin Django pour IndexEntry
 class IndexEntryAdmin(ImportExportModelAdmin, admin.ModelAdmin):
@@ -46,7 +81,7 @@ class IndexEntryAdmin(ImportExportModelAdmin, admin.ModelAdmin):
     """
     resource_class = IndexEntryResource  # Associe la ressource d'import/export
     list_display = ("name", "category", "liens_existant", "id_forum")  # Colonnes affichées dans la liste admin
-    search_fields = ("name", "category", "id_forum")  # Ajoute la recherche
+    search_fields = ("name", "category__code", "id_forum")  # Ajoute la recherche
     list_filter = ("category",)  # Ajoute un filtre par catégorie
 
     # Conserve tous les formats d'importation et ajoute Excel
@@ -56,18 +91,18 @@ class IndexEntryAdmin(ImportExportModelAdmin, admin.ModelAdmin):
         return formats
 
     def save_model(self, request, obj, form, change):
-        obj.save()  # Laisse Django gérer l'INSERT ou UPDATE normalement
-        # 🔹 Force l'enregistrement en base
+        # Force l'enregistrement en base
         super().save_model(request, obj, form, change)
 
     def liens_existant(self, obj):
         codes = settings.INDEX_LINK_CODES  # Ex: {"biography": "BIO", "discography": "DIS", ...}
-        template = settings.INDEX_LINK_TEMPLATES.get(obj.category.name.lower(), [None] * 5)
-        liens = obj.get_links
+        template = settings.INDEX_LINK_TEMPLATES.get(obj.category.code, [None] * 5)
+        liens = obj.get_links   
         visibles = []
         for key, link in zip(template, liens):
-            if key and link:
+            if key and isinstance(link, str):
                 visibles.append(codes.get(key, key.upper()))
+
         return ", ".join(visibles)
 
 # Enregistre IndexEntry dans l'admin
@@ -107,7 +142,6 @@ class PageExistenceAdmin(admin.ModelAdmin):
     list_per_page = 50  # 🔹 Définit le nombre d'entrées affichées par page
 
     def save_model(self, request, obj, form, change):
-        print(f"📌 Enregistrement dans PageExistence : {obj.category} - {obj.name} - {obj.page_type}")  # Debug console
         obj.save()
         super().save_model(request, obj, form, change)
 
@@ -118,6 +152,15 @@ class CategoryAdmin(admin.ModelAdmin):
     search_fields = ("code", "name", "label", "description")
     fields = ("code", "name", "label", "description")
     ordering = ("name",)
+    
+    def render_change_form(self, request, context, *args, **kwargs):
+        context['adminform'].form.fields['code'].help_text += (
+            "<br><br><span style='color: red;'>"
+            "⚠️ Toute nouvelle catégorie doit être ajoutée dans les constantes "
+            "<b>INDEX_LINK_TEMPLATES</b> (obligatoire) et <b>CATEGORY_MAPPING</b> (si la catégorie doit apparaître dans l’index principal) du fichier "
+            "<b>config/settings/project.py</b> !</span>"
+        )
+        return super().render_change_form(request, context, *args, **kwargs)
 
 @admin.register(PageType)
 class PageTypeAdmin(admin.ModelAdmin):

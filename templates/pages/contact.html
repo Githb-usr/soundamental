@@ -2,6 +2,14 @@
 {% load static %}
 
 {% block extra_js %}
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        var textarea = document.querySelector('textarea.richtext-contact');
+        if (textarea) {
+            textarea.removeAttribute('required');
+        }
+        });
+    </script>
     <script src="{% static 'js/tinymce/tinymce.min.js' %}"></script>
     <script src="{% static 'js/tinymce_contact_init.js' %}"></script>
     <script src="{% static 'js/contact.js' %}" defer></script>
@@ -142,9 +150,5 @@
             <p class="text-muted"><span class="text-danger">*</span> Champs obligatoires</p>
             
         </form>
-    {% endif %}
-
-    {% if time_remaining %}
-        <p id="countdown" class="text-danger">Réessayez dans <span id="timer">{{ time_remaining }}</span> secondes...</p>
     {% endif %}
 {% endblock %}

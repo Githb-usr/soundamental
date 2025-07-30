@@ -2,7 +2,6 @@
 /* ## pages.css - Styles des pages statiques et dynamiques ## */
 /* ########################################################## */
 
-
 /* PAGES STATIQUES */
 /* ############### */
 
@@ -10,7 +9,7 @@
 .page-title {
     color: #0088a8;
     font-weight: 700;
-    font-size: 3rem;
+    font-size: 4rem;
     text-transform: uppercase;
     margin-bottom: 50px;
     text-align: left;
@@ -23,10 +22,10 @@
 .dynamic-page-title {
     color: #0088a8; /* Même bleu que la grosse lettre */
     font-weight: 700; /* Épaisseur modérée (ajuste à 700 si tu veux plus épais) */
-    font-size: 3rem; /* Ajustable selon tes préférences */
+    font-size: 4rem; /* Ajustable selon tes préférences */
     text-transform: uppercase; /* Met tout en majuscules */
     margin-bottom: 25px; /* Augmente l’espace avec la grosse lettre */
-    text-align: left; /* Centré */
+    text-align: left;
 }
 
 /* En-tête interne */
@@ -52,6 +51,80 @@
     max-width: 100%; /* Prend toute la largeur disponible */
     padding: 0 65px; /* Applique le même padding que le reste du site */
     margin-bottom: 0 !important;
+}
+
+/* Pages d'accueil */
+/* ############### */
+
+/* Titre pas d'accueil */
+.home-page-title {
+    color: #0088a8; /* Même bleu que la grosse lettre */
+    font-weight: 700; /* Épaisseur modérée (ajuste à 700 si tu veux plus épais) */
+    font-size: 2rem; /* Ajustable selon tes préférences */
+    text-transform: uppercase; /* Met tout en majuscules */
+    margin-bottom: 25px; /* Augmente l’espace avec la grosse lettre */
+    text-align: center;
+}
+
+/* Carrousel accueil */
+.carousel-img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 0;
+    margin: 0;
+    box-shadow: none;
+    /* Pas de gap entre les images */
+    display: block;
+}
+.carousel-slide-row {
+    display: flex;
+    width: 100%;
+    gap: 0;
+}
+.carousel-slide-row > img {
+    flex: 1 1 0;
+    margin: 0;
+    padding: 0;
+    min-width: 0;
+}
+
+/* Section des mags */
+.mag-covers-table {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+    align-items: center;
+}
+.mag-row {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+.mag-cover {
+    max-width: 220px;
+    width: 100%;
+    height: auto;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+}
+
+.magazine-wrapper {
+    background-color: #ffe5cc; /* couleur de fond, adapte si besoin */
+    width: calc(100% + 130px);
+    margin-left: -65px;
+    margin-right: -65px;
+    padding: 28px 0 22px 0;
+}
+@media (max-width: 900px) {
+    .magazine-wrapper {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        border-radius: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
 
 /* Pages de tags */
@@ -237,189 +310,6 @@
     fill: currentColor; /* S'adapte à la couleur du texte du badge */
 }
 
-/* BLOG - Liste des articles (accueil et archives) */
-/* ############################################### */
-
-.blog-article-preview {
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-    align-items: flex-start;
-    margin-bottom: 1.5rem;
-}
-  
-/* Titre */
-.blog-article-preview h2 {
-font-size: 1.5rem;
-font-weight: 600;
-margin-bottom: 0.3rem;
-white-space: nowrap;
-overflow: hidden;
-text-overflow: ellipsis;
-}
-
-.blog-article-preview h2 a {
-text-decoration: none;
-color: #005f73;
-transition: color 0.3s ease;
-}
-
-.blog-article-preview h2 a:hover {
-color: #0088a8;
-text-decoration: underline;
-}
-
-/* Métadonnées */
-.blog-article-preview p.text-muted {
-font-size: 0.9rem;
-margin-bottom: 0.8rem;
-}
-
-/* Contenu prévisualisé */
-.blog-article-preview .blog-content-preview {
-font-size: 0.95rem;
-color: #333;
-line-height: 1.5;
-}
-
-/* Image miniature */
-.blog-thumbnail-wrapper {
-flex-shrink: 0;
-}
-
-.blog-thumbnail {
-width: 200px;
-max-width: 100%;
-height: auto;
-border-radius: 8px;
-display: block;
-}
-
-.blog-article-body {
-flex-grow: 1;
-}
-
-.blog-article-excerpt {
-margin-bottom: 0.5rem;
-color: #333;
-}
-
-/* Vignettes illustrant les articles dans les listes d'articles du blog */
-.blog-article-thumbnail {
-    max-width: 100%;
-    width: 200px;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 1rem;
-    display: block;
-}
-  
-
-/* ARCHIVES - Barre de mois (type onglet) */
-.mois-tabs {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.4rem;
-    margin-bottom: 1.5rem;
-    align-items: center;
-}
-
-.mois-tab {
-    display: inline-block;
-    padding: 4px 10px;
-    min-width: 80px;
-    text-align: center;
-    font-size: 0.75rem;
-    font-weight: 600;
-    text-decoration: none;
-    border-radius: 5px;
-    border: 1px solid transparent;
-    transition: all 0.2s ease-in-out;
-    background-color: #c6e6ee;
-    color: #0088a8;
-    line-height: 1.2rem;
-}
-
-.mois-tab:hover {
-    background-color: #d4edf3;
-    color: #005f73;
-}
-
-.mois-tab.mois-actif {
-    background-color: #007596;
-    color: #fff;
-    border-color: #007596;
-    pointer-events: none;
-}
-
-.mois-tab.mois-inactif {
-    background-color: #f8f9fa;
-    color: #b5b5b5;
-    border-color: #eeeeee;
-    pointer-events: none;
-    opacity: 1;
-}
-
-.mois-tab.mois-tous {
-    min-width: 100px; /* plus large pour "Tous les articles" */
-}
-
-/* SIDEBAR DES ARCHIVES DU BLOG */
-/* ############################ */
-
-.archives-sidebar.narrow-sidebar .accordion-item {
-    border: none;
-    background-color: transparent;
-}
-
-/* En-tête (année) — bouton accordéon avec teinte claire */
-.archives-sidebar.narrow-sidebar .accordion-button {
-    background-color: #e7e7e7; /* Teinte claire, légèrement plus marquée */
-    color: #212529;
-    font-weight: 600;
-    font-size: 0.95rem;
-    padding: 0.6rem 0.75rem;
-    border: none;
-    border-bottom: 1px solid #ccc; /* Trait de séparation visible */
-    border-radius: 0;
-    box-shadow: none;
-}
-
-/* Icône de l'accordéon (flèche) */
-.archives-sidebar.narrow-sidebar .accordion-button::after {
-    transform: scale(0.6);
-    filter: brightness(0.6);
-}
-
-/* Supprime le padding Bootstrap sur le body de l'accordéon */
-.archives-sidebar.narrow-sidebar .accordion-body {
-    padding: 0 !important;
-}
-
-/* Supprime le margin-bottom sur le ul l'accordéon */
-.archives-sidebar.narrow-sidebar .accordion-body ul {
-    margin-bottom: 0 !important;
-}
-
-/* Liste des mois (et "Tous les articles") */
-.archives-sidebar.narrow-sidebar .accordion-body ul li a {
-    display: block;
-    width: 100%;
-    padding: 0.5rem 0.75rem;
-    margin-bottom: 2px;
-    background-color: #f8f9fa;
-    color: #0088a8;
-    text-decoration: none;
-    font-size: 0.9rem;
-    transition: background-color 0.2s ease;
-}
-
-/* Effet au survol */
-.archives-sidebar.narrow-sidebar .accordion-body ul li a:hover {
-    background-color: #e1eff2;
-    color: #005f6b;
-}
-
 /* PAGE DES TELECHARGEMENTS */
 /* ######################## */
 .description-html {
@@ -430,6 +320,13 @@ color: #333;
 
 .object-fit-contain {
     object-fit: contain;
+}
+
+/* Sous-titre dans la liste des fichiers téléchargeables */
+.subtitle-download {
+    font-size: 1.1rem;
+    margin-top: -0.25rem;  /* resserre légèrement l'espace sous le titre */
+    margin-bottom: 0.4rem;
 }
 
 /* PAGINATION */
@@ -529,4 +426,23 @@ color: #333;
         width: 100%;
         height: auto;
     }
+}
+
+/* Vidéos Youtube */
+/* ############## */
+
+.video-youtube {
+  position: relative;
+  padding-bottom: 28.125%;
+  height: 0;
+  overflow: hidden;
+  width: 50%; 
+  max-width: 100%;
+}
+.video-youtube iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  border: 0;
+  display: block;
 }

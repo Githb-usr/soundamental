@@ -21,35 +21,42 @@
         </form>
 
         {% if files %}
-            <div class="list-group list-unstyled">
+            <!-- Grille responsive avec 2 éléments par ligne, hauteurs uniformes -->
+            <div class="row g-2 align-items-stretch">
                 {% for file in files %}
-                    <div class="list-group-item border-bottom p-3">
-                        <div class="d-flex gap-3 align-items-stretch">
-                            
-                            <!-- 📷 Image à gauche -->
-                            {% if file.image %}
-                                <div class="flex-shrink-0">
-                                    <img src="{{ file.image.url }}" alt="{{ file.title }}"
-                                        class="rounded" style="max-width: 130px; max-height: 250px; object-fit: contain;">
-                                </div>
-                            {% endif %}
-                    
-                            <!-- 📝 Texte + bouton à droite -->
-                            <div class="flex-grow-1 d-flex flex-column justify-content-between">
-                                <!-- Titre + description -->
-                                <div>
+                    <div class="col-md-6 {% if forloop.counter|divisibleby:2 %}ps-md-1{% else %}pe-md-1{% endif %}">
+                        <!-- 1. Carte = structure flex-column -->
+                        <div class="d-flex flex-column border p-3 bg-white rounded-0" style="min-height: 100%;">
+
+                            <!-- 2. Bloc extensible : image + texte -->
+                            <div class="d-flex gap-3 align-items-stretch">
+                                {% if file.image %}
+                                    <div class="flex-shrink-0">
+                                        <img src="{{ file.image.url }}" alt="{{ file.title }}"
+                                            class="rounded" style="max-width: 120px; max-height: 250px; object-fit: contain;">
+                                    </div>
+                                {% endif %}
+
+                                <div class="flex-grow-1" style="min-height: 100px;">
                                     <h5 class="mb-1">{{ file.title }}</h5>
-                                    <div class="small text-muted description-html">{{ file.description|safe }}</div>
-                                </div>
-                    
-                                <!-- Bouton aligné en bas à droite -->
-                                <div class="text-end mt-3">
-                                    <a href="{% url 'app_main:download_file' file.id %}" class="btn btn-primary btn-sm" title="{{ file.file.name }}">Télécharger</a>
-                                    <p class="small text-muted mt-1 mb-0">📥 {{ file.download_count }} téléchargement(s)</p>
+
+                                    {% if file.subtitle %}
+                                        <div class="subtitle-download">{{ file.subtitle }}</div>
+                                    {% endif %}
+
+                                    <div class="small text-muted description-html mt-1">
+                                        {{ file.description|safe }}
+                                    </div>
                                 </div>
                             </div>
+
+                            <!-- 3. Bloc bouton = calé en bas par mt-auto sur parent -->
+                            <div class="text-end mt-auto">
+                                <a href="{% url 'app_main:download_file' file.id %}" class="btn btn-sm btn-telechargement" title="{{ file.file.name }}">Télécharger</a>
+                                <p class="small text-muted mt-1 mb-0">📥 {{ file.download_count }} téléchargement(s)</p>
+                            </div>
                         </div>
-                    </div>                
+                    </div>
                 {% endfor %}
             </div>
         {% else %}
