@@ -1,0 +1,15 @@
+<div class="sidebar-section sidebar-latest blog-recent-articles">
+  <h3 class="sidebar-title">Derniers articles</h3>
+  <ul class="list-unstyled">
+    {% for article in recent_articles %}
+      <li>
+        <a href="{% url 'app_blog:detail_article' slug=article.slug %}">{{ article.titre }}</a>
+        <div class="recent-article-date text-muted" style="font-size:0.83em;">
+          {{ article.date_publication|date:"d/m/Y" }}
+        </div>
+      </li>
+    {% empty %}
+      <li><span class="text-muted">Aucun article publié.</span></li>
+    {% endfor %}
+  </ul>
+</div>

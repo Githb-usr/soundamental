@@ -85,7 +85,12 @@ class ArticleArchiveView(ListView):
             s = (annee + 1, 1) if m == 12 else (annee, m + 1)
             if s in mois_valides_set:
                 context["mois_suiv"] = s
-
+                
+        # Liste des derniers articles
+        context['recent_articles'] = (
+            Article.objects.published()
+            .order_by('-date_publication')[:5]  # 5 derniers articles
+        )
         context["categories"] = (
             CategorieArticle.objects.annotate(
                 nb_principale=Count("articles_avec_cette_categorie_principale", distinct=True),

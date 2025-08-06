@@ -108,6 +108,10 @@ class Article(models.Model):
         help_text="Catégories secondaires (optionnelles).",
     )
     
+    views = models.PositiveIntegerField(default=0, verbose_name="Vues")
+    last_viewed = models.DateTimeField(null=True, blank=True, verbose_name="Date dernière vue")
+
+    
     objects = ArticleQuerySet.as_manager()
 
     class Meta:

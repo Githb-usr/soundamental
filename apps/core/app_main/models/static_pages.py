@@ -142,11 +142,6 @@ class StaticPageHistory(models.Model):
         # Correction importante : utilise une liste explicite d'IDs
         excess_entry_ids = [entry.id for entry in excess_entries]
         
-        # DEBUG TEMPORAIRE
-        # print("max_history =", max_history)
-        # print("Nombre d'entrées d'historique actuelles :", StaticPageHistory.objects.filter(page=page_instance).count())
-        # print("IDs des entrées à supprimer :", excess_entry_ids)
-
         # Supprime effectivement les entrées excédentaires
         if excess_entry_ids:
             StaticPageHistory.objects.filter(id__in=excess_entry_ids).delete()

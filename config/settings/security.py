@@ -10,7 +10,10 @@ CSRF_COOKIE_SECURE = False
 
 ALLOWED_HOSTS = ["127.0.0.1", "localhost"]
 
-# 🔒 Validation des mots de passe
+X_FRAME_OPTIONS = 'ALLOWALL'
+# X_FRAME_OPTIONS = 'SAMEORIGIN'
+
+# Validation des mots de passe
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',

@@ -10,7 +10,7 @@ from .forms.admin_forms import ArticleAdminForm
 @admin.register(Article)
 class ArticleAdmin(admin.ModelAdmin):
     form = ArticleAdminForm
-    list_display = ('titre', 'categorie_principale', 'get_categories_secondaires','est_publie', 'date_publication', 'auteur', 'image_preview')
+    list_display = ('titre', 'categorie_principale', 'get_categories_secondaires','est_publie', 'date_publication', 'auteur', 'image_preview', 'views', 'last_viewed')
     list_filter = ('est_publie', 'date_publication')
     search_fields = ('titre', 'resume', 'contenu', 'auteur__username')
     prepopulated_fields = {'slug': ('titre',)}
@@ -58,7 +58,7 @@ class ArticleAdmin(admin.ModelAdmin):
 
 @admin.register(CategorieArticle)
 class CategorieArticleAdmin(admin.ModelAdmin):
-    list_display = ('nom', 'slug', 'description')
+    list_display = ('id','nom', 'slug', 'description')
     search_fields = ('nom', 'slug', 'description')
     ordering = ['nom']
     fields = ('nom', 'slug', 'description')  # ← ordre affiché dans le formulaire

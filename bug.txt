@@ -1,0 +1,48 @@
+<div class="ytp-error" role="alert" data-layer="4">
+  <div class="ytp-error-content" style="padding-top: 125.5px;">
+    <div class="ytp-error-icon-container">
+      <svg fill="#fff" viewBox="0 0 48 48">
+        <path d="M0 0h48v48H0V0z" fill="none"></path>
+        <path d="M22 30h4v4h-4zm0-16h4v12h-4zm1.99-10C12.94 4 4 12.95 4 24s8.94 20 19.99 20S44 35.05 44 24 35.04 4 23.99 4zM24 40c-8.84 0-16-7.16-16-16S15.16 8 24 8s16 7.16 16 16-7.16 16-16 16z" fill-opacity="0.7"></path>
+      </svg>
+    </div>
+    <div class="ytp-error-content-wrap">
+      <div class="ytp-error-content-wrap-reason">
+        <span>Vidéo non disponible</span>
+      </div>
+      <div class="ytp-error-content-wrap-subreason">
+        <div>
+          <a href="http://www.youtube.com/watch?v=XOic6pVAN30" target="TARGET_NEW_WINDOW">Regarder sur YouTube</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a class="ytp-small-redirect" target="_blank" href="https://www.youtube.com" aria-label="Accéder à YouTube pour rechercher plus de vidéos">
+    <svg fill="#fff" height="100%" viewBox="0 0 24 24" width="100%">
+      <path d="M0 0h24v24H0V0z" fill="none"></path>
+      <path d="M21.58 7.19c-.23-.86-.91-1.54-1.77-1.77C18.25 5 12 5 12 5s-6.25 0-7.81.42c-.86.23-1.54.91-1.77 1.77C2 8.75 2 12 2 12s0 3.25.42 4.81c.23.86.91 1.54 1.77 1.77C5.75 19 12 19 12 19s6.25 0 7.81-.42c.86-.23 1.54-.91 1.77-1.77C22 15.25 22 12 22 12s0-3.25-.42-4.81zM10 15V9l5.2 3-5.2 3z"></path>
+    </svg>
+  </a>
+  <div class="ytp-related-on-error-overlay ytp-error-overlay-round-corners ytp-scroll-min ytp-scroll-max" style="display: none;">
+    <h2 class="ytp-related-title">Plus de vidéos sur YouTube</h2>
+    <div class="ytp-suggestions">
+      <!-- Plusieurs suggestions cachées -->
+      <a class="ytp-suggestion-link" target="_blank" style="transition-delay: 0s; display: none;">
+        <div class="ytp-suggestion-image"><div class="ytp-suggestion-duration"></div></div>
+        <div class="ytp-suggestion-title"></div>
+        <div class="ytp-suggestion-author"></div>
+      </a>
+      <!-- ... Répéter pour chaque suggestion ... -->
+    </div>
+    <button class="ytp-button ytp-previous" aria-label="Afficher les suggestions de vidéos précédentes" style="bottom: 0px;">
+      <svg height="100%" version="1.1" viewBox="0 0 32 32" width="100%">
+        <path d="M 19.41,20.09 14.83,15.5 19.41,10.91 18,9.5 l -6,6 6,6 z" fill="#fff"></path>
+      </svg>
+    </button>
+    <button class="ytp-button ytp-next" aria-label="Afficher plus de suggestions de vidéos" style="bottom: 0px;">
+      <svg height="100%" version="1.1" viewBox="0 0 32 32" width="100%">
+        <path d="m 12.59,20.34 4.58,-4.59 -4.58,-4.59 1.41,-1.41 6,6 -6,6 z" fill="#fff"></path>
+      </svg>
+    </button>
+  </div>
+</div>

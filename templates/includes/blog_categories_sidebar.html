@@ -1,23 +1,43 @@
 <div class="sidebar-section blog-categories">
     <h3 class="sidebar-title">Catégories</h3>
-    <ul class="list-unstyled">
+    <ul class="list-unstyled" id="sidebar-categories-list">
       {% for cat in categories %}
-        <li{% if categorie_active and cat == categorie_active %} class="active"{% endif %}>
-          {% if categorie_active and cat == categorie_active %}
-            <span>{{ cat.nom }} ({{ cat.nb_principale|add:cat.nb_secondaire }})</span>
-          {% else %}
-            {% if annee %}
-              <a href="{% url 'app_blog:articles_par_annee_categorie' annee=annee slug=cat.slug %}">
-                {{ cat.nom }} ({{ cat.nb_principale|add:cat.nb_secondaire }})
-              </a>
+        {% if forloop.counter <= 10 %}
+          <li{% if categorie_active and cat == categorie_active %} class="active"{% endif %}>
+            {% if categorie_active and cat == categorie_active %}
+              <span>{{ cat.nom }} ({{ cat.nb_principale|add:cat.nb_secondaire }})</span>
             {% else %}
-              <a href="{% url 'app_blog:articles_par_categorie' cat.slug %}">
-                {{ cat.nom }} ({{ cat.nb_principale|add:cat.nb_secondaire }})
-              </a>
+              {% if annee %}
+                <a href="{% url 'app_blog:articles_par_annee_categorie' annee=annee slug=cat.slug %}">
+                  {{ cat.nom }} ({{ cat.nb_principale|add:cat.nb_secondaire }})
+                </a>
+              {% else %}
+                <a href="{% url 'app_blog:articles_par_categorie' cat.slug %}">
+                  {{ cat.nom }} ({{ cat.nb_principale|add:cat.nb_secondaire }})
+                </a>
+              {% endif %}
             {% endif %}
-          {% endif %}
-        </li>
+          </li>
+        {% else %}
+          <li class="extra-cat"{% if categorie_active and cat == categorie_active %} active{% endif %} style="display:none;">
+            {% if categorie_active and cat == categorie_active %}
+              <span>{{ cat.nom }} ({{ cat.nb_principale|add:cat.nb_secondaire }})</span>
+            {% else %}
+              {% if annee %}
+                <a href="{% url 'app_blog:articles_par_annee_categorie' annee=annee slug=cat.slug %}">
+                  {{ cat.nom }} ({{ cat.nb_principale|add:cat.nb_secondaire }})
+                </a>
+              {% else %}
+                <a href="{% url 'app_blog:articles_par_categorie' cat.slug %}">
+                  {{ cat.nom }} ({{ cat.nb_principale|add:cat.nb_secondaire }})
+                </a>
+              {% endif %}
+            {% endif %}
+          </li>
+        {% endif %}
       {% endfor %}
     </ul>
+    {% if categories|length > 10 %}
+      <button id="toggle-categories-btn" type="button" class="btn btn-link p-0">Voir toutes les catégories</button>
+    {% endif %}
 </div>
-  

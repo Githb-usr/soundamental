@@ -25,6 +25,40 @@
     }
 }
 
+/* === Slider prochaines sorties === */
+.carousel-prochaines-sorties {
+    max-width: 730px;
+    margin: 2.2rem auto 2.5rem auto;
+}
+.carousel-prochaines-sorties img {
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(30,30,30,0.09);
+}
+
+.carousel-prochaines-sorties .carousel-indicators {
+    position: static;           /* points sous le carousel */
+    display: flex;
+    justify-content: center;    /* centre les points */
+    margin-top: 12px;
+    margin-bottom: 0;
+    width: 100%;
+}
+
+.carousel-prochaines-sorties .carousel-indicators.right {
+    justify-content: flex-end;  /* pour placer à droite si besoin */
+}
+
+.carousel-prochaines-sorties .carousel-indicators [data-bs-target] {
+    background-color: #5a5858;     /* gris doux */
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 0 5px;
+    opacity: 0.85;
+    border: none;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.10);
+}
+
 /* BLOG - Liste des articles (accueil et archives) */
 /* ############################################### */
 
@@ -152,8 +186,21 @@ color: #333;
     min-width: 100px; /* plus large pour "Tous les articles" */
 }
 
-/* SIDEBAR CATEGORIES + ARCHIVES DU BLOG */
-/* ##################################### */
+/* SIDEBAR ARTICLES + CATEGORIES + ARCHIVES DU BLOG */
+/* ################################################ */
+
+.sidebar-section.blog-recent-articles ul, .sidebar-section.blog-categories ul#sidebar-categories-list {
+    font-size: 0.95em;  /* Ou 0.9em selon la taille globale */
+    line-height: 1.5;
+}
+.sidebar-section.blog-recent-articles li a {
+    display: block;
+    padding: 2px 0 0 0;
+}
+
+ul#sidebar-categories-list {
+    margin-bottom: .5rem;
+}
 
 /* Conteneur accordéon (année) : pas de bordure, fond transparent */
 .archives-sidebar.narrow-sidebar .accordion-item {
@@ -208,7 +255,6 @@ color: #333;
     color: #005f6b;
 }
 
-/* UNIFORMISATION ENTRE ARCHIVES ET CATÉGORIES */
 /* Même taille de police pour les listes d'archives et de catégories */
 .archives-sidebar.narrow-sidebar ul,
 .blog-categories.narrow-sidebar ul {
@@ -216,7 +262,6 @@ color: #333;
 }
 
 /* TITRES DES BLOCS SIDEBAR */
-/* Taille du titre homogène pour "Archives" et "Catégories" */
 .sidebar-title,
 .archives-sidebar.narrow-sidebar h2,
 .archives-sidebar.narrow-sidebar .h5,
@@ -224,8 +269,8 @@ color: #333;
     font-size: 1.1rem !important;
 }
 
-/* Espace sous le titre "Catégories" uniquement */
-.blog-categories .sidebar-title {
+/* Espace sous les titres "Derniers articles" et "Catégories" uniquement */
+.blog-categories .sidebar-title, .sidebar-latest .sidebar-title {
     margin-bottom: 0.2rem !important;
 }
 
@@ -243,12 +288,72 @@ color: #333;
 
 /* Ajoute un espace entre les deux blocs sidebars */
 #blog-sidebar .blog-categories {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* Couleur des liens des catégories */
+.blog-categories {
+    color: #0088a8;
+}
+
+/* Afficher / masquer au delà de 10 catégories */
+/* Cible uniquement la sidebar des catégories du blog */
+/* Masquer les catégories supplémentaires par défaut */
+.blog-categories .extra-cat {
+    display: none;
+}
+
+/* Bouton discret pour afficher/masquer la liste complète */
+#toggle-categories-btn {
+    background: none;
+    border: none;
+    color: #0088a8;
+    font-size: 0.95em;        /* Police réduite */
+    cursor: pointer;
+    padding: 0.1em 0.3em;
+    margin-top: 0;
+    margin-left: 0;
+    text-decoration: none;    /* Pas de soulignement */
+    outline: none;
+    transition: color 0.2s;
+}
+
+/* Au survol ou focus : bleu + soulignement, pour retour visuel */
+#toggle-categories-btn:hover,
+#toggle-categories-btn:focus {
+    color: #1877c9;           /* Bleu léger au survol */
+    text-decoration: underline;
+}
+
+/* Pour éviter le "saut" visuel quand on ouvre/ferme la liste */
+.blog-categories ul.list-unstyled {
+    transition: max-height 0.25s;
+}
+
+/* Séparation entre les sidebars */
+.blog-sidebar .sidebar-section + .sidebar-section {
+    border-top: 1px solid #eee;
+    margin-top: 1.2rem;
+    padding-top: 0.8rem;
+}
+
+/* Interviews & articles */
+/* ##################### */
+.blog-interview-intro, .blog-article-intro {
+    margin: 2rem 0;
+}
+
+.blog-interview-question {
+    margin-bottom: 1.2rem;
+}
+
+/* Liste des catégories en haut d'un article */
+.article-categories {
+    font-size : .8rem;
+    margin-bottom: .6rem;
 }
 
 /* Grilles de vignettes (interviews) */
-/* ################################# */
-
 #blog-grille-img {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -271,4 +376,107 @@ color: #333;
   #blog-grille-img {
     grid-template-columns: repeat(2, 1fr);
   }
+}
+
+.blog-grille-2x2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  max-width: 400px;
+  margin: 2em auto;
+}
+
+.blog-grille-2x2 img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  background: #eee;
+  display: block;
+  box-shadow: 0 2px 10px rgba(30,30,30,0.07);
+}
+
+.blog-grille-3x3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  max-width: 600px;
+  margin: 2em auto;
+}
+
+.blog-grille-3x3 img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  background: #eee;
+  display: block;
+  box-shadow: 0 2px 10px rgba(30,30,30,0.07);
+}
+
+/* Grille 3x6 spécifique pour les prochaines sorties */
+.blog-grille-3x6 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  max-width: 600px;
+  margin: 2em auto;
+}
+
+.blog-grille-3x6 img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  background: #eee;
+  display: block;
+  box-shadow: 0 2px 10px rgba(30,30,30,0.07);
+}
+
+.blog-grille-3x8 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  max-width: 600px;
+  margin: 2em auto;
+}
+
+.blog-grille-3x8 img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  background: #eee;
+  display: block;
+  box-shadow: 0 2px 10px rgba(30,30,30,0.07);
+}
+
+.blog-grille-3x9 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  max-width: 600px;
+  margin: 2em auto;
+}
+
+.blog-grille-3x9 img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  background: #eee;
+  display: block;
+  box-shadow: 0 2px 10px rgba(30,30,30,0.07);
+}
+
+/* Permet d'avoir une case vide propre en fin de grille */
+.blog-grille-3x8 span {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1/1;
+  background: none;
+}
+
+
+/* Mise en forme numérotation tracklistings dans les articles (avec 01 au lieu de 1) */
+.tracklist-ol {
+  list-style-type: decimal-leading-zero;
+  font-size: 1em;
+  margin-left: 2.5em; 
+  margin-bottom: 2em;
 }

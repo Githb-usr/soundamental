@@ -1,0 +1,272 @@
+[
+  {
+    "model": "app_blog.categoriearticle",
+    "pk": 1,
+    "fields": {
+      "nom": "Critiques/analyses musicales",
+      "description": "Avis détaillé par un membre de l'équipe ou un invité, pouvant être à propos : d’un album, compilation, titre, remix, clip, etc.",
+      "slug": "critiques-analyses-musicales"
+    }
+  },
+  {
+    "model": "app_blog.categoriearticle",
+    "pk": 2,
+    "fields": {
+      "nom": "Focus album",
+      "description": "Avis détaillé sur un album par un membre de l'équipe ou un invité",
+      "slug": "focus-album"
+    }
+  },
+  {
+    "model": "app_blog.categoriearticle",
+    "pk": 3,
+    "fields": {
+      "nom": "Focus compilation",
+      "description": "Avis détaillé sur une compilation par un membre de l'équipe ou un invité",
+      "slug": "focus-compilation"
+    }
+  },
+  {
+    "model": "app_blog.categoriearticle",
+    "pk": 4,
+    "fields": {
+      "nom": "Focus single",
+      "description": "Avis détaillé sur un single par un membre de l'équipe ou un invité",
+      "slug": "focus-single"
+    }
+  },
+  {
+    "model": "app_blog.categoriearticle",
+    "pk": 5,
+    "fields": {
+      "nom": "Focus titre",
+      "description": "Avis détaillé sur un titre par un membre de l'équipe ou un invité",
+      "slug": "focus-titre"
+    }
+  },
+  {
+    "model": "app_blog.categoriearticle",
+    "pk": 6,
+    "fields": {
+      "nom": "Focus clip",
+      "description": "Avis détaillé sur un vidéo clip par un membre de l'équipe ou un invité",
+      "slug": "focus-clip"
+    }
+  },
+  {
+    "model": "app_blog.categoriearticle",
+    "pk": 7,
+    "fields": {
+      "nom": "Focus remix",
+      "description": "Avis détaillé sur un remix par un membre de l'équipe ou un invité",
+      "slug": "focus-remix"
+    }
+  },
+  {
+    "model": "app_blog.categoriearticle",
+    "pk": 8,
+    "fields": {
+      "nom": "Focus collector",
+      "description": "Avis détaillé sur un objet collector par un membre de l'équipe ou un invité",
+      "slug": "focus-collector"
+    }
+  },
+  {
+    "model": "app_blog.categoriearticle",
+    "pk": 9,
+    "fields": {
+      "nom": "Eh oui ça existe !",
+      "description": "Petit focus sur un disque dont on n'aurait pas soupçonné l'existence (titres marrants/kitschs)",
+      "slug": "eh-oui-ca-existe"
+    }
+  },
+  {
+    "model": "app_blog.categoriearticle",
+    "pk": 10,
+    "fields": {
+      "nom": "Discographie",
+      "description": "Article en lien avec la discographie d'un artiste",
+      "slug": "discographie"
+    }
+  },
+  {
+    "model": "app_blog.categoriearticle",
+    "pk": 11,
+    "fields": {
+      "nom": "Label",
+      "description": "Article en lien avec un label",
+      "slug": "label"
+    }
+  },
+  {
+    "model": "app_blog.categoriearticle",
+    "pk": 12,
+    "fields": {
+      "nom": "Compilation",
+      "description": "Article en lien avec une compilation",
+      "slug": "compilation"
+    }
+  },
+  {
+    "model": "app_blog.categoriearticle",
+    "pk": 13,
+    "fields": {
+      "nom": "Artiste",
+      "description": "Article en lien avec un artiste",
+      "slug": "artiste"
+    }
+  },
+  {
+    "model": "app_blog.categoriearticle",
+    "pk": 14,
+    "fields": {
+      "nom": "Biographie",
+      "description": "Article en lien avec la biographie d'un artiste",
+      "slug": "biographie"
+    }
+  },
+  {
+    "model": "app_blog.categoriearticle",
+    "pk": 15,
+    "fields": {
+      "nom": "Concert",
+      "description": "Article en lien avec un concert et/ou une tournée",
+      "slug": "concert"
+    }
+  },
+  {
+    "model": "app_blog.categoriearticle",
+    "pk": 16,
+    "fields": {
+      "nom": "Festival",
+      "description": "Article en lien avec un festival",
+      "slug": "festival"
+    }
+  },
+  {
+    "model": "app_blog.categoriearticle",
+    "pk": 17,
+    "fields": {
+      "nom": "Soundamental",
+      "description": "Article en lien avec Soundamental",
+      "slug": "soundamental"
+    }
+  },
+  {
+    "model": "app_blog.categoriearticle",
+    "pk": 18,
+    "fields": {
+      "nom": "Soundamental - Le forum",
+      "description": "Informations, nouveautés et annonces liées au forum de discussion de Soundamental",
+      "slug": "soundamental-le-forum"
+    }
+  },
+  {
+    "model": "app_blog.categoriearticle",
+    "pk": 19,
+    "fields": {
+      "nom": "Soundamental - Le site",
+      "description": "Toutes les actus liées au site Soundamental (fonctionnalités, évolutions, mises à jour, bugs, etc.)",
+      "slug": "soundamental-le-site"
+    }
+  },
+  {
+    "model": "app_blog.categoriearticle",
+    "pk": 20,
+    "fields": {
+      "nom": "Soundamental sur le web",
+      "description": "Article indiquant qu'on parle de Soundamental ailleurs que sur son propre site (Présence de Soundamental sur les réseaux sociaux, Wikipedia ou autres sites et plateformes)",
+      "slug": "soundamental-sur-le-web"
+    }
+  },
+  {
+    "model": "app_blog.categoriearticle",
+    "pk": 21,
+    "fields": {
+      "nom": "Mises à jour du site",
+      "description": "Mises à jour notables du site et du forum de Soundamental",
+      "slug": "mises-a-jour-du-site"
+    }
+  },
+  {
+    "model": "app_blog.categoriearticle",
+    "pk": 22,
+    "fields": {
+      "nom": "Danceur, le magazine",
+      "description": "Article en lien avec Danceur, le magazine de Soundamental",
+      "slug": "danceur-le-magazine"
+    }
+  },
+  {
+    "model": "app_blog.categoriearticle",
+    "pk": 23,
+    "fields": {
+      "nom": "Interview",
+      "description": "Interview d’un invité, d'un membre du forum ou de l'équipe",
+      "slug": "interview"
+    }
+  },
+  {
+    "model": "app_blog.categoriearticle",
+    "pk": 24,
+    "fields": {
+      "nom": "Interview « Forum »",
+      "description": "Interview d’un membre du forum, pour en apprendre plus sur ses goûts musicaux et sa relation avec le monde musical.",
+      "slug": "interview-forum"
+    }
+  },
+  {
+    "model": "app_blog.categoriearticle",
+    "pk": 25,
+    "fields": {
+      "nom": "Interview « Collection »",
+      "description": "Interview d’un invité, d'un membre du forum ou de l'équipe, pour en apprendre plus sur sa façon de collectionner les disques ou tout autre objet en lien direct avec la musique.",
+      "slug": "interview-collection"
+    }
+  },
+  {
+    "model": "app_blog.categoriearticle",
+    "pk": 26,
+    "fields": {
+      "nom": "Découverte",
+      "description": "Mise en lumière d'un artiste, d'un label, d'un clip, etc. sous l'angle de la découverte par l'auteur de l'article",
+      "slug": "decouverte"
+    }
+  },
+  {
+    "model": "app_blog.categoriearticle",
+    "pk": 27,
+    "fields": {
+      "nom": "Evènement",
+      "description": "Evènement du monde de la musique autre qu'une sortie de disque, un concert ou un festival (remises de prix, etc.)",
+      "slug": "evenement"
+    }
+  },
+  {
+    "model": "app_blog.categoriearticle",
+    "pk": 28,
+    "fields": {
+      "nom": "Les prochaines sorties",
+      "description": "Annonce des albums, singles et/ou compilations qui sortiront dans les jours, les semaines ou les mois à venir",
+      "slug": "les-prochaines-sorties"
+    }
+  },
+  {
+    "model": "app_blog.categoriearticle",
+    "pk": 29,
+    "fields": {
+      "nom": "Dans les bacs",
+      "description": "Annonce des albums, singles et/ou compilations qui viennent de sortir (ou qui sont sortis il y a peu de temps) dans le commerce",
+      "slug": "dans-les-bacs"
+    }
+  },
+  {
+    "model": "app_blog.categoriearticle",
+    "pk": 30,
+    "fields": {
+      "nom": "Non classé",
+      "description": "Pour les articles n'entrant dans aucune catégorie",
+      "slug": "non-classe"
+    }
+  }
+]

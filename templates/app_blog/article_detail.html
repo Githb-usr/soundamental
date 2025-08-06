@@ -1,64 +1,82 @@
 {% extends "base.html" %}
+{% load blog_tags %}
+{% load static %}
 
 {% block content %}
-<article class="mb-5">
-    <h1>{{ article.titre }}</h1>
-    <p class="text-muted">
-        Publié le {{ article.date_publication|date:"d F Y" }} par {{ article.auteur }}
-    </p>
+<div class="blog-2col-grid">
+    <div>
+        <article class="mb-5">
+            <h1 class="page-title-medium-blog">{{ article.titre }}</h1>
+            <p class="text-muted">
+                Publié le {{ article.date_publication|date:"d F Y" }} par {{ article.auteur }}
+            </p>
 
-    <div class="article-categories">
-        <span class="badge badge-primary">
-          <a href="{% url 'app_blog:articles_par_categorie' article.categorie_principale.id %}">
-            {{ article.categorie_principale.nom }}
-          </a>
-        </span>
-        {% for cat in article.categories_secondaires.all %}
-          <span class="badge badge-secondary">
-            <a href="{% url 'app_blog:articles_par_categorie' cat.id %}">
-              {{ cat.nom }}
+            <div class="article-categories mb-3">
+                <span class="cat-label">Catégorie(s)&nbsp;:</span>
+                <span class="cat-badges">
+                    <span class="cat-badge">
+                        <a href="{% url 'app_blog:articles_par_categorie' article.categorie_principale.slug %}">
+                            {{ article.categorie_principale.nom }}
+                        </a>
+                    </span>
+                    {% for cat in article.categories_secondaires.all %}
+                        <span class="cat-sep"> | </span>
+                        <span class="cat-badge cat-badge-secondary">
+                            <a href="{% url 'app_blog:articles_par_categorie' cat.slug %}">{{ cat.nom }}</a>
+                        </span>
+                    {% endfor %}
+                </span>
+            </div>
+
+            {% if article.image and not article.masquer_image %}
+            <img src="{{ article.image.url }}" alt="{{ article.titre }}" class="img-fluid my-3" />
+            {% endif %}
+
+            <div class="blog-content">
+                {{ article.contenu|safe }}
+            </div>
+        </article>
+
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <!-- Bouton retour aux news à gauche -->
+            <a href="{% url 'app_blog:liste_articles' %}" class="btn retour-news-btn">
+                ← Retour aux news
             </a>
-          </span>
-        {% endfor %}
-    </div>      
 
-    {% if article.image and not article.masquer_image %}
-    <img src="{{ article.image.url }}" alt="{{ article.titre }}" class="img-fluid my-3" />
-    {% endif %}
+            <!-- Précédent et suivant à droite, l'un à côté de l'autre -->
+            <div>
+                {% if article_precedent %}
+                    <a href="{% url 'app_blog:detail_article' slug=article_precedent.slug %}" class="btn btn-article-nav me-2">
+                        ← Article précédent
+                    </a>
+                {% endif %}
+                {% if article_suivant %}
+                    <a href="{% url 'app_blog:detail_article' slug=article_suivant.slug %}" class="btn btn-article-nav">
+                        Article suivant →
+                    </a>
+                {% endif %}
+            </div>
+        </div>
 
-    <div class="blog-content">
-        {{ article.contenu|safe }}
+        {% if article.tags.all %}
+        <div class="tag-bloc">
+            {% for tag in article.tags.all %}
+                <a href="{% url 'app_main:tag_page' tag_slug=tag.slug %}" class="tag-button me-2">
+                    {{ tag.name }}
+                </a>
+            {% endfor %}
+        </div>
+        {% endif %}
     </div>
-</article>
 
-<div class="d-flex justify-content-between">
-    {% if article_precedent %}
-        <a href="{% url 'app_blog:detail_article' slug=article_precedent.slug %}" class="btn btn-outline-primary">
-            ← Article précédent
-        </a>
-    {% else %}
-        <span></span>
-    {% endif %}
-
-    {% if article_suivant %}
-        <a href="{% url 'app_blog:detail_article' slug=article_suivant.slug %}" class="btn btn-outline-primary">
-            Article suivant →
-        </a>
-    {% endif %}
+    <aside id="blog-sidebar" class="blog-sidebar">
+        {% include "includes/blog_recent_articles_sidebar.html" %}
+        {% include "includes/blog_categories_sidebar.html" %}
+        {% include "includes/blog_archives_sidebar.html" %}
+    </aside>
 </div>
+{% endblock %}
 
-<a href="{% url 'app_blog:liste_articles' %}" class="btn btn-outline-secondary mt-4">← Retour au blog</a>
-
-{% if article.tags.all %}
-<div class="tag-bloc">
-    <div class="mt-2">
-        {% for tag in article.tags.all %}
-            <a href="{% url 'app_main:tag_page' tag_slug=tag.slug %}" class="tag-button me-2">
-                {{ tag.name }}
-            </a>
-        {% endfor %}
-    </div>
-</div>
-{% endif %}
-
+{% block extra_js %}
+    <script src="{% static 'js/blog_categories_sidebar.js' %}"></script>
 {% endblock %}

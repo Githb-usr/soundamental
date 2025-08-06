@@ -1,3 +1,5 @@
+from django.conf import settings
+import os
 import random
 from django.shortcuts import render
 
@@ -7,21 +9,13 @@ def home_view(request):
     """
 
     # Pool d'images carrées (chemins relatifs ou absolus depuis static ou media)
-    image_pool = [
-        "/media/site/illustrations/carrousel/carrousel01.jpg",
-        "/media/site/illustrations/carrousel/carrousel02.jpg",
-        "/media/site/illustrations/carrousel/carrousel03.jpg",
-        "/media/site/illustrations/carrousel/carrousel04.jpg",
-        "/media/site/illustrations/carrousel/carrousel05.jpg",
-        "/media/site/illustrations/carrousel/carrousel06.jpg",
-        "/media/site/illustrations/carrousel/carrousel07.jpg",
-        "/media/site/illustrations/carrousel/carrousel08.jpg",
-        "/media/site/illustrations/carrousel/carrousel09.jpg",
-        "/media/site/illustrations/carrousel/carrousel10.jpg",
-        "/media/site/illustrations/carrousel/carrousel11.jpg",
-        "/media/site/illustrations/carrousel/carrousel12.jpg",
-        # ...ajoute tous tes fichiers ici...
-    ]
+    # => Correction : chargement automatique de tous les fichiers du dossier cible
+    folder = os.path.join(settings.MEDIA_ROOT, "site", "illustrations", "carrousel")
+    image_pool = []
+    for filename in os.listdir(folder):
+        if filename.lower().endswith(('.jpg', '.jpeg', '.png')):
+            # On prépare le chemin relatif attendu par le template (media)
+            image_pool.append(f"/media/site/illustrations/carrousel/{filename}")
 
     # Mélange deux fois la liste pour casser les séquences logiques
     temp = image_pool.copy()

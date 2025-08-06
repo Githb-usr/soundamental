@@ -17,7 +17,7 @@ handler404 = "config.handlers.custom_error_404"
 handler500 = "config.handlers.custom_error_500"
 
 urlpatterns = [
-    path("error-500/", custom_error_500),  # ✅ TEMP pour test visuel
+    path("error-500/", custom_error_500),  # TEMP pour test visuel
     path("test-error-500/", trigger_error),
     path('admin/', admin.site.urls), # Active l'admin Django
     path("select2/", include("django_select2.urls")),  # ⬅ requis pour le JS/AJAX, recherche dans les formulaires en ligne
@@ -26,7 +26,7 @@ urlpatterns = [
     path("index/", include(app_index_urls, namespace="app_index")),
     
     # Le blog (news)
-    path('blog/', include('apps.content.app_blog.urls', namespace='app_blog')),
+    path('news/', include('apps.content.app_blog.urls', namespace='app_blog')),
     
     # Route vers la vue d'upload d'image centralisée (utilisée par TinyMCE)
     path("medias/", include("apps.core.app_medias.urls", namespace="app_medias")),

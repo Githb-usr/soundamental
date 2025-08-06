@@ -1,8 +1,9 @@
 {% extends "base.html" %}
 {% load blog_tags %}
+{% load static %}
 
 {% block content %}
-<h1 class="mb-4">News et sorties</h1>
+<h1 class="page-title">News et sorties</h1>
 
 <div class="blog-2col-grid">
     <div>
@@ -111,10 +112,15 @@
     </div>
 
     <!-- Colonne latérale (archives) -->
-    <aside id="blog-sidebar">
+    <aside id="blog-sidebar" class="blog-sidebar">
+        {% include "includes/blog_recent_articles_sidebar.html" %}
         {% include "includes/blog_categories_sidebar.html" %}
         {% include "includes/blog_archives_sidebar.html" %}
     </aside>
     {% include "includes/pagination.html" %}
   </div>
+{% endblock %}
+
+{% block extra_js %}
+    <script src="{% static 'js/blog_categories_sidebar.js' %}"></script>
 {% endblock %}

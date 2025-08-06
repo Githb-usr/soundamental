@@ -4,7 +4,7 @@ from .models import Article
 
 class BlogRSSFeed(Feed):
     title = "Soundamental – Blog"
-    link = "/blog/"
+    link = "/news/"
     description = "Actualités de Soundamental (nouveautés, musique, site...)"
 
     def items(self):

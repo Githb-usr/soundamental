@@ -5,9 +5,8 @@ document.addEventListener("DOMContentLoaded", function () {
     return;
   }
 
-  // Initialisation de TinyMCE avec la configuration ADMIN
   tinymce.init({
-    selector: '#id_contenu, textarea.richtext', // Cible les champs de contenu enrichi
+    selector: '#id_contenu, textarea.richtext',
     language: 'fr_FR',
     language_url: '/static/js/tinymce/langs/fr_FR.js',
     height: 400,
@@ -28,17 +27,73 @@ document.addEventListener("DOMContentLoaded", function () {
     content_style: "body { font-family: Arial,Helvetica,sans-serif; font-size:14px }",
     content_css: "/static/css/custom.css",
     fontsize_formats: "8pt 10pt 12pt 14pt 16pt 18pt 24pt 36pt 48pt",
-    valid_elements:
-      "p,br,ul,ol,li,div[class|id|style],span[class|id|style],b,strong,i,em,u,sup,sub," +
-      "h1,h2,h3,h4,h5,h6,blockquote,pre,code," +
-      "a[href|title|target|rel]," +
-      "img[src|alt|title|width|height|style|class|id]," +
-      "table,tr,td,th,thead,tbody,tfoot," +
-      "hr",
-    extended_valid_elements:
-      "a[href|title|target|rel],img[src|alt|title|width|height|class|id|style],span[class|id|style],div[class|id|style],iframe[src|width|height|frameborder|allowfullscreen|title|allow]",
+
+    // ====== BALISES AUTORISÉES ======
+    valid_elements: [
+      "p[class|id|style]", "br", "ul[class|id|style]", "ol[class|id|style]", "li[class|id|style]",
+      "div[class|id|style]", "span[class|id|style|aria-*|data-*]", "b", "strong", "i", "em", "u", "sup", "sub",
+      "h1[class|id|style]", "h2[class|id|style]", "h3[class|id|style]", "h4[class|id|style]", "h5[class|id|style]", "h6[class|id|style]",
+      "blockquote[class|id|style]", "pre[class|id|style]", "code[class|id|style]", "hr[class|id|style]",
+      "a[href|title|target|rel|class|id|style]",
+      "img[src|alt|title|width|height|style|class|id]",
+      "table[class|id|style]", "tr[class|id|style]", "td[class|id|style]", "th[class|id|style]",
+      "thead[class|id|style]", "tbody[class|id|style]", "tfoot[class|id|style]",
+      "dl[class|id|style]", "dt[class|id|style]", "dd[class|id|style]",
+      "figure[class|id|style]", "figcaption[class|id|style]",
+      "section[class|id|style]", "article[class|id|style]", "nav[class|id|style]", "aside[class|id|style]", "main[class|id|style]",
+      "header[class|id|style]", "footer[class|id|style]", "address[class|id|style]",
+      "mark[class|id|style]", "time[class|id|style]", "abbr[class|id|style|title]", "cite[class|id|style]", "small[class|id|style]",
+      "data[class|id|style|value]", "s[class|id|style]", "del[class|id|style|cite|datetime]", "ins[class|id|style|cite|datetime]",
+      "kbd[class|id|style]", "samp[class|id|style]", "var[class|id|style]", "bdi[class|id|style]", "bdo[class|id|style|dir]",
+      "details[class|id|style]", "summary[class|id|style]",
+      "audio[src|controls|autoplay|loop|muted|preload|class|id|style]", "source[src|type|media]", "track[src|kind|label|srclang|default]",
+      "video[src|controls|autoplay|loop|muted|preload|poster|width|height|class|id|style]",
+      "iframe[src|width|height|frameborder|allowfullscreen|title|allow|class|id|style]",
+      // BALISES MANQUANTES POUR CAROUSEL BOOTSTRAP/SVG :
+      "button[class|id|type|style|title|aria-*|data-*]",
+      "svg[*]",
+      "polyline[*]",
+      "path[*]",
+      "use[*]",
+      "g[*]",
+      "rect[*]",
+      "circle[*]",
+      "line[*]"
+    ].join(','),
+
+    // ====== BALISES ÉTENDUES AUTORISÉES ======
+    extended_valid_elements: [
+      "a[href|title|target|rel|class|id|style]", "img[src|alt|title|width|height|class|id|style]", "span[class|id|style|aria-*|data-*]", "div[class|id|style]", "p[class|id|style]",
+      "ul[class|id|style]", "ol[class|id|style]", "li[class|id|style]",
+      "table[class|id|style]", "tr[class|id|style]", "td[class|id|style]", "th[class|id|style]",
+      "thead[class|id|style]", "tbody[class|id|style]", "tfoot[class|id|style]",
+      "h1[class|id|style]", "h2[class|id|style]", "h3[class|id|style]", "h4[class|id|style]", "h5[class|id|style]", "h6[class|id|style]",
+      "blockquote[class|id|style]", "pre[class|id|style]", "code[class|id|style]",
+      "dl[class|id|style]", "dt[class|id|style]", "dd[class|id|style]",
+      "figure[class|id|style]", "figcaption[class|id|style]",
+      "section[class|id|style]", "article[class|id|style]", "nav[class|id|style]", "aside[class|id|style]", "main[class|id|style]",
+      "header[class|id|style]", "footer[class|id|style]", "address[class|id|style]",
+      "mark[class|id|style]", "time[class|id|style]", "abbr[class|id|style|title]", "cite[class|id|style]", "small[class|id|style]",
+      "data[class|id|style|value]", "s[class|id|style]", "del[class|id|style|cite|datetime]", "ins[class|id|style|cite|datetime]",
+      "kbd[class|id|style]", "samp[class|id|style]", "var[class|id|style]", "bdi[class|id|style]", "bdo[class|id|style|dir]",
+      "details[class|id|style]", "summary[class|id|style]",
+      "audio[src|controls|autoplay|loop|muted|preload|class|id|style]", "source[src|type|media]", "track[src|kind|label|srclang|default]",
+      "video[src|controls|autoplay|loop|muted|preload|poster|width|height|class|id|style]",
+      "iframe[src|width|height|frameborder|allowfullscreen|title|allow|class|id|style]",
+      // BALISES MANQUANTES POUR CAROUSEL BOOTSTRAP/SVG :
+      "button[class|id|type|style|title|aria-*|data-*]",
+      "svg[*]",
+      "polyline[*]",
+      "path[*]",
+      "use[*]",
+      "g[*]",
+      "rect[*]",
+      "circle[*]",
+      "line[*]"
+    ].join(','),
+
     valid_styles: {
-      '*': 'float,width,height,margin,margin-top,margin-bottom,margin-left,margin-right,padding,padding-top,padding-bottom,padding-left,padding-right,display,border,border-radius,background,background-color,background-image,text-align,vertical-align,position,top,left,right,bottom,font-size,font-family,color',
+      '*': 'float,width,height,max-width,max-height,min-width,min-height,margin,margin-top,margin-bottom,margin-left,margin-right,padding,padding-top,padding-bottom,padding-left,padding-right,display,border,border-radius,background,background-color,background-image,background-size,background-repeat,background-position,text-align,vertical-align,position,top,left,right,bottom,overflow,overflow-x,overflow-y,box-shadow,font-size,font-family,font-weight,font-style,color,letter-spacing,line-height,text-decoration,text-transform,white-space,word-break,word-wrap,opacity,filter,z-index,list-style-type,list-style-position,outline,outline-color,outline-width,outline-style,caption-side,table-layout,empty-cells,border-collapse,border-spacing'
     },
 
     // Upload d’image par copier/coller ou glisser-déposer

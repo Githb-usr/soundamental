@@ -4,7 +4,7 @@ from django.db.models import Q, Count
 from django.db.models.functions import ExtractYear
 from django.utils.timezone import now
 from ..models import Article, CategorieArticle
-from ..utils import build_archive_dict
+from ..utils import build_archive_dict, get_categories_with_articles
 
 
 class ArticleCategorieView(ListView):
@@ -24,6 +24,7 @@ class ArticleCategorieView(ListView):
             .select_related("auteur", "categorie_principale")
             .prefetch_related("tags", "categories_secondaires")
             .order_by("-date_publication")
+            .distinct()
         )
         annee = self.kwargs.get("annee")
         if annee:
@@ -33,12 +34,8 @@ class ArticleCategorieView(ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context["archives"] = build_archive_dict()
-        context["categories"] = (
-            CategorieArticle.objects.annotate(
-                nb_principale=Count("articles_avec_cette_categorie_principale", distinct=True),
-                nb_secondaire=Count("articles_avec_cette_categorie_secondaire", distinct=True),
-            )
-        )
+        # On compte les articles publiés dans chaque catégorie (principale ou secondaire)
+        context["categories"] = get_categories_with_articles()
         context["categorie_active"] = self.categorie
         context["annee_actuelle"] = now().year
         

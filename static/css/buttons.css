@@ -20,25 +20,57 @@
 /* ############ */
 
 .tag-bloc {
-    margin-top: 50px;
+    margin-top: 5rem;
 }
 
 /* Boutons de tags */
 .tag-button {
     display: inline-block;
-    background: #0088a8; /* Bleu Soundamental */
-    color: white;
-    padding: 5px 10px;
-    font-size: 0.9rem;
+    background: transparent;
+    color: #0088a8;
+    border: 1.2px solid #0088a8;
+    padding: 2px 7px;
+    font-size: 0.75rem;
     border-radius: 5px;
     text-decoration: none;
-    font-weight: bold;
-    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+    font-weight: normal;
+    transition: background 0.2s, color 0.2s, border 0.2s;
+    margin-bottom: 4px;
 }
 
 /* Effet au survol des tags */
 .tag-button:hover {
-    background: white;
-    color: #0088a8;
-    border: 1px solid #0088a8;
+    background: #eaf7fb;
+    color: #005b6d;
+    border-color: #005b6d;
+}
+
+/* BOUTONS BLOG */
+/* ############ */
+
+.retour-news-btn {
+  background-color: #ffd93a;   /* jaune doux (modifie si besoin) */
+  color: #222;
+  font-weight: bold;
+  border: none;
+  box-shadow: 0 1px 4px #0001;
+  margin-right: 1em;
+}
+.btn-news-nav:hover {
+  background-color: #ffc107;
+  color: #111;
+}
+
+/* Boutons article précédent/suivant */
+.btn-article-nav {
+  background-color: #70b9e9;   /* bleu doux temporaire */
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  box-shadow: 0 1px 4px #0001;
+  margin-left: 0.5em;
+}
+.btn-article-nav:hover {
+  background-color: #1680bf;
+  color: #fff;
 }

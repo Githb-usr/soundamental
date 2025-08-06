@@ -34,8 +34,36 @@
     background-color: black;
 }
 
+.user-menu .nav-link {
+    padding-top: 0.25rem !important;    /* 4px */
+    padding-bottom: 0.25rem !important; /* 4px */
+    font-size: 0.95em; /* plus compact, optionnel */
+    line-height: 1.2;  /* resserre encore si besoin */
+}
+
+.user-menu .dropdown-menu .dropdown-item {
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    font-size: 0.95em;
+}
+
+
 /* MENU PRINCIPAL */
 /* ############## */
+
+/* Fix alignement menu principal avec content central */
+.site-menu .container-lg {
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 1140px; /* à adapter si ton content central n’est pas en .container-lg standard */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Supprime le padding droit du dernier lien du menu */
+.site-menu .nav-item-last .nav-link {
+    padding-right: 0 !important;
+}
 
 /* Taille de police spécifique au menu principal */
 .site-menu .fs-5-5 {

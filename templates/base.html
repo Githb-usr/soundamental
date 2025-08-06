@@ -11,9 +11,9 @@
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <link rel="alternate" type="application/rss+xml" title="Soundamental – Blog RSS" href="{% url 'app_blog:flux_rss' %}" />
         <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="{% static 'css/custom.css' %}">
         <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'css/custom.css' %}">
     </head>
 
     <body class="d-flex flex-column min-vh-100">
@@ -25,7 +25,7 @@
         </div>        
 
         <!-- En-tête du site -->
-        <header class="site-header bg-black text-white py-3">
+        <header class="site-header bg-black text-white py-2">
             {% include "includes/header.html" %}
         </header>
 

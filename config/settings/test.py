@@ -7,14 +7,14 @@ from .project import *
 from decouple import Config, RepositoryEnv
 from decouple import config
 
-# ❌ Désactiver le debug pour ne pas polluer les tests
+# Désactiver le debug pour ne pas polluer les tests
 DEBUG = False
 ALLOWED_HOSTS = ["127.0.0.1", "localhost"]
 
-# ❌ Désactiver les signaux pour ne pas polluer les tests
+# Désactiver les signaux pour ne pas polluer les tests
 DISABLE_SIGNALS = False
 
-# ✅ Base de données de test (MySQL)
+# Base de données de test (MySQL)
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.mysql",
@@ -33,13 +33,13 @@ DATABASES = {
     }
 }
 
-# ✅ Réduit les logs pour les tests
+# Réduit les logs pour les tests
 LOGGING = {
     "version": 1,
     "disable_existing_loggers": True,
 }
 
-# ✅ Accélération des tests (pas de password hashing lourd)
+# Accélération des tests (pas de password hashing lourd)
 PASSWORD_HASHERS = [
     "django.contrib.auth.hashers.MD5PasswordHasher",
 ]

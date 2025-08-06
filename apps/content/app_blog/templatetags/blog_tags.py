@@ -15,6 +15,19 @@ def mois_nom(numero):
     """
     return MOIS_FR.get(int(numero), numero)
 
+MOIS_ABBR = {
+    1: "Jan", 2: "Fév", 3: "Mar", 4: "Avr",
+    5: "Mai", 6: "Juin", 7: "Juil", 8: "Aoû",
+    9: "Sep", 10: "Oct", 11: "Nov", 12: "Déc"
+}
+
+@register.filter
+def mois_abbr(numero):
+    """
+    Convertit un numéro de mois (1–12) en abréviation française (3 lettres).
+    """
+    return MOIS_ABBR.get(int(numero), numero)
+
 @register.filter
 def to_list(start, end):
     """
