@@ -58,11 +58,6 @@ blockquote {
   border-radius: 0.3em;
 }
 
-/* PARAGRAPHES */
-/* p {
-    margin-bottom: 16px;
-} */
-
 /* LIENS */
 /* ##### */
 
@@ -114,4 +109,28 @@ a:hover {
 Supprime la bordure du dernier élément */
 .list-group-item:last-child {
     border-bottom: none;
+}
+
+/* ##################### */
+/* ### MEDIA QUERIES ### */
+/* ##################### */
+
+/* 
+    Réduit le padding latéral du container principal sur tablette et mobile.
+    Cela évite que le contenu soit trop compressé ou déborde de l’écran.
+    25px en tablette, 8px en mobile (ajuste si besoin).
+*/
+
+/* Responsive paddings pour le container central */
+@media (max-width: 1100px) {
+    .content-container {
+        padding-left: 25px !important;
+        padding-right: 25px !important;
+    }
+}
+@media (max-width: 700px) {
+    .content-container {
+        padding-left: 8px !important;
+        padding-right: 8px !important;
+    }
 }

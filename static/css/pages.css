@@ -98,6 +98,26 @@
     min-width: 0;
 }
 
+/* Par défaut (toutes tailles) : indicateurs en "points" ronds */
+#homeCarousel .carousel-indicators [data-bs-target] {
+    width: 10px;                 /* diamètre du point */
+    height: 10px;
+    border-radius: 50%;          /* rond */
+    background-color: #fff;      /* couleur du point (adapter si besoin) */
+    opacity: 0.55;               /* point inactif */
+    margin: 0 6px;               /* espacement horizontal entre points */
+    border: 0;                   /* aucun contour */
+}
+#homeCarousel .carousel-indicators .active {
+    opacity: 1;                  /* point actif plus visible */
+}
+
+/* Accessibilité : focus visible au clavier sur les points */
+#homeCarousel .carousel-indicators [data-bs-target]:focus-visible {
+    outline: 2px solid #00a0c6;
+    outline-offset: 2px;
+}
+
 /* Section des mags */
 .mag-covers-table {
     width: 100%;
@@ -321,6 +341,7 @@
 
 /* PAGE DES TELECHARGEMENTS */
 /* ######################## */
+
 .description-html {
     margin-bottom: 0.5rem;
     font-size: 0.9rem;
@@ -454,4 +475,374 @@
   width: 100%; height: 100%;
   border: 0;
   display: block;
+}
+
+/* ===================================
+   Pages statiques du site 
+   - À propos de Soundamental, 
+   - Avetissements, 
+   - Charte d'utilisation du forum,
+   - Politique de confidentialité
+=================================== */
+
+/* Espace entre sections (vertical uniquement) */
+.page-texte .page-section + .page-section {
+    margin-top: 1.5rem;  /* ajuste la valeur si tu veux plus/moins d'air */
+}
+
+/* Titre de la 1re section : marge haute réduite (sans toucher au reste) */
+.page-texte .page-section:first-child h2 {
+    margin-top: 0;  /* ajuste à .25rem si tu veux encore plus serré */
+}
+
+/* Option mobile : compacter un peu si nécessaire */
+@media (max-width: 575.98px) {
+    .page-texte .page-section + .page-section {
+        margin-top: 0.75rem;
+    }
+}
+
+/* =============================== */
+/* Charte Forum - Soundamental     */
+/* =============================== */
+
+/* Conteneur général, pas de cadre ni d’ombre */
+.forum-charte {
+    background: none;
+    padding: 0 0 24px 0;
+    font-size: 1.08em;
+    color: #222;
+    line-height: 1.7;
+}
+
+/* TITRES PRINCIPAUX */
+.forum-charte .section-title {
+    color: #0088a8;
+    font-family: 'Bebas Neue', Arial, sans-serif;
+    font-size: 2.5rem;
+    font-weight: normal;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    margin-top: 2.6rem;
+    margin-bottom: 1.2rem;
+    line-height: 1.1;
+}
+
+.forum-charte .section-title.small-text {
+    font-size: 1.28rem;
+    color: #0088a8;
+    font-family: 'Bebas Neue', Arial, sans-serif;
+    margin-top: 0;
+    margin-bottom: 1.1rem;
+    text-transform: none;
+    font-weight: normal;
+}
+
+/* Sous-titres (niveaux 3) */
+.forum-charte h3.section-title {
+    font-size: 1.5rem;
+    margin-top: 2.2rem;
+    margin-bottom: 1rem;
+    color: #0088a8;
+    font-family: 'Bebas Neue', Arial, sans-serif;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+/* Listes */
+.forum-charte .custom-list {
+    margin: 0 0 1.5em 1em;
+    padding-left: 1.2em;
+}
+
+.forum-charte .custom-list li {
+    margin-bottom: 1.2em;
+    padding-left: 0.1em;
+    list-style-type: disc;
+}
+
+/* Petits textes d’intro */
+.forum-charte .small-text {
+    font-size: 1em;
+    color: #444;
+    margin-bottom: 1.4em;
+}
+
+/* Séparateur */
+.forum-charte .separator {
+    border: none;
+    border-top: 1px solid #c8e6ed;
+    margin: 2.4em 0 2.2em 0;
+}
+
+/* Liens */
+.forum-charte a {
+    color: #0088a8;
+    text-decoration: underline dotted;
+    transition: color 0.2s;
+    word-break: break-all;
+}
+.forum-charte a:hover {
+    color: #005b6d;
+    text-decoration: underline solid;
+}
+
+/* Conclusion */
+.forum-charte .charte-conclusion {
+    margin-top: 2.6em;
+    font-style: normal;
+    color: #222;
+    font-size: 1.04em;
+}
+
+/* ##################### */
+/* ### MEDIA QUERIES ### */
+/* ##################### */
+
+/* ===========================================
+   Titre de page — ajustements d'espacement
+   Objectif :
+   - Écrans ≠ PC : réduire l'espace SOUS le titre
+   - Petits écrans : réduire l'espace AU-DESSUS (padding du header)
+=========================================== */
+
+/* Tablette & petits laptops : espace sous le titre un peu réduit */
+@media (max-width: 1199.98px) {
+  /* Réduction du padding du container de la page */
+  .content-container main {
+    --page-main-pt: 0.5rem;                  /* valeur unique, facile à ajuster */
+    padding-top: var(--page-main-pt) !important;
+  }
+  /* Home : carrousel affleurant sous le header (compense le padding de <main>) */
+  .carousel-fullwidth {
+    margin-top: calc(-1 * var(--page-main-pt)) !important;
+  }
+}
+
+/* ≤ 768px : compacter un peu plus + réduire le padding haut de l'en-tête */
+@media (max-width: 1200px) {
+  .page-title {
+    margin-bottom: 25px;
+  }
+  .page-header-wrapper {
+    padding-top: 14px;   /* au lieu de 30px */
+    padding-bottom: 8px; /* garde un léger souffle */
+  }
+}
+
+/* ≤ 768px : compacter un peu plus + réduire le padding haut de l'en-tête */
+@media (max-width: 767.98px) {
+  .page-title {
+    margin-bottom: 20px;
+  }
+  .page-header-wrapper {
+    padding-top: 14px;   /* au lieu de 30px */
+    padding-bottom: 8px; /* garde un léger souffle */
+  }
+}
+
+/* ≤ 576px : version mobile compacte */
+@media (max-width: 575.98px) {
+  .page-title {
+    margin-bottom: 15px;
+    font-size: 3rem;
+  }
+  .page-header-wrapper {
+    padding-top: 0;   /* réduit nettement l'espace AU-DESSUS */
+    padding-bottom: 6px;
+  }
+  /* Abaisse les 3 points de navigation du carrousel de l'accueil */
+  #homeCarousel .carousel-indicators {
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* =============== */
+/* Page d'accueil  */
+/* =============== */
+
+/* Carousel responsive : sur mobile, largeur = 100% (pas de débordement) */
+@media (max-width: 900px) {
+  .carousel-fullwidth {
+    width: 100vw !important;       /* occupe toute la largeur de la fenêtre */
+    max-width: 100vw !important;
+    position: relative !important;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw !important; /* aligne sur bord gauche de l'écran */
+    margin-right: -50vw !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    border-radius: 0 !important;
+  }
+  /* Réduction des marges sur la section intro de la home */
+  .intro-section .home-page-title {
+    margin-top: 0.5rem !important;   /* réduit l’espace au-dessus du titre */
+    margin-bottom: 0.5rem !important; /* réduit l’espace sous le titre */
+  }
+
+  .intro-section .btn {
+    margin-top: .5rem !important;   /* réduit l’espace au-dessus du bouton */
+    margin-bottom: .5rem !important;  /* réduit l’espace sous le bouton */
+  }
+
+  /* Optionnel : réduit aussi le padding vertical de la section entière */
+  .intro-section {
+    margin-top: 0.6rem !important;
+    margin-bottom: 0.6rem !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+  /* Boutons découverte de l'accueil */
+  .home-discover-btn {
+    margin-top: 0.5rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+  /* Bloc avec magazines */
+  .magazine-wrapper {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    position: relative !important;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw !important;
+    margin-right: -50vw !important;
+    border-radius: 0 !important;
+  }
+  /* Bloc avec magazines : marges du bloc */
+  .magazine-wrapper {
+    margin-top: 0.6rem !important;
+    margin-bottom: 0.6rem !important;
+  }
+  /* Bloc avec magazines : la couleur de fond déborde sur els marges */
+  .magazine-wrapper .container {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    max-width: 600px; /* tu ajustes si tu veux limiter la largeur du contenu sur mobile */
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .mag-row {
+    margin-bottom: 1rem;
+  }
+  /* Réduction de l'espace sous les titres du footer */
+  footer h5 {
+    margin-bottom: 0 !important;
+  }
+}
+
+@media (max-width: 600px) {
+  /* Cache la coupure, fusionne le texte sur mobile uniquement */
+  .mag-desc-line1::after {
+    content: " par des fans de Dance et autres courants électroniques des années '90 ";
+    display: inline;
+    white-space: normal;
+  }
+  .mag-desc-line2 {
+    display: none !important;
+  }
+}
+
+/* ===================================
+   @MEDIA QUERIES
+   Pages statiques du site 
+   - À propos de Soundamental, 
+   - Avetissements, 
+   - Charte d'utilisation du forum,
+   - Politique de confidentialité
+=================================== */
+
+/* Mobile : version plus compacte */
+@media (max-width: 575.98px) {
+    .page-texte h2 {
+        margin-top: 1.5rem;
+        margin-bottom: .5rem;
+    }
+    .page-texte .page-section:first-child h2 {
+        margin-top: 1rem;
+    }
+}
+
+/* ============ */
+/* Charte Forum */
+/* ============ */
+
+/* Responsive */
+@media (max-width: 700px) {
+    .forum-charte {
+        padding: 0 2vw 14px 2vw;
+        font-size: 0.97em;
+    }
+    .forum-charte .section-title {
+        font-size: 1.45rem;
+    }
+    .forum-charte h3.section-title {
+        font-size: 1.1rem;
+    }
+}
+
+/* ===========================================
+   Contact — plein écran sur smartphone (<576px)
+   =========================================== */
+@media (max-width: 575.98px) {
+    /* Les wrappers .w-50 du template passent à 100% */
+    .contact-form .w-50 {
+        width: 100% !important;   /* annule le 50% Bootstrap */
+    }
+
+    /* Petits espacements verticaux entre blocs de champ */
+    .contact-form .contact-item + .contact-item {
+        margin-top: 12px;
+    }
+
+    /* Boutons empilés et 100% si besoin */
+    .contact-form .contact-btn {
+        flex-direction: column;
+        gap: 12px;
+    }
+    .contact-form .contact-btn .btn {
+        width: 100%;
+    }
+}
+
+/* ======================
+   Page de téléchargement
+   ====================== */
+
+/* Téléchargements — "Trier par" = 100% quand 1 carte/ligne (mobile) */
+@media (max-width: 767.98px) {
+  .downloads-sort { width: 100% !important; }                 /* le form prend toute la ligne */
+  .downloads-sort #sort {                                     /* le select s'étire dans la ligne */
+    width: 100% !important;
+    flex: 1 1 auto;
+    min-width: 0;
+  }                         
+}
+
+/* Téléchargements — "Trier par" = 50% quand 2 cartes/ligne (tablette) */
+@media (min-width: 768px) and (max-width: 1199.98px) {
+  .downloads-sort {
+    display: flex;                                  /* sécurité */
+    align-items: center;
+    gap: .5rem;
+    width: 50%;                                     /* label + select dans 50% */
+    align-self: flex-start;                         /* évite un centrage parent */
+  }
+  .downloads-sort #sort,
+  .downloads-sort select,
+  .downloads-sort .form-select {
+    flex: 1 1 0;                                    /* le select prend le reste */
+    min-width: 0;
+    max-width: 100%;
+    width: auto;                                    /* retire tout 100% résiduel */
+  }
+}
+
+/* Bouton "Télécharger" plein écran en mobile */
+@media (max-width: 575.98px) {
+  .btn-telechargement {
+    display: block;   /* l'ancre devient un bloc */
+    width: 100%;      /* prend toute la largeur du conteneur */
+  }
 }

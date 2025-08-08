@@ -31,8 +31,14 @@
 }
 
 /* Supprimer le `gutter-x` de Bootstrap */
-.main-index .container, .row {
+/* .main-index .container, .row {
     --bs-gutter-x: 0 !important; /* Supprime l'espace horizontal Bootstrap */
+/* } */
+
+/* Limite bien aux lignes de l'index uniquement */
+.main-index .container,
+.main-index .row {
+    --bs-gutter-x: 0 !important;
 }
 
 /* Boutons carrés menu index avec bon alignement */
@@ -244,4 +250,206 @@
     background: white;
     color: #0088a8;
     border: 1px solid #0088a8;
+}
+
+
+/* ############################################# */
+/* ############### MEDIA QUERIES ############### */
+/* ############################################# */
+
+/* ========================= */
+/* Index - Responsive global */
+/* ========================= */
+
+/* — Tablet (≤ 992px) — */
+@media (max-width: 992px) {
+  /* Grosse lettre plus compacte */
+  .main-index .big-letter {
+    width: 140px;     /* au lieu de 174px */
+    height: 140px;
+    font-size: 6.5rem;
+  }
+
+  /* Grille principale : passe de 10 à 9 colonnes + 5 lignes si besoin */
+  .main-index .grid-4x10 {
+    grid-template-columns: repeat(9, 34px);
+    grid-template-rows: repeat(5, 34px);
+    gap: 6px 4px;
+  }
+
+  /* Boutons carrés un peu plus petits */
+  .main-index .btn-outline-primary,
+  .main-index .btn-outline-secondary {
+    width: 34px;
+    height: 34px;
+    font-size: 1rem;
+  }
+}
+
+/* Index — supprimer le "trou" sous le menu en mobile/tablette */
+@media (max-width: 1199.98px) {
+  .content-container .main-index.no-top-padding {
+    --page-main-pt: 0 !important;  /* neutralise la variable imposée plus haut */
+    padding-top: 0 !important;      /* colle l'entête interne au menu */
+  }
+}
+
+/* ===================================================== */
+/* 577px–1199.98px — Grosse lettre = hauteur de la grille */
+/* Carré garanti (largeur = hauteur de la grille)        */
+/* ===================================================== */
+@media (min-width: 577px) and (max-width: 1199.98px) {
+  /* Variables pour synchroniser les hauteurs (4 rangées) */
+  .main-index {
+    --idx-rows: 4;      /* nombre de lignes de la grille */
+    --idx-cell: 34px;   /* hauteur d'une case (AJUSTABLE) */
+    --idx-row-gap: 6px; /* espacement vertical entre lignes (AJUSTABLE) */
+  }
+
+  /* La ligne s'étire verticalement : la grille fixe la hauteur de référence */
+  .main-index .page-header > .d-flex.align-items-center {
+    align-items: stretch !important;
+    gap: 10px;
+  }
+  .main-index .page-header .flex-grow-1 { min-width: 0; }
+
+  /* La grille impose sa hauteur = rows * cell + gaps */
+  .main-index .grid-4x10 {
+    /* ordre par LIGNES, pas de débordement */
+    grid-auto-flow: row;
+    /* hauteur de chaque ligne = --idx-cell, 4 lignes */
+    grid-template-rows: repeat(var(--idx-rows), var(--idx-cell));
+    row-gap: var(--idx-row-gap);
+  }
+
+  /* Grosse lettre : carrée, largeur = hauteur calculée de la grille */
+  .main-index .big-letter {
+    /* hauteur = celle de la ligne (stretch via le parent) */
+    height: auto;
+    /* largeur calée sur la hauteur totale de la grille */
+    width: calc(var(--idx-cell) * var(--idx-rows)
+             + (var(--idx-rows) - 1) * var(--idx-row-gap));
+    aspect-ratio: 1 / 1;   /* sécurité : garde le carré si police/border changent */
+    flex: 0 0 auto;
+    flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center;
+    line-height: 1; overflow: hidden;
+    /* taille du caractère (ajuste si besoin) */
+    font-size: clamp(4.8rem, 11vw, 6.2rem);
+  }
+}
+
+
+/* ===================================================== */
+/* ≤ 576px — Bandeau index : grosse lettre à gauche,     */
+/* grille à droite, même hauteur, le tout lisible.       */
+/* ===================================================== */
+@media (max-width: 576.98px) {
+
+  .dynamic-page-title {
+    font-size: 3rem !important;
+    margin-bottom: 10px !important;
+  }
+  .main-index .page-header {
+    padding-top: 15px;
+  }
+  /* 1) Étirement vertical des 2 colonnes (override utilitaire BS) */
+  .main-index .page-header > .d-flex.align-items-center {
+    align-items: stretch !important;  /* remplace align-items-center */
+    gap: 8px;
+  }
+  /* Réduit l'écart gauche/droite créé par .ms-4 sur petit écran */
+  .main-index .page-header .ms-4 { margin-left: 8px !important; }
+
+  /* 2) Lettre gauche : largeur fixe responsive, hauteur = celle de la grille */
+  .main-index .big-letter {
+    flex: 0 0 clamp(88px, 22vw, 116px);  /* largeur (colonne gauche) */
+    height: auto;                        /* s’étire via align-items:stretch */
+    font-size: clamp(3.6rem, 14vw, 5.2rem);
+  }
+
+  /* Important en contexte flex pour éviter le rognage sur la droite */
+  .main-index .page-header .flex-grow-1 { min-width: 0; }
+
+  /* Grille : 5 colonnes calculées pour éviter les arrondis foireux */
+  .main-index .grid-4x10 {
+    --gap: 4px;                                   /* espaces horizontaux/verticaux */
+    display: grid;
+    width: 100%;
+    min-width: 0;
+    grid-auto-flow: row;                          /* progression PAR LIGNES */
+    grid-template-columns: repeat(5, calc((100% - 4*var(--gap)) / 5));
+    column-gap: var(--gap);
+    row-gap: var(--gap);
+    /* On supprime toute hauteur/ligne héritée du desktop */
+    grid-template-rows: unset;
+    grid-auto-rows: unset;
+  }
+
+  /* Chaque case : carré fiable + centrage parfait du caractère */
+  .main-index .grid-4x10 > a {
+    display: flex;                 /* centrage sans flottement */
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    aspect-ratio: 1 / 1;          /* carré strict, sans ::before */
+    box-sizing: border-box;        /* prend en compte les bordures */
+    margin: 0;
+    padding: 0;
+    line-height: 1;                /* évite le texte "trop bas" */
+    overflow: hidden;              /* rien ne dépasse du carré */
+    font-size: clamp(0.95rem, 5vw, 1.1rem); /* taille lisible et contenue */
+  }
+
+  /* Si un span/strong est utilisé à l'intérieur, on normalise */
+  .main-index .grid-4x10 > a > span,
+  .main-index .grid-4x10 > a > strong {
+    display: block;
+    line-height: 1;
+  }
+
+  /* Sous-lettres : bascule en carrousel horizontal (scroll) */
+  .main-index .grid-sub-letters {
+    display: flex;                 /* override du grid desktop */
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    gap: 6px;
+    padding: 6px 2px 8px 2px;      /* un petit souffle pour le doigt */
+    scroll-snap-type: x proximity; /* snap doux */
+  }
+  .main-index .grid-sub-letters > a {
+    flex: 0 0 36px;                /* largeur fixe par bouton */
+    height: 36px;
+    line-height: 36px;
+    scroll-snap-align: start;
+  }
+
+  /* Allège les marges autour du tableau/liste */
+  .main-index .index-table,
+  .main-index .index-empty-message {
+    margin: 20px 0;
+  }
+}
+
+/* ========================================= */
+/* Index — Mobile : sous-lettres défilantes  */
+/* ========================================= */
+@media (max-width: 576px) {
+  /* Passe la barre des 27 sous-lettres en ligne scrollable */
+  .main-index .grid-sub-letters {
+    display: flex;                 /* remplace le grid desktop */
+    gap: 6px;                      /* espacement constant */
+    padding: 6px 2px 8px 2px;      /* marge interne pour le doigt */
+    overflow-x: auto;              /* défilement horizontal */
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x proximity; /* accrochage doux */
+  }
+
+  /* Chaque bouton prend une largeur fixe, lisible au doigt */
+  .main-index .grid-sub-letters > a {
+    flex: 0 0 36px;                /* largeur fixe */
+    height: 36px;
+    line-height: 36px;
+    scroll-snap-align: start;
+  }
 }

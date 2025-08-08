@@ -146,5 +146,5 @@ class StaticPageHistory(models.Model):
         if excess_entry_ids:
             StaticPageHistory.objects.filter(id__in=excess_entry_ids).delete()
             print("Suppression effectuée.")
-        else:
-            print("Aucune suppression nécessaire.")
+        # else:
+        #     print("Aucune suppression nécessaire.")

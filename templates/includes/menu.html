@@ -2,14 +2,51 @@
 
 <nav class="site-menu w-100 bg-black text-white justify-content-end">
     <div class="container-lg justify-content-end">
-        <ul class="nav w-100 fs-6 fw-bold justify-content-end">
+        <!-- Bouton burger mobile -->
+        <button class="menu-burger-btn d-lg-none" type="button" aria-label="Menu" onclick="document.getElementById('mainNavList').classList.toggle('open');">
+            <span class="burger-bar"></span>
+            <span class="burger-bar"></span>
+            <span class="burger-bar"></span>
+        </button>
+        <ul id="mainNavList" class="nav w-100 fs-6 fw-bold justify-content-end">
+            {% comment %} === LIENS USER POUR MOBILE BURGER === {% endcomment %}
+            {% if user.is_authenticated %}
+                <li class="nav-item user-menu-mobile d-block d-lg-none dropdown">
+                    <a href="#" class="nav-link text-white fw-bold dropdown-toggle" id="userBurgerEspace" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Mon espace
+                    </a>
+                    <ul class="dropdown-menu bg-black text-white" aria-labelledby="userBurgerEspace">
+                        {% if user.is_staff %}
+                            <li><a class="dropdown-item" href="/admin/" target="_blank">Accès admin</a></li>
+                        {% endif %}
+                        <li><a class="dropdown-item" href="{% url 'app_blog:article_creer' %}">Créer une news</a></li>
+                        <li class="dropdown-item disabled">Créer une fiche pressage</li>
+                        <li class="dropdown-item disabled">Créer un artiste</li>
+                    </ul>
+                </li>
+                <li class="nav-item user-menu-mobile d-block d-lg-none dropdown">
+                    <a href="#" class="nav-link text-white fw-bold dropdown-toggle" id="userBurgerCompte" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Mon compte
+                    </a>
+                    <ul class="dropdown-menu bg-black text-white" aria-labelledby="userBurgerCompte">
+                        <li class="dropdown-item disabled">Voir mon profil</li>
+                        <li class="dropdown-item disabled">Modifier mes infos</li>
+                        <li class="dropdown-item disabled">Préférences</li>
+                    </ul>
+                </li>
+            {% else %}
+                <li class="nav-item user-menu-mobile d-block d-lg-none">
+                    <a class="nav-link text-white" href="{% url 'login' %}?next={{ request.path }}">Se connecter</a>
+                </li>
+            {% endif %}
+
             <li class="nav-item">
-                <a href="{% url 'app_blog:liste_articles' %}" class="nav-link text-white">NEWS</a>
+                <a href="{% url 'app_blog:liste_articles' %}" class="nav-link text-white">News</a>
             </li>
             <!-- Menu déroulant pour "Index" -->
             <li class="nav-item dropdown">
                 <a href="#" class="nav-link text-white fw-bold dropdown-toggle" id="indexDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    INDEX
+                    Index
                 </a>
                 <ul class="dropdown-menu bg-black text-white" aria-labelledby="indexDropdown">
                     <li><a class="dropdown-item" href="{% url 'app_index:index' %}">Index général</a></li>
@@ -21,7 +58,7 @@
             <!-- Menu déroulant pour "Forum" -->
             <li class="nav-item dropdown">
                 <a href="#" class="nav-link text-white fw-bold dropdown-toggle" id="indexDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    FORUM
+                    Forum
                 </a>
                 <ul class="dropdown-menu bg-black text-white" aria-labelledby="indexDropdown">
                     <li><a class="dropdown-item" href="https://www.soundamental.org/forum/">Accueil forum</a></li>
@@ -33,14 +70,19 @@
                 <a href="{% url 'app_main:aide_root' slug='aide' %}" class="nav-link text-white">Aide / FAQ</a>
             </li>
             <li class="nav-item">
-                <a href="{% url 'app_main:dynamic_page' page_name='telechargements' %}" class="nav-link text-white">TÉLÉCHARGEMENTS</a>
+                <a href="{% url 'app_main:dynamic_page' page_name='telechargements' %}" class="nav-link text-white">Téléchargement</a>
             </li>
             {% comment %} <li class="nav-item">
                 <a href="{% url 'app_main:static_page' slug='liens' %}" class="nav-link text-white">LIENS</a>
             </li> {% endcomment %}
             <li class="nav-item nav-item-last">
-                <a href="{% url 'app_main:contact' %}" class="nav-link text-white">CONTACT</a>
+                <a href="{% url 'app_main:contact' %}" class="nav-link text-white">Contact</a>
             </li>
+            {% if user.is_authenticated %}
+                <li class="nav-item user-menu-mobile logout-item d-block d-lg-none">
+                    <a class="nav-link text-white" href="{% url 'logout' %}">Se déconnecter</a>
+                </li>
+            {% endif %}
         </ul>
     </div>
 </nav>

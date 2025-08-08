@@ -1,3 +1,65 @@
+/* ##################################################
+   header.css — Styles du header et des menus
+   ##################################################
+
+   SOMMAIRE (organisation du fichier)
+
+   1)  En-tête global
+       1.1) Wrapper d’en-tête (page-header-wrapper)
+       1.2) Page header (container/padding)
+       1.3) Branding (brand-wrapper, brand-logo, brand-baseline)
+
+   2)  User menu (barre haute) — Desktop
+       2.1) Container et positionnement
+       2.2) Liens et items
+       2.3) Dropdown (styles, tailles, hover)
+
+   3)  Menu principal (site-menu) — Desktop
+       3.1) Container (navbar/nav)
+       3.2) Liens et items
+       3.3) Dropdown (styles, tailles, hover)
+
+   4)  Dropdowns — Règles communes (desktop)
+       4.1) Fond, couleurs, séparateurs
+       4.2) Dernier item sans bordure
+       4.3) Flèches (toggle) desktop
+
+   5)  États et accessibilité
+       5.1) Hover/active/focus visibles
+       5.2) Z-index / empilement
+       5.3) Normalisation typographique
+
+   6)  Ajustements spécifiques header
+       6.1) Classes utilitaires (ex. fs-5-5)
+       6.2) Containers auxiliaires (ex. buttons-container)
+
+   7)  MEDIA QUERIES — Mobile / Burger (<= 991px)
+       7.1) Masquage de la barre user (fusion dans burger)
+       7.2) Container du burger (#mainNavList)
+       7.3) Items du menu principal (pile verticale)
+       7.4) Sous-menus (accordéon : masqué/affiché via .open)
+       7.5) Sous-menus — items & séparateurs
+            (couvre <li><a.dropdown-item> et <li.dropdown-item>)
+       7.6) Flèches indicatrices (rotation sur .open)
+       7.7) Indentation des sous-niveaux
+       7.8) Z-index & ombres panel
+       7.9) Exceptions ciblées (ex. lien "Contact")
+       7.10) Confort tactile (min-height), transitions/motion
+
+   8)  MEDIA QUERIES — Desktop (>= 992px)
+       8.1) Ouverture au survol (hover)
+       8.2) Alignements/compat .dropdown-menu-end
+
+   9)  Impression (print)
+
+   10) Notes de maintenance
+       - Les règles communes doivent rester uniques.
+       - Éviter les doublons : un seul bloc par sélecteur hors media query.
+       - Les variantes mobile/desktop restent dans leurs media queries respectives.
+       - Tout changement visuel doit être validé séparément (pas dans ce fichier).
+
+   ################################################## */
+
 /* ################################################## */
 /* ## header.css - Styles du header (menu compris) ## */
 /* ################################################## */
@@ -75,40 +137,418 @@
     margin-bottom: 10px;
 }
 
-/* Sous-menus déroulants */
+/* Désactive le soulignement des liens de navigation principale au survol */
+nav.site-menu .nav-link:hover,
+nav.site-menu .dropdown-item:hover,
+.user-menu-mobile .nav-link:hover,
+.user-menu-mobile .dropdown-item:hover {
+    text-decoration: none !important;
+}
 
-.site-menu #indexDropdown + .dropdown-menu {
-    background-color: black !important;
+/* ------------------------------------------------------------------ */
+/* Unification des dropdowns menu principal & user menu (PC/tablette) */
+/* ------------------------------------------------------------------ */
+
+nav.site-menu .dropdown-menu,
+nav.user-menu .dropdown-menu {
+    background: #555 !important;
+    min-width: 200px;
     border-radius: 0 !important;
-    padding-bottom: 0;
+    box-shadow: none !important;
+    border: none !important;
+    padding: 0 !important;
+    color: #ccc !important;
 }
 
-.site-menu #indexDropdown + .dropdown-menu .dropdown-item {
-    color: white !important;
-    font-weight: bold;
-    position: relative;
-    padding: 10px 15px;
-    display: flex;
-    align-items: center; /* Centre verticalement le texte */
+nav.site-menu .dropdown-menu li,
+nav.user-menu .dropdown-menu li {
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
-.site-menu #indexDropdown + .dropdown-menu .dropdown-item:not(.last-item)::after {
-    content: "";
-    display: block;
-    position: absolute;
-    bottom: 0;
-    left: 15px;  /* Aligné avec le padding */
-    right: 15px; /* Aligné avec le padding */
-    transform: translateY(50%); /* Corrige l'alignement pour un vrai centrage */
-    height: 1px;
-    background-color: rgb(146, 144, 144);
-    opacity: 0.5; /* Rend la ligne plus discrète si besoin */
+nav.site-menu .dropdown-menu .dropdown-item,
+nav.user-menu .dropdown-menu .dropdown-item {
+    color: #ccc !important;
+    background: transparent !important;
+    font-size: 1rem !important;
+    font-family: inherit;
+    padding: 11px 28px 11px 18px !important; /* padding gauche = 18px */
+    border-bottom: 1px solid #ccc !important;
+    transition: background 0.18s, color 0.18s;
+    text-align: left;
+    width: 100%; /* toute la ligne */
+    box-sizing: border-box;
+    margin: 0 !important;
 }
 
-.site-menu #indexDropdown + .dropdown-menu .dropdown-item.last-item {
-    border-bottom: none;
+/* Retire le trait sur le dernier item de chaque menu, même avec structure <ul><li><a> */
+.dropdown-menu li:last-child .dropdown-item {
+    border-bottom: none !important;
+}
+/* Cas où l'élément lui-même est un <li class="dropdown-item"> (burger user) */
+.dropdown-menu li.dropdown-item:last-child {
+    border-bottom: none !important;
 }
 
-.site-menu #indexDropdown + .dropdown-menu .dropdown-item:hover {
-    background-color: #333 !important;
+nav.site-menu .dropdown-menu .dropdown-item:hover,
+nav.user-menu .dropdown-menu .dropdown-item:hover {
+    background: #0088a8 !important;
+    color: #fff !important;
+    text-decoration: none !important;
+}
+
+/* ############################################# */
+/* ############### MEDIA QUERIES ############### */
+/* ############################################# */
+
+/* ----------------------------------------- */
+/* STRUCTURE RESPONSIVE & AJUSTEMENTS LAYOUT */
+/* (Header, menu, paddings, position menu)   */
+/* ----------------------------------------- */
+
+/* Masque aussi la barre entière du user menu sur mobile/tablette */
+@media (max-width: 991px) {
+    .bg-dark.text-white.py-1 {
+        display: none !important;
+        height: 0 !important;
+        min-height: 0 !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        border: none !important;
+    }
+}
+@media (max-width: 600px) {
+    /* Position du menu burger sous le header plus petit en smartphone */
+    #mainNavList {
+        top: 60px;
+    }
+}
+@media (max-width: 991px) {
+    /* Position du menu burger sous le header plus petit en smartphone */
+    #mainNavList {
+        top: 60px;
+    }
+}
+@media (min-width: 992px) {
+    /* Sur desktop, menu horizontal classique, pas de position fixe */
+    #mainNavList {
+        top: unset !important;
+    }
+}
+
+/* Padding de la barre de menu supprimé en desktop mais remis en mode tablette longue */
+@media (min-width: 992px) and (max-width: 1200px) {
+    .site-header .container-lg,
+    .site-menu .container-lg,
+    .site-footer .container-lg,
+    .content-container {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+}
+
+/* -------------------------- */
+/* Responsive Header & Logo   */
+/* -------------------------- */
+
+@media (max-width: 991px) {
+    /* Header : structure horizontale pour logo + menu burger */
+    .site-header .container-lg {
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+        max-height: 45px;  /* ajuste à la hauteur utile de ta barre */
+        height: auto;      /* permet d'adapter si le contenu dépasse */
+        display: flex !important;
+    }
+
+    /* Logo toujours à gauche */
+    .site-header .container-lg > div:first-child {
+        margin-left: 8px !important;   /* ajuste la valeur selon le rendu visuel */
+        margin-right: 0 !important;
+    }
+
+    /* Menu (nav) prend tout l'espace restant à droite du logo */
+    .site-header nav.site-menu {
+        margin-left: auto !important;
+        padding: 0 !important;
+        display: flex !important;
+        align-items: center !important;
+        width: auto !important;
+    }
+
+    /* Bouton burger visible et à droite */
+    .menu-burger-btn {
+        margin-left: auto !important;
+        margin-right: 0 !important;
+        display: inline-block;
+        background: none;
+        border: none;
+        padding: 12px 8px;
+        margin-top: 0;
+        cursor: pointer;
+        z-index: 10001;
+        vertical-align: middle;
+    }
+
+    /* Icone du burger */
+    .menu-burger-btn .burger-bar {
+        display: block;
+        width: 27px;
+        height: 4px;
+        margin: 5px 0;
+        background: #fff;
+        border-radius: 2px;
+        transition: 0.2s;
+    }
+}
+
+/* Logo plus petit sur très petits écrans */
+@media (max-width: 600px) {
+    .site-header img[alt="Logo Soundamental"] {
+        height: 30px !important;
+    }
+    .site-header .container-lg {
+        padding-left: 3px !important;
+        padding-right: 3px !important;
+    }
+}
+
+/* ---------------------------- */
+/* MENU UTILISATEUR (user menu) */
+/* ---------------------------- */
+
+/* 
+   Masque le menu utilisateur classique (en haut à droite) sur mobile et tablette,
+   pour éviter le doublon avec le menu burger qui intègre déjà les liens utilisateur.
+*/
+@media (max-width: 991px) {
+    .user-menu,
+    .user-menu-container {
+        display: none !important;
+        height: 0 !important;
+        min-height: 0 !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        border: none !important;
+    }
+
+    /* 
+       Liens utilisateur intégrés dans le menu burger (mobile) : 
+       espace vertical supplémentaire pour aérer, séparateur pour "Se déconnecter"
+    */
+    .user-menu-mobile {
+        margin-bottom: 0.5rem;
+    }
+
+    .user-menu-mobile.logout-item {
+        border-top: 1px solid #444;
+        margin-top: 1.2rem;
+        padding-top: 0.7rem;
+    }
+
+    .user-menu-mobile.logout-item .nav-link {
+        padding-top: 5px !important;
+        padding-bottom: 5px !important;
+        min-height: 36px;
+        display: flex;
+        align-items: center;      /* centre verticalement */
+        justify-content: flex-start;
+    }
+    .dropdown-menu li:last-child .dropdown-item {
+        border-bottom: none !important;
+    }
+}
+
+/* ------------------------------ */
+/* MENU PRINCIPAL (burger mobile) */
+/* ------------------------------ */
+
+@media (min-width: 992px) {
+    nav.site-menu .nav-link {
+        text-transform: uppercase !important;
+    }
+}
+
+@media (max-width: 991px) {
+    /* Le container du menu principal passe en vertical, occupe tout l'écran */
+    .site-menu .container-lg {
+        position: relative !important;
+    }
+
+    /* Menu principal masqué par défaut sur mobile, affiché si #mainNavList.open */
+    #mainNavList {
+        display: none;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        width: 100vw !important;
+        max-width: 100vw !important;
+        min-width: 0 !important;
+        background: #222;
+        position: fixed !important;      /* sort du flux Bootstrap */
+        left: 0 !important;
+        right: 0 !important;
+        z-index: 9999;
+        border-top: 1px solid #444;
+        box-shadow: 0 6px 18px #0006;
+        padding-bottom: 0;
+        padding-left: 0 !important;
+        margin: 0 !important;
+    }
+    #mainNavList.open {
+        display: flex !important;
+    }
+
+    /* Items du menu en vertical, pleine largeur */
+    .site-menu .nav-item {
+        width: 100%;
+        text-align: left;
+        border-bottom: 1px solid #444;
+        padding: 0;
+        margin: 0;
+    }
+    .site-menu .nav-item-last {
+        border-bottom: none !important;
+    }
+
+    /* Liens principaux : padding vertical modéré, alignement à gauche */
+    .site-menu .nav-link {
+        width: 100%;
+        padding: 11px 18px !important;      /* padding vertical = hauteur modérée */
+        font-size: 1.05rem !important;
+        color: #fff !important;
+        border: none;
+        background: transparent;
+        text-align: left;
+        display: inline-flex;
+        align-items: center;
+        padding-right: 12px !important;    /* espace flèche */
+    }
+
+    /* Item "Contact" (menu burger) : hauteur compacte spécifique */
+    .site-menu .nav-item a.nav-link[href*="contact"] {
+        padding-top: 5px !important;
+        padding-bottom: 5px !important;
+        min-height: 36px;
+        display: flex;
+        align-items: center;
+    }
+
+    /* Sous-menus accordéon (masqué par défaut, visible si parent .open) */
+    .site-menu .dropdown-menu {
+        display: none !important;
+        position: static !important;
+        background: #555 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+        width: 100% !important;
+        z-index: 1;
+        border-left: 2px solid #444 !important;
+    }
+    .site-menu .nav-item.open > .dropdown-menu {
+        display: block !important;
+    }
+    /* Items des sous-menus (mobile) — style commun, sans bordure par défaut */
+.site-menu .dropdown-menu .dropdown-item,
+.user-menu-mobile .dropdown-menu .dropdown-item {
+    padding: 11px 28px !important;
+    font-size: 1.00rem !important;
+    color: #ccc !important;
+    text-align: left;
+    background: transparent;
+    border-bottom: 0; /* pas de bordure ici */
+}
+
+/* Bordure uniquement entre les items (jamais sur le dernier)
+   — couvre <li><a class="dropdown-item"> ET <li class="dropdown-item"> */
+.site-menu .dropdown-menu li:not(:last-child) > .dropdown-item,
+.site-menu .dropdown-menu li.dropdown-item:not(:last-child),
+.user-menu-mobile .dropdown-menu li:not(:last-child) > .dropdown-item,
+.user-menu-mobile .dropdown-menu li.dropdown-item:not(:last-child) {
+    border-bottom: 1px solid #ccc;
+}
+
+    /* Flèche après le texte pour dropdowns */
+    .site-menu .nav-item.dropdown > .nav-link::after {
+        content: "";
+        display: inline-block;
+        margin-left: 12px;
+        width: 8px;
+        height: 8px;
+        border-right: 2px solid #bbb;
+        border-bottom: 2px solid #bbb;
+        transform: rotate(45deg);
+        transition: transform 0.18s cubic-bezier(.4,2,.6,1);
+        pointer-events: none;
+    }
+    .site-menu .nav-item.open > .nav-link::after {
+        transform: rotate(-135deg);
+    }
+}
+
+/* ------------------------------ */
+/* STYLES COMMUNS - MENUS BURGER  */
+/* (site-menu + user-menu-mobile) */
+/* ------------------------------ */
+
+@media (max-width: 991px) {
+    /* Bordure bas sur tous les items (sauf le dernier de chaque menu) */
+    .site-menu .nav-item,
+    .user-menu-mobile {
+        border-bottom: 1px solid #444;
+    }
+    .site-menu .nav-item-last,
+    .user-menu-mobile.logout-item {
+        border-bottom: none !important;
+    }
+
+    /* Animation/effet au survol de tous les liens de menus burger */
+    .site-menu .nav-link:hover,
+    .user-menu-mobile .nav-link:hover {
+        background: #303841;
+        color: #ffd93a;
+        text-decoration: none;
+        transition: background 0.18s, color 0.18s;
+    }
+
+    /* Largeur et alignement des sous-menus (dropdowns) */
+    .site-menu .dropdown-menu,
+    .user-menu-mobile .dropdown-menu {
+        width: 100% !important;
+        min-width: 0 !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+    }
+
+    /* Sous-menus utilisateurs : couleur de fond harmonisée */
+    .user-menu-mobile .dropdown-menu {
+        background: #3d3d3d !important;
+    }
+
+    /* Menu utilisateur et sous-menus : garde la casse normale */
+    .user-menu-mobile .nav-link,
+    .user-menu-mobile .dropdown-item {
+        text-transform: none;
+    }
+}
+
+/* -------------------------------------------- */
+/* AJUSTEMENTS DIVERS ET CORRECTIFS SPECIFIQUES */
+/* -------------------------------------------- */
+
+/* Centrage du user menu dans le bandeau sombre sur tablettes (existant mais désormais inutile si tu masques user menu sur mobile/tablette)
+   Tu peux supprimer cette section si tout est bien masqué ! */
+@media (max-width: 900px) {
+    .bg-dark .container-fluid {
+        justify-content: center !important;
+    }
+    .user-menu .nav {
+        flex-direction: row !important;
+        justify-content: center !important;
+    }
 }

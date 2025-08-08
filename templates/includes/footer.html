@@ -1,5 +1,8 @@
 {% load static %}
 
+<!-- Barre noire alignée -->
+<div class="footer-separator" class="bg-black" style="height: 8px; width: 100%;"></div>
+
 <div class="container text-center footer">
     <div class="row">
         <!-- Colonne 1 -->
@@ -23,9 +26,9 @@
             <h5 class="text-uppercase fw-bold">Soundamental</h5>
             <ul class="list-unstyled">
                 <li><a href="{% url 'app_main:static_page' slug='a-propos-de-soundamental' %}" class="text-white text-decoration-none">À propos de Soundamental</a></li>
-                <li><a href="{% url 'app_main:static_page' slug='charte-dutilisation-du-forum' %}" class="text-white text-decoration-none">Charte d'utilisation du forum</a></li>
                 <li><a href="{% url 'app_main:static_page' slug='avertissements' %}" class="text-white text-decoration-none">Avertissements</a></li>
                 <li><a href="{% url 'app_main:static_page' slug='politique-de-confidentialite' %}" class="text-white text-decoration-none">Politique de confidentialité</a></li>
+                <li><a href="{% url 'app_main:static_page' slug='charte-dutilisation-du-forum' %}" class="text-white text-decoration-none">Charte d'utilisation du forum</a></li>            
             </ul>
         </div>
 
@@ -34,7 +37,7 @@
             <h5 class="text-uppercase fw-bold">Ressources</h5>
             <ul class="list-unstyled">
                 <a href="{% url 'app_main:dynamic_page' page_name='telechargements' %}" class="nav-link text-white">Téléchargements</a>
-                <a href="{% url 'app_main:static_page' slug='liens' %}" class="nav-link text-white">Liens</a>
+                {% comment %} <a href="{% url 'app_main:static_page' slug='liens' %}" class="nav-link text-white">Liens</a> {% endcomment %}
                 <a href="{% url 'app_blog:flux_rss' %}" class="text-muted text-decoration-none me-2" title="Flux RSS du blog">
                     <i class="bi bi-rss-fill"></i> RSS
                 </a>                

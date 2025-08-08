@@ -14,8 +14,8 @@
           <ul class="dropdown-menu dropdown-menu-end">
             <li><a class="dropdown-item" href="/admin/" target="_blank">Accès admin</a></li>
             <li><a class="dropdown-item" href="{% url 'app_blog:article_creer' %}">Créer une news</a></li>
-            <li class="dropdown-item disabled">Créer une fiche pressage</li>
-            <li class="dropdown-item disabled">Créer un artiste</li>
+            <li><a class="dropdown-item disabled" href="#" tabindex="-1" aria-disabled="true">Créer une fiche pressage</a></li>
+            <li><a class="dropdown-item disabled" href="#" tabindex="-1" aria-disabled="true">Créer un artiste</a></li>
           </ul>
         </li>
       {% else %}
@@ -28,8 +28,8 @@
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end">
                   <li><a class="dropdown-item" href="{% url 'app_blog:article_creer' %}">Créer une news</a></li>
-                  <li class="dropdown-item disabled">Créer une fiche pressage</li>
-                  <li class="dropdown-item disabled">Créer un artiste</li>
+                  <li><a class="dropdown-item disabled" href="#" tabindex="-1" aria-disabled="true">Créer une fiche pressage</a></li>
+                  <li><a class="dropdown-item disabled" href="#" tabindex="-1" aria-disabled="true">Créer un artiste</a></li>
                 </ul>
               </li>
             {% endif %}
@@ -43,9 +43,9 @@
           Mon compte
         </a>
         <ul class="dropdown-menu dropdown-menu-end">
-          <li class="dropdown-item disabled">Voir mon profil</li>
-          <li class="dropdown-item disabled">Modifier mes infos</li>
-          <li class="dropdown-item disabled">Préférences</li>
+          <li><a class="dropdown-item disabled" href="#" tabindex="-1" aria-disabled="true">Voir mon profil</a></li>
+          <li><a class="dropdown-item disabled" href="#" tabindex="-1" aria-disabled="true">Modifier mes infos</a></li>
+          <li><a class="dropdown-item disabled" href="#" tabindex="-1" aria-disabled="true">Préférences</a></li>
         </ul>
       </li>
 

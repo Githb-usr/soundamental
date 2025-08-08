@@ -2,7 +2,26 @@
 /* ## footer.css - Styles du footer ## */
 /* ################################### */
 
+.site-footer {
+    padding-top: 0.5rem !important;
+    padding-bottom: 1.5rem !important;
+}
+
+/* ===========================================
+   Barre noire au-dessus du footer (séparateur)
+   =========================================== */
+
+   /* Par défaut : barre pleine largeur du viewport */
+.site-footer .footer-separator {
+    display: block;              /* assure l’affichage même sans contenu */
+    height: 8px;                 /* épaisseur de la barre */
+    background-color: #000;      /* couleur de la barre */
+    width: 100%;                 /* pleine largeur */
+    margin-bottom: 1.5rem;
+}
+
 /* Liens */
+/* ----- */
 .site-footer .footer a {
     color: #333 !important; /* Couleur sombre pour qu'ils soient lisibles */
     transition: color 0.3s ease-in-out;
@@ -34,4 +53,55 @@
 .site-footer .footer .row .col-md-4:first-child {
     padding-left: 0 !important;
     margin-left: 0 !important;
+}
+
+
+/* ##################### */
+/* ### MEDIA QUERIES ### */
+/* ##################### */
+
+/* Footer aligné sur la barre noire entre 576px et 1200px
+   → le <div class="container footer"> devient fluide (100% et non centré) */
+@media (min-width: 576px) and (max-width: 1200px) {
+  .footer.container {
+    max-width: 100% !important;
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .footer.container .row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
+
+/* ============================================
+   4 colonnes alignées sur une seule ligne
+   (tailles intermédiaires) — sans gutters
+   Empêche la 4e colonne ("Support") de passer dessous
+   ============================================ */
+@media (min-width: 700px) and (max-width: 1200px) {
+  .site-footer .footer .row {
+    --footer-gap: 18px;                 /* écart horizontal entre colonnes */
+    display: flex;
+    flex-wrap: nowrap;                  /* on force une seule ligne */
+    column-gap: var(--footer-gap);      /* gap n'affecte pas le calcul de largeur */
+  }
+
+  /* Largeur exacte = (100% - 3 gaps) / 4, pas de padding/marge parasite */
+  .site-footer .footer .row > .col-md-3 {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-right: 0 !important;
+    box-sizing: border-box;
+    flex: 0 0 calc((100% - (3 * var(--footer-gap))) / 4);
+    max-width: calc((100% - (3 * var(--footer-gap))) / 4);
+  }
+
+  /* Neutralise d'éventuels restes de marge personnalisée sur d'autres breakpoints */
+  .site-footer .footer .row > [class^="col-"] {
+    margin-right: 0 !important;
+  }
 }
