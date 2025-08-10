@@ -66,7 +66,7 @@ def generate_index_data(index_entries):
         # Un slug d'index ne doit contenir ni espace ni /
         has_index = bool(slug) and (' ' not in slug) and ('/' not in slug)        
 
-        template = settings.INDEX_LINK_TEMPLATES.get(entry.category.name.lower(), [None] * 5)
+        template = settings.INDEX_LINK_TEMPLATES.get(entry.category.code, [None] * 5)
         links = entry.get_links  # Utilise la méthode centralisée
 
         index_data.append({

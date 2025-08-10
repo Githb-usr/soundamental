@@ -81,4 +81,7 @@ htmlcov/
 *.bak
 *.tmp
 script_arbo.ps1
+arborescence.txt
 arborescence_*.txt
+carrousel_images.json
+carrousel_update.py

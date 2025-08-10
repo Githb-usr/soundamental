@@ -8,7 +8,19 @@
         {% csrf_token %}
         {{ form.media }}  {# Charge les ressources nécessaires (TinyMCE) #}
         {{ form.as_p }}
-        <button type="submit" class="btn btn-success">💾 Enregistrer</button>
+
+        {# Actions : Retour à gauche, Enregistrer à droite, responsive #}
+        <div class="row g-2 mt-3 align-items-stretch">
+            <div class="col-12 col-sm-auto">
+                <a href="{% url 'app_main:static_page' slug=page.slug %}" class="btn btn-secondary w-100">
+                    << Retour
+                </a>
+            </div>
+            <div class="col-12 col-sm-auto ms-sm-auto">
+                <button type="submit" class="btn btn-primary w-100">
+                    Enregistrer
+                </button>
+            </div>
+        </div>
     </form>
-    <a href="{% url 'app_main:static_page' slug=page.slug %}" class="btn btn-secondary">⬅️ Retour</a>
 {% endblock %}

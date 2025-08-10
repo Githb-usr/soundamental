@@ -6,10 +6,16 @@ from django_recaptcha.fields import ReCaptchaField
 from django_recaptcha.widgets import ReCaptchaV2Checkbox
 from django.template.loader import render_to_string
 from django.utils.html import strip_tags
+import bleach
 
 # =========================
 # 📂 FORMULAIRE DE CONTACT
 # =========================
+
+# Balises et attributs autorisés pour le message de contact
+ALLOWED_TAGS = ['p', 'br', 'strong', 'b', 'em', 'i', 'u', 'ul', 'ol', 'li', 'a']
+ALLOWED_ATTRS = {'a': ['href']}  # on n'autorise QUE l'URL
+ALLOWED_PROTOCOLS = ['http', 'https', 'mailto']
 
 class ContactForm(forms.Form):
     """
@@ -74,7 +80,28 @@ class ContactForm(forms.Form):
         if self.cleaned_data.get('honeypot'):
             raise forms.ValidationError("Spam détecté !")
         return self.cleaned_data['honeypot']
-   
+    
+    def clean_message(self):
+        """
+        Nettoie le HTML saisi : on garde une mise en forme minimale (gras/italique/souligné,
+        listes, liens) et on supprime tout le reste (styles inline, scripts, iframes, etc.).
+        """
+        raw = self.cleaned_data.get("message", "")
+
+        # Sanitize strict avec whitelist (constantes définies en haut de fichier)
+        safe_html = bleach.clean(
+            raw,
+            tags=ALLOWED_TAGS,
+            attributes=ALLOWED_ATTRS,
+            protocols=ALLOWED_PROTOCOLS,
+            strip=True  # supprime les balises interdites au lieu de les échapper
+        )
+
+        # Normalisation légère pour éviter les espaces/balises parasites
+        safe_html = " ".join(safe_html.split())
+
+        return safe_html
+
     def send_email(self):
         """ Envoie l'email après validation du formulaire et une copie au visiteur avec format HTML """
         

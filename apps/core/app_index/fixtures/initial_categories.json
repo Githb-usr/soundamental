@@ -45,7 +45,7 @@
     "fields": {
       "code": "lexique",
       "name": "Lexique",
-      "label": "Lexique",
+      "label": "Lexiques",
       "description": "Terme du lexique référencé(e) sur le site"
     }
   },
@@ -65,7 +65,7 @@
     "fields": {
       "code": "chaine_tv",
       "name": "Chaine TV",
-      "label": "Chaine TV",
+      "label": "Chaines TV",
       "description": "Chaine de TV référencé(e) sur le site"
     }
   },
@@ -182,6 +182,16 @@
   {
     "model": "app_index.category",
     "pk": 19,
+    "fields": {
+      "code": "producteur",
+      "name": "Producteur",
+      "label": "Producteurs",
+      "description": "Producteur référencé(e) sur le site (un producteur peut aussi être considéré comme un artiste)"
+    }
+  },
+  {
+    "model": "app_index.category",
+    "pk": 20,
     "fields": {
       "code": "pub_tv",
       "name": "Pub TV",

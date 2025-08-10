@@ -35,7 +35,7 @@
     --bs-gutter-x: 0 !important; /* Supprime l'espace horizontal Bootstrap */
 /* } */
 
-/* Limite bien aux lignes de l'index uniquement */
+/* Supprimer le `gutter-x` de Bootstrap, limité aux lignes de l'index uniquement */
 .main-index .container,
 .main-index .row {
     --bs-gutter-x: 0 !important;
@@ -286,8 +286,8 @@
   }
 }
 
-/* Index — supprimer le "trou" sous le menu en mobile/tablette */
-@media (max-width: 1199.98px) {
+/* Coller le menu à l'en-tête en mobile/tablette */
+@media (max-width: 1200px) {
   .content-container .main-index.no-top-padding {
     --page-main-pt: 0 !important;  /* neutralise la variable imposée plus haut */
     padding-top: 0 !important;      /* colle l'entête interne au menu */
@@ -295,50 +295,103 @@
 }
 
 /* ===================================================== */
-/* 577px–1199.98px — Grosse lettre = hauteur de la grille */
-/* Carré garanti (largeur = hauteur de la grille)        */
+/* 577px–1199.98px — Grille fixe 4×10 + grosse lettre    */
+/* Carrés fiables, lettre carrée = hauteur de la grille  */
 /* ===================================================== */
 @media (min-width: 577px) and (max-width: 1199.98px) {
-  /* Variables pour synchroniser les hauteurs (4 rangées) */
+
+  /* Neutraliser le "space-between" du <main> pour l'index */
+  .content-container main.main-index {
+    justify-content: flex-start !important; /* stoppe l’étirement variable */
+  }
+
+  /* Variables dédiées à cette plage : ajuste --cell si besoin */
   .main-index {
-    --idx-rows: 4;      /* nombre de lignes de la grille */
-    --idx-cell: 34px;   /* hauteur d'une case (AJUSTABLE) */
-    --idx-row-gap: 6px; /* espacement vertical entre lignes (AJUSTABLE) */
+    --cell: 36px;  /* taille d'un carré (à ajuster si trop petit/grand) */
+    --gap: 6px;    /* espacement constant entre cases */
+    --rows: 4;
+    --cols: 10;
   }
 
-  /* La ligne s'étire verticalement : la grille fixe la hauteur de référence */
+  /* On laisse de l'air entre la lettre et la grille, sans forcer la largeur totale */
   .main-index .page-header > .d-flex.align-items-center {
-    align-items: stretch !important;
-    gap: 10px;
+    align-items: flex-start;
+    gap: 12px;
   }
-  .main-index .page-header .flex-grow-1 { min-width: 0; }
 
-  /* La grille impose sa hauteur = rows * cell + gaps */
+  /* Grille 4×10 à largeur/hauteur déterministes (pas responsive ici) */
   .main-index .grid-4x10 {
-    /* ordre par LIGNES, pas de débordement */
-    grid-auto-flow: row;
-    /* hauteur de chaque ligne = --idx-cell, 4 lignes */
-    grid-template-rows: repeat(var(--idx-rows), var(--idx-cell));
-    row-gap: var(--idx-row-gap);
+    display: grid;
+    grid-auto-flow: row; /* progression par LIGNES */
+    grid-template-columns: repeat(var(--cols), var(--cell));
+    grid-template-rows: repeat(var(--rows), var(--cell));
+    gap: var(--gap);
+    width: calc(var(--cols) * var(--cell) + (var(--cols) - 1) * var(--gap)); /* largeur fixe de la grille */
   }
 
-  /* Grosse lettre : carrée, largeur = hauteur calculée de la grille */
+  /* Cases parfaitement carrées (même mesure que --cell) */
+  .main-index .grid-4x10 > a {
+    width: var(--cell);
+    height: var(--cell);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    padding: 0;
+    /* Taille du caractère ajustable */
+    font-size: clamp(0.95rem, 1.9vw, 1.1rem);
+  }
+
+  /* Grosse lettre : carré de hauteur identique à la grille (4 lignes + gaps) */
   .main-index .big-letter {
-    /* hauteur = celle de la ligne (stretch via le parent) */
-    height: auto;
-    /* largeur calée sur la hauteur totale de la grille */
-    width: calc(var(--idx-cell) * var(--idx-rows)
-             + (var(--idx-rows) - 1) * var(--idx-row-gap));
-    aspect-ratio: 1 / 1;   /* sécurité : garde le carré si police/border changent */
-    flex: 0 0 auto;
-    flex-shrink: 0;
-    display: flex; align-items: center; justify-content: center;
-    line-height: 1; overflow: hidden;
-    /* taille du caractère (ajuste si besoin) */
-    font-size: clamp(4.8rem, 11vw, 6.2rem);
+    width:  calc(var(--rows) * var(--cell) + (var(--rows) - 1) * var(--gap));
+    height: calc(var(--rows) * var(--cell) + (var(--rows) - 1) * var(--gap));
+    flex: 0 0 auto; /* pas de rétrécissement */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    overflow: hidden;
+  }
+
+  .main-index .index-content {
+    row-gap: 12px;               /* espace stable entre TOUS les enfants (dont .page-header et .grid-sub-letters) */
+  }
+  .main-index .page-header { 
+    margin-bottom: 0 !important; /* on laisse le parent gérer l'écart */
   }
 }
 
+/* Sous-lettres — flex-wrap, sans scroll (<1200px) */
+/* Mobile + Intermédiaire : on wrappe, on part de la 1re lettre, pas de trou */
+@media (min-width: 577px) and (max-width: 1199.98px) {
+  /* Resserre l'espace sous le bandeau (lettre + grille) */
+  .main-index .page-header { margin-bottom: 8px !important; }
+
+  /* Ruban des sous-lettres : pas de grid, pas de carrousel */
+  .main-index .grid-sub-letters {
+    display: flex !important;
+    flex-wrap: wrap;
+    justify-content: flex-start;   /* commence à gauche */
+    align-content: flex-start;
+    gap: 6px;
+    margin: 1rem 0 0 0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
+  }
+
+  .main-index .grid-sub-letters > a {
+    display: flex; align-items: center; justify-content: center;
+    width: 36px; height: 36px;
+    line-height: 1; padding: 0;
+  }
+
+  /* Un peu plus grand en écrans intermédiaires */
+  @media (min-width: 577px) {
+  .main-index .grid-sub-letters { gap: 8px; }
+  .main-index .grid-sub-letters > a { width: 40px; height: 40px; }
+  }
+}
 
 /* ===================================================== */
 /* ≤ 576px — Bandeau index : grosse lettre à gauche,     */
@@ -408,22 +461,6 @@
     line-height: 1;
   }
 
-  /* Sous-lettres : bascule en carrousel horizontal (scroll) */
-  .main-index .grid-sub-letters {
-    display: flex;                 /* override du grid desktop */
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    gap: 6px;
-    padding: 6px 2px 8px 2px;      /* un petit souffle pour le doigt */
-    scroll-snap-type: x proximity; /* snap doux */
-  }
-  .main-index .grid-sub-letters > a {
-    flex: 0 0 36px;                /* largeur fixe par bouton */
-    height: 36px;
-    line-height: 36px;
-    scroll-snap-align: start;
-  }
-
   /* Allège les marges autour du tableau/liste */
   .main-index .index-table,
   .main-index .index-empty-message {
@@ -431,25 +468,271 @@
   }
 }
 
-/* ========================================= */
-/* Index — Mobile : sous-lettres défilantes  */
-/* ========================================= */
-@media (max-width: 576px) {
-  /* Passe la barre des 27 sous-lettres en ligne scrollable */
+/* Mobile (≤ 576.98px) — sous-lettres : 2 lignes + scroll horizontal, ordre par LIGNES */
+@media (max-width: 576.98px) {
   .main-index .grid-sub-letters {
-    display: flex;                 /* remplace le grid desktop */
-    gap: 6px;                      /* espacement constant */
-    padding: 6px 2px 8px 2px;      /* marge interne pour le doigt */
-    overflow-x: auto;              /* défilement horizontal */
+    /* Deux lignes fixes, on étend en colonnes vers la droite */
+    display: grid;
+    grid-template-rows: repeat(2, 36px);  /* 2 lignes */
+    grid-auto-flow: column dense;
+    grid-auto-columns: 36px;              /* largeur fixe par case */
+    column-gap: 6px;                      /* espace horizontal */
+    row-gap: 6px;                         /* espace entre les 2 lignes */
+    justify-content: start;               /* départ bien à gauche */
+    align-content: start;
+    overflow-x: auto;
+    overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
-    scroll-snap-type: x proximity; /* accrochage doux */
+    /* Pas de padding/marges qui décalent la 1ʳᵉ case hors écran */
+    padding: 0 !important;
+    margin-top: 12px !important;   /* on garde un petit espace au-dessus */
   }
 
-  /* Chaque bouton prend une largeur fixe, lisible au doigt */
   .main-index .grid-sub-letters > a {
-    flex: 0 0 36px;                /* largeur fixe */
-    height: 36px;
-    line-height: 36px;
-    scroll-snap-align: start;
+    display: flex; align-items: center; justify-content: center;
+    width: 36px; height: 36px;
+    line-height: 1; padding: 0;
+    flex: 0 0 auto; /* pas de shrink en scroll */
+  }
+
+  /* ⚠️ Ordre par LIGNES (row-major) pour 27 items : 14 en 1ère ligne, le reste en 2e */
+  .main-index .grid-sub-letters > a { grid-row: 1; }
+  .main-index .grid-sub-letters > a:nth-child(n+15) { grid-row: 2; }
+}
+
+/* =============================================================== */
+/* < 700px — Accordéon des lignes d'index (écrans intermédiaires)  */
+/* =============================================================== */
+@media (max-width: 699.98px) {
+  /* Espace entre sous-lettres et entrées de l'index */
+  .main-index .grid-sub-letters {
+    margin-bottom: 1rem !important;
+  }
+
+  /* Le bloc mobile sort du conteneur centré et s'étire bord à bord */
+  .main-index .index-results-mobile {
+    width: 100vw;                                   /* largeur viewport */
+    margin-left: calc(50% - 50vw);                  /* annule le centrage du .container */
+    margin-right: calc(50% - 50vw);
+    padding-left: 12px;                              /* léger padding interne */
+    padding-right: 12px;
+    box-sizing: border-box; /* évite 100vw + padding => plus de tronquage à droite */
+  }
+
+  /* Liste des items : empilage simple, espacements courts */
+  .main-index .index-results-mobile .index-accordion {
+    display: grid;
+    row-gap: 8px; /* espace entre items */
+  }
+
+  /* Item <details> : cadre discret */
+  .main-index .index-results-mobile .index-acc-item {
+    width: calc(100% + 2px);       /* +2px = épaisseur des 2 bordures */
+    border: 1px solid #e3e3e3;
+    background: #f9f9f9;
+    box-sizing: border-box; /* inclut la bordure dans les 100% */
+    margin: 0;              /* neutralise un éventuel margin UA */
+    margin-left: -1px;             /* décale la bordure gauche dans le padding du conteneur */
+    margin-right: -1px;            /* idem à droite */
+  }
+
+  /* En-tête cliquable */
+  .main-index .index-results-mobile .index-acc-summary {
+    display: flex;
+    align-items: flex-start;      /* le badge peut passer dessous si le nom wrappe */
+    min-width: 0;
+    gap: 8px;
+    padding: 10px 12px;
+    list-style: none;             /* neutralise le marqueur natif */
+    cursor: pointer;
+    margin: 0;
+  }
+  /* Masque le marqueur par défaut (Chrome/Safari) */
+  .main-index .index-results-mobile .index-acc-summary::-webkit-details-marker { display: none; }
+
+  /* Chevron d’état (ajouté en CSS, pas en HTML) */
+  .main-index .index-results-mobile .index-acc-summary::after {
+    content: "▾";                 /* flèche simple, lisible */
+    margin-left: auto;
+    transform-origin: 50% 50%;
+    transition: transform .2s ease;
+  }
+  .main-index .index-results-mobile .index-acc-item[open] > .index-acc-summary::after {
+    transform: rotate(180deg);
+  }
+
+  /* Nom : priorité visuelle + clamp (max 2 lignes) */
+  .main-index .index-results-mobile .index-acc-name {
+    flex: 1 1 auto;
+    font-weight: 600;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;        /* 2 lignes max */
+    -webkit-box-orient: vertical;
+  }
+
+  .main-index .index-results-mobile .index-acc-cat {
+    color: #555;
+    background: #eee;
+    padding: 2px 6px;
+    border: 1px solid #ddd;
+    border-radius: 0;
+    white-space: nowrap;
+  }
+
+  .main-index .index-results-mobile .index-acc-cat a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  /* Corps déplié : liens en chips qui wrapent sur plusieurs lignes */
+  .main-index .index-results-mobile .index-acc-body {
+    padding: 8px 12px 12px;
+    border-top: 1px solid #e3e3e3;
+    background: #fff;
+  }
+  .main-index .index-results-mobile .index-acc-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end; /* pousse les liens à droite */
+    gap: 8px;
+  }
+
+  /* Liens (réutilise .index-link-btn mais on assure des cibles tactiles) */
+  .main-index .index-results-mobile .index-acc-links .index-link-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 40px;
+    height: 36px;             /* cible tactile confortable */
+    line-height: 1;
+    padding: 0 10px;          /* laisse respirer les labels */
+    border-radius: 0;         /* cohérence visuelle */
+  }
+
+  /* Si PAS de sous-lettres, on garde un espace avant les résultats */
+  .main-index .index-results-mobile {
+      margin-top: 1rem; /* espace si aucune sous-lettre */
+  }
+  .main-index .grid-sub-letters + .index-results-mobile {
+      margin-top: 0; /* annule l'espace si les sous-lettres sont présentes */
+  }
+}
+
+/* =========================================================== */
+/* < 500px — Accordéon spécifique des lignes d'index (mobile)  */
+/* =========================================================== */
+@media (max-width: 499.98px) {
+  /* Header de l’item : autorise le retour à la ligne et réserve la place du chevron */
+  .main-index .index-results-mobile .index-acc-summary {
+      position: relative;      /* nécessaire pour positionner la flèche */
+      display: flex;
+      flex-wrap: wrap;         /* permet à la catégorie de passer dessous */
+      align-items: flex-start;
+      gap: 8px;
+      min-width: 0;            /* évite le tronquage */
+      padding-right: 28px;     /* réserve la place de la flèche */
+  }
+
+  /* Flèche (chevron) en haut à droite, hors du flux */
+  .main-index .index-results-mobile .index-acc-summary::after {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+  }
+
+/* < 500 px — Forcer l'ellipsis du NOM sur l'enfant qui porte le texte */
+  .main-index .index-results-mobile .index-acc-name {
+    order: 1;
+    flex: 0 0 100%;   /* garde la catégorie en dessous */
+    min-width: 0;     /* autorise le shrink */
+  }
+
+  /* Quel que soit l'enfant immédiat (a / span / strong), on applique l'ellipsis */
+  .main-index .index-results-mobile .index-acc-name > a,
+  .main-index .index-results-mobile .index-acc-name > span,
+  .main-index .index-results-mobile .index-acc-name > strong {
+    display: block;         /* nécessaire pour text-overflow */
+    max-width: 100%;
+    min-width: 0;
+    white-space: nowrap;    /* 1 seule ligne */
+    overflow: hidden;       /* cache le surplus */
+    text-overflow: ellipsis;/* affiche "…" */
+  }
+
+  /* 3) Sécurité : la flèche est au-dessus et non cliquable */
+  .main-index .index-results-mobile .index-acc-summary::after {
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .main-index .index-results-mobile .index-acc-cat {
+    order: 2;
+    flex: 0 0 auto;                     /* largeur = contenu */
+    display: inline-block;              /* garde l’aspect badge */
+    align-self: flex-start;             /* sous le nom, aligné en haut */
+    margin-top: 2px;
+
+    /* Contraintes de largeur et coupe propre */
+    max-width: calc(100% - 28px);       /* laisse la zone de la flèche à droite */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+/* 577–630 px — Grille fluide (ne déborde plus à droite) */
+@media (min-width: 577px) and (max-width: 630px) {
+
+  /* Le bloc de droite peut rétrécir correctement */
+  .main-index .page-header .flex-grow-1 { 
+    min-width: 0;
+  }
+
+  /* Grille 10 colonnes qui s'adapte à la largeur dispo */
+  .main-index .grid-4x10 {
+    width: 100%;
+    --gap: 5px; /* léger resserrement pour cette tranche */
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: repeat(10, calc((100% - 9*var(--gap)) / 10));
+    column-gap: var(--gap);
+    row-gap: var(--gap);
+  }
+
+  /* Cases carrées qui suivent la largeur de colonne */
+  .main-index .grid-4x10 > a {
+    width: 100%;
+    aspect-ratio: 1 / 1;      /* carré strict */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+/* 700–767.98 px : afficher le tableau, masquer l'accordéon */
+@media (min-width: 700px) and (max-width: 767.98px) {
+  .main-index .index-results { display: block !important; }        /* montre le tableau */
+  .main-index .index-results-mobile { display: none !important; }  /* cache l'accordéon */
+}
+
+/* Accordéon mobile : entrée ouverte mise en évidence en vert plus soutenu */
+.main-index .index-results-mobile .index-acc-item[open] {
+    background-color: #e0f7e0; /* vert clair soutenu */
+    border-color: #9dd99d;     /* vert plus marqué */
+}
+
+/* Badge catégorie assorti en vert plus clair */
+.main-index .index-results-mobile .index-acc-item[open] .index-acc-cat {
+    background-color: #f4fff4; /* vert très pâle */
+    border-color: #b6e2b6;     /* vert clair */
+}
+
+@media (max-width: 576.98px) {
+  .main-index {
+    padding-bottom: 60px;
   }
 }

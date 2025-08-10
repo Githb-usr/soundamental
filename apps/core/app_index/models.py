@@ -33,9 +33,21 @@ class Category(models.Model):
         verbose_name="Description",
         help_text="Description de la catégorie."
     )
+    
+    @property
+    def plural_label(self):
+        """
+        Libellé au pluriel. Utiliser quand on veut explicitement le pluriel
+        (menus, titres de sections, etc.). Évite les ambiguïtés côté template.
+        """
+        return self.label
 
     def __str__(self):
-        return self.label or self.name
+        """
+        Représentation texte par défaut de Category.
+        On force le singulier pour l’admin et partout où Django affiche l’objet.
+        """
+        return self.name
 
     class Meta:
         verbose_name = "Catégorie"

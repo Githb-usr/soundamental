@@ -73,7 +73,7 @@
         {% endif %}
 
         <!-- Tableau des entrées -->
-        <div class="index-results">
+        <div class="index-results d-none d-md-block">
             {% include "includes/pagination.html" %}
             {% if index_data %}
                 <table class="index-table">
@@ -86,10 +86,10 @@
                                 <td class="category-link">
                                     {% if entry.has_index %}
                                         <a href="{% url 'app_index:category_index' entry.category_url %}">
-                                            {{ entry.entry.category.label|default:entry.entry.category.name|title }}
+                                            {{ entry.entry.category.name|default:entry.entry.category.code|title }}
                                         </a>
                                     {% else %}
-                                        {{ entry.entry.category.label|default:entry.entry.category.name|title }}
+                                        {{ entry.entry.category.name|default:entry.entry.category.code|title }}
                                     {% endif %}
                                 </td>
                             {% endif %}
@@ -117,6 +117,49 @@
             {% include "includes/pagination.html" %}
 
         </div>
-    </div>
+        {# ====== ACCORDÉON — MOBILE (< md) ====== #}
+        <div class="index-results-mobile d-block d-md-none">
+            {% include "includes/pagination.html" %}
+            {% if index_data %}
+                <div class="index-accordion">
+                    {% for entry in index_data %}
+                    <details class="index-acc-item">
+                        <summary class="index-acc-summary">
+                            <span class="index-acc-name" title="{{ entry.entry.name }}">{{ entry.entry.name|truncatechars:42 }}</span>
+                            {% if not category %}
+                                <span class="index-acc-cat">
+                                    {% if entry.has_index %}
+                                        <a href="{% url 'app_index:category_index' entry.category_url %}">
+                                            {{ entry.entry.category.name|default:entry.entry.category.code|title }}
+                                        </a>
+                                    {% else %}
+                                        {{ entry.entry.category.name|default:entry.entry.category.code|title }}
+                                    {% endif %}
+                                </span>
+                            {% endif %}
+                        </summary>
 
+                        <div class="index-acc-body">
+                            <div class="index-acc-links">
+                                {% for link_data in entry.links %}
+                                    {% if link_data.link %}
+                                        <a href="{{ link_data.link }}" class="index-link-btn">{{ link_data.label }}</a>
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </details>
+                    {% endfor %}
+                </div>
+            {% else %}
+                <p class="index-empty-message text-muted">Aucune entrée trouvée.</p>
+            {% endif %}
+            {% include "includes/pagination.html" %}
+        </div>
+    </div>
+{% endblock %}
+
+{% block extra_js %}
+    {{ block.super }}
+    <script src="{% static 'js/index-accordion.js' %}" defer></script>
 {% endblock %}

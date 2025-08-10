@@ -9,28 +9,27 @@ document.addEventListener("DOMContentLoaded", function () {
     language: 'fr_FR',
     language_url: '/static/js/tinymce/langs/fr_FR.js',
 
-    // Plugins activés
-    plugins: 'image link lists code fullscreen media table',
+    // Plugins strictement nécessaires (alignés avec la whitelist serveur)
+    plugins: 'autolink link lists paste',
 
+    // Toolbar minimale (pas de code, pas d’images/médias/tables/couleurs)
     toolbar:
-    'code | undo redo | formatselect fontselect fontsizeselect | ' +
-    'bold italic underline strikethrough | forecolor backcolor | ' +
-    'alignleft aligncenter alignright alignjustify | ' +
-    'bullist numlist outdent indent | ' +
-    'link image media table | fullscreen preview',
-
+    'bold italic underline bullist numlist link unlink removeformat ',
     menubar: false,
-    statusbar: false,
+    statusbar: true,
     branding: false,
 
-    // Protection : on n’autorise que les balises sûres
-    valid_elements: 'a[href|target=_blank],strong/b,em/i,u,s,strike,span[style],ul,ol,li,p,br,span,' +
-                    'h1,h2,h3,h4,h5,h6,table,tr,td,th,thead,tbody,tfoot,img[src|alt|title|width|height],code,pre',
-    extended_valid_elements: 'u,s,strike,span[style]',
-    content_css: 'default',
-    formats: {
-        underline: { inline: 'u' },
-        strikethrough: { inline: 's' },
-    }
+    // Génération HTML propre
+    forced_root_block: 'p',
+    paste_as_text: true, // colle en texte brut (évite les styles Word/HTML)
+
+    // N'autoriser que quelques balises inoffensives
+    valid_elements: 'a[href],strong/b,em/i,u,ul,ol,li,p,br',
+    // Bloquer explicitement les éléments indésirables
+    invalid_elements: 'img,video,audio,table,tr,td,th,thead,tbody,tfoot,pre,code,iframe,style,script,span',
+    
+    // Pas d’options de cible ni de titre sur les liens (réduit les risques)
+    link_target_list: false,
+    link_title: false
   });
 });
