@@ -2748,5 +2748,214 @@
       "category": 15,
       "access_level": 1
     }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 251,
+    "fields": {
+      "name": "Soundamental",
+      "slug": "soundamental",
+      "description": "Tag apposé sur toutes les pages en lien direct avec Soundamental.",
+      "category": null,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 252,
+    "fields": {
+      "name": "Nyls",
+      "slug": "nyls",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Nyls.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 253,
+    "fields": {
+      "name": "Danceur",
+      "slug": "danceur",
+      "description": "Tag apposé sur toutes les pages en lien direct avec le magazine Danceur.",
+      "category": null,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 254,
+    "fields": {
+      "name": "Interview",
+      "slug": "interview",
+      "description": "Tag apposé sur toutes les pages en lien avec des interviews.",
+      "category": null,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 255,
+    "fields": {
+      "name": "Nok'",
+      "slug": "nok",
+      "description": "Tag apposé sur toutes les pages en lien direct avec le membre du forum Nok'.",
+      "category": null,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 256,
+    "fields": {
+      "name": "Sangore",
+      "slug": "sangore",
+      "description": "Tag apposé sur toutes les pages en lien direct avec le membre du forum Sangore.",
+      "category": null,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 257,
+    "fields": {
+      "name": "SMR",
+      "slug": "smr",
+      "description": "Tag apposé sur toutes les pages en lien direct avec le membre du forum SMR.",
+      "category": null,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 258,
+    "fields": {
+      "name": "Les Shadoks",
+      "slug": "les shadoks",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe les Shadoks.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 259,
+    "fields": {
+      "name": "Discographie",
+      "slug": "discographie",
+      "description": "Tag apposé sur toutes les pages en lien direct avec une discographie.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 260,
+    "fields": {
+      "name": "Krystophe",
+      "slug": "krystophe",
+      "description": "Tag apposé sur toutes les pages en lien direct avec le membre du forum Krystophe.",
+      "category": null,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 261,
+    "fields": {
+      "name": "Clip",
+      "slug": "clip",
+      "description": "Tag apposé sur toutes les pages en lien direct avec un clip vidéo.",
+      "category": null,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 262,
+    "fields": {
+      "name": "La Femme",
+      "slug": "la femme",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe La Femme.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 263,
+    "fields": {
+      "name": "Jeanne Calment",
+      "slug": "jeanne calment",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Jeanne Calment.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 264,
+    "fields": {
+      "name": "Album",
+      "slug": "album",
+      "description": "Tag apposé sur toutes les pages en lien direct avec un album.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 265,
+    "fields": {
+      "name": "Single",
+      "slug": "single",
+      "description": "Tag apposé sur toutes les pages en lien direct avec un single.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 266,
+    "fields": {
+      "name": "Compilation",
+      "slug": "compilation",
+      "description": "Tag apposé sur toutes les pages en lien direct avec une compilation.",
+      "category": 3,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 267,
+    "fields": {
+      "name": "Angely",
+      "slug": "angely",
+      "description": "Tag apposé sur toutes les pages en lien direct avec le membre du forum Angely.",
+      "category": null,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 268,
+    "fields": {
+      "name": "Calvin Harris",
+      "slug": "calvin harris",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Calvin Harris.",
+      "category": 2,
+      "access_level": 1
+    }
+  },
+  {
+    "model": "app_main.tag",
+    "pk": 269,
+    "fields": {
+      "name": "Basic Element",
+      "slug": "basic element",
+      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Basic Element.",
+      "category": 2,
+      "access_level": 1
+    }
   }
 ]

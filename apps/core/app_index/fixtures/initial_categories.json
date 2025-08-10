@@ -201,7 +201,7 @@
   },
   {
     "model": "app_index.category",
-    "pk": 20,
+    "pk": 21,
     "fields": {
       "code": "reportage",
       "name": "Reportage",
@@ -211,7 +211,7 @@
   },
   {
     "model": "app_index.category",
-    "pk": 21,
+    "pk": 22,
     "fields": {
       "code": "serie",
       "name": "Série",
@@ -221,7 +221,7 @@
   },
   {
     "model": "app_index.category",
-    "pk": 22,
+    "pk": 23,
     "fields": {
       "code": "site_web",
       "name": "Site web",
@@ -231,7 +231,7 @@
   },
   {
     "model": "app_index.category",
-    "pk": 23,
+    "pk": 24,
     "fields": {
       "code": "station_radio",
       "name": "Station radio",
@@ -241,7 +241,7 @@
   },
   {
     "model": "app_index.category",
-    "pk": 24,
+    "pk": 25,
     "fields": {
       "code": "webradio",
       "name": "Webradio",
