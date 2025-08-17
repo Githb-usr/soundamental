@@ -1,12 +1,20 @@
 from django import forms
+from django.db import transaction
 from django.contrib import admin
 from import_export import resources
 from import_export.admin import ImportExportModelAdmin
 from import_export.fields import Field
 from import_export.widgets import ForeignKeyWidget
-from apps.core.app_index.models import IndexEntry, IndexSettings, PageExistence, Category, PageType
 from django.conf import settings
 import logging
+
+# Import via l’agrégateur de l’app (inclut désormais IndexAlias)
+from apps.core.app_index.models import IndexEntry, IndexSettings, PageExistence, Category, PageType, IndexAlias
+
+
+# =========================
+# Journalisation import index
+# =========================
 
 # Initialisation du logger (placé tout en haut du fichier si pas déjà fait)
 logger = logging.getLogger("import_index")
@@ -14,6 +22,10 @@ handler = logging.FileHandler("logs/import_index.log", encoding="utf-8")
 handler.setFormatter(logging.Formatter("%(asctime)s - %(levelname)s - %(message)s"))
 logger.addHandler(handler)
 logger.setLevel(logging.INFO)
+
+# =========================
+# Ressource import/export
+# =========================
 
 # Définition de la ressource pour gérer l'import/export des entrées de l'index
 class IndexEntryResource(resources.ModelResource):
@@ -72,6 +84,25 @@ class IndexEntryResource(resources.ModelResource):
             logger.info(msg)
             # La création est laissée à import_export (pas de .create ici)
 
+# =========================
+# Inline pour les alias
+# =========================
+class IndexAliasInline(admin.TabularInline):
+    """
+    Inline pour gérer les alias directement depuis la fiche d'une entrée.
+    - La catégorie et 'alias_normalized' sont gérés automatiquement côté modèle.
+    """
+    model = IndexAlias
+    extra = 1
+    fields = ("alias", "is_listed")
+    verbose_name = "Alias / variation"
+    verbose_name_plural = "Alias / variations"
+
+
+# =========================
+# Admin IndexEntry
+# =========================
+
 # Configuration de l'admin Django pour IndexEntry
 class IndexEntryAdmin(ImportExportModelAdmin, admin.ModelAdmin):
     """
@@ -83,6 +114,8 @@ class IndexEntryAdmin(ImportExportModelAdmin, admin.ModelAdmin):
     list_display = ("name", "category", "liens_existant", "id_forum")  # Colonnes affichées dans la liste admin
     search_fields = ("name", "category__code", "id_forum")  # Ajoute la recherche
     list_filter = ("category",)  # Ajoute un filtre par catégorie
+    
+    inlines = [IndexAliasInline]
 
     # Conserve tous les formats d'importation et ajoute Excel
     def get_import_formats(self):
@@ -104,6 +137,14 @@ class IndexEntryAdmin(ImportExportModelAdmin, admin.ModelAdmin):
                 visibles.append(codes.get(key, key.upper()))
 
         return ", ".join(visibles)
+    
+    # Rend l'enregistrement de la fiche + inlines atomique : tout passe ou rien
+    def changeform_view(self, request, object_id=None, form_url='', extra_context=None):
+        if request.method == "POST":
+            with transaction.atomic():
+                return super().changeform_view(request, object_id, form_url, extra_context)
+        return super().changeform_view(request, object_id, form_url, extra_context)
+
 
 # Enregistre IndexEntry dans l'admin
 admin.site.register(IndexEntry, IndexEntryAdmin)
@@ -125,6 +166,10 @@ class IndexSettingsAdmin(admin.ModelAdmin):
             obj.letters_with_sub_buttons = "0,1,2,3,4,5,6,7,8,9,A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z,@"
         super().save_model(request, obj, form, change)
 
+# =========================
+# Admin PageExistence
+# =========================
+
 @admin.register(PageExistence)
 class PageExistenceAdmin(admin.ModelAdmin):
     """
@@ -145,6 +190,10 @@ class PageExistenceAdmin(admin.ModelAdmin):
         obj.save()
         super().save_model(request, obj, form, change)
 
+# =========================
+# Admin Category
+# =========================
+
 # Ajout des configurations pour les nouvelles tables Category et PageType
 @admin.register(Category)
 class CategoryAdmin(admin.ModelAdmin):
@@ -162,8 +211,40 @@ class CategoryAdmin(admin.ModelAdmin):
         )
         return super().render_change_form(request, context, *args, **kwargs)
 
+# =========================
+# Admin PageType
+# =========================
+
 @admin.register(PageType)
 class PageTypeAdmin(admin.ModelAdmin):
     list_display = ("code", "label", "description")
     search_fields = ("code", "label", "description")
     ordering = ("code", "label")
+
+# =========================
+# Admin IndexAlias 
+# =========================
+class IndexAliasResource(resources.ModelResource):
+    """
+    Ressource d'import/export des alias.
+    - 'entry' est résolu par le NOM de l'IndexEntry (plus simple que l'ID).
+    - 'category' et 'alias_normalized' sont calculés automatiquement en save().
+    """
+    entry = Field(
+        column_name="entry",                 # colonne CSV
+        attribute="entry",                   # champ du modèle
+        widget=ForeignKeyWidget(IndexEntry, field="name")  # lookup par nom
+    )
+
+    class Meta:
+        model = IndexAlias
+        fields = ("entry", "alias", "is_listed")
+        import_id_fields = ("entry", "alias")  # permet la mise à jour si même couple
+
+@admin.register(IndexAlias)
+class IndexAliasAdmin(ImportExportModelAdmin, admin.ModelAdmin):
+    import_template_name = "admin/app_index/indexalias/import.html"
+    resource_class = IndexAliasResource
+    list_display = ("alias", "entry", "category", "is_listed")
+    list_filter = ("category", "is_listed")
+    search_fields = ("alias", "entry__name")

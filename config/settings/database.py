@@ -12,6 +12,7 @@ DATABASES = {
         'OPTIONS': {
             'charset': 'utf8mb4',
             'init_command': "SET NAMES 'utf8mb4'",
+            'sql_mode': 'STRICT_TRANS_TABLES',
         },
     }
 }

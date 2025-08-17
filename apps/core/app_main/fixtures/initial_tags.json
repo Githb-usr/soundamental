@@ -2935,27 +2935,5 @@
       "category": null,
       "access_level": 1
     }
-  },
-  {
-    "model": "app_main.tag",
-    "pk": 268,
-    "fields": {
-      "name": "Calvin Harris",
-      "slug": "calvin harris",
-      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Calvin Harris.",
-      "category": 2,
-      "access_level": 1
-    }
-  },
-  {
-    "model": "app_main.tag",
-    "pk": 269,
-    "fields": {
-      "name": "Basic Element",
-      "slug": "basic element",
-      "description": "Tag apposé sur toutes les pages en lien direct avec l'artiste ou le groupe Basic Element.",
-      "category": 2,
-      "access_level": 1
-    }
   }
 ]

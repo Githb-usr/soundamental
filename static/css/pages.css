@@ -656,6 +656,13 @@
   #homeCarousel .carousel-indicators {
     margin-bottom: 0.5rem;
   }
+  /* Vue mobile (index + blog) */
+  .blog-article-list .pagination-container:last-of-type,
+  .blog-archive-list .pagination-container:last-of-type,
+  .main-index .index-results-mobile nav.pagination-container:last-of-type > ul.pagination {
+    margin-bottom: 0 !important;
+  }
+
 }
 
 /* =============== */

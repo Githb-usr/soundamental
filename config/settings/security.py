@@ -10,8 +10,10 @@ CSRF_COOKIE_SECURE = False
 
 ALLOWED_HOSTS = ["127.0.0.1", "localhost"]
 
-X_FRAME_OPTIONS = 'ALLOWALL'
-# X_FRAME_OPTIONS = 'SAMEORIGIN'
+# Autoriser les iframes depuis Calameo
+CSP_FRAME_SRC = ("'self'", "https://v.calameo.com")
+X_FRAME_OPTIONS = 'SAMEORIGIN'
+# X_FRAME_OPTIONS = 'ALLOWALL'
 
 # Validation des mots de passe
 AUTH_PASSWORD_VALIDATORS = [

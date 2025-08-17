@@ -480,3 +480,407 @@ ul#sidebar-categories-list {
   margin-left: 2.5em; 
   margin-bottom: 2em;
 }
+
+/* ##################### */
+/* ### MEDIA QUERIES ### */
+/* ##################### */
+
+/* ===========================================================
+   BLOG — Responsive complet (desktop / tablette / mobile)
+   =========================================================== */
+
+/* ===========================================================
+   BLOG — RÈGLE GLOBALE (hors media query)
+   Tronquer uniquement le RÉSUMÉ (titre & méta complets).
+   =========================================================== */
+.blog-article-excerpt {
+  display: -webkit-box;          /* nécessaire pour WebKit */
+  -webkit-box-orient: vertical;  /* idem */
+  -webkit-line-clamp: 4;         /* version WebKit */
+  line-clamp: 4;                 /* version standard (future compatibilité) */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ===========================================================
+   BLOG — Responsive complet (desktop / tablette / mobile)
+   Objectif mobile & tablette :
+   - Grille en 1 colonne (sidebar SOUS le contenu)
+   - Liste d’articles en LIGNE : vignette à gauche, texte à droite
+   - Vignette : largeur contrainte par sa colonne, hauteur proportionnelle
+   - Pas de scroll horizontal (Safari iOS inclus)
+   =========================================================== */
+
+/* ≤ 991px : colonne unique + liste en ligne (img gauche / texte droite) */
+@media (max-width: 991px) {
+  /* Grille globale : sidebar sous le contenu */
+  .blog-2col-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    gap: 0;
+    overflow-x: hidden; /* sécurité anti-dépassement */
+  }
+  .blog-2col-grid > aside {
+    margin-top: 2.5rem;
+  }
+
+  /* Carte d’aperçu d’article = LIGNE (image à gauche) */
+  .blog-article-preview {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: flex-start !important;
+    gap: 12px;
+    width: 100%;
+  }
+
+  /* Colonne image : largeur fixe raisonnable, pas d’upscaling excessif */
+  .blog-article-preview .blog-thumbnail-wrapper {
+    flex: 0 0 160px;      /* largeur de la colonne image */
+    max-width: 160px;
+    min-width: 140px;     /* évite le rétrécissement trop fort */
+  }
+
+  /* Image : largeur = 100% de sa colonne, hauteur proportionnelle (auto) */
+  .blog-article-preview .blog-article-thumbnail,
+  .blog-article-preview .blog-thumbnail {
+    width: 100%;
+    height: auto;         /* conserve les proportions (aucun rognage) */
+    display: block;
+    border-radius: 8px;
+    /* pas d’object-fit pour rester 100% proportionnel */
+  }
+
+  /* Zone texte : occupe tout l’espace restant, sans débordement horizont. */
+  .blog-article-body {
+    flex: 1 1 auto;
+    min-width: 0;              /* essentiel pour éviter le scroll horizontal (Safari iOS) */
+    overflow-wrap: anywhere;   /* casse les très longues urls/mots */
+    text-align: left;
+  }
+
+  /* Titre multi-lignes OK (pas d’ellipse agressive) */
+  .blog-article-preview h2 {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+    line-height: 1.25;
+    margin-bottom: 0.25rem;
+  }
+
+  /* Métadonnées un peu resserrées */
+  .blog-article-preview p.text-muted {
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* ≤ 768px : vignette légèrement réduite pour garder l’équilibre visuel */
+@media (max-width: 768px) {
+  .blog-article-preview .blog-thumbnail-wrapper {
+    flex-basis: 150px;
+    max-width: 150px;
+  }
+}
+
+/* ≤ 420px : très petit écran (iPhone vertical) — encore un cran en-dessous */
+@media (max-width: 420px) {
+  .blog-article-preview {
+    gap: 10px;
+  }
+  .blog-article-preview .blog-thumbnail-wrapper {
+    flex-basis: 130px;
+    max-width: 130px;
+    min-width: 120px;
+  }
+}
+
+/* ===========================================================
+   BLOG — DÉTAIL D’ARTICLE : contenu fluide + boutons adaptatifs
+   =========================================================== */
+
+/* Contenu riche (TinyMCE) : médias toujours fluides et centrés proprement */
+.blog-content img,
+.blog-content video,
+.blog-content iframe {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto 0.8rem auto;  /* aération uniforme */
+}
+
+/* iFrame au ratio 16:9 quand aucune hauteur n’est imposée dans le HTML */
+.blog-content iframe {
+  aspect-ratio: 16 / 9;      /* géré par Safari iOS récents */
+  width: 100%;
+  border: 0;
+}
+
+/* Exception pour Calaméo : on annule le ratio forcé */
+.blog-content iframe[src*="calameo.com"],
+.blog-content iframe[src*="//v.calameo.com"] {
+  aspect-ratio: auto !important;
+  width: 100% !important;
+  /* height: 600px !important; */
+  display: block;
+  margin: 0 auto 1rem auto;
+}
+
+/* Image d’en-tête d’article (au-dessus du corps) : déjà .img-fluid via BS,
+   on ajoute un léger arrondi pour cohérence visuelle */
+article > img.img-fluid {
+  border-radius: 8px;
+}
+
+/* Ligne de navigation sous l’article (retour / préc. / suiv.) :
+   disposition fiable en petit écran : 
+   - rangée 1 : « Précédent » à gauche, « Suivant » à droite
+   - rangée 2 : « Retour aux news » pleine largeur
+*/
+/* Ligne de navigation sous l’article (retour / préc. / suiv.) — mobile (≤575.98px)
+   Rangée 1 : "Précédent" collé à gauche, "Suivant" collé à droite (grille 2 colonnes)
+   Rangée 2 : "Retour aux news" sur toute la largeur
+*/
+/* Détail article — NAV mobile (≤575.98px)
+   Rangée 1 : "Précédent" collé à gauche, "Suivant" collé à droite (grille 2 col.)
+   Rangée 2 : "Retour aux news" pleine largeur
+*/
+@media (max-width: 575.98px) {
+
+  /* Conteneur de la barre de nav  */
+  .blog-2col-grid .d-flex.justify-content-between.align-items-center.mb-3 {
+    display: flex !important;
+    flex-wrap: wrap !important;       /* 2 lignes possibles */
+    gap: 8px;
+    justify-content: flex-start !important;  /* pas de “space-between” parasite */
+    align-items: stretch !important;
+    width: 100%;
+  }
+
+  /* Wrapper des boutons Précédent/Suivant (le <div> de droite dans le template) */
+  .blog-2col-grid .d-flex.justify-content-between.align-items-center.mb-3 > div {
+    order: 1;                          /* 1re rangée */
+    display: grid;                     /* placement fiable aux extrémités */
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+  }
+
+  /* Cas standard : 2 boutons */
+  .blog-2col-grid .d-flex.justify-content-between.align-items-center.mb-3 > div .btn-article-nav:first-child {
+    justify-self: start;               /* totalement collé bord gauche */
+    margin: 0 !important;              /* neutralise .me-2 */
+    white-space: nowrap;
+  }
+  .blog-2col-grid .d-flex.justify-content-between.align-items-center.mb-3 > div .btn-article-nav:last-child {
+    justify-self: end;                 /* totalement collé bord droit */
+    margin: 0 !important;
+    white-space: nowrap;
+    text-align: right;
+  }
+
+  /* Cas 1 seul bouton : */
+  /* - "Précédent" seul (il a .me-2) → colonne gauche */
+  .blog-2col-grid .d-flex.justify-content-between.align-items-center.mb-3 > div .btn-article-nav.me-2:only-child {
+    grid-column: 1 / span 1;
+    justify-self: start;
+    margin: 0 !important;
+  }
+  /* - "Suivant" seul (pas de .me-2) → colonne droite */
+  .blog-2col-grid .d-flex.justify-content-between.align-items-center.mb-3 > div .btn-article-nav:not(.me-2):only-child {
+    grid-column: 2 / span 1;
+    justify-self: end;
+    margin: 0 !important;
+    text-align: right;
+  }
+
+  /* "Retour aux news" : 2e rangée, pleine largeur, sans espace à droite */
+  .retour-news-btn {
+    order: 2;                          /* 2e rangée */
+    display: block;
+    width: 100% !important;            /* prend toute la ligne */
+    margin: 0 !important;              /* supprime tout décalage résiduel */
+    text-align: center;                /* centre le libellé (change si besoin) */
+  }
+}
+
+
+/* ===========================================================
+   BLOG — ARCHIVES : navigation années/mois lisible en mobile
+   =========================================================== */
+
+/* Barre année et mois : respire et wrap correctement */
+@media (max-width: 575.98px) {
+  .archive-nav {
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  /* Année/mois courant : plein centre sur ligne dédiée */
+  .archive-nav .flex-grow-1 {
+    order: -1;            /* remonte au-dessus des flèches */
+    width: 100%;
+    text-align: center;
+  }
+
+  .archive-nav .btn.btn-sm {
+    flex: 0 0 auto;       /* évite les étirements laids */
+  }
+}
+
+/* ===========================================================
+   BLOG — SIDEBAR : cohérence mobile (déjà sous le contenu)
+   =========================================================== */
+
+/* Espacements un peu plus courts dans la sidebar sur smartphone */
+@media (max-width: 575.98px) {
+  #blog-sidebar .sidebar-section + .sidebar-section {
+    margin-top: 0.8rem;
+    padding-top: 0.6rem;
+  }
+  .sidebar-title,
+  .archives-sidebar.narrow-sidebar h2,
+  .archives-sidebar.narrow-sidebar .h5,
+  .blog-categories.narrow-sidebar h3 {
+    font-size: 1.02rem !important;
+  }
+}
+
+/* =================
+   BLOG — INTERVIEWS
+   ================= */
+
+/* 1) Sécurise toutes les images du contenu (y compris width/height inline) */
+.blog-content img {
+  max-width: 100% !important;   /* ne déborde jamais */
+  height: auto !important;      /* proportions conservées */
+  display: block;
+}
+
+/* Annule la marge des images dans les grilles d’interview */
+#blog-grille-img img, .blog-grille-2x2 img, .blog-grille-3x3 img, 
+.blog-grille-3x6 img,.blog-grille-3x8 img, .blog-grille-3x9 img {
+  margin-bottom: 0 !important;
+}
+
+/* 2) Sur mobile/tablette : on annule les float/width inline des figures et blocs */
+@media (max-width: 991px) {
+
+  /* Figures flottantes : deviennent plein largeur, sans centrage texte du bloc */
+  .blog-content figure[style*="float"] {
+    float: none !important;
+    width: 100% !important;
+    margin: 0 0 0.5rem 0 !important;
+    text-align: left !important;   /* IMPORTANT : on ne centre pas tout le bloc */
+  }
+
+  /* Blocs 450px (ex. vélo/gaming) : deviennent fluides */
+  .blog-content div[style*="float"][style*="width: 450px"] {
+    float: none !important;
+    width: 100% !important;
+    margin: 0 0 1rem 0 !important;
+  }
+  .blog-content div[style*="float"][style*="width: 450px"] figure {
+    width: 100% !important;
+    margin: 0 0 1rem 0 !important;
+  }
+
+  /* LÉGENDES — par défaut à GAUCHE + espace réduit sous l’image */
+  .blog-content figure figcaption {
+    margin-top: 0.18em !important;  /* réduit l’espace image/légende */
+    font-size: 0.92em !important;
+    color: #666 !important;
+    line-height: 1.35;
+    word-break: break-word;
+    text-align: left !important;     /* défaut = gauche */
+  }
+
+  /* Centrer la légende UNIQUEMENT si l’image n’a pas une largeur 100% déclarée */
+  .blog-content figure > img[width]:not([width="100%"]) + figcaption,
+  .blog-content figure > img[style*="width:"]:not([style*="width: 100%"]) + figcaption {
+    text-align: center !important;
+  }
+
+  /* Si l’image est explicitement pleine largeur ⇒ légende RESTE à gauche */
+  .blog-content figure > img[width="100%"] + figcaption,
+  .blog-content figure > img[style*="width: 100%"] + figcaption {
+    text-align: left !important;
+  }
+
+  /* Intro et questions : respiration et lisibilité en petit écran */
+  .blog-interview-intro {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 0.8rem 0 1rem 0;
+  }
+  .blog-interview-question {
+    margin: 1.1rem 0 0.9rem 0;
+    line-height: 1.5;
+  }
+}
+
+/* 3) Grilles d’images d’interview : déjà alignées sur les autres via #blog-grille-img,
+      on s’assure juste que plusieurs grilles sur la même page ne se parasitent pas */
+#blog-grille-img {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+  margin-bottom: 24px;
+}
+#blog-grille-img img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  object-fit: cover;
+  aspect-ratio: 1 / 1;
+}
+@media (max-width: 800px) {
+  #blog-grille-img { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 500px) {
+  #blog-grille-img { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Interview SMR */
+/* Bloc flottant à droite (desktop), fluide en mobile */
+.interview-float-block-right {               /* remplace: float:right; max-width:500px; margin:0 0 2rem 2rem; */
+  float: right;
+  max-width: 500px;
+  margin: 0 0 2rem 2rem;
+  text-align: left;
+}
+
+/* Figures internes : pleine largeur du bloc */
+.interview-figure {                          /* remplace: width:100%; margin:0; */
+  width: 100%;
+  margin: 0;
+}
+
+/* Espacement entre les deux figures (≃ 1.2em) */
+.interview-figure--spaced {
+  margin-top: 1.2em;
+}
+
+/* Images : fluides, proportions conservées */
+.interview-img {                             /* remplace: width:100%; height:auto; display:block; */
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Légendes : style identique à l’existant, sans inline */
+.interview-caption {                         /* remplace: margin-top:0.3em; font-size:0.95em; color:#666; */
+  margin-top: 0.3em;
+  font-size: 0.95em;
+  color: #666;
+  line-height: 1.35;
+  word-break: break-word;
+  text-align: left;                          /* pas de centrage global */
+}
+
+/* Responsive : en ≤ 991px, on annule le float et on passe en pleine largeur */
+@media (max-width: 991px) {
+  .interview-float-block-right {
+    float: none;
+    width: 100%;
+    max-width: none;
+    margin: 0 0 1rem 0;                      /* marge basse simple en mobile */
+  }
+}

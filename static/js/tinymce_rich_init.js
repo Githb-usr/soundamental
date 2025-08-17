@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
       "details[class|id|style]", "summary[class|id|style]",
       "audio[src|controls|autoplay|loop|muted|preload|class|id|style]", "source[src|type|media]", "track[src|kind|label|srclang|default]",
       "video[src|controls|autoplay|loop|muted|preload|poster|width|height|class|id|style]",
-      "iframe[src|width|height|frameborder|allowfullscreen|title|allow|class|id|style]",
+      "iframe[src|width|height|frameborder|allowfullscreen|title|allow|scrolling|allowtransparency|sandbox|class|id|style]",
       // BALISES MANQUANTES POUR CAROUSEL BOOTSTRAP/SVG :
       "button[class|id|type|style|title|aria-*|data-*]",
       "svg[*]",
@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", function () {
       "details[class|id|style]", "summary[class|id|style]",
       "audio[src|controls|autoplay|loop|muted|preload|class|id|style]", "source[src|type|media]", "track[src|kind|label|srclang|default]",
       "video[src|controls|autoplay|loop|muted|preload|poster|width|height|class|id|style]",
-      "iframe[src|width|height|frameborder|allowfullscreen|title|allow|class|id|style]",
+      "iframe[src|width|height|frameborder|allowfullscreen|title|allow|scrolling|allowtransparency|sandbox|class|id|style]",
       // BALISES MANQUANTES POUR CAROUSEL BOOTSTRAP/SVG :
       "button[class|id|type|style|title|aria-*|data-*]",
       "svg[*]",

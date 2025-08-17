@@ -80,8 +80,15 @@
                     <tbody>
                         {% for entry in index_data %}
                         <tr>
-                            <td>{{ entry.entry.name }}</td>
-                            
+                            <td>
+                                <span class="index-name">{{ entry.display_name|default:entry.entry.name }}</span>
+                                {% if entry.is_alias %}
+                                    <span class="index-badge-alias"
+                                        title="Alias de {{ entry.entry.name }}"
+                                        aria-label="Alias de {{ entry.entry.name }}">alias</span>
+                                {% endif %}
+                            </td>
+   
                             {% if not category %}
                                 <td class="category-link">
                                     {% if entry.has_index %}
@@ -125,17 +132,28 @@
                     {% for entry in index_data %}
                     <details class="index-acc-item">
                         <summary class="index-acc-summary">
-                            <span class="index-acc-name" title="{{ entry.entry.name }}">{{ entry.entry.name|truncatechars:42 }}</span>
-                            {% if not category %}
-                                <span class="index-acc-cat">
-                                    {% if entry.has_index %}
-                                        <a href="{% url 'app_index:category_index' entry.category_url %}">
-                                            {{ entry.entry.category.name|default:entry.entry.category.code|title }}
-                                        </a>
-                                    {% else %}
-                                        {{ entry.entry.category.name|default:entry.entry.category.code|title }}
-                                    {% endif %}
+                            <span class="index-acc-left">
+                                <span class="index-acc-name"
+                                    title="{{ entry.display_name|default:entry.entry.name }}">
+                                {{ entry.display_name|default:entry.entry.name }}
                                 </span>
+                                {% if entry.is_alias %}
+                                <span class="index-badge-alias"
+                                        title="Alias de {{ entry.entry.name }}"
+                                        aria-label="Alias de {{ entry.entry.name }}">alias</span>
+                                {% endif %}
+                            </span>
+
+                            {% if not category %}
+                            <span class="index-acc-cat">
+                                {% if entry.has_index %}
+                                <a href="{% url 'app_index:category_index' entry.category_url %}">
+                                    {{ entry.entry.category.name|default:entry.entry.category.code|title }}
+                                </a>
+                                {% else %}
+                                {{ entry.entry.category.name|default:entry.entry.category.code|title }}
+                                {% endif %}
+                            </span>
                             {% endif %}
                         </summary>
 

@@ -1,0 +1,17 @@
+{# Template spécifique à app_index.IndexAlias, qui étend la page d'import #}
+{% extends "admin/import_export/import.html" %}
+
+{% block content %}
+<div style="margin-bottom:12px; padding:10px; border:1px solid #ddd; background:#f9f9f9;">
+  <p><strong>Exemple de CSV (UTF-8, entête obligatoire) :</strong></p>
+  <pre style="margin:0; white-space:pre; overflow:auto;">entry,alias,is_listed
+Richard Gotainer,Gotainer,1
+Richard Gotainer,"Gotainer, Richard",1</pre>
+  <p style="margin-top:6px;">
+    Le champ <code>entry</code> doit correspondre exactement au nom de l’entrée principale.
+    Les alias contenant une virgule doivent être <em>entre guillemets</em> (CSV).
+  </p>
+</div>
+
+{{ block.super }}
+{% endblock %}
