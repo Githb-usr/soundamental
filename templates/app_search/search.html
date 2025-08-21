@@ -1,0 +1,220 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Recherche{% endblock %}
+
+{% block content %}
+  <section class="container search-page-wrap">
+    <h1 class="page-title">Recherche</h1>
+
+    <!-- Formulaire GET simple -->
+    <form method="get" action="{% url 'app_search:search' %}" class="mb-5" role="search" aria-label="Recherche sur le site" id="search-form">
+        <div class="input-group">
+            <!-- Champ de saisie -->
+            <input
+            type="search"
+            name="q"
+            value="{{ query }}"
+            class="form-control"
+            placeholder="Tapez un mot ou une expression…"
+            aria-label="Rechercher"
+            autocomplete="off"
+            required
+            />
+            <!-- Sélecteur de portée (V1 passive) -->
+            <select name="scope" class="form-select" aria-label="Limiter la recherche à un type de contenu">
+            <option value="tout" {% if active_filter == "tout" %}selected{% endif %}>Tout le site</option>
+            <option value="index" {% if active_filter == "index" %}selected{% endif %}>Index</option>
+            <option value="blog"  {% if active_filter == "blog" %}selected{% endif %}>News</option>
+            <option value="pages" {% if active_filter == "pages" %}selected{% endif %}>Pages</option>
+            </select>
+
+            <button class="btn btn-primary" type="submit">Rechercher</button>
+        </div>
+
+        <!-- Boutons de réinitialisation -->
+        <div class="mt-2 d-flex gap-2">
+            <!-- 1) Réinitialiser le formulaire (sans toucher aux résultats déjà affichés) -->
+            <button type="button" class="btn btn-outline-secondary btn-sm" id="reset-form-btn">
+            Effacer le formulaire
+            </button>
+
+            <!-- 2) Tout réinitialiser (formulaire + résultats) -->
+            <a href="{% url 'app_search:search' %}" class="btn btn-outline-danger btn-sm">
+            Tout effacer
+            </a>
+        </div>
+    </form>
+
+    <!-- Zone de résultats -->
+    {% if query %}
+
+        <!-- Résultats INDEX -->
+        {% if active_filter == "tout" or active_filter == "index" %}
+            <h2 class="h5 mb-3">Résultats — Index{% if total_index %} ({{ total_index }}) {% else %} (0) {% endif %}</h2>
+
+            {# --- Sous-filtres Index : tout / artistes / compilations / labels --- #}
+            {% with q=query|urlencode %}
+            <div class="index-subfilters d-flex flex-wrap gap-2 mb-3">
+                <a href="?q={{ q }}&scope={{ active_filter }}"{% comment %}garde le scope courant: 'tout' ou 'index'{% endcomment %}
+                class="btn btn-sm {% if index_type == 'tout' %}btn-primary{% else %}btn-outline-primary{% endif %}">
+                Tout
+                </a>
+                <a href="?q={{ q }}&scope={{ active_filter }}&index_type=artistes"
+                class="btn btn-sm {% if index_type == 'artistes' %}btn-primary{% else %}btn-outline-primary{% endif %}">
+                Artistes
+                </a>
+                <a href="?q={{ q }}&scope={{ active_filter }}&index_type=compilations"
+                class="btn btn-sm {% if index_type == 'compilations' %}btn-primary{% else %}btn-outline-primary{% endif %}">
+                Compilations
+                </a>
+                <a href="?q={{ q }}&scope={{ active_filter }}&index_type=labels"
+                class="btn btn-sm {% if index_type == 'labels' %}btn-primary{% else %}btn-outline-primary{% endif %}">
+                Labels
+                </a>
+            </div>
+            {% endwith %}
+
+            {% if total_index %}
+                <ul class="list-unstyled search-index-results">
+                {% for e in results_index %}
+                    <li class="search-index-item">
+                    <div class="search-index-line">
+                        <span class="search-index-name">{{ e.name }}</span>
+
+                        {% if e.category_name %}
+                        <span class="search-index-cat">{{ e.category_name }}</span>
+                        {% endif %}
+
+                        {# Liens à droite : on affiche UNIQUEMENT ceux qui existent #}
+                        <div class="search-index-links">
+                        {% with L=e.links %}
+                            {# 0 = BIO/HIST #}
+                            {% if L and L.0 %}
+                            <a href="{{ L.0 }}" class="index-link-btn" title="Biographie / Historique">BIO</a>
+                            {% else %}
+                            <span class="index-link-slot" aria-hidden="true"></span>
+                            {% endif %}
+
+                            {# 1 = DIS/VOL/CAT #}
+                            {% if L and L.1 %}
+                            <a href="{{ L.1 }}" class="index-link-btn" title="Discographie / Volumes / Catalogue">DIS</a>
+                            {% else %}
+                            <span class="index-link-slot" aria-hidden="true"></span>
+                            {% endif %}
+
+                            {# 2 = VID #}
+                            {% if L and L.2 %}
+                            <a href="{{ L.2 }}" class="index-link-btn" title="Vidéographie">VID</a>
+                            {% else %}
+                            <span class="index-link-slot" aria-hidden="true"></span>
+                            {% endif %}
+
+                            {# 3 = AUT #}
+                            {% if L and L.3 %}
+                            <a href="{{ L.3 }}" class="index-link-btn" title="Autre lien">AUT</a>
+                            {% else %}
+                            <span class="index-link-slot" aria-hidden="true"></span>
+                            {% endif %}
+
+                            {# 4 = FOR #}
+                            {% if L and L.4 %}
+                            <a href="{{ L.4 }}" class="index-link-btn" title="Forum">FOR</a>
+                            {% else %}
+                            <span class="index-link-slot" aria-hidden="true"></span>
+                            {% endif %}
+                        {% endwith %}
+                        </div>
+
+                    <div class="search-index-sub">
+                        {# "Voir dans l’index" revient en-dessous, aligné à gauche #}
+                        {% if e.category_code and e.letter %}
+                            {% if e.sub_letter %}
+                                <a class="small" href="{% url 'app_index:category_index_sub_letter' category=e.category_code letter=e.letter sub_letter=e.sub_letter %}">
+                                Voir dans l’index
+                                </a>
+                            {% else %}
+                                <a class="small" href="{% url 'app_index:category_index_letter' category=e.category_code letter=e.letter %}">
+                                Voir dans l’index
+                                </a>
+                            {% endif %}
+                        {% endif %}
+
+                        {# Alias (optionnel) sous la ligne #}
+                        {% if e.matched_aliases %}
+                        <div class="search-index-alias">
+                            {% if e.matched_aliases|length == 1 %}
+                            « {{ e.matched_aliases.0 }} » est un alias de {{ e.name }}.
+                            {% else %}
+                                Alias et variations orthographiques :
+                                {% for alias in e.matched_aliases %}
+                                    <em>{{ alias }}</em>{% if not forloop.last %} | {% endif %}
+                                {% endfor %}
+                            {% endif %}
+                        </div>
+                        {% endif %}
+                    </div>
+                    </li>
+                {% endfor %}
+                </ul>
+
+            {% else %}
+              <p class="text-muted">Aucune entrée d’index trouvée pour «&nbsp;{{ query }}&nbsp;».</p>
+            {% endif %}
+        {% endif %}
+
+        <!-- Résultats BLOG -->
+        {% if active_filter == "tout" or active_filter == "blog" %}
+            <hr class="my-4">
+            <h2 class="h5 mb-3">Résultats — News{% if total_blog %} ({{ total_blog }}) {% else %} (0) {% endif %}</h2>
+
+            {% if total_blog %}
+            <ul class="list-unstyled">
+                {% for a in results_blog %}
+                <li class="mb-2">
+                    {# Lien vers le détail de l’article /news/<slug>/ #}
+                    {% if a.slug %}
+                        <a href="{% url 'app_blog:detail_article' slug=a.slug %}" class="text-decoration-none">
+                        <strong>{{ a.titre }}</strong>
+                        </a>
+                    {% else %}
+                        {# Sécurité : si pas de slug (cas théorique), on affiche sans lien #}
+                        <strong>{{ a.titre }}</strong>
+                    {% endif %}
+                    {% if a.date_publication %}
+                        <span class="text-muted">— {{ a.date_publication|date:"d/m/Y" }}</span>
+                    {% endif %}
+                </li>
+                {% endfor %}
+            </ul>
+            {% else %}
+            <p class="text-muted">Aucun article trouvé dans le blog pour «&nbsp;{{ query }}&nbsp;».</p>
+            {% endif %}
+        {% endif %}
+
+        <!-- Résultats PAGES STATIQUES -->
+        {% if active_filter == "tout" or active_filter == "pages" %}
+            <hr class="my-4">
+            <h2 class="h5 mb-3">Résultats — Pages du site{% if total_pages %} ({{ total_pages }}) {% else %} (0) {% endif %}</h2>
+
+            {% if total_pages %}
+            <ul class="list-unstyled">
+                {% for p in results_pages %}
+                <li class="mb-2">
+                    <a href="{% url 'app_main:static_page' slug=p.slug %}" class="text-decoration-none">
+                    <strong>{{ p.title }}</strong>
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+            {% else %}
+            <p class="text-muted">Aucune page trouvée pour «&nbsp;{{ query }}&nbsp;».</p>
+            {% endif %}
+        {% endif %}
+
+    {% endif %}
+  </section>
+  
+  <script src="{% static 'js/search_reset.js' %}"></script>
+
+{% endblock %}

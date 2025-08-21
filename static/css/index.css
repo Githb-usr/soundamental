@@ -252,21 +252,50 @@
     border: 1px solid #0088a8;
 }
 
-/* Pastille "alias" — ciblage précis pour l'index */
-.index-table td .index-badge-alias,
-.index-acc-summary .index-badge-alias {
-  display: inline-block;
-  margin-left: 6px;
-  padding: 2px 5px;
-  font-size: 10px;
-  line-height: 1;
-  text-transform: uppercase;
-  border-radius: 10px;
-  background-color: #eef2ff;
-  color: #1d4ed8;
-  border: 1px solid #c7d2fe;
-  vertical-align: middle;  /* ← aligne le badge avec le texte */
+/* Badge "alias" pour les noms de l'index */
+/* ###################################### */
+
+/* Badge "alias" pour les noms de l'index (desktop + mobile) */
+.main-index .index-badge-alias {
+    display: inline-block;          /* reste à côté du nom */
+    vertical-align: baseline; /* s’aligne sur la ligne de texte */
+    margin-left: 6px;               /* petit espace après le nom */
+    padding: 1px 6px;               /* pastille compacte */
+    font-size: 0.72rem;             /* plus petit que le texte du nom */
+    line-height: 1.2;
+    text-transform: lowercase;      /* rendu "alias" comme demandé */
+    background-color: #e9f5f8;      /* bleu très clair */
+    color: #0088a8;                 /* bleu du thème */
+    border: 1px solid #bfe3ec;      /* liseré léger */
+    border-radius: 3px;
+    vertical-align: middle;
+    white-space: nowrap;            /* évite le retour à la ligne du badge */
 }
+
+/* Nom dans le tableau desktop : garde le flux en ligne pour accueillir le badge */
+.main-index .index-table .index-name {
+    font-weight: 600;               /* met un léger relief au nom */
+    white-space: nowrap;            /* évite que le badge passe à la ligne */
+    overflow: hidden;               /* compatible avec truncatechars côté template */
+    text-overflow: ellipsis;
+    max-width: 100%;
+}
+
+/* Nom dans l'accordéon mobile : bloc à gauche qui contient nom + badge */
+.main-index .index-acc-summary .index-acc-left {
+    display: inline-flex;           /* aligne nom + badge proprement */
+    align-items: baseline;          /* badge aligné sur la ligne de base du nom */
+    gap: 6px;                       /* espace constant si jamais le badge saute la marge */
+}
+
+/* Nom mobile : same idea que desktop mais adapté au flux mobile */
+.main-index .index-acc-summary .index-acc-name {
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 
 
 /* ############################################# */
@@ -482,16 +511,6 @@
   .main-index .index-empty-message {
     margin: 20px 0;
   }
-
-  /* Réduction discrète du badge "Alias" pour éviter les retours à la ligne */
-  .index-table td .index-badge-alias,
-  .index-acc-summary .index-badge-alias {
-    font-size: 9px;            /* plus petit sur mobile */
-    padding: 1px 5px;           /* coussin réduit */
-    border-radius: 8px;         /* rayon adapté */
-    margin-left: 4px;           /* espace réduit avec le nom */
-    vertical-align: middle;  /* ← aligne le badge avec le texte */
-  }
 }
 
 /* Mobile (≤ 576.98px) — sous-lettres : 2 lignes + scroll horizontal, ordre par LIGNES */
@@ -565,42 +584,36 @@
   /* En-tête cliquable */
   .main-index .index-results-mobile .index-acc-summary {
     display: flex;
-    align-items: center;            /* tout reste sur une ligne */
+    align-items: flex-start;      /* le badge peut passer dessous si le nom wrappe */
     min-width: 0;
     gap: 8px;
     padding: 10px 12px;
-    position: relative;             /* nécessaire pour positionner le chevron */
-    padding-right: 28px;            /* sur-définit le padding droit (12 → 28) */
     list-style: none;             /* neutralise le marqueur natif */
     cursor: pointer;
     margin: 0;
   }
-
   /* Masque le marqueur par défaut (Chrome/Safari) */
   .main-index .index-results-mobile .index-acc-summary::-webkit-details-marker { display: none; }
 
-  /* Chevron absolu : ne prend plus de place dans le flex */
+  /* Chevron d’état (ajouté en CSS, pas en HTML) */
   .main-index .index-results-mobile .index-acc-summary::after {
-    content: "▾";
-    position: absolute;
-    right: 12px;
-    top: 50%;
-    transform: translateY(-50%) rotate(0);
+    content: "▾";                 /* flèche simple, lisible */
+    margin-left: auto;
     transform-origin: 50% 50%;
     transition: transform .2s ease;
   }
   .main-index .index-results-mobile .index-acc-item[open] > .index-acc-summary::after {
-    transform: translateY(-50%) rotate(180deg);
+    transform: rotate(180deg);
   }
 
-  /* Nom : une seule ligne avec ellipsis (badge visible à droite) */
+  /* Nom : priorité visuelle + clamp (max 2 lignes) */
   .main-index .index-results-mobile .index-acc-name {
     flex: 1 1 auto;
-    min-width: 0;                  /* autorise le shrink */
     font-weight: 600;
-    white-space: nowrap;           /* 1 seule ligne */
     overflow: hidden;
-    text-overflow: ellipsis;       /* … */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;        /* 2 lignes max */
+    -webkit-box-orient: vertical;
   }
 
   .main-index .index-results-mobile .index-acc-cat {
@@ -649,22 +662,69 @@
   .main-index .grid-sub-letters + .index-results-mobile {
       margin-top: 0; /* annule l'espace si les sous-lettres sont présentes */
   }
-
-  /* Le badge reste à droite du nom, jamais tronqué */
-  .main-index .index-results-mobile .index-badge-alias {
-    flex: 0 0 auto;
-    margin-left: 6px;
-  }
-
-  /* La catégorie colle à droite */
-  .main-index .index-results-mobile .index-acc-cat {
-    margin-left: auto;
-    flex: 0 0 auto;
-    white-space: nowrap;
-  }
 }
 
+/* =========================================================== */
+/* < 500px — Accordéon spécifique des lignes d'index (mobile)  */
+/* =========================================================== */
+@media (max-width: 499.98px) {
+  /* Header de l’item : autorise le retour à la ligne et réserve la place du chevron */
+  .main-index .index-results-mobile .index-acc-summary {
+      position: relative;      /* nécessaire pour positionner la flèche */
+      display: flex;
+      flex-wrap: wrap;         /* permet à la catégorie de passer dessous */
+      align-items: flex-start;
+      gap: 8px;
+      min-width: 0;            /* évite le tronquage */
+      padding-right: 28px;     /* réserve la place de la flèche */
+  }
 
+  /* Flèche (chevron) en haut à droite, hors du flux */
+  .main-index .index-results-mobile .index-acc-summary::after {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+  }
+
+/* < 500 px — Forcer l'ellipsis du NOM sur l'enfant qui porte le texte */
+  .main-index .index-results-mobile .index-acc-name {
+    order: 1;
+    flex: 0 0 100%;   /* garde la catégorie en dessous */
+    min-width: 0;     /* autorise le shrink */
+  }
+
+  /* Quel que soit l'enfant immédiat (a / span / strong), on applique l'ellipsis */
+  .main-index .index-results-mobile .index-acc-name > a,
+  .main-index .index-results-mobile .index-acc-name > span,
+  .main-index .index-results-mobile .index-acc-name > strong {
+    display: block;         /* nécessaire pour text-overflow */
+    max-width: 100%;
+    min-width: 0;
+    white-space: nowrap;    /* 1 seule ligne */
+    overflow: hidden;       /* cache le surplus */
+    text-overflow: ellipsis;/* affiche "…" */
+  }
+
+  /* 3) Sécurité : la flèche est au-dessus et non cliquable */
+  .main-index .index-results-mobile .index-acc-summary::after {
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .main-index .index-results-mobile .index-acc-cat {
+    order: 2;
+    flex: 0 0 auto;                     /* largeur = contenu */
+    display: inline-block;              /* garde l’aspect badge */
+    align-self: flex-start;             /* sous le nom, aligné en haut */
+    margin-top: 2px;
+
+    /* Contraintes de largeur et coupe propre */
+    max-width: calc(100% - 28px);       /* laisse la zone de la flèche à droite */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
 
 /* 577–630 px — Grille fluide (ne déborde plus à droite) */
 @media (min-width: 577px) and (max-width: 630px) {
@@ -703,6 +763,30 @@
   .main-index .index-results { display: block !important; }        /* montre le tableau */
   .main-index .index-results-mobile { display: none !important; }  /* cache l'accordéon */
 }
+
+/* ========================= */
+/* ≤ 768px : tablettes/mobiles */
+/* ========================= */
+@media (max-width: 768px) {
+  .main-index .index-badge-alias {
+    font-size: 0.65rem;    /* encore plus discret */
+    padding: 1px 4px;      /* réduit la pastille */
+    margin-left: 4px;      /* espace plus court */
+  }
+}
+
+/* ========================= */
+/* ≤ 420px : très petits écrans */
+/* ========================= */
+@media (max-width: 420px) {
+  .main-index .index-badge-alias {
+    margin-left: 0;         /* on annule la marge gauche */
+    margin-top: 2px;        /* petit espace au-dessus */
+    font-size: 0.6rem;      /* police réduite */
+    text-align: left;       /* aligné avec le nom */
+  }
+}
+
 
 /* Accordéon mobile : entrée ouverte mise en évidence en vert plus soutenu */
 .main-index .index-results-mobile .index-acc-item[open] {

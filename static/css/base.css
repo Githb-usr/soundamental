@@ -134,3 +134,13 @@ Supprime la bordure du dernier élément */
         padding-right: 8px !important;
     }
 }
+
+/* Pour Safari (iphone vertical) */
+@supports (-webkit-touch-callout: none) and (hover: none) and (pointer: coarse) {
+  .ios-vw-fix {
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    /* on laisse tes paddings internes tranquilles */
+  }
+}

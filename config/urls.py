@@ -34,6 +34,9 @@ urlpatterns = [
     # Connexion et déconnexion
     path("login/", auth_views.LoginView.as_view(), name="login"),
     path("logout/", auth_views.LogoutView.as_view(), name="logout"),
+    
+    # moteur de recherche
+    path("recherche/", include("apps.core.app_search.urls", namespace="app_search")),  
 
     # Toutes les autres routes dynamiques (accueil, pages, contact, etc.)
     path("", include("apps.core.app_main.urls", namespace="app_main")),

@@ -9,7 +9,7 @@ from apps.core.app_main.models.settings import AppMainSettings
 # ===================
 
 CATEGORY_CHOICES = [
-        ("site-info", "Pages de base"),
+        ("site-info", "Pages du site"),
         ("aide", "Pages Aide/FAQ"),
 ]
 
@@ -97,6 +97,8 @@ class StaticPageMeta(models.Model):
         """
         Retourne l'URL absolue de la page statique.
         """
+        if self.category == "aide":
+            return "/aide/" if self.slug == "aide" else f"/aide/{self.slug}/"
         return f"/{self.slug}/"
 
     def __str__(self):

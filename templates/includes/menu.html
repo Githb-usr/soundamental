@@ -78,6 +78,26 @@
             <li class="nav-item nav-item-last">
                 <a href="{% url 'app_main:contact' %}" class="nav-link text-white">Contact</a>
             </li>
+            <!-- Recherche : la loupe mène directement à la page de recherche -->
+            <li class="nav-item search-toggle">
+                <a id="nav-search-link"
+                    class="nav-link p-0"
+                    href="{% url 'app_search:search' %}"
+                    aria-label="Recherche">
+                    <!-- Icône loupe épaisse, blanche via CSS (currentColor) -->
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                        class="icon-loupe"
+                        width="20" height="20"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true">
+                    <circle cx="11" cy="11" r="7"
+                            stroke="currentColor" stroke-width="2.6" fill="none"/>
+                    <line x1="16.5" y1="16.5" x2="21.5" y2="21.5"
+                            stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/>
+                    </svg>
+                </a>
+            </li>
+
             {% if user.is_authenticated %}
                 <li class="nav-item user-menu-mobile logout-item d-block d-lg-none">
                     <a class="nav-link text-white" href="{% url 'logout' %}">Se déconnecter</a>

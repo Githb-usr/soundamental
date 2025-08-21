@@ -252,6 +252,18 @@ nav.user-menu .dropdown-menu .dropdown-item:hover {
 /* Responsive Header & Logo   */
 /* -------------------------- */
 
+/* Contact n'est plus le dernier item → lui rendre son padding droit */
+@media (min-width: 992px) {
+  .site-menu .nav-item.nav-item-last:not(:last-child) .nav-link {
+    padding-right: 1rem !important;  /* valeur Bootstrap par défaut */
+  }
+
+  /* Le DERNIER <li> réel du menu garde un padding-right nul */
+  .site-menu .nav > li:last-child .nav-link {
+    padding-right: 0 !important;
+  }
+}
+
 @media (max-width: 991px) {
     /* Header : structure horizontale pour logo + menu burger */
     .site-header .container-lg {

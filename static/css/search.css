@@ -1,0 +1,579 @@
+/* ################################################################## */
+/* ## search.css - Styles de la page de recherche (avec résultats) ## */
+/* ################################################################## */
+
+/* Formulaire - Le groupe occupe toute la largeur à tous les breakpoints */
+#search-form .input-group {
+  width: 100%;
+}
+
+/* Formulaire - Empêche les éléments de "pousser" l'input hors de l'écran */
+#search-form .input-group .form-control,
+#search-form .input-group .form-select {
+  min-width: 0;
+}
+
+.search-index-name {
+    font-weight: 700;
+}
+
+/* Ligne en 3 colonnes : [nom 1fr] [catégorie fixe] [liens à droite] */
+.search-index-results .search-index-line {
+  display: grid;
+  grid-template-columns: 1fr 160px auto; /* colonne catégorie fixe */
+  align-items: center;
+  column-gap: 16px;     /* <-- plus d'air entre catégorie et liens (au lieu de 8px) */
+}
+
+/* Colonne "catégorie" fixe → alignement vertical garanti ; ellipse si trop long */
+.search-index-results .search-index-cat {
+  color: #212529;
+  background: #eee;
+  border: 1px solid #ddd;
+  padding: 2px 6px;
+  width: 160px;              /* même valeur que la colonne */
+  max-width: 160px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  justify-self: start;
+  text-align: center;
+}
+
+/* Colonne "liens" : 5 slots fixes (BIO, DIS, VID, AUT, FOR) */
+.search-index-results .search-index-links {
+  display: grid;
+  grid-template-columns: repeat(5, 44px); /* 5 cases fixes */
+  justify-self: end;                       /* ancré à droite */
+  gap: 6px;
+}
+
+/* Espace sous les entrées d'index */
+.search-index-sub {
+  margin-bottom: 1rem;
+}
+
+/* Pas d'espace après la dernière entrée d'index */
+.search-index-results > .search-index-item:last-child .search-index-sub {
+  margin-bottom: 0;
+}
+
+
+/* ==============================
+   Résultats de recherche — Badges 3 lettres (BIO/DIS/VID/AUT/FOR)
+   Ciblage strict au bloc des résultats index
+   ============================== */
+
+/* =========================================================
+   RECHERCHE — Résultats INDEX : alternance + séparateur
+   ========================================================= */
+
+/* On gère l'espacement sur l'élément de ligne lui-même */
+.search-index-results .search-index-item {
+  margin: 0;                   /* supprime l'écart externe pour un vrai "zebra" */
+  padding: 10px 7px 0 7px;
+  border-bottom: 1px solid #e9ecef;  /* trait léger entre deux lignes */
+}
+
+/* Pas de trait après la dernière ligne */
+.search-index-results .search-index-item:last-child {
+  border-bottom: 0;
+}
+
+/* Fond gris très léger 1 ligne sur 2 */
+.search-index-results .search-index-item:nth-child(odd) {
+  background-color: #f8f9fa;
+}
+
+/* Conserve le petit écart au-dessus du lien "Voir dans l'index" */
+.search-index-results .search-index-sub { margin-top: 6px; }
+
+
+.search-index-results .index-link-btn {
+  /* boîte */
+  display: inline-flex;                /* centrage parfait du texte */
+  align-items: center;
+  justify-content: center;
+  width: 44px;                         /* largeur fixe = 3 lettres */
+  height: 26px;
+  border-radius: 4px;
+  border: 1px solid #0088a8;
+
+  /* typo */
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: .3px;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  /* couleurs */
+  background: #0088a8;                 /* bleu/vert site */
+  color: #fff;
+}
+
+/* Slot vide : même encombrement, totalement neutre (pas de bordure, pas de texte) */
+.search-index-results .index-link-slot {
+  width: 44px;
+  height: 26px;
+  display: inline-block;
+}
+
+/* Survol / focus clavier : inversion propre + feedback net */
+.search-index-results .index-link-btn:hover,
+.search-index-results .index-link-btn:focus,
+.search-index-results .index-link-btn:focus-visible {
+  background: #fff;
+  color: #0088a8;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0,136,168,.15);
+}
+
+/* État actif (clic) : léger feedback */
+.search-index-results .index-link-btn:active {
+  transform: translateY(1px);
+}
+
+/* Évite la couleur violette sur liens déjà visités */
+.search-index-results .index-link-btn:visited {
+  color: #fff;
+}
+
+/* =========================
+   Recherche dans la navbar
+   ========================= */
+
+/* Popover de recherche : fermé par défaut partout */
+.nav-search-popover { 
+  display: none;
+}
+
+/* Ne s'affiche que quand le JS ajoute .is-open */
+.nav-search-popover.is-open { 
+  display: block;
+}
+
+
+/* ===== Recherche dans la navbar (loupe) ===== */
+.navbar .nav-item.search-toggle { position: relative; }
+
+/* Popover caché par défaut, taille raisonnable et non intrusive */
+.navbar .nav-search-popover {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 8px);
+  display: none;                  /* JS ajoute .is-open */
+  width: clamp(240px, 60vw, 360px);
+  padding: 10px;
+  background: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: .375rem;
+  box-shadow: 0 4px 18px rgba(0,0,0,.08);
+  z-index: 1050;
+}
+
+/* Rangée compacte : input + bouton */
+.navbar .nav-search-row {
+  display: grid;
+  grid-template-columns: 1fr auto; /* l'input prend la place, bouton compact */
+  gap: 8px;
+}
+
+/* Empêche l'input de s'étirer "à 3 km" */
+.navbar .nav-search-input {
+  min-width: 0;
+}
+
+/* État ouvert */
+.navbar .nav-search-popover.is-open { display: block; }
+
+
+/* ===============================
+   Loupe (item de menu « recherche »)
+   =============================== */
+
+/* Le <li> de la loupe suit l’alignement vertical des autres items */
+.site-menu .nav-item.search-toggle {
+  display: flex;
+  align-items: center; /* centrage vertical */
+}
+
+/* Le bouton-lien de la loupe : blanc + "gras" comme les autres items */
+.site-menu .nav-item.search-toggle .nav-link {
+  color: #fff !important;     /* icône blanche (SVG en currentColor) */
+  font-weight: 700;           /* "gras" pour cohérence visuelle */
+  display: inline-flex;       /* aligne proprement l’icône */
+  align-items: center;
+  line-height: 1;             /* évite les décalages de baseline */
+  padding-top: .5rem;         /* même hauteur perçue que les autres liens */
+  padding-bottom: .5rem;
+}
+
+/* L’icône elle-même prend la couleur du lien (blanc) et s’aligne bien */
+.site-menu .nav-item.search-toggle .nav-link svg {
+  width: 18px;
+  height: 18px;
+  display: block;             /* supprime l’espace inline */
+  color: inherit;             /* sécurité : suit le #fff du parent */
+  vertical-align: middle;
+}
+
+/* Hover/focus : on garde le blanc (pas de variation de couleur) */
+.site-menu .nav-item.search-toggle .nav-link:hover,
+.site-menu .nav-item.search-toggle .nav-link:focus {
+  color: #fff !important;
+  text-decoration: none;
+}
+
+/* Espace à GAUCHE de la loupe en grand écran uniquement */
+@media (min-width: 992px) {
+  .site-menu .nav-item.search-toggle { margin-left: 0.8rem; }
+}
+
+/* Petits écrans : on limite la largeur à 90vw pour éviter tout dépassement */
+@media (max-width: 576px) {
+  .navbar .nav-search-popover { width: min(90vw, 360px); }
+}
+
+/* ##################### */
+/* ### MEDIA QUERIES ### */
+/* ##################### */
+
+/* =========================================================
+   RECHERCHE — Formulaire (input + select + bouton)
+   Objectif : plus d'espace pour la saisie sur mobile
+   ========================================================= */
+
+/* Page Recherche : aligner à gauche UNIQUEMENT sur mobile/tablette.
+   Sur PC (>= 1199px), on garde le container Bootstrap par défaut. */
+@media (max-width: 1199.98px) {
+  .search-page-wrap {
+    --bs-gutter-x: 0 !important;   /* neutralise le padding horizontal Bootstrap */
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  /* Titre + Formulaire + Résultats : sans offset horizontal sur petits écrans */
+  .search-page-wrap .page-title-medium-blog,
+  .search-page-wrap #search-form,
+  .search-page-wrap .search-index-results {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-left: 0 !important;
+  }
+}
+
+/* Base : petit écart horizontal entre les éléments */
+#search-form .input-group { gap: 8px; }
+
+/* Le groupe occupe toute la largeur à tous les breakpoints */
+#search-form .input-group {
+  width: 100%;
+}
+
+/* Empêche les éléments de "pousser" l'input hors de l'écran */
+#search-form .input-group .form-control,
+#search-form .input-group .form-select {
+  min-width: 0;
+}
+
+/* Écrans intermédiaires : l'input prend tout l'espace dispo,
+   le select et le bouton ont une largeur fixe lisible */
+@media (min-width: 769px) and (max-width: 1200px) {
+  #search-form .input-group {
+    width: calc(100% + var(--bs-gutter-x));                 /* ajoute le gutter à la largeur */
+    margin-left: calc(-1 * var(--bs-gutter-x) / 2);          /* compense à gauche */
+    margin-right: calc(-1 * var(--bs-gutter-x) / 2);         /* compense à droite */
+  }
+
+  #search-form .input-group {
+    gap: 8px;                 /* petit espace entre éléments */
+  }
+  #search-form .input-group input[name="q"] {
+    flex: 1 1 auto;           /* s'étire pour remplir */
+  }
+  #search-form .input-group select[name="scope"] {
+    flex: 0 0 220px;          /* ajuste si besoin (200–240px) */
+    max-width: 220px;
+  }
+  #search-form .input-group button[type="submit"] {
+    flex: 0 0 160px;          /* largeur bouton stable */
+    max-width: 160px;
+  }
+}
+
+/* Sécurise le flex des éléments internes pour éviter tout écrasement */
+#search-form .input-group .form-control,
+#search-form .input-group .form-select {
+  min-width: 0; /* indispensable pour laisser l'input s'étirer */
+}
+
+/* ≤ 768px : on passe l'input sur une ligne complète, select + bouton sur la ligne suivante */
+@media (max-width: 768px) {
+  #search-form .input-group { flex-wrap: wrap; }
+
+  /* Champ de recherche : 100% de la ligne */
+  #search-form input[name="q"] {
+    flex: 1 1 100% !important;
+    min-width: 0;
+  }
+
+  /* Select : prend la majorité de la 2e ligne */
+  #search-form select[name="scope"] {
+    flex: 1 1 60%;
+    max-width: none;
+  }
+
+  /* Bouton Rechercher : garde une largeur lisible */
+  #search-form button[type="submit"] {
+    flex: 1 1 35%;
+    min-width: 140px;
+  }
+}
+
+/* ≤ 480px : select et bouton chacun sur leur propre ligne */
+@media (max-width: 480px) {
+  #search-form select[name="scope"],
+  #search-form button[type="submit"] {
+    flex: 1 1 100%;
+  }
+}
+
+
+/* =========================================================
+   RECHERCHE — Résultats INDEX (nom + catégorie + 5 slots)
+   Objectif : alignement stable + pas de débordement mobile
+   ========================================================= */
+
+/* Rappel (desktop) : 3 colonnes [nom 1fr] [catégorie 160px] [liens] */
+.search-index-results .search-index-line {
+  display: grid;
+  grid-template-columns: 1fr 160px auto;
+  align-items: center;
+  row-gap: .5rem;
+  column-gap: 16px;  /* espace entre catégorie et liens */
+}
+
+/* Catégorie : même largeur que la colonne, ellipse au besoin */
+.search-index-results .search-index-cat {
+  width: 160px;
+  max-width: 160px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Zone liens (5 emplacements) : grille fixe desktop */
+.search-index-results .search-index-links {
+  display: grid;
+  grid-template-columns: repeat(5, 44px); /* BIO/DIS/VID/AUT/FOR */
+  justify-self: end;
+  gap: 6px;
+}
+
+/* Tablette (≤ 768px) : colonne catégorie un peu plus étroite */
+@media (max-width: 768px) {
+  .search-index-results .search-index-line {
+    grid-template-columns: 1fr 130px auto;
+  }
+  .search-index-results .search-index-cat {
+    width: 130px;
+    max-width: 130px;
+  }
+
+  #search-form .input-group {
+    flex-wrap: wrap; /* déjà présent chez toi, on le rappelle pour le contexte */
+  }
+
+  /* Retire tous les arrondis des éléments du groupe en mode empilé */
+  #search-form .input-group .form-control,
+  #search-form .input-group .form-select,
+  #search-form .input-group .btn,
+  #search-form .input-group .rounded-start,
+  #search-form .input-group .rounded-end {
+    border-radius: 0 !important;  /* bords carrés en mode multi-lignes */
+  }
+}
+
+/* Mobile (≤ 576px) : une seule colonne, tout passe en pile, pas de scroll horizontal */
+/* Mobile (≤ 576px) — nom + catégorie sur la 1ʳᵉ ligne, 5 liens sur la 2ᵉ */
+@media (max-width: 576px) {
+  .search-index-results .search-index-line {
+    display: grid;
+    grid-template-columns: 1fr auto;     /* nom flexible, catégorie auto */
+    grid-template-areas:
+      "name cat"
+      "links links";
+    align-items: center;
+    row-gap: 6px;
+    column-gap: 8px;
+  }
+
+  .search-index-results .search-index-name { grid-area: name; }
+
+  .search-index-results .search-index-cat  {
+    grid-area: cat;
+    justify-self: end;                    /* reste sur la 1ʳᵉ ligne à droite */
+    margin: 0;
+    width: auto;                          /* pleine liberté sur mobile */
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  /* 5 slots fixes sur la 2ᵉ ligne */
+  .search-index-results .search-index-links {
+    grid-area: links;
+    display: grid;
+    grid-template-columns: repeat(5, 44px);
+    gap: 6px;
+    justify-self: start;                  /* aligné à gauche */
+    margin-top: 0;
+  }
+}
+
+/* Mobile (≤ 576px) — 3 lignes lisibles : 
+   1) nom   2) catégorie + 5 boutons   3) "Voir dans l’index" (déjà en dessous) */
+@media (max-width: 576px) {
+  .search-index-results .search-index-line {
+    display: grid;
+    grid-template-columns: 1fr auto;      /* cat à gauche (1fr) / liens à droite (auto) */
+    grid-template-areas:
+      "name name"
+      "cat  links";
+    align-items: center;
+    row-gap: 5px;
+    column-gap: 10px;
+    width: 100%;
+  }
+
+  /* 1) Nom plein large */
+  .search-index-results .search-index-name { grid-area: name; }
+
+  /* 2) Catégorie alignée à gauche, coupe proprement si manque de place */
+  .search-index-results .search-index-cat {
+    grid-area: cat;
+    justify-self: start;   /* <-- aligne bien à gauche */
+    margin: 0;
+    min-width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  /* 2) 5 emplacements à droite, SANS débordement :
+        - flex distribue la place dispo
+        - min/max bornent chaque slot
+        - pas d’overflow sur la marge droite */
+  .search-index-results .search-index-links {
+    grid-area: links;
+    display: flex;
+    gap: 6px;
+    max-width: 100%;
+    /* empêche toute largeur supérieure au conteneur */
+    overflow: hidden;
+  }
+
+  .search-index-results .index-link-btn,
+  .search-index-results .index-link-slot {
+    box-sizing: border-box;
+    flex: 1 1 36px;   /* base 36px, peut se comprimer si besoin */
+    min-width: 28px;  /* borne basse -> pas illisible */
+    max-width: 44px;  /* borne haute (desktop) */
+    height: 24px;
+  }
+
+  /* Petit espace au-dessus de "Voir dans l’index" */
+  .search-index-results .search-index-sub { margin-top: 6px; }
+}
+
+.search-index-sub {
+  margin-bottom: 0.3rem;
+}
+
+/* Très étroit (≤ 380px) : mini-réduction pour éviter tout débordement horizontal */
+@media (max-width: 380px) {
+  .search-index-results {
+    --slotW: 34px;   /* on réduit les badges */
+    --slotGap: 4px;  /* on réduit l'écart */
+    --linksW: calc(var(--slotW) * 5 + var(--slotGap) * 4);
+  }
+  .search-index-results .index-link-btn,
+  .search-index-results .index-link-slot {
+    height: 22px;
+  }
+}
+
+/* Badges 3 lettres (déjà ajoutés) — rappel utile ici */
+.search-index-results .index-link-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 26px;
+  border-radius: 4px;
+  border: 1px solid #0088a8;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: .3px;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: #0088a8;
+  color: #fff;
+}
+.search-index-results .index-link-btn:hover,
+.search-index-results .index-link-btn:focus,
+.search-index-results .index-link-btn:focus-visible {
+  background: #fff;
+  color: #0088a8;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0,136,168,.15);
+}
+.search-index-results .index-link-slot {
+  width: 44px;
+  height: 26px;
+  display: inline-block; /* réserve l’emplacement vide */
+}
+
+/* Mobile/Tablet (<992px) : remplacer la loupe par le texte "Rechercher" dans le burger */
+@media (max-width: 991.98px) {
+  .site-menu .nav-item.search-toggle .nav-link {
+    /* mêmes paddings que les autres items du burger */
+    padding: 11px 18px !important;
+    display: flex;
+    align-items: center;
+    color: #fff !important;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+  /* cacher l'icône */
+  .site-menu .nav-item.search-toggle .nav-link svg {
+    display: none !important;
+  }
+  /* injecter le libellé */
+  .site-menu .nav-item.search-toggle .nav-link::after {
+    content: "Rechercher";
+    display: inline-block;
+  }
+
+  /* Séparateur au-dessus de "Rechercher" dans le burger */
+  .site-menu .nav-item.search-toggle {
+    border-top: 1px solid #444;
+  }
+
+  /* Règle commune : même padding/hauteur pour tous les liens du burger */
+  .site-menu #mainNavList .nav-link {
+    padding: 11px 18px !important;
+    min-height: 44px;              /* hauteur uniforme */
+    display: flex;
+    align-items: center;
+  }
+
+  /* Neutralise les exceptions qui rétrécissaient "Contact" et "Se déconnecter" */
+  .site-menu .nav-item a.nav-link[href*="contact"],
+  .user-menu-mobile.logout-item .nav-link {
+    padding: 11px 18px !important;
+    min-height: 44px !important;
+  }
+}

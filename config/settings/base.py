@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'apps.core.app_index',
     'apps.core.app_main',
     'apps.core.app_medias',
+    'apps.core.app_search',
     'apps.content.app_artistes',
     'apps.content.app_blog',
     'apps.content.app_pressages',    

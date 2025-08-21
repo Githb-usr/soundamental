@@ -20,6 +20,13 @@ def static_page_view(request, slug):
     # Récupérer la page statique depuis la base
     page = get_object_or_404(StaticPageMeta, slug=slug, published=True)
     
+    # 🔒 Si la page est de catégorie "aide", on n'autorise pas l'accès direct "/<slug>/"
+    # → Redirection 301 vers "/aide/<slug>/" (et "/aide/" pour la racine)
+    if page.category == "aide":
+        if page.slug == "aide":
+            return redirect("app_main:aide_root", permanent=True)
+        return redirect("app_main:aide_detail", slug=page.slug, permanent=True)
+
     # Récupérer uniquement les tags associés à cette page ET visibles pour l'utilisateur
     tags = list(Tag.objects.filter(static_pages=page).filter(id__in=get_visible_tags(request.user)))
     
@@ -73,13 +80,16 @@ def edit_page(request, slug):
 # 🔹 Vue : page individuelle d'une rubrique d'aide
 # Affiche le contenu de la page statique correspondant au slug demandé
 def aide_detail(request, slug):
-    # Récupère la page statique quel que soit son tag
-    page = get_object_or_404(StaticPageMeta, slug=slug, published=True)
+    # ⚠️ On limite explicitement aux pages de catégorie "aide"
+    page = get_object_or_404(StaticPageMeta, slug=slug, published=True, category="aide")
 
     # S'il s'agit de la page d'accueil de l'aide, on fournit aussi les autres pages d'aide
     pages_by_slug = None
     if slug == "aide":
-        autres_pages = StaticPageMeta.objects.filter(published=True).exclude(slug="aide")
+        # ⚠️ On ne liste que les sous-pages d'aide
+        autres_pages = (StaticPageMeta.objects
+                        .filter(published=True, category="aide")
+                        .exclude(slug="aide"))
         pages_by_slug = {p.slug: p for p in autres_pages}
 
     return render(request, "pages/static_page.html", {
