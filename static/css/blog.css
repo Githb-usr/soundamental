@@ -367,16 +367,6 @@ ul#sidebar-categories-list {
   object-fit: cover;
   aspect-ratio: 1 / 1; /* pour carré même sans hauteur */
 }
-@media (max-width: 800px) {
-  #blog-grille-img {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-@media (max-width: 500px) {
-  #blog-grille-img {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
 
 .blog-grille-2x2 {
   display: grid;

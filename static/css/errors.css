@@ -134,7 +134,9 @@
    STYLES ERREUR 500 — écran rétro terminal
    ============================================ */
 
-.bg-primary-gradient::after {
+/* Désactive le fond image UNIQUEMENT sur les pages d'erreur */
+.error-404 .bg-primary-gradient::after,
+.error-500 .bg-primary-gradient::after {
     display: none !important;
 }
 
@@ -176,4 +178,10 @@
 @keyframes scanline {
     0% { left: -100%; }
     100% { left: 100%; }
+}
+
+/* Accessibilité : désactiver les animations si l'utilisateur préfère les réduire */
+@media (prefers-reduced-motion: reduce) {
+  .error-404 .error-message { animation: none !important; }
+  .error-500 .retro-screen::after { animation: none !important; }
 }

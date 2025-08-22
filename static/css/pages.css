@@ -2,6 +2,15 @@
 /* ## pages.css - Styles des pages statiques et dynamiques ## */
 /* ########################################################## */
 
+/* Viewport width fiable (corrige les soucis de 100vw sur Safari/iOS) */
+:root {
+  --vw: 100vw;           /* fallback universel */
+}
+/* Navigateurs modernes (Safari inclus) : utilise l’unité dynamique */
+@supports (width: 100dvw) {
+  :root { --vw: 100dvw; } /* 100dvw ignore les barres/scrollbars problématiques */
+}
+
 /* PAGES STATIQUES */
 /* ############### */
 
@@ -151,16 +160,6 @@
     margin-left: -65px;
     margin-right: -65px;
     padding: 28px 0 22px 0;
-}
-@media (max-width: 900px) {
-    .magazine-wrapper {
-        width: 100%;
-        margin-left: 0;
-        margin-right: 0;
-        border-radius: 0;
-        padding-left: 0;
-        padding-right: 0;
-    }
 }
 
 /* Pages de tags */
@@ -669,7 +668,6 @@
   .main-index .index-results-mobile nav.pagination-container:last-of-type > ul.pagination {
     margin-bottom: 0 !important;
   }
-
 }
 
 /* =============== */
@@ -679,17 +677,18 @@
 /* Carousel responsive : sur mobile, largeur = 100% (pas de débordement) */
 @media (max-width: 900px) {
   .carousel-fullwidth {
-    width: 100vw !important;       /* occupe toute la largeur de la fenêtre */
-    max-width: 100vw !important;
+    width: var(--vw) !important;
+    max-width: var(--vw) !important;
     position: relative !important;
     left: 50%;
     right: 50%;
-    margin-left: -50vw !important; /* aligne sur bord gauche de l'écran */
-    margin-right: -50vw !important;
+    margin-left: calc(-0.5 * var(--vw)) !important;
+    margin-right: calc(-0.5 * var(--vw)) !important;
     padding-left: 0 !important;
     padding-right: 0 !important;
     border-radius: 0 !important;
   }
+
   /* Réduction des marges sur la section intro de la home */
   .intro-section .home-page-title {
     margin-top: 0.5rem !important;   /* réduit l’espace au-dessus du titre */
@@ -713,22 +712,25 @@
     margin-top: 0.5rem !important;
     margin-bottom: 0.5rem !important;
   }
+
   /* Bloc avec magazines */
   .magazine-wrapper {
-    width: 100vw !important;
-    max-width: 100vw !important;
+    width: var(--vw) !important;
+    max-width: var(--vw) !important;
     position: relative !important;
     left: 50%;
     right: 50%;
-    margin-left: -50vw !important;
-    margin-right: -50vw !important;
+    margin-left: calc(-0.5 * var(--vw)) !important;
+    margin-right: calc(-0.5 * var(--vw)) !important;
     border-radius: 0 !important;
   }
+
   /* Bloc avec magazines : marges du bloc */
   .magazine-wrapper {
     margin-top: 0.6rem !important;
     margin-bottom: 0.6rem !important;
   }
+  
   /* Bloc avec magazines : la couleur de fond déborde sur els marges */
   .magazine-wrapper .container {
     padding-left: 16px !important;

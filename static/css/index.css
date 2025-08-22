@@ -30,11 +30,6 @@
     border: 1px solid #0088a8;
 }
 
-/* Supprimer le `gutter-x` de Bootstrap */
-/* .main-index .container, .row {
-    --bs-gutter-x: 0 !important; /* Supprime l'espace horizontal Bootstrap */
-/* } */
-
 /* Supprimer le `gutter-x` de Bootstrap, limité aux lignes de l'index uniquement */
 .main-index .container,
 .main-index .row {
@@ -556,9 +551,9 @@
 
   /* Le bloc mobile sort du conteneur centré et s'étire bord à bord */
   .main-index .index-results-mobile {
-    width: 100vw;                                   /* largeur viewport */
-    margin-left: calc(50% - 50vw);                  /* annule le centrage du .container */
-    margin-right: calc(50% - 50vw);
+    width: var(--vw);                                   /* largeur viewport */
+    margin-left: calc(50% - 0.5 * var(--vw));                  /* annule le centrage du .container */
+    margin-right: calc(50% - 0.5 * var(--vw));
     padding-left: 12px;                              /* léger padding interne */
     padding-right: 12px;
     box-sizing: border-box; /* évite 100vw + padding => plus de tronquage à droite */
@@ -612,8 +607,9 @@
     font-weight: 600;
     overflow: hidden;
     display: -webkit-box;
-    -webkit-line-clamp: 2;        /* 2 lignes max */
     -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;        /* 2 lignes max - WebKit (actuel) */
+    line-clamp: 2;           /* Standard (futur) */
   }
 
   .main-index .index-results-mobile .index-acc-cat {

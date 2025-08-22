@@ -48,11 +48,6 @@
   gap: 6px;
 }
 
-/* Espace sous les entrées d'index */
-.search-index-sub {
-  margin-bottom: 1rem;
-}
-
 /* Pas d'espace après la dernière entrée d'index */
 .search-index-results > .search-index-item:last-child .search-index-sub {
   margin-bottom: 0;
@@ -214,7 +209,6 @@
   height: 18px;
   display: block;             /* supprime l’espace inline */
   color: inherit;             /* sécurité : suit le #fff du parent */
-  vertical-align: middle;
 }
 
 /* Hover/focus : on garde le blanc (pas de variation de couleur) */
@@ -393,44 +387,6 @@
   #search-form .input-group .rounded-start,
   #search-form .input-group .rounded-end {
     border-radius: 0 !important;  /* bords carrés en mode multi-lignes */
-  }
-}
-
-/* Mobile (≤ 576px) : une seule colonne, tout passe en pile, pas de scroll horizontal */
-/* Mobile (≤ 576px) — nom + catégorie sur la 1ʳᵉ ligne, 5 liens sur la 2ᵉ */
-@media (max-width: 576px) {
-  .search-index-results .search-index-line {
-    display: grid;
-    grid-template-columns: 1fr auto;     /* nom flexible, catégorie auto */
-    grid-template-areas:
-      "name cat"
-      "links links";
-    align-items: center;
-    row-gap: 6px;
-    column-gap: 8px;
-  }
-
-  .search-index-results .search-index-name { grid-area: name; }
-
-  .search-index-results .search-index-cat  {
-    grid-area: cat;
-    justify-self: end;                    /* reste sur la 1ʳᵉ ligne à droite */
-    margin: 0;
-    width: auto;                          /* pleine liberté sur mobile */
-    max-width: 100%;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-
-  /* 5 slots fixes sur la 2ᵉ ligne */
-  .search-index-results .search-index-links {
-    grid-area: links;
-    display: grid;
-    grid-template-columns: repeat(5, 44px);
-    gap: 6px;
-    justify-self: start;                  /* aligné à gauche */
-    margin-top: 0;
   }
 }
 
