@@ -1,5 +1,4 @@
-from decouple import Csv, Config, RepositoryEnv
-from decouple import config
+from decouple import config, Csv
 
 # Configuration des administrateurs
 ADMINS = config("ADMINS", default="", cast=Csv())  # Pas de valeur par défaut pour préserver l'adresse mail principale

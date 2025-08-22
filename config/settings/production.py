@@ -1,15 +1,20 @@
+from decouple import config, Csv
 from .base import *
 from .database import DATABASES
 from .security import *
 from .email import *
 from .external import *
 from .project import *
-from decouple import Config, RepositoryEnv
 import os
 
 # Mode production
 DEBUG = False
-ALLOWED_HOSTS = ["127.0.0.1", "localhost", "soundamental.org", "www.soundamental.org"]
+
+# ALLOWED_HOSTS lu depuis les variables d'environnement (o2switch)
+ALLOWED_HOSTS = config("ALLOWED_HOSTS", cast=Csv())
+
+# (optionnel mais recommandé) CSRF depuis l'env aussi
+CSRF_TRUSTED_ORIGINS = config("CSRF_TRUSTED_ORIGINS", default="", cast=Csv())
 
 # Active la compression des fichiers statiques
 STATICFILES_STORAGE = "django.contrib.staticfiles.storage.ManifestStaticFilesStorage"

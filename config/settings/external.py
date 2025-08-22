@@ -1,6 +1,5 @@
 from decouple import config
 import socket
-from decouple import Config, RepositoryEnv
 
 # TinyMCE Configuration
 # Options communes (public/admin)

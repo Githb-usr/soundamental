@@ -4,7 +4,6 @@ from .security import *
 from .email import *
 from .external import *
 from .project import *
-from decouple import Config, RepositoryEnv
 from decouple import config
 
 # Désactiver le debug pour ne pas polluer les tests

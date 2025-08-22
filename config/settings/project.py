@@ -1,5 +1,3 @@
-from decouple import Config, RepositoryEnv
-
 # Structures des principaux liens de Soundamental
 LINK_BASES = {
     "forum": "https://www.soundamental.org/forum/topic/{}",

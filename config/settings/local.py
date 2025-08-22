@@ -4,7 +4,6 @@ from .security import *
 from .email import *
 from .external import *
 from .project import *
-from decouple import Config, RepositoryEnv
 
 # Mode développement
 DEBUG = True

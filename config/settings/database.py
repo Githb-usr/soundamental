@@ -1,5 +1,9 @@
-from decouple import Config, RepositoryEnv
-from decouple import config
+from pathlib import Path
+from decouple import AutoConfig
+from apps.core.compat import mysql  # active le fallback PyMySQL→MySQLdb si mysqlclient est absent
+
+BASE_DIR = Path(__file__).resolve().parent.parent.parent
+config = AutoConfig(search_path=BASE_DIR)
 
 DATABASES = {
     'default': {

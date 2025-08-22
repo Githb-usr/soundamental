@@ -49,27 +49,10 @@ static_collected/
 # Ignore tout le contenu de media/
 media/*
 
-# Sauf les .gitkeep dans tous les sous-dossiers de media/
-!media/.gitkeep
-!media/site/.gitkeep
-!media/site/**
-!media/downloads/.gitkeep
-!media/downloads/data/.gitkeep
-!media/downloads/images/.gitkeep
-!media/users/.gitkeep
-!media/artistes/.gitkeep
-!media/compilations/.gitkeep
-!media/labels/.gitkeep
-!media/pressages/.gitkeep
-!media/blog/.gitkeep
-!media/blog/autres/.gitkeep
-!media/blog/illustrations/.gitkeep
-!media/blog/news_artistes/.gitkeep
-!media/blog/news_evenements/.gitkeep
-!media/blog/news_forum/.gitkeep
-!media/blog/news_labels/.gitkeep
-!media/blog/news_site/.gitkeep
-
+# Ignore tout le contenu de /media (uploads), mais garde les .gitkeep
+/media/**
+!/media/**/
+!/media/**/.gitkeep
 
 # Ignore les fichiers de tests et coverage (si tu fais des tests)
 .coverage
@@ -85,3 +68,9 @@ arborescence.txt
 arborescence_*.txt
 carrousel_images.json
 carrousel_update.py
+
+# o2switch / Passenger
+.htaccess
+passenger_wsgi.py
+tmp/
+temp/
