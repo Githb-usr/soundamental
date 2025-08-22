@@ -98,6 +98,13 @@
     min-width: 0;
 }
 
+/* Carrousel accueil — largeur étendue sur desktop/tablette */
+.carousel-fullwidth {
+  width: calc(100% + 130px);
+  margin-left: -65px;
+  margin-right: -65px;
+}
+
 /* Par défaut (toutes tailles) : indicateurs en "points" ronds */
 #homeCarousel .carousel-indicators [data-bs-target] {
     width: 10px;                 /* diamètre du point */
@@ -736,6 +743,15 @@
   /* Réduction de l'espace sous les titres du footer */
   footer h5 {
     margin-bottom: 0 !important;
+  }
+}
+
+/* Carrousel accueil — Desktop = 4 images, <768px = 3 images (on masque la 4e) */
+@media (max-width: 767.98px) {
+  /* Masque uniquement la 4e vignette du slide en vue mobile/tablette étroite.
+     Les 3 restantes occupent automatiquement toute la largeur (flex). */
+  .carousel-slide-row > img:nth-child(4) {
+    display: none;
   }
 }
 

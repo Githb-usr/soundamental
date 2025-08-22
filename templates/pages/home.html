@@ -6,7 +6,7 @@
 
 {% block content %}
     <!-- Carousel principal -->
-    <section class="carousel-fullwidth" style="width: calc(100% + 130px); margin-left: -65px; margin-right: -65px;">
+    <section class="carousel-fullwidth">
         <div id="homeCarousel" class="carousel slide" data-bs-ride="carousel">
             <!-- Points ronds pour naviguer -->
             <div class="carousel-indicators">
@@ -19,7 +19,14 @@
                 <div class="carousel-item {% if forloop.first %}active{% endif %}">
                     <div class="carousel-slide-row">
                         {% for img in slide %}
-                            <img src="{{ img }}" class="carousel-img" alt="Image {{ forloop.parentloop.counter }}-{{ forloop.counter }}">
+                            <img src="{{ img }}"
+                                class="carousel-img"
+                                alt="Image {{ forloop.parentloop.counter }}-{{ forloop.counter }}"
+                                {% if forloop.parentloop.first and forloop.first %}
+                                    loading="eager" fetchpriority="high" decoding="sync"
+                                {% else %}
+                                    loading="lazy" decoding="async"
+                                {% endif %}>                        
                         {% endfor %}
                     </div>
                 </div>

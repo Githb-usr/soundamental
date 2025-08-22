@@ -9,6 +9,7 @@ import os
 
 # Mode production
 DEBUG = False
+DEBUG_PROPAGATE_EXCEPTIONS = False
 
 # ALLOWED_HOSTS lu depuis les variables d'environnement (o2switch)
 ALLOWED_HOSTS = config("ALLOWED_HOSTS", cast=Csv())
