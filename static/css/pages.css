@@ -2,15 +2,6 @@
 /* ## pages.css - Styles des pages statiques et dynamiques ## */
 /* ########################################################## */
 
-/* Viewport width fiable (corrige les soucis de 100vw sur Safari/iOS) */
-:root {
-  --vw: 100vw;           /* fallback universel */
-}
-/* Navigateurs modernes (Safari inclus) : utilise l’unité dynamique */
-@supports (width: 100dvw) {
-  :root { --vw: 100dvw; } /* 100dvw ignore les barres/scrollbars problématiques */
-}
-
 /* PAGES STATIQUES */
 /* ############### */
 
@@ -717,11 +708,16 @@
   .magazine-wrapper {
     width: var(--vw) !important;
     max-width: var(--vw) !important;
-    position: relative !important;
-    left: 50%;
-    right: 50%;
-    margin-left: calc(-0.5 * var(--vw)) !important;
-    margin-right: calc(-0.5 * var(--vw)) !important;
+
+    /* centrage plein viewport sans offsets latéraux */
+    margin-left: calc(50% - 0.5 * var(--vw)) !important;
+    margin-right: calc(50% - 0.5 * var(--vw)) !important;
+
+    /* neutraliser les offsets qui font buguer Safari */
+    left: auto !important;
+    right: auto !important;
+    position: static !important; /* (ou supprime position si pas nécessaire) */
+
     border-radius: 0 !important;
   }
 

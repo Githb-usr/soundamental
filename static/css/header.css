@@ -405,6 +405,7 @@ nav.user-menu .dropdown-menu .dropdown-item:hover {
         padding-left: 0 !important;
         margin: 0 !important;
     }
+
     #mainNavList.open {
         display: flex !important;
     }
@@ -558,4 +559,19 @@ nav.user-menu .dropdown-menu .dropdown-item:hover {
         flex-direction: row !important;
         justify-content: center !important;
     }
+}
+
+@media (max-width: 991px) and (max-height: 500px) {
+  #mainNavList.open {
+    position: fixed !important;
+    top: 60px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: block !important;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 10px; /* permet d’afficher complètement la dernière ligne */
+  }
 }

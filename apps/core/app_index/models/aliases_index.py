@@ -63,12 +63,12 @@ class IndexAlias(models.Model):
         # Un alias normalisé est unique au sein d'une catégorie (évite doublons inter-entrées)
         constraints = [
             models.UniqueConstraint(
-                fields=["category", "alias_normalized"],
-                name="uniq_alias_normalized_per_category"
+                fields=["alias_normalized"],
+                name="uniq_alias_normalized_global"
             )
         ]
         indexes = [
-            models.Index(fields=["category", "alias_normalized"]),
+            models.Index(fields=["alias_normalized"]),
             models.Index(fields=["entry"]),
         ]
         ordering = ["alias"]
@@ -128,36 +128,38 @@ class IndexAlias(models.Model):
         if alias_norm and principal_norm and alias_norm == principal_norm:
             raise ValidationError({"alias": "Cet alias équivaut (normalisé) au nom principal de l'entrée."})
 
-        # 3) Alias = nom principal d'une autre entrée de la même catégorie → interdit
-        if self.category_id and alias_norm:
-            # Recherche potentiels conflits (même catégorie, autre entrée)
-            conflicts = IndexEntry.objects.filter(category_id=self.category_id).exclude(pk=self.entry_id)
-            for e in conflicts.only("id", "name"):
-                if IndexAlias.normalize(e.name) == alias_norm:
-                    raise ValidationError({"alias": f"Conflit avec l'entrée '{e.name}' de la même catégorie. "
-                                                    f"Incrémentez le nom (ex. '... (2)') si intentionnel."})
-        
-        # (4) Conflit avec un AUTRE ALIAS (même catégorie)
+        # 3) Conflit avec un NOM PRINCIPAL d'une AUTRE entrée (toutes catégories)
+        conflicts = IndexEntry.objects.exclude(pk=self.entry_id).only("id", "name")
+        for e in conflicts:
+            if IndexAlias.normalize(e.name) == alias_norm:
+                raise ValidationError({"alias": (
+                    f"Conflit avec l'entrée '{e.name}' (toute catégorie). "
+                    f"Incrémentez le nom (ex. '... (2)') si intentionnel."
+                )})
+
+        # 4) Conflit avec un AUTRE ALIAS (toutes catégories)
         other_alias = (
             IndexAlias.objects
-            .filter(category_id=self.category_id, alias_normalized=alias_norm)
+            .filter(alias_normalized=alias_norm)
             .exclude(pk=self.pk)
             .select_related("entry")
             .first()
         )
         if other_alias:
             raise ValidationError({"alias": (
-                f"Alias déjà utilisé par l'entrée '{other_alias.entry.name}' dans cette catégorie. "
+                f"Alias déjà utilisé par l'entrée '{other_alias.entry.name}' (toute catégorie). "
                 f"Modifiez l'alias ou incrémentez-le (ex. '... (2)')."
             )})
 
     def save(self, *args, **kwargs):
-        """
-        Alimente automatiquement la catégorie et la version normalisée avant sauvegarde.
-        """
+        # Alimente d'abord les champs dépendants
         if self.entry and (not self.category_id or self.category_id != self.entry.category_id):
             self.category = self.entry.category
         self.alias_normalized = IndexAlias.normalize(self.alias or "")
+
+        # Vérification applicative globale avant écriture
+        self.full_clean()
+
         super().save(*args, **kwargs)
 
 
@@ -234,22 +236,22 @@ def _suggest_inversion_alias(name: str, category_code: str | None) -> list[str]:
 
 def _filter_valid_candidates(entry: IndexEntry, candidates: list[str]) -> list[str]:
     """
-    Filtre les suggestions pour éviter les conflits avant création :
+    Filtre les suggestions pour éviter les conflits avant création (UNICITÉ GLOBALE) :
     - retire vides / égales (normalisées) au principal,
-    - retire celles déjà existantes (alias_normalized unique en catégorie),
-    - retire celles qui égalent (normalisées) le nom principal d'une autre entrée de la même catégorie.
+    - retire celles déjà existantes comme alias (toutes catégories),
+    - retire celles qui égalent le nom principal d'une AUTRE entrée (toutes catégories).
     """
     principal_norm = IndexAlias.normalize(entry.name)
     seen = set()
     valid: list[str] = []
 
-    # Index existant des alias normalisés (toutes entrées) pour cette catégorie
+    # Tous alias normalisés (toutes catégories)
     existing_alias_norms = set(
-        IndexAlias.objects.filter(category=entry.category).values_list("alias_normalized", flat=True)
+        IndexAlias.objects.values_list("alias_normalized", flat=True)
     )
 
-    # Prépare la liste des autres noms principaux (normalisés) de la même catégorie
-    other_entries = IndexEntry.objects.filter(category=entry.category).exclude(pk=entry.pk).only("name")
+    # Tous autres noms principaux (normalisés), toutes catégories
+    other_entries = IndexEntry.objects.exclude(pk=entry.pk).only("name")
     other_principal_norms = {IndexAlias.normalize(e.name) for e in other_entries}
 
     for cand in candidates:
@@ -259,9 +261,9 @@ def _filter_valid_candidates(entry: IndexEntry, candidates: list[str]) -> list[s
         if norm == principal_norm:
             continue  # même que principal
         if norm in existing_alias_norms:
-            continue  # alias déjà présent ailleurs
+            continue  # déjà utilisé comme alias
         if norm in other_principal_norms:
-            # conflit avec un autre nom principal de la même catégorie → on ignore (tu pourras créer '... (2)' si besoin)
+            # conflit avec un autre nom principal → à toi d'incrémenter ("... (2)") si intentionnel
             continue
         if norm in seen:
             continue
@@ -269,7 +271,6 @@ def _filter_valid_candidates(entry: IndexEntry, candidates: list[str]) -> list[s
         valid.append(cand)
 
     return valid
-
 
 def suggest_aliases_for_entry(entry: IndexEntry) -> list[str]:
     """
@@ -300,9 +301,7 @@ def auto_create_suggested_aliases(sender, instance: IndexEntry, created, **kwarg
         candidates = suggest_aliases_for_entry(instance)
         for text in candidates:
             norm = IndexAlias.normalize(text)
-            exists = IndexAlias.objects.filter(
-                category=instance.category, alias_normalized=norm
-            ).exists()
+            exists = IndexAlias.objects.filter(alias_normalized=norm).exists()
             if not exists:
                 IndexAlias.objects.create(entry=instance, alias=text)
     except Exception:

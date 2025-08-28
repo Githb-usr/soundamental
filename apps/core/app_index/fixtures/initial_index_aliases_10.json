@@ -1,0 +1,1898 @@
+[
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "The Free"
+      ],
+      "alias": "Free, The",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "free, the"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "The Game"
+      ],
+      "alias": "Game, The",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "game, the"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "The Good Men"
+      ],
+      "alias": "Good Men, The",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "good men, the"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "The Grid"
+      ],
+      "alias": "Grid, The",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "grid, the"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "The Groovebusters"
+      ],
+      "alias": "Groovebusters, The",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "groovebusters, the"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "The Hard Concert"
+      ],
+      "alias": "Hard Concert, The",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "hard concert, the"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "The Heartists"
+      ],
+      "alias": "Heartists, The",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "heartists, the"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "The Hypnotist"
+      ],
+      "alias": "Hypnotist, The",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "hypnotist, the"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "The Insects"
+      ],
+      "alias": "Insects, The",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "insects, the"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "The Irrepressibles"
+      ],
+      "alias": "Irrepressibles, The",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "irrepressibles, the"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "The Joker's"
+      ],
+      "alias": "Joker's, The",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "joker's, the"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "The K-Melody"
+      ],
+      "alias": "K-Melody, The",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "k-melody, the"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "The KLF"
+      ],
+      "alias": "KLF, The",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "klf, the"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "The Libertines"
+      ],
+      "alias": "Libertines, The",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "libertines, the"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "The Lost Fingers"
+      ],
+      "alias": "Lost Fingers, The",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "lost fingers, the"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "The M.A.F. X-Perience"
+      ],
+      "alias": "The MAF X-Perience",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "the maf x-perience"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "The M.A.F. X-Perience"
+      ],
+      "alias": "M.A.F. X-Perience, The",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "m.a.f. x-perience, the"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "The M.A.F. X-Perience"
+      ],
+      "alias": "MAF X-Perience, The",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "maf x-perience, the"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "The Mackenzie"
+      ],
+      "alias": "Mackenzie, The",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "mackenzie, the"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "The Mad Stuntman"
+      ],
+      "alias": "Mad Stuntman, The",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "mad stuntman, the"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "The Magician"
+      ],
+      "alias": "Magician, The",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "magician, the"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "The Mamas & The Papas"
+      ],
+      "alias": "Mamas & The Papas, The",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "mamas & the papas, the"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "The Manor"
+      ],
+      "alias": "Manor, The",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "manor, the"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "The Marquis"
+      ],
+      "alias": "Marquis, The",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "marquis, the"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "The Master"
+      ],
+      "alias": "Master, The",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "master, the"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "The Maxx"
+      ],
+      "alias": "Maxx, The",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "maxx, the"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "The Michael Zager Band"
+      ],
+      "alias": "Michael Zager Band, The",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "michael zager band, the"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "The Modern"
+      ],
+      "alias": "Modern, The",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "modern, the"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "The Montini Experience"
+      ],
+      "alias": "Montini Experience, The",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "montini experience, the"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "The O.T. Quartet"
+      ],
+      "alias": "O.T. Quartet, The",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "o.t. quartet, the"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "The O.T. Quartet"
+      ],
+      "alias": "The OT Quartet",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "the ot quartet"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "The O.T. Quartet"
+      ],
+      "alias": "OT Quartet, The",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "ot quartet, the"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "The Object"
+      ],
+      "alias": "Object, The",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "object, the"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "The Off-Key Hat"
+      ],
+      "alias": "Off-Key Hat, The",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "off-key hat, the"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "The Operator"
+      ],
+      "alias": "Operator, The",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "operator, the"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "The Original"
+      ],
+      "alias": "Original, The",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "original, the"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "The Outhere Brothers"
+      ],
+      "alias": "Outhere Brothers, The",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "outhere brothers, the"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "The Overlookers"
+      ],
+      "alias": "Overlookers, The",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "overlookers, the"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "The Parakit"
+      ],
+      "alias": "Parakit, The",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "parakit, the"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "The Platform"
+      ],
+      "alias": "Platform, The",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "platform, the"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "The Presets"
+      ],
+      "alias": "Presets, The",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "presets, the"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "The Pretenders"
+      ],
+      "alias": "Pretenders, The",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "pretenders, the"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "The Prince Karma"
+      ],
+      "alias": "Prince Karma, The",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "prince karma, the"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "The Prodigy"
+      ],
+      "alias": "Prodigy, The",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "prodigy, the"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "The Prodigy"
+      ],
+      "alias": "Prodigy",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "prodigy"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "The Pusher"
+      ],
+      "alias": "Pusher, The",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "pusher, the"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "The Rapino Brothers"
+      ],
+      "alias": "Rapino Brothers, The",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "rapino brothers, the"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "The Rave Family"
+      ],
+      "alias": "Rave Family, The",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "rave family, the"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "The Reese Project"
+      ],
+      "alias": "Reese Project, The",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "reese project, the"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "The Rock Steady Crew"
+      ],
+      "alias": "Rock Steady Crew, The",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "rock steady crew, the"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "The Sensitives"
+      ],
+      "alias": "Sensitives, The",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "sensitives, the"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "The Shamen"
+      ],
+      "alias": "Shamen, The",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "shamen, the"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "The Shapeshifters"
+      ],
+      "alias": "Shapeshifters, The",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "shapeshifters, the"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "The Shoes"
+      ],
+      "alias": "Shoes, The",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "shoes, the"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "The Snatch"
+      ],
+      "alias": "Snatch, The",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "snatch, the"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "The Soundlovers"
+      ],
+      "alias": "Soundlovers, The",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "soundlovers, the"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "The Source"
+      ],
+      "alias": "Source, The",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "source, the"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "The Space Brothers"
+      ],
+      "alias": "Space Brothers, The",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "space brothers, the"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "The Stranglers"
+      ],
+      "alias": "Stranglers, The",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "stranglers, the"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "The Superkill"
+      ],
+      "alias": "Superkill, The",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "superkill, the"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "The Supermen Lovers"
+      ],
+      "alias": "Supermen Lovers, The",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "supermen lovers, the"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "The Tamperer"
+      ],
+      "alias": "Tamperer, The",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "tamperer, the"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "The Time Frequency"
+      ],
+      "alias": "Time Frequency, The",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "time frequency, the"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "The Tragic 144"
+      ],
+      "alias": "Tragic 144, The",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "tragic 144, the"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "The Ultimate Dream Mix"
+      ],
+      "alias": "Ultimate Dream Mix, The",
+      "is_listed": true,
+      "category": 3,
+      "alias_normalized": "ultimate dream mix, the"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "The Ultimate Seduction"
+      ],
+      "alias": "Ultimate Seduction, The",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "ultimate seduction, the"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "The Underdog Project"
+      ],
+      "alias": "Underdog Project, The",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "underdog project, the"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "The Unity Mixers"
+      ],
+      "alias": "Unity Mixers, The",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "unity mixers, the"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "The Vegetarians"
+      ],
+      "alias": "Vegetarians, The",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "vegetarians, the"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "The Voca People"
+      ],
+      "alias": "Voca People, The",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "voca people, the"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "The Voice Of Dance"
+      ],
+      "alias": "Voice Of Dance, The",
+      "is_listed": true,
+      "category": 3,
+      "alias_normalized": "voice of dance, the"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "The Washington Affair"
+      ],
+      "alias": "Washington Affair, The",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "washington affair, the"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "The Weather Girls"
+      ],
+      "alias": "Weather Girls, The",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "weather girls, the"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "The Weeknd"
+      ],
+      "alias": "Weeknd, The",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "weeknd, the"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "The World Wide Message Tribe"
+      ],
+      "alias": "World Wide Message Tribe, The",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "world wide message tribe, the"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "The Young Professionals"
+      ],
+      "alias": "Young Professionals, The",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "young professionals, the"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Thierry Hazard"
+      ],
+      "alias": "Hazard, Thierry",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "hazard, thierry"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Thierry Pastor"
+      ],
+      "alias": "Pastor, Thierry",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "pastor, thierry"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Thomas Anders"
+      ],
+      "alias": "Anders, Thomas",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "anders, thomas"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Thomas Azier"
+      ],
+      "alias": "Azier, Thomas",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "azier, thomas"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Thomas Bronzwaer"
+      ],
+      "alias": "Bronzwaer, Thomas",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "bronzwaer, thomas"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Thomas Newson"
+      ],
+      "alias": "Newson, Thomas",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "newson, thomas"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Thomas Petersen"
+      ],
+      "alias": "Petersen, Thomas",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "petersen, thomas"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Tim Deluxe"
+      ],
+      "alias": "Deluxe, Tim",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "deluxe, tim"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Tim Stamton"
+      ],
+      "alias": "Stamton, Tim",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "stamton, tim"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Timi Kullai"
+      ],
+      "alias": "Kullai, Timi",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "kullai, timi"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Timo Maas"
+      ],
+      "alias": "Maas, Timo",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "maas, timo"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Tina Cousins"
+      ],
+      "alias": "Cousins, Tina",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "cousins, tina"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Tina Safrany"
+      ],
+      "alias": "Safrany, Tina",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "safrany, tina"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Tina Turner"
+      ],
+      "alias": "Turner, Tina",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "turner, tina"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "TNN"
+      ],
+      "alias": "T.N.N.",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "t.n.n."
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "TLD"
+      ],
+      "alias": "T.L.D.",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "t.l.d."
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Todd Terry"
+      ],
+      "alias": "Terry, Todd",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "terry, todd"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Tom Beser"
+      ],
+      "alias": "Beser, Tom",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "beser, tom"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Tom Snare"
+      ],
+      "alias": "Snare, Tom",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "snare, tom"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Tom Wilson"
+      ],
+      "alias": "Wilson, Tom",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "wilson, tom"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Tommie Jenkins"
+      ],
+      "alias": "Jenkins, Tommie",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "jenkins, tommie"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Toni H."
+      ],
+      "alias": "Toni H",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "toni h"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Toni H."
+      ],
+      "alias": "H., Toni",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "h., toni"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Toni H."
+      ],
+      "alias": "H, Toni",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "h, toni"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Tony Di Bart"
+      ],
+      "alias": "Di Bart, Tony",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "di bart, tony"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Tony Salmonelli"
+      ],
+      "alias": "Salmonelli, Tony",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "salmonelli, tony"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Tony T."
+      ],
+      "alias": "Tony T",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "tony t"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Tony T."
+      ],
+      "alias": "T., Tony",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "t., tony"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Tony T."
+      ],
+      "alias": "T, Tony",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "t, tony"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Tony T."
+      ],
+      "alias": "Tony Dyer",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "tony dyer"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Tony T."
+      ],
+      "alias": "Dyer, Tony",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "dyer, tony"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Tony Xandrou"
+      ],
+      "alias": "Xandrou, Tony",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "xandrou, tony"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Tori Amos"
+      ],
+      "alias": "Amos, Tori",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "amos, tori"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "TPO"
+      ],
+      "alias": "T.P.O.",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "t.p.o."
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Tracy Anne"
+      ],
+      "alias": "Anne, Tracy",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "anne, tracy"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Tristan Garner"
+      ],
+      "alias": "Garner, Tristan",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "garner, tristan"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "U.H.F."
+      ],
+      "alias": "UHF",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "uhf"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "U.N.A."
+      ],
+      "alias": "UNA",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "una"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "U.S.U.R.A."
+      ],
+      "alias": "USURA",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "usura"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "V.I.P. (2)"
+      ],
+      "alias": "VIP (2)",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "vip (2)"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Valeria Vix"
+      ],
+      "alias": "Vix, Valeria",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "vix, valeria"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Valerie Dore"
+      ],
+      "alias": "Dore, Valerie",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "dore, valerie"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Valery Scott"
+      ],
+      "alias": "Scott, Valery",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "scott, valery"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Vanessa Paradis"
+      ],
+      "alias": "Paradis, Vanessa",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "paradis, vanessa"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "VCMG"
+      ],
+      "alias": "V.C.M.G.",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "v.c.m.g."
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Veronika Loubry"
+      ],
+      "alias": "Loubry, Veronika",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "loubry, veronika"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Véronique Jannot"
+      ],
+      "alias": "Jannot, Véronique",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "jannot, veronique"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Vic Palminteri"
+      ],
+      "alias": "Palminteri, Vic",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "palminteri, vic"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Vincent Léoty"
+      ],
+      "alias": "Léoty, Vincent",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "leoty, vincent"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Vincent Piguet"
+      ],
+      "alias": "Piguet, Vincent",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "piguet, vincent"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Vladimir Cauchemar"
+      ],
+      "alias": "Cauchemar, Vladimir",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "cauchemar, vladimir"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Vladimir Cosma"
+      ],
+      "alias": "Cosma, Vladimir",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "cosma, vladimir"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "VNV Nation"
+      ],
+      "alias": "V.N.V. Nation",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "v.n.v. nation"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "W.L.D."
+      ],
+      "alias": "WLD",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "wld"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Wadey Nara"
+      ],
+      "alias": "Nara, Wadey",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "nara, wadey"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Wanda Fisher"
+      ],
+      "alias": "Fisher, Wanda",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "fisher, wanda"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Wayne Beckford"
+      ],
+      "alias": "Beckford, Wayne",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "beckford, wayne"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Wendel Kos"
+      ],
+      "alias": "Kos, Wendel",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "kos, wendel"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Werner Wichtig"
+      ],
+      "alias": "Wichtig, Werner",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "wichtig, werner"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Will Smith"
+      ],
+      "alias": "Smith, Will",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "smith, will"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "William Naraine"
+      ],
+      "alias": "Naraine, William",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "naraine, william"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "William Sheller"
+      ],
+      "alias": "Sheller, William",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "sheller, william"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Willy Moon"
+      ],
+      "alias": "Moon, Willy",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "moon, willy"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "XOD"
+      ],
+      "alias": "X.O.D.",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "x.o.d."
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "XTM"
+      ],
+      "alias": "X.T.M.",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "x.t.m."
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Yan Wagner"
+      ],
+      "alias": "Wagner, Yan",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "wagner, yan"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Yasmine Nine"
+      ],
+      "alias": "Nine, Yasmine",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "nine, yasmine"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Ysa Ferrer"
+      ],
+      "alias": "Ferrer, Ysa",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "ferrer, ysa"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Ysabelle Lacamp"
+      ],
+      "alias": "Lacamp, Ysabelle",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "lacamp, ysabelle"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Yta Farrow"
+      ],
+      "alias": "Farrow, Yta",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "farrow, yta"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Yves Deruyter"
+      ],
+      "alias": "Deruyter, Yves",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "deruyter, yves"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Yves Larock"
+      ],
+      "alias": "Larock, Yves",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "larock, yves"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Yves Murasca"
+      ],
+      "alias": "Murasca, Yves",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "murasca, yves"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Yvette Horner"
+      ],
+      "alias": "Horner, Yvette",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "horner, yvette"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "YXXY"
+      ],
+      "alias": "Y.X.X.Y.",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "y.x.x.y."
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Zaho De Sagazan"
+      ],
+      "alias": "De Sagazan, Zaho",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "de sagazan, zaho"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Zaza Fournier"
+      ],
+      "alias": "Fournier, Zaza",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "fournier, zaza"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Zizi Jeanmaire"
+      ],
+      "alias": "Jeanmaire, Zizi",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "jeanmaire, zizi"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Zoë Badwi"
+      ],
+      "alias": "Badwi, Zoë",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "badwi, zoe"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Zoë Johnston"
+      ],
+      "alias": "Johnston, Zoë",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "johnston, zoe"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Zuum!"
+      ],
+      "alias": "Zuum",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "zuum"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "[Flashwave][77]"
+      ],
+      "alias": "Flashwave 77",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "flashwave 77"
+    }
+  }
+]

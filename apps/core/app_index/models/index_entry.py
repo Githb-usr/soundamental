@@ -10,6 +10,21 @@ from .page_existence import PageExistence
 # Entrée principale de l'index
 # ===============================
 
+class IndexEntryManager(models.Manager):
+    """
+    Permet à 'loaddata' de résoudre une FK via une natural key: ("Nom exact",)
+    Exemple dans fixture: "entry": ["Michael Jackson"]
+    """
+    def get_by_natural_key(self, name: str):
+        return self.get(name=name)
+
+    def natural_key(self):
+        """
+        Natural key = tuple à 1 élément (le 'name' globalement unique).
+        Autorise les fixtures à référencer l'entrée par son nom.
+        """
+        return (self.name,)
+
 class IndexEntry(models.Model):
     """
     Modèle représentant une entrée de l'index général et thématique.
@@ -35,6 +50,8 @@ class IndexEntry(models.Model):
         verbose_name="ID Forum",
         help_text="ID du forum sous la forme '12345-slug' (ex: 9699-stereotype)"
     )
+    
+    objects = IndexEntryManager()
 
     class Meta:
         indexes = [

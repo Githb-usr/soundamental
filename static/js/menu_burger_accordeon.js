@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     let lastIsMobile = null;
 
     function isMobileMenu() {
@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function deactivateBootstrapDropdowns() {
-        document.querySelectorAll('.site-menu .nav-item.dropdown > .nav-link').forEach(function(link) {
+        document.querySelectorAll('.site-menu .nav-item.dropdown > .nav-link').forEach(function (link) {
             link.removeAttribute('data-bs-toggle');
             link.removeAttribute('aria-expanded');
             link.classList.remove('dropdown-toggle');
@@ -14,33 +14,31 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function activateBootstrapDropdowns() {
-        document.querySelectorAll('.site-menu .nav-item.dropdown > .nav-link').forEach(function(link) {
+        document.querySelectorAll('.site-menu .nav-item.dropdown > .nav-link').forEach(function (link) {
             link.setAttribute('data-bs-toggle', 'dropdown');
             link.setAttribute('aria-expanded', 'false');
             link.classList.add('dropdown-toggle');
         });
-        // Supprime la classe "open" éventuelle
-        document.querySelectorAll('.site-menu .nav-item.dropdown').forEach(function(item){
+        document.querySelectorAll('.site-menu .nav-item.dropdown').forEach(function (item) {
             item.classList.remove('open');
         });
     }
 
-    // Nettoie tous les anciens listeners sur les liens de dropdown mobile
     function removeMobileListeners() {
-        document.querySelectorAll('.site-menu .nav-item.dropdown > .nav-link').forEach(function(link) {
+        document.querySelectorAll('.site-menu .nav-item.dropdown > .nav-link').forEach(function (link) {
             link.replaceWith(link.cloneNode(true));
         });
     }
 
-    // Active l'accordéon mobile (une seule fois)
     function activateAccordionBurgerMenu() {
-        document.querySelectorAll('.site-menu .nav-item.dropdown > .nav-link').forEach(function(parentLink) {
-            parentLink.addEventListener('click', function(e) {
+        document.querySelectorAll('.site-menu .nav-item.dropdown > .nav-link').forEach(function (parentLink) {
+            parentLink.addEventListener('click', function (e) {
                 e.preventDefault();
                 var parentItem = this.parentElement;
-                // Ferme les autres
-                document.querySelectorAll('.site-menu .nav-item.dropdown').forEach(function(item){
-                    if(item!==parentItem){item.classList.remove('open');}
+                document.querySelectorAll('.site-menu .nav-item.dropdown').forEach(function (item) {
+                    if (item !== parentItem) {
+                        item.classList.remove('open');
+                    }
                 });
                 parentItem.classList.toggle('open');
             });
@@ -49,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function refreshMenuBehavior() {
         const isMobile = isMobileMenu();
-        if (isMobile === lastIsMobile) return; // évite les re-exécutions inutiles
+        if (isMobile === lastIsMobile) return;
         lastIsMobile = isMobile;
 
         removeMobileListeners();
@@ -61,9 +59,27 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Initialisation
     refreshMenuBehavior();
-
-    // Mise à jour sur redimensionnement de la fenêtre
     window.addEventListener('resize', refreshMenuBehavior);
+
+    const burger = document.getElementById("burgerIcon");
+    const navList = document.getElementById("mainNavList");
+
+    if (burger && navList) {
+        burger.addEventListener("click", function () {
+            navList.classList.toggle("open");
+            navList.style.display = navList.classList.contains("open") ? "block" : "";
+        });
+
+        document.addEventListener("click", function (event) {
+            const isOpen = navList.classList.contains("open");
+            const clickedInsideMenu = navList.contains(event.target);
+            const clickedBurger = burger.contains(event.target);
+
+            if (isOpen && !clickedInsideMenu && !clickedBurger) {
+                navList.classList.remove("open");
+                navList.style.display = "";
+            }
+        }, true); // capture
+    }
 });

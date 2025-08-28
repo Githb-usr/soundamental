@@ -1,0 +1,1550 @@
+[
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Benny B."
+      ],
+      "alias": "Benny B",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "benny b"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Benny B."
+      ],
+      "alias": "B., Benny",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "b., benny"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Benny B."
+      ],
+      "alias": "B, Benny",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "b, benny"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Benny Benassi"
+      ],
+      "alias": "Benassi, Benny",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "benassi, benny"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Bernard Minet"
+      ],
+      "alias": "Minet, Bernard",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "minet, bernard"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Bernard Tapie"
+      ],
+      "alias": "Tapie, Bernard",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "tapie, bernard"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Beth Ditto"
+      ],
+      "alias": "Ditto, Beth",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "ditto, beth"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Beth Jeans Houghton"
+      ],
+      "alias": "Houghton, Beth Jeans",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "houghton, beth jeans"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Bethany Kay"
+      ],
+      "alias": "Kay, Bethany",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "kay, bethany"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Betty Boo"
+      ],
+      "alias": "Boo, Betty",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "boo, betty"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Beverley Knight"
+      ],
+      "alias": "Knight, Beverley",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "knight, beverley"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Billy Crawford"
+      ],
+      "alias": "Crawford, Billy",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "crawford, billy"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Björk"
+      ],
+      "alias": "Björk Guðmundsdóttir",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "bjork gudmundsdottir"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Björk"
+      ],
+      "alias": "Guðmundsdóttir, Björk",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "gudmundsdottir, bjork"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Blake Amado"
+      ],
+      "alias": "Amado, Blake",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "amado, blake"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Bob Sinclar"
+      ],
+      "alias": "Sinclar, Bob",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "sinclar, bob"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Bonnie Tyler"
+      ],
+      "alias": "Tyler, Bonnie",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "tyler, bonnie"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "B.P.M."
+      ],
+      "alias": "BPM",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "bpm"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Brian Cross"
+      ],
+      "alias": "Cross, Brian",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "cross, brian"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Bridget Bones"
+      ],
+      "alias": "Bones, Bridget",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "bones, bridget"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Brigitte Fontaine"
+      ],
+      "alias": "Fontaine, Brigitte",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "fontaine, brigitte"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Bruno Sanchioni"
+      ],
+      "alias": "Sanchioni, Bruno",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "sanchioni, bruno"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Byron Stingily"
+      ],
+      "alias": "Stingily, Byron",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "stingily, byron"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Calvin Harris"
+      ],
+      "alias": "Harris, Calvin",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "harris, calvin"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Camélia Jordana"
+      ],
+      "alias": "Jordana, Camélia",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "jordana, camelia"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Camille Saféris"
+      ],
+      "alias": "Saféris, Camille",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "saferis, camille"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Carl Cox"
+      ],
+      "alias": "Cox, Carl",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "cox, carl"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Carl Fanini"
+      ],
+      "alias": "Fanini, Carl",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "fanini, carl"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Carl Linger"
+      ],
+      "alias": "Linger, Carl",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "linger, carl"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Carmen Maria Vega"
+      ],
+      "alias": "Vega, Carmen Maria",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "vega, carmen maria"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Caro Emerald"
+      ],
+      "alias": "Emerald, Caro",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "emerald, caro"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Carol Arnauld"
+      ],
+      "alias": "Arnauld, Carol",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "arnauld, carol"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Carol B."
+      ],
+      "alias": "Carol B",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "carol b"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Carol B."
+      ],
+      "alias": "B., Carol",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "b., carol"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Carol B."
+      ],
+      "alias": "B, Carol",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "b, carol"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Carol Bailey"
+      ],
+      "alias": "Bailey, Carol",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "bailey, carol"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Carol Jiani"
+      ],
+      "alias": "Jiani, Carol",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "jiani, carol"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Caroline Grimm"
+      ],
+      "alias": "Grimm, Caroline",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "grimm, caroline"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Caroline Legrand"
+      ],
+      "alias": "Legrand, Caroline",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "legrand, caroline"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Caroline Loeb"
+      ],
+      "alias": "Loeb, Caroline",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "loeb, caroline"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Catherine Ringer"
+      ],
+      "alias": "Ringer, Catherine",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "ringer, catherine"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Cathy Dennis"
+      ],
+      "alias": "Dennis, Cathy",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "dennis, cathy"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Cauet"
+      ],
+      "alias": "Sébastien Cauet",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "sebastien cauet"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Cauet"
+      ],
+      "alias": "Cauet, Sébastien",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "cauet, sebastien"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "CB Milton"
+      ],
+      "alias": "Milton, CB",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "milton, cb"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "CB Milton"
+      ],
+      "alias": "C.B. Milton",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "c.b. milton"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "CB Milton"
+      ],
+      "alias": "Milton, C.B.",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "milton, c.b."
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Ce Ce Peniston"
+      ],
+      "alias": "CeCe Peniston",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "cece peniston"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Ce Ce Peniston"
+      ],
+      "alias": "Peniston, Ce Ce",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "peniston, ce ce"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Ce Ce Peniston"
+      ],
+      "alias": "Peniston, CeCe",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "peniston, cece"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Celvin Rotane"
+      ],
+      "alias": "Rotane, Celvin",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "rotane, celvin"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Cesaria Evora"
+      ],
+      "alias": "Evora, Cesaria",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "evora, cesaria"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Chantal Goya"
+      ],
+      "alias": "Goya, Chantal",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "goya, chantal"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Charles Aznavour"
+      ],
+      "alias": "Aznavour, Charles",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "aznavour, charles"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Charli XCX"
+      ],
+      "alias": "XCX, Charli",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "xcx, charli"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Charlotte De Witte"
+      ],
+      "alias": "De Witte, Charlotte",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "de witte, charlotte"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Charlotte Gainsbourg"
+      ],
+      "alias": "Gainsbourg, Charlotte",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "gainsbourg, charlotte"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Charly Danone"
+      ],
+      "alias": "Danone, Charly",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "danone, charly"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Charly Lownoise"
+      ],
+      "alias": "Lownoise, Charly",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "lownoise, charly"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Chris Anderson"
+      ],
+      "alias": "Anderson, Chris",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "anderson, chris"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Christian M."
+      ],
+      "alias": "Christian M",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "christian m"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Christian M."
+      ],
+      "alias": "M., Christian",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "m., christian"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Christian M."
+      ],
+      "alias": "M, Christian",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "m, christian"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Christine Roques"
+      ],
+      "alias": "Roques, Christine",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "roques, christine"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Christophe Rippert"
+      ],
+      "alias": "Rippert, Christophe",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "rippert, christophe"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Christophe Willem"
+      ],
+      "alias": "Willem, Christophe",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "willem, christophe"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Christopher Just"
+      ],
+      "alias": "Just, Christopher",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "just, christopher"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Cinzia Kay"
+      ],
+      "alias": "Kay, Cinzia",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "kay, cinzia"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "CJ Wilson"
+      ],
+      "alias": "C.J. Wilson",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "c.j. wilson"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "CJ Wilson"
+      ],
+      "alias": "Wilson, CJ",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "wilson, cj"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "CJ Wilson"
+      ],
+      "alias": "Wilson, C.J.",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "wilson, c.j."
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Christine & The Queens"
+      ],
+      "alias": "Christine And The Queens",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "christine and the queens"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Christine & The Queens"
+      ],
+      "alias": "Rahim Claude Redcar",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "rahim claude redcar"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Claire Diterzi"
+      ],
+      "alias": "Diterzi, Claire",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "diterzi, claire"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Clara Luciani"
+      ],
+      "alias": "Luciani, Clara",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "luciani, clara"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Claude Brasseur"
+      ],
+      "alias": "Brasseur, Claude",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "brasseur, claude"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Claude François"
+      ],
+      "alias": "François, Claude",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "francois, claude"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Claude Lombard"
+      ],
+      "alias": "Lombard, Claude",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "lombard, claude"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Claudia Cazacu"
+      ],
+      "alias": "Cazacu, Claudia",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "cazacu, claudia"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Claudia Phillips"
+      ],
+      "alias": "Phillips, Claudia",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "phillips, claudia"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Cléa Vincent"
+      ],
+      "alias": "Vincent, Cléa",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "vincent, clea"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Corinne Hermès"
+      ],
+      "alias": "Hermès, Corinne",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "hermes, corinne"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Cornelia Grolimund"
+      ],
+      "alias": "Grolimund, Cornelia",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "grolimund, cornelia"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Corynne Charby"
+      ],
+      "alias": "Charby, Corynne",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "charby, corynne"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Cristian Marchi"
+      ],
+      "alias": "Marchi, Cristian",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "marchi, cristian"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Crystal Waters"
+      ],
+      "alias": "Waters, Crystal",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "waters, crystal"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Cunnie Williams"
+      ],
+      "alias": "Williams, Cunnie",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "williams, cunnie"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Cyndi Lauper"
+      ],
+      "alias": "Lauper, Cyndi",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "lauper, cyndi"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "D.J. Deemark"
+      ],
+      "alias": "DJ Deemark",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "dj deemark"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "D.J. Deemark"
+      ],
+      "alias": "Deemark, DJ",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "deemark, dj"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "D.J. Deemark"
+      ],
+      "alias": "Deemark, D.J.",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "deemark, d.j."
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "D.N.A. (2)"
+      ],
+      "alias": "DNA (2)",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "dna (2)"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "DNA"
+      ],
+      "alias": "D.N.A.",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "d.n.a."
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Daisy Dee"
+      ],
+      "alias": "Dee, Daisy",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "dee, daisy"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Damon Blaze"
+      ],
+      "alias": "Blaze, Damon",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "blaze, damon"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Dan Lacksman"
+      ],
+      "alias": "Lacksman, Dan",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "lacksman, dan"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Dana Dawson"
+      ],
+      "alias": "Dawson, Dana",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "dawson, dana"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Dana Drops"
+      ],
+      "alias": "Drops, Dana",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "drops, dana"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Daniel Balavoine"
+      ],
+      "alias": "Balavoine, Daniel",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "balavoine, daniel"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Daniel Balavoine"
+      ],
+      "alias": "Balavoine",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "balavoine"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Daniel Bovie"
+      ],
+      "alias": "Bovie, Daniel",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "bovie, daniel"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Daniel Kandi"
+      ],
+      "alias": "Kandi, Daniel",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "kandi, daniel"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Daniela Vecchia"
+      ],
+      "alias": "Vecchia, Daniela",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "vecchia, daniela"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Dannii Minogue"
+      ],
+      "alias": "Minogue, Dannii",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "minogue, dannii"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Darie Boutboul"
+      ],
+      "alias": "Boutboul, Darie",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "boutboul, darie"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Dario Moreno"
+      ],
+      "alias": "Moreno, Dario",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "moreno, dario"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Darryl Pandy"
+      ],
+      "alias": "Pandy, Darryl",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "pandy, darryl"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Dave Davis"
+      ],
+      "alias": "Davis, Dave",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "davis, dave"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "David Bowie"
+      ],
+      "alias": "Bowie, David",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "bowie, david"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "David Bowie"
+      ],
+      "alias": "Bowie",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "bowie"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "David Guetta"
+      ],
+      "alias": "Guetta, David",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "guetta, david"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "David Hallyday"
+      ],
+      "alias": "Hallyday, David",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "hallyday, david"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "David Hasselhoff"
+      ],
+      "alias": "Hasselhoff, David",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "hasselhoff, david"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "David Kane"
+      ],
+      "alias": "Kane, David",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "kane, david"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "David May"
+      ],
+      "alias": "May, David",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "may, david"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "David Morales"
+      ],
+      "alias": "Morales, David",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "morales, david"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "David Penn"
+      ],
+      "alias": "Penn, David",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "penn, david"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "David Sion"
+      ],
+      "alias": "Sion, David",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "sion, david"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "David Tavare"
+      ],
+      "alias": "Tavare, David",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "tavare, david"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "David Vendetta"
+      ],
+      "alias": "Vendetta, David",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "vendetta, david"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Debbie K."
+      ],
+      "alias": "K., Debbie",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "k., debbie"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Debbie K."
+      ],
+      "alias": "Debbie K",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "debbie k"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Debbie K."
+      ],
+      "alias": "K, Debbie",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "k, debbie"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Deborah Cooper"
+      ],
+      "alias": "Cooper, Deborah",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "cooper, deborah"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Deborah De Luca"
+      ],
+      "alias": "De Luca, Deborah",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "de luca, deborah"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Deely.B.Dine "
+      ],
+      "alias": "Deely B. Dine ",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "deely b. dine"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Delphine Chanéac"
+      ],
+      "alias": "Chanéac, Delphine",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "chaneac, delphine"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Demis Roussos"
+      ],
+      "alias": "Roussos, Demis",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "roussos, demis"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Den Harrow"
+      ],
+      "alias": "Harrow, Den",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "harrow, den"
+    }
+  }
+]

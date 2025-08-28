@@ -18,9 +18,10 @@
 # 16 = Jeu vidéo
 # 17 = Livre
 # 18 = Magazine
-# 19 = Pub TV
-# 20 = Reportage
-# 21 = Série
-# 22 = Site web
-# 23 = Station radio
-# 24 = Webradio
+# 19 = Producteur
+# 20 = Pub TV
+# 21 = Reportage
+# 22 = Série
+# 23 = Site web
+# 24 = Station radio
+# 25 = Webradio

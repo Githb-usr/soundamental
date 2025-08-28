@@ -1,0 +1,1550 @@
+[
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Den J. Rose"
+      ],
+      "alias": "Den J Rose",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "den j rose"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Den J. Rose"
+      ],
+      "alias": "Rose, Den J",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "rose, den j"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Den J. Rose"
+      ],
+      "alias": "Rose, Den J.",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "rose, den j."
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Deni Hines"
+      ],
+      "alias": "Hines, Deni",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "hines, deni"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Dennis De Laat"
+      ],
+      "alias": "De Laat, Dennis",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "de laat, dennis"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Desy D."
+      ],
+      "alias": "Desy D",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "desy d"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Desy D."
+      ],
+      "alias": "D., Desy",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "d., desy"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Desy D."
+      ],
+      "alias": "D, Desy",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "d, desy"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Diane Russel"
+      ],
+      "alias": "Russel, Diane",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "russel, diane"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Dick Rivers"
+      ],
+      "alias": "Rivers, Dick",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "rivers, dick"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Didier Sinclair"
+      ],
+      "alias": "Sinclair, Didier",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "sinclair, didier"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Die Antwoord"
+      ],
+      "alias": "Antwoord, Die",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "antwoord, die"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Die Ravers"
+      ],
+      "alias": "Ravers, Die",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "ravers, die"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Dim Chris"
+      ],
+      "alias": "Chris, Dim",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "chris, dim"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Dimitri Vegas"
+      ],
+      "alias": "Vegas, Dimitri",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "vegas, dimitri"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "DJ 70"
+      ],
+      "alias": "70, DJ",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "70, dj"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "DJ Aligator"
+      ],
+      "alias": "Aligator, DJ",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "aligator, dj"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "DJ Antoine"
+      ],
+      "alias": "Antoine, DJ",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "antoine, dj"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "DJ B"
+      ],
+      "alias": "DJ B.",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "dj b."
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "DJ B"
+      ],
+      "alias": "B, DJ",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "b, dj"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "DJ B"
+      ],
+      "alias": "B., DJ",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "b., dj"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "DJ Bart"
+      ],
+      "alias": "Bart, DJ",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "bart, dj"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "DJ Bertrand"
+      ],
+      "alias": "Bertrand, DJ",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "bertrand, dj"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "DJ BoBo"
+      ],
+      "alias": "BoBo, DJ",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "bobo, dj"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "DJ Bountyhunter"
+      ],
+      "alias": "Bountyhunter, DJ",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "bountyhunter, dj"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "DJ Bubba"
+      ],
+      "alias": "Bubba, DJ",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "bubba, dj"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "DJ Company"
+      ],
+      "alias": "Company, DJ",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "company, dj"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "DJ Creator"
+      ],
+      "alias": "Creator, DJ",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "creator, dj"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "DJ Daddy K"
+      ],
+      "alias": "Daddy K, DJ",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "daddy k, dj"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "DJ Daddy K"
+      ],
+      "alias": "Daddy K",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "daddy k"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "DJ Dado"
+      ],
+      "alias": "Dado, DJ",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "dado, dj"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "DJ Dano"
+      ],
+      "alias": "Dano, DJ",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "dano, dj"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "DJ Dave"
+      ],
+      "alias": "Dave, DJ",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "dave, dj"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "DJ Dean"
+      ],
+      "alias": "Dean, DJ",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "dean, dj"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "DJ Defi J"
+      ],
+      "alias": "Defi J, DJ",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "defi j, dj"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "DJ Dero"
+      ],
+      "alias": "Dero, DJ",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "dero, dj"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "DJ Druid"
+      ],
+      "alias": "Druid, DJ",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "druid, dj"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "DJ Duck"
+      ],
+      "alias": "Duck, DJ",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "duck, dj"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "DJ Edge"
+      ],
+      "alias": "Edge, DJ",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "edge, dj"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "DJ Encore"
+      ],
+      "alias": "Encore, DJ",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "encore, dj"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "DJ Energizer"
+      ],
+      "alias": "Energizer, DJ",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "energizer, dj"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "DJ Energy"
+      ],
+      "alias": "Energy, DJ",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "energy, dj"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "DJ Esteban"
+      ],
+      "alias": "Esteban, DJ",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "esteban, dj"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "DJ Fade"
+      ],
+      "alias": "Fade, DJ",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "fade, dj"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "DJ Fireline"
+      ],
+      "alias": "Fireline, DJ",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "fireline, dj"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "DJ Foggy"
+      ],
+      "alias": "Foggy, DJ",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "foggy, dj"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "DJ Fred"
+      ],
+      "alias": "Fred, DJ",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "fred, dj"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "DJ Fresh"
+      ],
+      "alias": "Fresh, DJ",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "fresh, dj"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "DJ Fruchtzwerg"
+      ],
+      "alias": "Fruchtzwerg, DJ",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "fruchtzwerg, dj"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "DJ Groovy"
+      ],
+      "alias": "Groovy, DJ",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "groovy, dj"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "DJ H."
+      ],
+      "alias": "H., DJ",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "h., dj"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "DJ H."
+      ],
+      "alias": "DJ H",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "dj h"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "DJ H."
+      ],
+      "alias": "H, DJ",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "h, dj"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "DJ Hooligan"
+      ],
+      "alias": "Hooligan, DJ",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "hooligan, dj"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "DJ Layla"
+      ],
+      "alias": "Layla, DJ",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "layla, dj"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "DJ Ludo Remix"
+      ],
+      "alias": "Ludo Remix, DJ",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "ludo remix, dj"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "DJ Mad"
+      ],
+      "alias": "Mad, DJ",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "mad, dj"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "DJ Mangoo"
+      ],
+      "alias": "Mangoo, DJ",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "mangoo, dj"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "DJ Manian"
+      ],
+      "alias": "Manian, DJ",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "manian, dj"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "DJ Max V."
+      ],
+      "alias": "DJ Max V",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "dj max v"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "DJ Max V."
+      ],
+      "alias": "Max V., DJ",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "max v., dj"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "DJ Max V."
+      ],
+      "alias": "Max V, DJ",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "max v, dj"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "DJ MD"
+      ],
+      "alias": "MD, DJ",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "md, dj"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "DJ Mehdi"
+      ],
+      "alias": "Mehdi, DJ",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "mehdi, dj"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "DJ Miki"
+      ],
+      "alias": "Miki, DJ",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "miki, dj"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "DJ Miko"
+      ],
+      "alias": "Miko, DJ",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "miko, dj"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "DJ Panda"
+      ],
+      "alias": "Panda, DJ",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "panda, dj"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "DJ Peter"
+      ],
+      "alias": "Peter, DJ",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "peter, dj"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "DJ Phats"
+      ],
+      "alias": "Phats, DJ",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "phats, dj"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "DJ Philip"
+      ],
+      "alias": "Philip, DJ",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "philip, dj"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "DJ Professor"
+      ],
+      "alias": "Professor, DJ",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "professor, dj"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "DJ Quicksilver"
+      ],
+      "alias": "Quicksilver, DJ",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "quicksilver, dj"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "DJ Tonka"
+      ],
+      "alias": "Tonka, DJ",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "tonka, dj"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "DJ Valium"
+      ],
+      "alias": "Valium, DJ",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "valium, dj"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "DJ Visage"
+      ],
+      "alias": "Visage, DJ",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "visage, dj"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "DJ Waxweazle"
+      ],
+      "alias": "Waxweazle, DJ",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "waxweazle, dj"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "DJ Webster"
+      ],
+      "alias": "Webster, DJ",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "webster, dj"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "DJ Weirdo"
+      ],
+      "alias": "Weirdo, DJ",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "weirdo, dj"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "DJ' Chris"
+      ],
+      "alias": "Chris, DJ'",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "chris, dj'"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "DJ Ramezz"
+      ],
+      "alias": "Ramezz, DJ",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "ramezz, dj"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "DJ Rebel"
+      ],
+      "alias": "Rebel, DJ",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "rebel, dj"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "DJ Rien"
+      ],
+      "alias": "Rien, DJ",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "rien, dj"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "DJ Roman"
+      ],
+      "alias": "Roman, DJ",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "roman, dj"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "DJ Ron"
+      ],
+      "alias": "Ron, DJ",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "ron, dj"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "DJ Ross"
+      ],
+      "alias": "Ross, DJ",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "ross, dj"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "DJ Sammy"
+      ],
+      "alias": "Sammy, DJ",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "sammy, dj"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "DJ Sanny J"
+      ],
+      "alias": "DJ Sanny J.",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "dj sanny j."
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "DJ Sanny J"
+      ],
+      "alias": "Sanny J, DJ",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "sanny j, dj"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "DJ Sanny J"
+      ],
+      "alias": "Sanny J., DJ",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "sanny j., dj"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "DJ Scana"
+      ],
+      "alias": "Scana, DJ",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "scana, dj"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "DJ Scot Project"
+      ],
+      "alias": "Scot Project, DJ",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "scot project, dj"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "DJ Seduction"
+      ],
+      "alias": "Seduction, DJ",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "seduction, dj"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "DJ Sergio"
+      ],
+      "alias": "Sergio, DJ",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "sergio, dj"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "DJ Service"
+      ],
+      "alias": "Service, DJ",
+      "is_listed": true,
+      "category": 18,
+      "alias_normalized": "service, dj"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "DJ Serzh"
+      ],
+      "alias": "Serzh, DJ",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "serzh, dj"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "DJ Shah"
+      ],
+      "alias": "Shah, DJ",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "shah, dj"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "DJ Shog"
+      ],
+      "alias": "Shog, DJ",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "shog, dj"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "DJ Sim"
+      ],
+      "alias": "Sim, DJ",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "sim, dj"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "DJ Snake"
+      ],
+      "alias": "Snake, DJ",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "snake, dj"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "DJ Sno-White"
+      ],
+      "alias": "Sno-White, DJ",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "sno-white, dj"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "DJ Spy"
+      ],
+      "alias": "Spy, DJ",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "spy, dj"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "DJ Sy"
+      ],
+      "alias": "Sy, DJ",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "sy, dj"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "DJ Sylvan"
+      ],
+      "alias": "Sylvan, DJ",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "sylvan, dj"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "DJ Taucher"
+      ],
+      "alias": "Taucher, DJ",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "taucher, dj"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "DJ Tissue"
+      ],
+      "alias": "Tissue, DJ",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "tissue, dj"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "DJ Tomko"
+      ],
+      "alias": "Tomko, DJ",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "tomko, dj"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Dolores Gallagher"
+      ],
+      "alias": "Gallagher, Dolores",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "gallagher, dolores"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Dominik De Leon"
+      ],
+      "alias": "De Leon, Dominik",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "de leon, dominik"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Donald Duck"
+      ],
+      "alias": "Duck, Donald",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "duck, donald"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Donna Summer"
+      ],
+      "alias": "Summer, Donna",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "summer, donna"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Doris Day"
+      ],
+      "alias": "Day, Doris",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "day, doris"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Doris Norton"
+      ],
+      "alias": "Norton, Doris",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "norton, doris"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Dr. Alban"
+      ],
+      "alias": "Alban, Dr.",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "alban, dr."
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Dr. Droste"
+      ],
+      "alias": "Droste, Dr.",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "droste, dr."
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Dr. Fernando!"
+      ],
+      "alias": "Dr. Fernando",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "dr. fernando"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Dr. Fernando!"
+      ],
+      "alias": "Fernando!, Dr.",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "fernando!, dr."
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Dr. Fernando!"
+      ],
+      "alias": "Fernando, Dr.",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "fernando, dr."
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Dr. G"
+      ],
+      "alias": "Dr. G.",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "dr. g."
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Dr. G"
+      ],
+      "alias": "G, Dr.",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "g, dr."
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Dr. G"
+      ],
+      "alias": "G., Dr.",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "g., dr."
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Dr. Kucho!"
+      ],
+      "alias": "Dr. Kucho",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "dr. kucho"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Dr. Kucho!"
+      ],
+      "alias": "Kucho!, Dr.",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "kucho!, dr."
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Dr. Kucho!"
+      ],
+      "alias": "Kucho, Dr.",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "kucho, dr."
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Dr. Love"
+      ],
+      "alias": "Love, Dr.",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "love, dr."
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Dr. Phil Omanski"
+      ],
+      "alias": "Phil Omanski, Dr. ",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "phil omanski, dr."
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Dr. Phil Omanski"
+      ],
+      "alias": "Phil Omanski",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "phil omanski"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Dr. Phil Omanski"
+      ],
+      "alias": "Omanski, Phil",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "omanski, phil"
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Dr. Sleepwalker"
+      ],
+      "alias": "Sleepwalker, Dr.",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "sleepwalker, dr."
+    }
+  },
+  {
+    "model": "app_index.indexalias",
+    "fields": {
+      "entry": [
+        "Dr. Smiley"
+      ],
+      "alias": "Smiley, Dr.",
+      "is_listed": true,
+      "category": 2,
+      "alias_normalized": "smiley, dr."
+    }
+  }
+]

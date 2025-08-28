@@ -9,7 +9,7 @@
         <div class="col-md-3">
             <h5 class="text-uppercase fw-bold">Navigation</h5>
             <ul class="list-unstyled">
-                <li><a href="{% url 'app_main:static_page' slug='accueil' %}" class="text-white text-decoration-none">Accueil</a></li>
+                <li><a href="{% url 'app_main:home' %}" class="text-white text-decoration-none">Accueil</a></li>
                 <li><a href="{% url 'app_blog:liste_articles' %}" class="text-white text-decoration-none">News</a></li>
                 <li><a class="dropdown-item" href="{% url 'app_main:dynamic_page' page_name='index' %}">Index général</a></li>
                 <li><a class="dropdown-item" href="{% url 'app_index:category_index' category='artistes' %}">Index artistes</a></li>
@@ -48,7 +48,7 @@
         <div class="col-md-3">
             <h5 class="text-uppercase fw-bold">Support</h5>
             <ul class="list-unstyled">
-                <li><a href="{% url 'app_main:aide_root' slug='aide' %}">Aide / FAQ</a></li>
+                <!-- <li><a href="{% url 'app_main:aide_root' slug='aide' %}">Aide / FAQ</a></li> -->
                 <li><a href="{% url 'app_main:contact' %}" class="text-white text-decoration-none">Contact</a></li>
             </ul>
         </div>
