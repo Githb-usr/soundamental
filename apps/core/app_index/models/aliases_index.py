@@ -286,24 +286,3 @@ def suggest_aliases_for_entry(entry: IndexEntry) -> list[str]:
     suggestions += _suggest_inversion_alias(entry.name, getattr(entry.category, "code", None))
     # Nettoyage / dédoublonnage final + anti-conflits
     return _filter_valid_candidates(entry, suggestions)
-
-
-@receiver(post_save, sender=IndexEntry)
-def auto_create_suggested_aliases(sender, instance: IndexEntry, created, **kwargs):
-    """
-    Ne crée les alias suggérés que lors de la CRÉATION d'une entrée.
-    Évite les doublons quand l'admin enregistre une entrée + inlines (ordre: parent puis inlines).
-    """
-    if not created:
-        return  # ← clé : on ne fait rien lors d'une modification
-
-    try:
-        candidates = suggest_aliases_for_entry(instance)
-        for text in candidates:
-            norm = IndexAlias.normalize(text)
-            exists = IndexAlias.objects.filter(alias_normalized=norm).exists()
-            if not exists:
-                IndexAlias.objects.create(entry=instance, alias=text)
-    except Exception:
-        # Ne jamais casser la sauvegarde d'une entrée à cause des suggestions.
-        pass
